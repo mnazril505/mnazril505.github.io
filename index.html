@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gs. Mohamad Nazril - GIS Analyst Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gis: {
+                            light: '#e0f2fe',
+                            main: '#0f766e', // Teal 700 - Professional Earthy/Green tone
+                            dark: '#134e4a', // Teal 900
+                            accent: '#f59e0b' // Amber for highlights
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Topographic / Grid subtle background for Hero */
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(15, 118, 110, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(15, 118, 110, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        
+        .nav-scrolled {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(8px);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="font-bold text-2xl tracking-tight text-gis-main">
+                        <i class="fa-solid fa-earth-asia mr-2"></i>Gs. Nazril
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-gis-main font-semibold transition">Utama</a>
+                    <a href="#about" class="text-slate-600 hover:text-gis-main font-semibold transition">Profil</a>
+                    <a href="#skills" class="text-slate-600 hover:text-gis-main font-semibold transition">Kemahiran</a>
+                    <a href="#projects" class="text-slate-600 hover:text-gis-main font-semibold transition">Projek</a>
+                    <a href="#contact" class="text-slate-600 hover:text-gis-main font-semibold transition">Hubungi</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600 hover:text-gis-main focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-slate-700 hover:bg-gis-light hover:text-gis-main rounded-md">Utama</a>
+                <a href="#about" class="block px-3 py-2 text-slate-700 hover:bg-gis-light hover:text-gis-main rounded-md">Profil</a>
+                <a href="#skills" class="block px-3 py-2 text-slate-700 hover:bg-gis-light hover:text-gis-main rounded-md">Kemahiran</a>
+                <a href="#projects" class="block px-3 py-2 text-slate-700 hover:bg-gis-light hover:text-gis-main rounded-md">Projek</a>
+                <a href="#contact" class="block px-3 py-2 text-slate-700 hover:bg-gis-light hover:text-gis-main rounded-md">Hubungi</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-grid-pattern relative">
+        <!-- Decorative subtle gradient blob -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-gis-main opacity-10 blur-3xl z-0 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center md:text-left max-w-3xl">
+                <p class="text-gis-main font-semibold tracking-wide uppercase text-sm mb-3">Ahli Profesional Geospatial (IGRSM) & Teknologis Siswazah (MBOT)</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                    Gs. Mohamad Nazril <br class="hidden sm:block" /> Bin Sharil
+                </h1>
+                <h2 class="text-xl sm:text-2xl text-slate-600 font-light mb-8">
+                    GIS Analyst | GeoAI & UAV Mapping | Pakar Analisis Kesesuaian Tanah
+                </h2>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                    Memanfaatkan sistem maklumat geografi, penderiaan jauh, dan kecerdasan buatan (GeoAI) untuk menyelesaikan masalah spatial yang kompleks dan mengoptimumkan aliran kerja analisis untuk keputusan strategik.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="px-8 py-3 rounded-lg bg-gis-main text-white font-semibold hover:bg-gis-dark transition shadow-lg shadow-teal-500/30 text-center">
+                        Lihat Portfolio Projek
+                    </a>
+                    <a href="https://github.com/MNazril505" target="_blank" class="px-8 py-3 rounded-lg bg-white border border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-github text-xl"></i> GitHub Profil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <!-- Image Placeholder (Can be replaced with actual professional photo) -->
+                    <div class="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/800x600/134e4a/ffffff?text=Gs.+Mohamad+Nazril" alt="Gs. Mohamad Nazril" class="object-cover w-full h-full">
+                        <div class="absolute inset-0 border-4 border-white rounded-2xl mix-blend-overlay"></div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <div class="inline-block px-3 py-1 rounded-full bg-gis-light text-gis-main font-semibold text-sm mb-4">Mengenai Saya</div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6">Merapatkan Jurang Data Spatial & Keputusan Berimpak</h3>
+                    <div class="space-y-4 text-slate-600 leading-relaxed">
+                        <p>
+                            Sebagai seorang profesional yang diiktiraf oleh <strong>IGRSM</strong> dan <strong>MBOT</strong>, saya mempunyai keghairahan mendalam terhadap penganalisisan data spatial termaju. Fokus utama saya adalah dalam memodenkan aliran kerja GIS tradisional kepada sistem yang lebih pintar dan berautomatik.
+                        </p>
+                        <p>
+                            Kepakaran saya merangkumi **Analisis Pembuatan Keputusan Berbilang Kriteria (MCDM)**, khususnya menggunakan kaedah *Analytical Hierarchy Process (AHP)* bagi perancangan guna tanah dan pertanian jitu. 
+                        </p>
+                        <p>
+                            Saya amat komited dalam meneroka potensi <strong>GeoAI</strong>—menggabungkan pengimejan UAV dengan model Pembelajaran Mendalam (seperti YOLOv8-Seg) untuk mengekstrak maklumat spatial berskala besar dengan pantas dan jitu, khusus bagi menampung keperluan sektor perladangan moden.
+                        </p>
+                    </div>
+                    <div class="mt-8 flex gap-6">
+                        <div class="border-l-4 border-gis-main pl-4">
+                            <h4 class="font-bold text-slate-900 text-xl">IGRSM</h4>
+                            <p class="text-sm text-slate-500">Ahli Profesional Geospatial</p>
+                        </div>
+                        <div class="border-l-4 border-gis-main pl-4">
+                            <h4 class="font-bold text-slate-900 text-xl">MBOT</h4>
+                            <p class="text-sm text-slate-500">Teknologis Siswazah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="inline-block px-3 py-1 rounded-full bg-gis-light text-gis-main font-semibold text-sm mb-4">Kemahiran Teras</div>
+                <h3 class="text-3xl font-bold text-slate-900">Kepakaran Teknikal & Teknologi</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-gis-light flex items-center justify-center text-gis-main text-2xl mb-6">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Analisis Reruang & MCDM</h4>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Pakar dalam membina model kesesuaian tanah menggunakan kaedah penganalisisan berbilang kriteria.</p>
+                    <ul class="space-y-2 text-sm font-medium text-slate-700">
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> Model AHP (Analytical Hierarchy Process)</li>
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> Penilaian Kesesuaian Tanah Pertanian</li>
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> Spatial Data Mining</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-gis-light flex items-center justify-center text-gis-main text-2xl mb-6">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Perisian GIS & UAV</h4>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Penguasaan perisian industri standard untuk pemprosesan, pembersihan topologi, dan kartografi.</p>
+                    <ul class="space-y-2 text-sm font-medium text-slate-700">
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> QGIS & ArcGIS Pro</li>
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> Pemprosesan Imej UAV (Dron)</li>
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> Pengurusan Geodatabase</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-gis-light flex items-center justify-center text-gis-main text-2xl mb-6">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Pengekodan, Automasi & AI</h4>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Membangunkan skrip dan memanfaatkan model AI bagi mempercepatkan ekso-analisis data spatial.</p>
+                    <ul class="space-y-2 text-sm font-medium text-slate-700">
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> Python (ArcPy, PyQGIS)</li>
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> YOLOv8-Seg (Deep Learning / GeoAI)</li>
+                        <li><i class="fa-solid fa-check text-gis-accent mr-2"></i> Jupyter Notebooks (Jupyter/Colab)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <div class="inline-block px-3 py-1 rounded-full bg-gis-light text-gis-main font-semibold text-sm mb-4">Portfolio GIS</div>
+                    <h3 class="text-3xl font-bold text-slate-900">Projek & Kajian Kes</h3>
+                </div>
+                <a href="https://github.com/MNazril505?tab=repositories" target="_blank" class="hidden md:inline-flex items-center text-gis-main font-semibold hover:text-gis-dark">
+                    Lihat Semua di GitHub <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 flex flex-col card-hover">
+                    <div class="h-48 w-full bg-slate-200 relative">
+                        <!-- Placeholder for Drone/AI imagery -->
+                        <img src="https://placehold.co/600x400/27272a/a1a1aa?text=S-PADI+GeoAI" alt="S-PADI Platform" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-gis-main shadow-sm">
+                            GeoAI
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Platform GeoAI S-PADI</h4>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">
+                            Integrasi imej UAV beresolusi tinggi dan model <em>Deep Learning</em> (YOLOv8-Seg) bagi menyokong pertanian jitu, pengekstrakan ciri automatik, dan pemantauan kesihatan tanaman spatial.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-gis-main hover:text-gis-dark transition">
+                            Lihat Butiran Projek <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 flex flex-col card-hover">
+                    <div class="h-48 w-full bg-slate-200 relative">
+                        <!-- Placeholder for Heatmap/AHP imagery -->
+                        <img src="https://placehold.co/600x400/0f766e/ccfbf1?text=AHP+Land+Suitability" alt="MCDM AHP" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-gis-main shadow-sm">
+                            MCDM-AHP
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Kesesuaian Tanah MCDM-AHP</h4>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">
+                            Kajian kes di Kota Belud: Melaksanakan analisis spatial menggunakan model <em>Analytical Hierarchy Process</em> untuk mengenal pasti zon paling optimum bagi penanaman padi sawah berdasarkan faktor topografi dan tanah.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-gis-main hover:text-gis-dark transition">
+                            Lihat Butiran Projek <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 flex flex-col card-hover">
+                    <div class="h-48 w-full bg-slate-200 relative">
+                        <!-- Placeholder for Python/Code imagery -->
+                        <img src="https://placehold.co/600x400/1e293b/94a3b8?text=GeoAI_Sawit.ipynb" alt="Python Automation" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-gis-main shadow-sm">
+                            Python / Automasi
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Automasi GIS & Pengesanan Ciri</h4>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">
+                            Menulis skrip Python (<code>GeoAI_Sawit.ipynb</code>) untuk mengautomasikan pengesanan kanopi pokok, pembersihan data vektor, dan menukar aliran kerja manual memakan masa kepada proses berkomputer sepenuhnya.
+                        </p>
+                        <a href="https://github.com/MNazril505" target="_blank" class="inline-flex items-center text-sm font-semibold text-gis-main hover:text-gis-dark transition">
+                            Lihat Jupyter Notebook <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Mobile View all projects -->
+            <div class="mt-8 text-center md:hidden">
+                <a href="https://github.com/MNazril505?tab=repositories" class="inline-flex items-center text-slate-600 font-semibold border border-slate-300 px-6 py-2 rounded-lg hover:bg-slate-50">
+                    Lihat Semua di GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-12 mb-8 gap-8">
+                
+                <div class="max-w-xl">
+                    <h2 class="text-3xl font-bold mb-4">Mari Berkolaborasi.</h2>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                        Saya sedang mencari peluang kerjaya sebagai <strong>GIS Specialist</strong> atau jawatan teknikal spatial yang membolehkan saya mengaplikasikan kepakaran GeoAI dan Automasi, terutamanya dalam sektor perladangan dan perancangan.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col gap-4 min-w-[200px]">
+                    <a href="mailto:email.anda@gmail.com" class="flex items-center gap-3 bg-white/10 hover:bg-gis-main px-6 py-3 rounded-lg transition-colors duration-300">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                        <span class="font-medium">Hantar E-mel</span>
+                    </a>
+                    <a href="https://linkedin.com/in/mnazril505" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-[#0A66C2] px-6 py-3 rounded-lg transition-colors duration-300">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                        <span class="font-medium">Sambung di LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+                <p>&copy; 2026 Gs. Mohamad Nazril Bin Sharil. Semua Hak Cipta Terpelihara.</p>
+                <div class="flex space-x-6 text-xl">
+                    <a href="https://github.com/MNazril505" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-researchgate"></i></a> <!-- Optional placeholder for academia -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('nav-scrolled');
+                navbar.classList.remove('py-2'); // Makes it slightly thinner on scroll if padding was applied
+            } else {
+                navbar.classList.remove('nav-scrolled');
+                navbar.classList.add('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
