@@ -3,101 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projek IRBM Sungai Tuaran - Gs. Mohamad Nazril</title>
+    <title>Flagship Project: GeoAI & Spatial Automation - Gs. Mohamad Nazril</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-800 antialiased leading-relaxed">
 
-    <!-- Navbar Back Button -->
-    <nav class="bg-white shadow-md fixed w-full z-20 top-0">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center">
-            <a href="index.html" class="text-emerald-700 hover:text-emerald-900 font-bold flex items-center transition">
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-gray-200 fixed w-full z-20 top-0 shadow-sm">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-emerald-700 hover:text-emerald-900 font-semibold flex items-center transition text-sm">
                 <i class="fas fa-arrow-left mr-2"></i> Kembali ke Halaman Utama
             </a>
+            <span class="text-xs font-bold uppercase tracking-wider text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Flagship Research Project</span>
         </div>
     </nav>
 
-    <!-- Project Header -->
-    <header class="bg-emerald-900 text-white pt-28 pb-16 mt-10">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <span class="bg-emerald-700 text-emerald-100 px-3 py-1 rounded-full text-sm font-semibold tracking-wide uppercase mb-4 inline-block">Sokongan GIS Alam Sekitar</span>
-            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Study On Integrated River Basin Management (IRBM) Plan For Sungai Tuaran Basin</h1>
-            <p class="text-lg text-emerald-200">Pengurusan Lembangan Sungai Bersepadu & Mitigasi Risiko</p>
-        </div>
-    </header>
+    <!-- Main Article Container -->
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+        
+        <!-- Header Section -->
+        <header class="mb-12 border-b border-gray-200 pb-8">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
+                Model Hibrid GIS-AHP & GeoAI untuk Penilaian Kesesuaian Tanah Padi (Kota Belud)
+            </h1>
+            <p class="text-xl text-gray-600 font-medium mb-6">
+                Automasi Ruang, Pemodelan Keputusan Multikriteria (MCDM), dan Pembelajaran Mendalam (*Deep Learning*)
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-semibold">GIS & Remote Sensing</span>
+                <span class="px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-semibold">MCDM-AHP</span>
+                <span class="px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-semibold">PyTorch & GeoAI</span>
+                <span class="px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-semibold">Python / ArcPy</span>
+            </div>
+        </header>
 
-    <!-- Project Details Content -->
-    <section class="py-12">
-        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
-            
-            <!-- Left Column: Info & Methodology -->
-            <div class="md:col-span-2 space-y-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-emerald-500 pl-3">Ringkasan Projek (Overview)</h2>
-                    <p class="text-gray-600 text-justify leading-relaxed">
-                        Projek ini bertujuan membangunkan pelan pengurusan spatial yang komprehensif untuk Lembangan Sungai Tuaran. Objektif utama adalah untuk menilai risiko guna tanah, memetakan kawasan sensitif alam sekitar (ESA), dan menyediakan sokongan sistem maklumat geografi (GIS) kepada perancang bandar dan agensi kerajaan bagi memastikan pembangunan mampan di sekitar lembangan sungai.
-                    </p>
+        <!-- Project Overview -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center border-l-4 border-emerald-600 pl-3">
+                <span class="mr-2">📊</span> Project Overview
+            </h2>
+            <p class="text-gray-700 text-base md:text-lg mb-4 text-justify">
+                Projek ini membangunkan pangkalan data spatial berskala mikro di Daerah Kota Belud bagi mengenal pasti dan menilai kawasan kesesuaian tanah terbiar untuk penanaman semula padi jelapang. Pendekatan hibrid menggabungkan penilaian faktor fizikal dan sosio-ekonomi secara saintifik.
+            </p>
+            <p class="text-gray-700 text-base md:text-lg text-justify">
+                Sistem ini disokong sepenuhnya oleh perpaipan automasi Python (ArcPy) dan algoritma Pembelajaran Mendalam (*GeoAI U-Net*) untuk perahan data guna tanah berketepatan tinggi daripada imej satelit.
+            </p>
+        </section>
+
+        <!-- Methodology Framework -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center border-l-4 border-emerald-600 pl-3">
+                <span class="mr-2">🔍</span> Methodology & Implementation Framework
+            </h2>
+            <div class="bg-slate-900 text-white p-8 rounded-xl shadow-lg font-mono text-sm space-y-6">
+                <div class="border border-slate-700 p-4 rounded bg-slate-800">
+                    <p class="text-emerald-400 font-bold mb-1">[ LAYER 1: MULTI-CRITERIA DECISION MAKING (MCDM-AHP) ]</p>
+                    <p class="text-gray-300">• Input: Faktor Topografi (DEM), Kecerunan, Jenis Tanih, Sumber Air & Saliran</p>
+                    <p class="text-gray-300">• Proses: Penilaian Matriks Perbandingan Berpasangan & Pengiraan Nilai Wajaran (Weightage)</p>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-emerald-500 pl-3">Metodologi & Pelaksanaan</h2>
-                    <ul class="space-y-4 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-satellite text-emerald-500 mt-1 mr-3"></i>
-                            <div><strong>Pengumpulan Data Spatial:</strong> Mendapatkan data topografi, model elevasi digital (DEM), dan imej satelit terkini untuk mendigitalkan sempadan lembangan tadahan.</div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-layer-group text-emerald-500 mt-1 mr-3"></i>
-                            <div><strong>Analisis Spatial (Overlay & Buffer):</strong> Melaksanakan analisis penampan sungai (river buffer) untuk mengenalpasti zon larangan pembangunan dan zon berisiko banjir.</div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marked-alt text-emerald-500 mt-1 mr-3"></i>
-                            <div><strong>Pemetaan Hasil:</strong> Menghasilkan siri peta tematik termasuk Peta Guna Tanah, Peta Kecerunan, dan Peta Kualiti Air.</div>
-                        </li>
-                    </ul>
+                <div class="text-center text-emerald-400 font-bold">↓</div>
+                <div class="border border-slate-700 p-4 rounded bg-slate-800">
+                    <p class="text-emerald-400 font-bold mb-1">[ LAYER 2: GEOAI & DEEP LEARNING EXTRACTION ]</p>
+                    <p class="text-gray-300">• Input: Imej Satelit & Data UAV Multispektral</p>
+                    <p class="text-gray-300">• Proses: Latihan Model U-Net + ResNet34 (Google Colab T4 GPU) & Penapisan Hingar Geometri (&lt;30 sqm)</p>
+                </div>
+                <div class="text-center text-emerald-400 font-bold">↓</div>
+                <div class="border border-slate-700 p-4 rounded bg-slate-800">
+                    <p class="text-emerald-400 font-bold mb-1">[ LAYER 3: SPATIAL OVERLAY & SUITABILITY MAPPING ]</p>
+                    <p class="text-gray-300">• Output Akhir: Peta Klasifikasi Kesesuaian Tanah (Sangat Sesuai, Sesuai, Tidak Sesuai)</p>
                 </div>
             </div>
+        </section>
 
-            <!-- Right Column: Tools & Skills -->
-            <div class="space-y-6">
-                <div class="bg-gray-100 p-6 rounded-xl border border-gray-200">
-                    <h3 class="font-bold text-gray-800 mb-3">Teknologi Digunakan</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-white text-emerald-800 rounded font-medium text-sm border border-gray-300">ArcGIS Pro</span>
-                        <span class="px-3 py-1 bg-white text-emerald-800 rounded font-medium text-sm border border-gray-300">Hydrology Tools</span>
-                        <span class="px-3 py-1 bg-white text-emerald-800 rounded font-medium text-sm border border-gray-300">Spatial Analyst</span>
+        <!-- Map Gallery Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center border-l-4 border-emerald-600 pl-3">
+                <span class="mr-2">🗺️</span> Map Gallery & Visualization
+            </h2>
+            
+            <div class="space-y-10">
+                <!-- Map 1 -->
+                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Peta 1: Model Kesesuaian Tanah Padi Berasaskan AHP Di Kota Belud</h3>
+                    <p class="text-gray-600 text-sm mb-4">Visualisasi spatial integrasi faktor fizikal dan sosio-ekonomi dalam menentukan kawasan berpotensi tinggi.</p>
+                    <div class="bg-white p-2 rounded-lg border border-gray-300 shadow-sm">
+                        <img src="https://placehold.co/1000x500/047857/ffffff?text=Peta+Kesesuaian+Tanah+AHP+Kota+Belud" alt="Peta AHP" class="w-full rounded">
+                        <p class="text-center text-xs font-semibold text-gray-500 mt-2">Rajah 1: Peta Model Kesesuaian Tanah AHP Kota Belud</p>
+                    </div>
+                </div>
+
+                <!-- Map 2 -->
+                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Peta 2: Hasil Klasifikasi GeoAI & Penapisan Vektor Ruang</h3>
+                    <p class="text-gray-600 text-sm mb-4">Keputusan segmentasi model U-Net (PyTorch) berserta penapisan hingar geometri untuk analisis petak sawah.</p>
+                    <div class="bg-white p-2 rounded-lg border border-gray-300 shadow-sm">
+                        <img src="https://placehold.co/1000x500/065f46/ffffff?text=GeoAI+Segmentation+Output" alt="GeoAI Output" class="w-full rounded">
+                        <p class="text-center text-xs font-semibold text-gray-500 mt-2">Rajah 2: Hasil Perahan Data Guna Tanah Berasaskan Model U-Net</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Map Gallery Section -->
-    <section class="py-12 bg-gray-100">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Galeri Peta & Visualisasi</h2>
-            
-            <div class="space-y-8">
-                <!-- GANTI GAMBAR PETA PERTAMA -->
-                <div class="bg-white p-4 rounded-xl shadow-md">
-                    <img src="https://placehold.co/1000x500/047857/ffffff?text=Peta+Lembangan+Tadahan+Sungai+Tuaran" alt="Peta Tadahan" class="w-full rounded-lg mb-4">
-                    <p class="text-center font-semibold text-gray-700">Peta 1: Sempadan Lembangan Tadahan Sungai Tuaran</p>
-                </div>
-                
-                <!-- GANTI GAMBAR PETA KEDUA -->
-                <div class="bg-white p-4 rounded-xl shadow-md">
-                    <img src="https://placehold.co/1000x500/065f46/ffffff?text=Peta+Zon+Penampan+(Buffer)+Risiko" alt="Peta Penampan" class="w-full rounded-lg mb-4">
-                    <p class="text-center font-semibold text-gray-700">Peta 2: Analisis Zon Penampan & Kawasan Risiko</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <footer class="bg-emerald-900 text-emerald-100 py-6 text-center mt-10">
-        <p class="text-sm opacity-80">&copy; 2026 Gs. Mohamad Nazril Bin Sharil. Professional GIS Portfolio.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
+        <p>&copy; 2026 Gs. Mohamad Nazril Bin Sharil. Professional GIS Portfolio.</p>
     </footer>
 
 </body>
