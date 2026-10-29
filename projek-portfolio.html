@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Model Hibrid GIS-AHP & GeoAI - Gs. Mohamad Nazril</title>
+    <title>GeoAI Land Use Mapping - Gs. Mohamad Nazril</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: #f8f9fa; color: #334155; }
         .text-navy { color: #1e293b; }
@@ -24,6 +25,7 @@
             <a href="index.html" class="text-slate-500 hover:text-slate-800 font-semibold text-sm transition">
                 &larr; Kembali ke Halaman Utama
             </a>
+            <span class="text-xs font-semibold text-slate-400">Prepared by: Gs. Nazril</span>
         </div>
     </nav>
 
@@ -32,115 +34,119 @@
         
         <!-- Header Section -->
         <header class="mb-14">
-            <h1 class="text-4xl md:text-5xl font-bold text-navy leading-tight mb-2">
-                GeoAI & Spatial Automation: Strategic Land Suitability Analysis for Kota Belud
+            <h1 class="text-4xl md:text-5xl font-bold text-navy leading-tight mb-2 uppercase">
+                GeoAI Model Development for Land Use Mapping
             </h1>
-            <p class="text-xl text-slate-400 font-medium mb-4">Geospatial Analysis & Deep Learning Automation</p>
-            <span class="inline-block bg-navy text-white text-xs font-semibold px-3 py-1 rounded">
-                Geospatial Analysis & Spatial Automation
+            <p class="text-xl text-slate-500 font-medium mb-4">Meeting Urban Planning Standards (Work In Progress)</p>
+            <span class="inline-block bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded">
+                Deep Learning & Spatial Automation
             </span>
-            
-            <h2 class="text-3xl font-bold text-navy mt-10">
-                Model Hibrid GIS-AHP & GeoAI: Analisis Kesesuaian Tanah
-            </h2>
         </header>
 
-        <!-- Project Overview -->
+        <!-- Project Overview & Objective -->
         <section class="mb-12">
             <h3 class="text-2xl font-bold text-navy mb-4 flex items-center border-l-[5px] border-teal-custom pl-3">
                 📊 Project Overview
             </h3>
-            <p class="text-slate-600 leading-relaxed mb-8">
-                This project demonstrates <strong>data-driven spatial intelligence for agricultural strategic planning</strong>, analyzing idle land distributions across Kota Belud to identify high-potential paddy expansion opportunities using advanced GIS techniques and GeoAI.
+            <p class="text-slate-600 leading-relaxed mb-8 text-lg font-medium">
+                Exploring AI's Potential to Accelerate Precision Data Extraction & Statutory Compliance.
             </p>
 
             <h4 class="text-lg font-bold text-navy mb-3 flex items-center">
-                🎯 Business Objective
+                ❓ Why Is It Still 100% Manual? (The Challenge)
             </h4>
             <p class="text-slate-600 leading-relaxed mb-4">
-                For agricultural agencies and town planners (e.g., Jabatan Pertanian, SMART SBB BERNAS), current site selection strategy is often <strong>reactive</strong> — relying on manual field surveys without quantifying actual spatial parameters. This analysis provides a <strong>proactive, evidence-based approach</strong> to site selection.
+                Urban planning is bound by legal and statutory requirements, not just visual satellite mapping! GeoAI output often struggles with irregular borders, overlapping polygons, or misalignment with actual survey lots. To meet planning standards, AI outputs must align with:
             </p>
-            <p class="font-bold text-navy mb-3">Key Goals:</p>
-            <ol class="list-decimal list-inside space-y-3 text-slate-600 ml-2 mb-8">
-                <li><strong>Identify spatial suitability</strong> — quantify where optimal physical factors concentrate (soil, slope, hydrology)</li>
-                <li><strong>Analyze current land use</strong> — map service areas of existing active paddy fields</li>
-                <li><strong>Find agricultural gaps</strong> — locate high-potential, unutilized zones ("white space" / tanah terbiar)</li>
-                <li><strong>Recommend expansion sites</strong> — rank optimal locations with suitability opportunity scores</li>
-            </ol>
+            <ul class="grey-bullets text-slate-600 mb-8 ml-2">
+                <li><strong>Cadastral Lot Boundaries:</strong> Precise legal geometry.</li>
+                <li><strong>Express Land Conditions & Land Titles:</strong> Statutory land use matching.</li>
+                <li><strong>Land Use Zoning:</strong> Defined under state acts and ordinances.</li>
+            </ul>
             <hr class="border-gray-200">
         </section>
 
-        <!-- Market Context & Why This Matters -->
+        <!-- Market Context & GeoAI Evolution -->
         <section class="mb-12">
             <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
-                💼 Market Context & Why This Matters
+                📈 3 GeoAI Evolutions in Geospatial
             </h3>
             
-            <h4 class="text-xl font-semibold text-navy mb-4">Sabah Agricultural Food Security Opportunity</h4>
-            <ul class="grey-bullets text-slate-600 mb-8 ml-2">
-                <li><strong>National focus:</strong> Increasing the Self-Sufficiency Level (SSL) for local rice production (2025-2030)</li>
-                <li><strong>High idle land prevalence:</strong> Extensive abandoned agricultural plots that require systematic revitalization</li>
-                <li><strong>Technological transition:</strong> Shift towards precise, drone/satellite-based monitoring to reduce manual surveying costs</li>
-                <li><strong>Geospatial limitation:</strong> Complex topography requires accurate modeling and professional spatial consultation</li>
-            </ul>
-
-            <h4 class="text-xl font-semibold text-navy mb-4">Why Kota Belud?</h4>
-            <ul class="space-y-2 text-slate-600">
-                <li>✓ Designated national granary area (Jelapang Padi) = high concentration of agricultural initiatives</li>
-                <li>✓ Existing irrigation infrastructure (IADA) = crucial for sustainable paddy cultivation</li>
-                <li>✓ Diverse topographic landscape = excellent for testing multi-criteria spatial models</li>
-                <li>✓ Manageable district size = feasible for detailed high-resolution spatial analysis</li>
-            </ul>
-            <div class="mt-8"><hr class="border-gray-200"></div>
-        </section>
-
-        <!-- Key Technical Concepts -->
-        <section class="mb-12">
-            <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
-                ⚙️ Key Technical Concepts
-            </h3>
-
-            <div class="mb-6">
-                <h4 class="text-lg font-bold text-navy mb-3">1. Multi-Criteria Decision Making (MCDM-AHP)</h4>
-                <ul class="grey-bullets text-slate-600 ml-2">
-                    <li>Definition: Mathematical framework to evaluate and assign weights to spatial criteria (elevation, drainage, soil type)</li>
-                    <li>Advantage over simple overlay: Provides a scientifically validated consistency ratio for decision prioritization</li>
-                    <li>Business application: Define "Highly Suitable" (intervention zones) vs "Unsuitable" areas</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-lg font-bold text-navy mb-3">2. Semantic Segmentation (GeoAI U-Net)</h4>
-                <ul class="grey-bullets text-slate-600 ml-2">
-                    <li>Technique: Automated landcover classification from high-resolution imagery using PyTorch Deep Learning</li>
-                    <li>Advantage: Identifies precise field boundaries accounting for spatial noise (&lt;30 sqm filtering) via ArcPy</li>
-                </ul>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-gray-50 p-5 rounded border border-gray-200">
+                    <h4 class="font-bold text-navy mb-2">1. Semantic Segmentation</h4>
+                    <p class="text-sm text-slate-600">Classifies every pixel into land use categories.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded border border-gray-200">
+                    <h4 class="font-bold text-navy mb-2">2. Object Detection</h4>
+                    <p class="text-sm text-slate-600">Identifies specific entities (buildings, tree canopy, infra).</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded border border-gray-200">
+                    <h4 class="font-bold text-navy mb-2">3. Spatial Predictive Modeling</h4>
+                    <p class="text-sm text-slate-600">Predicts urban growth and future land use patterns.</p>
+                </div>
             </div>
             <div class="mt-8"><hr class="border-gray-200"></div>
         </section>
 
-        <!-- Analysis Steps & Key Findings -->
-        <section>
+        <!-- Technical Workflow -->
+        <section class="mb-12">
             <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
-                📈 Analysis Steps & Key Findings
+                ⚙️ The GeoAI Pipeline Workflow
+            </h3>
+
+            <div class="space-y-6">
+                <div>
+                    <h4 class="text-lg font-bold text-navy mb-2">Step 1: Spatial Data Chipping</h4>
+                    <p class="text-slate-600 ml-2">Image augmentation generating 512x512 patches with 50% overlap to preserve edge details.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-navy mb-2">Step 2: AI Model Training</h4>
+                    <p class="text-slate-600 ml-2">Training U-Net architectures accelerated on Google Colab (T4 GPU) using PyTorch framework.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-navy mb-2">Step 3: Inference & Vectorization</h4>
+                    <p class="text-slate-600 ml-2">Converting raster pixel predictions directly to vector layers (Shapefiles/GeoJSON) via GeoPandas and Rasterio.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-navy mb-2">Step 4: Geometric Noise Filtering</h4>
+                    <p class="text-slate-600 ml-2">Automated post-processing to clean spatial noise, remove irregular fragments, and smooth boundaries for planning compliance.</p>
+                </div>
+            </div>
+            <div class="mt-10"><hr class="border-gray-200"></div>
+        </section>
+
+        <!-- Analysis & Key Findings -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
+                🔬 Model Trial & Error Phases (Key Findings)
             </h3>
             
-            <h4 class="text-lg font-bold text-navy mb-3">Step 1: Data Collection & Preparation</h4>
-            <ul class="grey-bullets text-slate-600 mb-8 ml-2">
-                <li>Loaded physical parameters from GIS databases (DEM, Soil, River buffers)</li>
-                <li>Extracted agricultural indicators via GeoAI segmentation:
-                    <ul class="grey-bullets mt-3 ml-6">
-                        <li><strong>Active paddy fields:</strong> Mapped using U-Net model on Google Colab (T4 GPU)</li>
-                        <li><strong>Idle lands (Tanah terbiar):</strong> 50+ potential unutilized sites identified</li>
-                        <li><strong>Water sources:</strong> Distance to nearest irrigation networks mapped</li>
-                        <li><strong>Total suitability zones:</strong> Derived from AHP weighted overlay</li>
-                    </ul>
+            <ul class="space-y-6 text-slate-600 mb-8">
+                <li class="bg-red-50 p-4 rounded-lg border border-red-100">
+                    <strong class="text-navy text-lg block mb-1">PHASE 1: Standard U-Net</strong>
+                    Shows detected classes but boundaries are "blocky" and jagged. Too coarse for statutory planning needs.
+                </li>
+                <li class="bg-amber-50 p-4 rounded-lg border border-amber-100">
+                    <strong class="text-navy text-lg block mb-1">PHASE 2: U-Net + ResNet34 + Overlap Patching</strong>
+                    Current model limitations. Visual testing highlights the challenge of jagged vs sharp corners in cadastral alignment.
+                </li>
+                <li class="bg-emerald-50 p-4 rounded-lg border border-emerald-200">
+                    <strong class="text-emerald-800 text-lg block mb-1">PHASE 3 (GOAL): U-Net++ + ResNet50 + TTA</strong>
+                    Ultimate goal for maximum precision & statutory alignment (Currently in gradual development due to long training times).
                 </li>
             </ul>
 
-            <!-- Map Image Placeholder -->
-            <div class="border border-gray-300 rounded p-1 bg-white shadow-sm mb-4">
-                <img src="https://placehold.co/1000x500/f8f9fa/1e293b?text=Suitability+Zones+%26+GeoAI+Output+in+Kota+Belud" alt="Map Output" class="w-full h-auto">
+        </section>
+
+        <!-- Tools Used -->
+        <section class="mb-6 bg-slate-50 p-6 rounded-lg border border-slate-200">
+            <h3 class="text-lg font-bold text-navy mb-4">🛠️ Softwares & Tools Used</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-white border border-gray-300 text-slate-700 rounded shadow-sm font-semibold text-sm">Google Colab (T4 GPU)</span>
+                <span class="px-4 py-2 bg-white border border-gray-300 text-slate-700 rounded shadow-sm font-semibold text-sm">PyTorch</span>
+                <span class="px-4 py-2 bg-white border border-gray-300 text-slate-700 rounded shadow-sm font-semibold text-sm">GeoPandas</span>
+                <span class="px-4 py-2 bg-white border border-gray-300 text-slate-700 rounded shadow-sm font-semibold text-sm">Rasterio</span>
             </div>
         </section>
 
