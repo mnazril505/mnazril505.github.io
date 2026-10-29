@@ -189,10 +189,10 @@
                     </div>
                 </div>
             </div>
-
+            <div class="mt-10"><hr class="border-gray-200"></div>
         </section>
 
-        <!-- CURRENT MODEL LIMITATIONS (Last Section) -->
+        <!-- CURRENT MODEL LIMITATIONS -->
         <section class="mb-12">
             <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
                 ⚠️ Current Model Limitations (Key Findings)
@@ -211,6 +211,27 @@
                     <img src="Limitations.jpg" alt="Current Model Limitations Analysis" class="w-full h-auto rounded max-h-[500px] object-contain mx-auto">
                     <p class="text-center text-xs font-semibold text-slate-500 mt-2">Visual Analysis: Boundary & Corner Precision Challenges</p>
                 </div>
+            </div>
+            <div class="mt-10"><hr class="border-gray-200"></div>
+        </section>
+
+        <!-- CONCLUSION & FUTURE RECOMMENDATIONS -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-navy mb-4 flex items-center border-l-[5px] border-teal-custom pl-3">
+                🎯 Conclusion & Future Recommendations
+            </h3>
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 text-slate-700 leading-relaxed space-y-4">
+                <p>
+                    The integration of GeoAI into land use mapping demonstrates immense potential to drastically reduce manual digitization bottlenecks in urban planning workflows. However, bridging the gap between raw pixel classification and statutory cadastral compliance remains a critical challenge.
+                </p>
+                <p>
+                    <strong>Key Takeaways & Next Steps:</strong>
+                </p>
+                <ul class="space-y-2 ml-4">
+                    <li><strong>1. Advanced Architecture Transition:</strong> Moving towards deeper encoders like ResNet50 and U-Net++ combined with Test-Time Augmentation (TTA) is essential to resolve sharp corner inaccuracies.</li>
+                    <li><strong>2. Post-Processing Automation:</strong> Integrating automated topology rules and Douglas-Peucker geometric simplification algorithms will bridge the gap between AI outputs and statutory cadastral standards.</li>
+                    <li><strong>3. Scalable Enterprise Deployment:</strong> Transitioning the pipeline from experimental Google Colab notebooks to scalable cloud-native architectures (such as Google Earth Engine and PostGIS) will enable statewide adoption for local planning authorities.</li>
+                </ul>
             </div>
         </section>
 
