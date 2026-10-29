@@ -1,118 +1,150 @@
 <!DOCTYPE html>
-<html lang="ms" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flagship Project: GeoAI & Spatial Automation - Gs. Mohamad Nazril</title>
+    <title>Model Hibrid GIS-AHP & GeoAI - Gs. Mohamad Nazril</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: #f8f9fa; color: #334155; }
+        .text-navy { color: #1e293b; }
+        .bg-navy { background-color: #1e293b; }
+        .border-teal-custom { border-color: #6096ba; }
+        ul.grey-bullets { list-style-type: none; padding-left: 0; }
+        ul.grey-bullets > li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; }
+        ul.grey-bullets > li::before { content: "•"; color: #cbd5e1; font-size: 1.5rem; position: absolute; left: 0; top: -0.3rem; }
+    </style>
 </head>
-<body class="bg-white text-gray-800 antialiased leading-relaxed">
+<body class="antialiased">
 
     <!-- Top Navigation Bar -->
-    <nav class="bg-white border-b border-gray-200 fixed w-full z-20 top-0 shadow-sm">
-        <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-emerald-700 hover:text-emerald-900 font-semibold flex items-center transition text-sm">
-                <i class="fas fa-arrow-left mr-2"></i> Kembali ke Halaman Utama
+    <nav class="bg-white border-b border-gray-200 fixed w-full z-20 top-0">
+        <div class="max-w-5xl mx-auto px-8 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-slate-500 hover:text-slate-800 font-semibold text-sm transition">
+                &larr; Kembali ke Halaman Utama
             </a>
-            <span class="text-xs font-bold uppercase tracking-wider text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Flagship Research Project</span>
         </div>
     </nav>
 
-    <!-- Main Article Container -->
-    <main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto mt-24 mb-20 px-8 py-12 bg-white shadow-sm border border-gray-100 rounded-lg">
         
         <!-- Header Section -->
-        <header class="mb-12 border-b border-gray-200 pb-8">
-            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
-                Model Hibrid GIS-AHP & GeoAI untuk Penilaian Kesesuaian Tanah Padi (Kota Belud)
+        <header class="mb-14">
+            <h1 class="text-4xl md:text-5xl font-bold text-navy leading-tight mb-2">
+                GeoAI & Spatial Automation: Strategic Land Suitability Analysis for Kota Belud
             </h1>
-            <p class="text-xl text-gray-600 font-medium mb-6">
-                Automasi Ruang, Pemodelan Keputusan Multikriteria (MCDM), dan Pembelajaran Mendalam (*Deep Learning*)
-            </p>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-semibold">GIS & Remote Sensing</span>
-                <span class="px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-semibold">MCDM-AHP</span>
-                <span class="px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-semibold">PyTorch & GeoAI</span>
-                <span class="px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-semibold">Python / ArcPy</span>
-            </div>
+            <p class="text-xl text-slate-400 font-medium mb-4">Geospatial Analysis & Deep Learning Automation</p>
+            <span class="inline-block bg-navy text-white text-xs font-semibold px-3 py-1 rounded">
+                Geospatial Analysis & Spatial Automation
+            </span>
+            
+            <h2 class="text-3xl font-bold text-navy mt-10">
+                Model Hibrid GIS-AHP & GeoAI: Analisis Kesesuaian Tanah
+            </h2>
         </header>
 
         <!-- Project Overview -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center border-l-4 border-emerald-600 pl-3">
-                <span class="mr-2">📊</span> Project Overview
-            </h2>
-            <p class="text-gray-700 text-base md:text-lg mb-4 text-justify">
-                Projek ini membangunkan pangkalan data spatial berskala mikro di Daerah Kota Belud bagi mengenal pasti dan menilai kawasan kesesuaian tanah terbiar untuk penanaman semula padi jelapang. Pendekatan hibrid menggabungkan penilaian faktor fizikal dan sosio-ekonomi secara saintifik.
+            <h3 class="text-2xl font-bold text-navy mb-4 flex items-center border-l-[5px] border-teal-custom pl-3">
+                📊 Project Overview
+            </h3>
+            <p class="text-slate-600 leading-relaxed mb-8">
+                This project demonstrates <strong>data-driven spatial intelligence for agricultural strategic planning</strong>, analyzing idle land distributions across Kota Belud to identify high-potential paddy expansion opportunities using advanced GIS techniques and GeoAI.
             </p>
-            <p class="text-gray-700 text-base md:text-lg text-justify">
-                Sistem ini disokong sepenuhnya oleh perpaipan automasi Python (ArcPy) dan algoritma Pembelajaran Mendalam (*GeoAI U-Net*) untuk perahan data guna tanah berketepatan tinggi daripada imej satelit.
+
+            <h4 class="text-lg font-bold text-navy mb-3 flex items-center">
+                🎯 Business Objective
+            </h4>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                For agricultural agencies and town planners (e.g., Jabatan Pertanian, SMART SBB BERNAS), current site selection strategy is often <strong>reactive</strong> — relying on manual field surveys without quantifying actual spatial parameters. This analysis provides a <strong>proactive, evidence-based approach</strong> to site selection.
             </p>
+            <p class="font-bold text-navy mb-3">Key Goals:</p>
+            <ol class="list-decimal list-inside space-y-3 text-slate-600 ml-2 mb-8">
+                <li><strong>Identify spatial suitability</strong> — quantify where optimal physical factors concentrate (soil, slope, hydrology)</li>
+                <li><strong>Analyze current land use</strong> — map service areas of existing active paddy fields</li>
+                <li><strong>Find agricultural gaps</strong> — locate high-potential, unutilized zones ("white space" / tanah terbiar)</li>
+                <li><strong>Recommend expansion sites</strong> — rank optimal locations with suitability opportunity scores</li>
+            </ol>
+            <hr class="border-gray-200">
         </section>
 
-        <!-- Methodology Framework -->
+        <!-- Market Context & Why This Matters -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center border-l-4 border-emerald-600 pl-3">
-                <span class="mr-2">🔍</span> Methodology & Implementation Framework
-            </h2>
-            <div class="bg-slate-900 text-white p-8 rounded-xl shadow-lg font-mono text-sm space-y-6">
-                <div class="border border-slate-700 p-4 rounded bg-slate-800">
-                    <p class="text-emerald-400 font-bold mb-1">[ LAYER 1: MULTI-CRITERIA DECISION MAKING (MCDM-AHP) ]</p>
-                    <p class="text-gray-300">• Input: Faktor Topografi (DEM), Kecerunan, Jenis Tanih, Sumber Air & Saliran</p>
-                    <p class="text-gray-300">• Proses: Penilaian Matriks Perbandingan Berpasangan & Pengiraan Nilai Wajaran (Weightage)</p>
-                </div>
-                <div class="text-center text-emerald-400 font-bold">↓</div>
-                <div class="border border-slate-700 p-4 rounded bg-slate-800">
-                    <p class="text-emerald-400 font-bold mb-1">[ LAYER 2: GEOAI & DEEP LEARNING EXTRACTION ]</p>
-                    <p class="text-gray-300">• Input: Imej Satelit & Data UAV Multispektral</p>
-                    <p class="text-gray-300">• Proses: Latihan Model U-Net + ResNet34 (Google Colab T4 GPU) & Penapisan Hingar Geometri (&lt;30 sqm)</p>
-                </div>
-                <div class="text-center text-emerald-400 font-bold">↓</div>
-                <div class="border border-slate-700 p-4 rounded bg-slate-800">
-                    <p class="text-emerald-400 font-bold mb-1">[ LAYER 3: SPATIAL OVERLAY & SUITABILITY MAPPING ]</p>
-                    <p class="text-gray-300">• Output Akhir: Peta Klasifikasi Kesesuaian Tanah (Sangat Sesuai, Sesuai, Tidak Sesuai)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Map Gallery Section -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center border-l-4 border-emerald-600 pl-3">
-                <span class="mr-2">🗺️</span> Map Gallery & Visualization
-            </h2>
+            <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
+                💼 Market Context & Why This Matters
+            </h3>
             
-            <div class="space-y-10">
-                <!-- Map 1 -->
-                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Peta 1: Model Kesesuaian Tanah Padi Berasaskan AHP Di Kota Belud</h3>
-                    <p class="text-gray-600 text-sm mb-4">Visualisasi spatial integrasi faktor fizikal dan sosio-ekonomi dalam menentukan kawasan berpotensi tinggi.</p>
-                    <div class="bg-white p-2 rounded-lg border border-gray-300 shadow-sm">
-                        <img src="https://placehold.co/1000x500/047857/ffffff?text=Peta+Kesesuaian+Tanah+AHP+Kota+Belud" alt="Peta AHP" class="w-full rounded">
-                        <p class="text-center text-xs font-semibold text-gray-500 mt-2">Rajah 1: Peta Model Kesesuaian Tanah AHP Kota Belud</p>
-                    </div>
-                </div>
+            <h4 class="text-xl font-semibold text-navy mb-4">Sabah Agricultural Food Security Opportunity</h4>
+            <ul class="grey-bullets text-slate-600 mb-8 ml-2">
+                <li><strong>National focus:</strong> Increasing the Self-Sufficiency Level (SSL) for local rice production (2025-2030)</li>
+                <li><strong>High idle land prevalence:</strong> Extensive abandoned agricultural plots that require systematic revitalization</li>
+                <li><strong>Technological transition:</strong> Shift towards precise, drone/satellite-based monitoring to reduce manual surveying costs</li>
+                <li><strong>Geospatial limitation:</strong> Complex topography requires accurate modeling and professional spatial consultation</li>
+            </ul>
 
-                <!-- Map 2 -->
-                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Peta 2: Hasil Klasifikasi GeoAI & Penapisan Vektor Ruang</h3>
-                    <p class="text-gray-600 text-sm mb-4">Keputusan segmentasi model U-Net (PyTorch) berserta penapisan hingar geometri untuk analisis petak sawah.</p>
-                    <div class="bg-white p-2 rounded-lg border border-gray-300 shadow-sm">
-                        <img src="https://placehold.co/1000x500/065f46/ffffff?text=GeoAI+Segmentation+Output" alt="GeoAI Output" class="w-full rounded">
-                        <p class="text-center text-xs font-semibold text-gray-500 mt-2">Rajah 2: Hasil Perahan Data Guna Tanah Berasaskan Model U-Net</p>
-                    </div>
-                </div>
+            <h4 class="text-xl font-semibold text-navy mb-4">Why Kota Belud?</h4>
+            <ul class="space-y-2 text-slate-600">
+                <li>✓ Designated national granary area (Jelapang Padi) = high concentration of agricultural initiatives</li>
+                <li>✓ Existing irrigation infrastructure (IADA) = crucial for sustainable paddy cultivation</li>
+                <li>✓ Diverse topographic landscape = excellent for testing multi-criteria spatial models</li>
+                <li>✓ Manageable district size = feasible for detailed high-resolution spatial analysis</li>
+            </ul>
+            <div class="mt-8"><hr class="border-gray-200"></div>
+        </section>
+
+        <!-- Key Technical Concepts -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
+                ⚙️ Key Technical Concepts
+            </h3>
+
+            <div class="mb-6">
+                <h4 class="text-lg font-bold text-navy mb-3">1. Multi-Criteria Decision Making (MCDM-AHP)</h4>
+                <ul class="grey-bullets text-slate-600 ml-2">
+                    <li>Definition: Mathematical framework to evaluate and assign weights to spatial criteria (elevation, drainage, soil type)</li>
+                    <li>Advantage over simple overlay: Provides a scientifically validated consistency ratio for decision prioritization</li>
+                    <li>Business application: Define "Highly Suitable" (intervention zones) vs "Unsuitable" areas</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold text-navy mb-3">2. Semantic Segmentation (GeoAI U-Net)</h4>
+                <ul class="grey-bullets text-slate-600 ml-2">
+                    <li>Technique: Automated landcover classification from high-resolution imagery using PyTorch Deep Learning</li>
+                    <li>Advantage: Identifies precise field boundaries accounting for spatial noise (&lt;30 sqm filtering) via ArcPy</li>
+                </ul>
+            </div>
+            <div class="mt-8"><hr class="border-gray-200"></div>
+        </section>
+
+        <!-- Analysis Steps & Key Findings -->
+        <section>
+            <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
+                📈 Analysis Steps & Key Findings
+            </h3>
+            
+            <h4 class="text-lg font-bold text-navy mb-3">Step 1: Data Collection & Preparation</h4>
+            <ul class="grey-bullets text-slate-600 mb-8 ml-2">
+                <li>Loaded physical parameters from GIS databases (DEM, Soil, River buffers)</li>
+                <li>Extracted agricultural indicators via GeoAI segmentation:
+                    <ul class="grey-bullets mt-3 ml-6">
+                        <li><strong>Active paddy fields:</strong> Mapped using U-Net model on Google Colab (T4 GPU)</li>
+                        <li><strong>Idle lands (Tanah terbiar):</strong> 50+ potential unutilized sites identified</li>
+                        <li><strong>Water sources:</strong> Distance to nearest irrigation networks mapped</li>
+                        <li><strong>Total suitability zones:</strong> Derived from AHP weighted overlay</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Map Image Placeholder -->
+            <div class="border border-gray-300 rounded p-1 bg-white shadow-sm mb-4">
+                <img src="https://placehold.co/1000x500/f8f9fa/1e293b?text=Suitability+Zones+%26+GeoAI+Output+in+Kota+Belud" alt="Map Output" class="w-full h-auto">
             </div>
         </section>
 
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
-        <p>&copy; 2026 Gs. Mohamad Nazril Bin Sharil. Professional GIS Portfolio.</p>
-    </footer>
 
 </body>
 </html>
