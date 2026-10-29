@@ -122,12 +122,26 @@
             <div class="mt-10"><hr class="border-gray-200"></div>
         </section>
 
-        <!-- Model Trial & Error Phases with Individual Images -->
+        <!-- Model Trial & Error Phases & Current Limitations -->
         <section class="mb-12">
             <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
-                🔬 Model Trial & Error Phases (Key Findings)
+                🔬 Model Trial & Error Phases & Current Limitations
             </h3>
             
+            <!-- NEW SUB-SECTION: Current Model Limitations -->
+            <div class="mb-8 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg shadow-sm">
+                <h4 class="text-lg font-bold text-navy mb-2 flex items-center">
+                    <i class="fas fa-exclamation-triangle text-blue-600 mr-2"></i> Current Model Limitations (Key Findings)
+                </h4>
+                <p class="text-slate-700 leading-relaxed text-sm md:text-base mb-3">
+                    Walaupun model U-Net dan ResNet berjaya mengesan kelas guna tanah secara keseluruhan, analisis visual mendapati wujudnya kekangan ketara pada fasa semasa:
+                </p>
+                <ul class="space-y-2 text-slate-700 text-sm md:text-base ml-4">
+                    <li><strong>• Masalah Sempadan (Boundary Detection):</strong> Garisan sempadan objek sering kelihatan beralun, kasar, dan tidak selari dengan lot kadaster sebenar.</li>
+                    <li>• <strong>Ketepatan Bucu (Sharp vs Jagged Corners):</strong> Model sukar mengekalkan sudut tajam (sharp corners) pada sudut lot, menyebabkan bucu kelihatan bergerigi dan memerlukan proses pembersihan geometri manual yang rumit.</li>
+                </ul>
+            </div>
+
             <div class="space-y-8">
                 <!-- PHASE 1 -->
                 <div class="bg-red-50 p-6 rounded-lg border border-red-100 flex flex-col md:flex-row gap-6 items-center">
