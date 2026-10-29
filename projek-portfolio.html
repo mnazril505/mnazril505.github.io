@@ -89,40 +89,67 @@
             <div class="mt-8"><hr class="border-gray-200"></div>
         </section>
 
-        <!-- Technical Workflow with Infographic -->
+        <!-- Technical Workflow with Step-by-Step Images -->
         <section class="mb-12">
             <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
-                ⚙️ The GeoAI Pipeline Workflow & Infographic
+                ⚙️ The GeoAI Pipeline Workflow (Step-by-Step)
             </h3>
 
-            <!-- Main Infographic Image -->
-            <div class="mb-6 border border-gray-200 rounded-lg p-2 bg-slate-50 shadow-sm text-center">
+            <!-- Main Infographic Overview -->
+            <div class="mb-8 border border-gray-200 rounded-lg p-2 bg-slate-50 shadow-sm text-center">
                 <img src="WhatsApp Image 2026-10-26 at 8.15.22 AM.jpeg" alt="GeoAI Infographic Workflow" class="w-full h-auto rounded mx-auto max-h-[800px] object-contain">
                 <p class="text-center text-xs font-semibold text-slate-500 mt-2">Rajah Infografik Utama: GeoAI Model Development & Workflow</p>
             </div>
 
-            <div class="space-y-6">
-                <div>
-                    <h4 class="text-lg font-bold text-navy mb-2">Step 1: Spatial Data Chipping</h4>
-                    <p class="text-slate-600 ml-2">Image augmentation generating 512x512 patches with 50% overlap to preserve edge details.</p>
+            <div class="space-y-8">
+                <!-- STEP 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-3/5">
+                        <strong class="text-navy text-xl block mb-2">Step 1: Spatial Data Chipping</strong>
+                        <p class="text-slate-600">Image augmentation generating 512x512 patches with 50% overlap to preserve edge details.</p>
+                    </div>
+                    <div class="md:w-2/5 w-full">
+                        <img src="step1.jpg" alt="Step 1 Spatial Data Chipping" class="w-full h-48 object-cover rounded border border-gray-300 bg-white shadow-sm" onerror="this.src='https://placehold.co/400x250/f1f5f9/475569?text=Upload+step1.jpg'">
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-bold text-navy mb-2">Step 2: AI Model Training</h4>
-                    <p class="text-slate-600 ml-2">Training U-Net architectures accelerated on Google Colab (T4 GPU) using PyTorch framework.</p>
+
+                <!-- STEP 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-3/5">
+                        <strong class="text-navy text-xl block mb-2">Step 2: AI Model Training</strong>
+                        <p class="text-slate-600">Training U-Net architectures accelerated on Google Colab (T4 GPU) using PyTorch framework.</p>
+                    </div>
+                    <div class="md:w-2/5 w-full">
+                        <img src="step2.jpg" alt="Step 2 AI Model Training" class="w-full h-48 object-cover rounded border border-gray-300 bg-white shadow-sm" onerror="this.src='https://placehold.co/400x250/f1f5f9/475569?text=Upload+step2.jpg'">
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-bold text-navy mb-2">Step 3: Inference & Vectorization</h4>
-                    <p class="text-slate-600 ml-2">Converting raster pixel predictions directly to vector layers (Shapefiles/GeoJSON) via GeoPandas and Rasterio.</p>
+
+                <!-- STEP 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-3/5">
+                        <strong class="text-navy text-xl block mb-2">Step 3: Inference & Vectorization</strong>
+                        <p class="text-slate-600">Converting raster pixel predictions directly to vector layers (Shapefiles/GeoJSON) via GeoPandas and Rasterio.</p>
+                    </div>
+                    <div class="md:w-2/5 w-full">
+                        <img src="step3.jpg" alt="Step 3 Inference & Vectorization" class="w-full h-48 object-cover rounded border border-gray-300 bg-white shadow-sm" onerror="this.src='https://placehold.co/400x250/f1f5f9/475569?text=Upload+step3.jpg'">
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-bold text-navy mb-2">Step 4: Geometric Noise Filtering</h4>
-                    <p class="text-slate-600 ml-2">Automated post-processing to clean spatial noise, remove irregular fragments, and smooth boundaries for planning compliance.</p>
+
+                <!-- STEP 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-3/5">
+                        <strong class="text-navy text-xl block mb-2">Step 4: Geometric Noise Filtering</strong>
+                        <p class="text-slate-600">Automated post-processing to clean spatial noise, remove irregular fragments, and smooth boundaries for planning compliance.</p>
+                    </div>
+                    <div class="md:w-2/5 w-full">
+                        <img src="step4.jpg" alt="Step 4 Geometric Noise Filtering" class="w-full h-48 object-cover rounded border border-gray-300 bg-white shadow-sm" onerror="this.src='https://placehold.co/400x250/f1f5f9/475569?text=Upload+step4.jpg'">
+                    </div>
                 </div>
             </div>
             <div class="mt-10"><hr class="border-gray-200"></div>
         </section>
 
-        <!-- Model Trial & Error Phases (Phase 1, 2, 3 First) -->
+        <!-- Model Trial & Error Phases (Phase 1, 2, 3) -->
         <section class="mb-12">
             <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
                 🔬 Model Trial & Error Phases
@@ -165,7 +192,7 @@
 
         </section>
 
-        <!-- CURRENT MODEL LIMITATIONS (Pushed to the Last) -->
+        <!-- CURRENT MODEL LIMITATIONS (Last Section) -->
         <section class="mb-12">
             <h3 class="text-2xl font-bold text-navy mb-6 flex items-center border-l-[5px] border-teal-custom pl-3">
                 ⚠️ Current Model Limitations (Key Findings)
@@ -179,7 +206,7 @@
                     <li><strong>• Boundary Detection Issues:</strong> Object boundary lines often appear wavy, coarse, and misaligned with actual cadastral lots.</li>
                     <li><strong>• Corner Accuracy (Sharp vs. Jagged Corners):</strong> The model struggles to maintain sharp corners at lot angles, resulting in jagged vertices that require complex manual geometric cleaning processes.</li>
                 </ul>
-                <!-- Uploaded Limitations Image -->
+                <!-- Limitations Image -->
                 <div class="border border-blue-200 rounded-lg p-2 bg-white shadow-sm text-center">
                     <img src="Limitations.jpg" alt="Current Model Limitations Analysis" class="w-full h-auto rounded max-h-[500px] object-contain mx-auto">
                     <p class="text-center text-xs font-semibold text-slate-500 mt-2">Visual Analysis: Boundary & Corner Precision Challenges</p>
