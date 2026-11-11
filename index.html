@@ -203,7 +203,7 @@
                     </span>
                 </div>
 
-                <!-- STANDARDIZED EXECUTIVE BANNER -->
+                <!-- STANDARDIZED EXECUTIVE BANNER (OVERVIEW & EXPLORE MAPS) -->
                 <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 rounded-3xl p-6 sm:p-9 text-white shadow-md border border-slate-800">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                         <div class="max-w-3xl">
@@ -260,7 +260,7 @@
                     </span>
                 </div>
 
-                <!-- STANDARDIZED EXECUTIVE BANNER -->
+                <!-- STANDARDIZED EXECUTIVE BANNER (OVERVIEW & EXPLORE MAPS) -->
                 <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 rounded-3xl p-6 sm:p-9 text-white mb-10 shadow-md border border-slate-800">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                         <div class="max-w-3xl">
@@ -776,7 +776,6 @@
 
             <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-12 bg-slate-50/50">
 
-                <!-- 1. Project Overview & Challenge -->
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="w-9 h-9 rounded-xl bg-emerald-800 text-white flex items-center justify-center font-bold text-sm">01</span>
@@ -817,7 +816,6 @@
                     </div>
                 </div>
 
-                <!-- 2. 3 GeoAI Evolutions -->
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="w-9 h-9 rounded-xl bg-teal-800 text-white flex items-center justify-center font-bold text-sm">02</span>
@@ -846,7 +844,6 @@
                     </div>
                 </div>
 
-                <!-- 3. Workflow Steps (Text Only) -->
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-xs">03</span>
@@ -880,7 +877,6 @@
                     </div>
                 </div>
 
-                <!-- 4. Trial & Error Phases (Text Analysis) -->
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="w-8 h-8 rounded-lg bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">04</span>
@@ -909,7 +905,6 @@
                     </div>
                 </div>
 
-                <!-- 5. Current Model Limitations -->
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-xs">05</span>
@@ -936,7 +931,6 @@
                     </div>
                 </div>
 
-                <!-- 6. Conclusion & Tools -->
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-xs">06</span>
@@ -1005,7 +999,6 @@
 
             <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-12 bg-slate-50/50">
 
-                <!-- 01. Urban Planning & Development -->
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="w-8 h-8 rounded-lg bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">01</span>
@@ -1176,7 +1169,7 @@
                         <span class="w-8 h-8 rounded-lg bg-emerald-900 text-white flex items-center justify-center font-bold text-xs">03</span>
                         <div>
                             <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">GIS DATABASE</h4>
-                            <p class="text-xs text-slate-500 font-medium">System integration diagram: Base Map nucleus feeding the enterprise GIS database</p>
+                            <p class="text-xs text-slate-500 font-medium">System Integration GIS Database</p>
                         </div>
                     </div>
 
@@ -1379,139 +1372,6 @@
             <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
                 <span>Standardized Urban Planning Framework &bull; Sabah Statutory Regulations</span>
                 <button onclick="closeUrbanModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition cursor-pointer">
-                    Close Window
-                </button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- MODAL 3: EXPLORE MAPS & VISUAL GALLERY                                    -->
-    <!-- ========================================================================= -->
-    <div id="mapViewerModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/85 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
-        
-        <div class="bg-white w-full max-w-5xl max-h-[92vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="mapViewerModalCard">
-            
-            <div class="bg-slate-900 text-white px-6 py-4 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
-                <div class="flex items-center gap-3">
-                    <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm">
-                        <i class="fas fa-map-location-dot"></i>
-                    </span>
-                    <div>
-                        <h3 class="text-base sm:text-lg font-black tracking-tight text-white uppercase" id="mapModalTitle">Explore Maps &amp; Visual Gallery</h3>
-                        <p class="text-xs text-slate-400" id="mapModalSubtitle">High-Resolution Geospatial Visuals, Workflows &amp; Map Layers</p>
-                    </div>
-                </div>
-                <button onclick="closeMapModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm cursor-pointer">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <div class="p-6 sm:p-8 overflow-y-auto modal-scroll space-y-6 bg-slate-50/50">
-
-                <!-- GeoAI Visual Gallery -->
-                <div id="geoaiVisualGallery" class="space-y-6 hidden">
-                    
-                    <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
-                        <button onclick="switchGeoaiVisual('infographic')" id="btn-vis-infographic" class="geoai-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-800 text-white transition cursor-pointer">
-                            1. Full Workflow Infographic
-                        </button>
-                        <button onclick="switchGeoaiVisual('steps')" id="btn-vis-steps" class="geoai-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer">
-                            2. 4-Stage Execution Visuals
-                        </button>
-                        <button onclick="switchGeoaiVisual('phases')" id="btn-vis-phases" class="geoai-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer">
-                            3. Model Test Results &amp; Limitations
-                        </button>
-                    </div>
-
-                    <div id="vis-infographic" class="geoai-vis-panel space-y-2">
-                        <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm text-center">
-                            <img src="WhatsApp Image 2026-10-26 at 8.15.22 AM.jpeg" alt="GeoAI Infographic Workflow" class="w-full h-auto rounded-xl mx-auto max-h-[650px] object-contain" onerror="this.src='https://placehold.co/1000x650/064e3b/ffffff?text=GeoAI+Model+Development+%26+Workflow+Infographic'">
-                            <p class="text-center text-xs font-semibold text-slate-500 mt-2">Rajah Infografik Utama: GeoAI Model Development &amp; Workflow</p>
-                        </div>
-                    </div>
-
-                    <div id="vis-steps" class="geoai-vis-panel hidden space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                                <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Stage 01</span>
-                                <h6 class="font-bold text-slate-900 text-xs mb-2">Step 1: Spatial Data Chipping (512&times;512 px)</h6>
-                                <img src="Step 1.jpg" alt="Step 1" class="w-full h-48 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/500x300/0f766e/ffffff?text=Step+1:+Spatial+Data+Chipping'">
-                            </div>
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                                <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Stage 02</span>
-                                <h6 class="font-bold text-slate-900 text-xs mb-2">Step 2: AI Model Training (PyTorch &bull; CUDA T4)</h6>
-                                <img src="Step 2.png" alt="Step 2" class="w-full h-48 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/500x300/0f766e/ffffff?text=Step+2:+AI+Model+Training'">
-                            </div>
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                                <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Stage 03</span>
-                                <h6 class="font-bold text-slate-900 text-xs mb-2">Step 3: Inference &amp; Vectorization (GeoPandas)</h6>
-                                <img src="Step 3.png" alt="Step 3" class="w-full h-48 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/500x300/0f766e/ffffff?text=Step+3:+Inference+%26+Vectorization'">
-                            </div>
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                                <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Stage 04</span>
-                                <h6 class="font-bold text-slate-900 text-xs mb-2">Step 4: Geometric Noise Filtering &amp; Snapping</h6>
-                                <img src="Step 4.png" alt="Step 4" class="w-full h-48 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/500x300/0f766e/ffffff?text=Step+4:+Geometric+Noise+Filtering'">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="vis-phases" class="geoai-vis-panel hidden space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                                <span class="px-2 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold rounded uppercase mb-1 inline-block">Phase 1 Test Result</span>
-                                <h6 class="font-bold text-slate-900 text-xs mb-2">Standard U-Net: Jagged/Blocky Boundaries</h6>
-                                <img src="phase 1.jpg" alt="Phase 1" class="w-full h-48 object-cover rounded-xl border border-red-200" onerror="this.src='https://placehold.co/500x300/fee2e2/991b1b?text=Phase+1:+Blocky+Boundaries'">
-                            </div>
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                                <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded uppercase mb-1 inline-block">Phase 2 Test Result</span>
-                                <h6 class="font-bold text-slate-900 text-xs mb-2">U-Net + ResNet34 + Overlap Patching</h6>
-                                <img src="Phase 2.jpg" alt="Phase 2" class="w-full h-48 object-cover rounded-xl border border-amber-200" onerror="this.src='https://placehold.co/500x300/fef3c7/92400e?text=Phase+2:+ResNet34+Testing'">
-                            </div>
-                        </div>
-                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                            <h6 class="font-bold text-slate-900 text-xs mb-2">Visual Analysis: Boundary Detection &amp; Corner Inaccuracy Challenges</h6>
-                            <img src="Limitations.jpg" alt="Limitations" class="w-full h-auto max-h-[400px] object-contain rounded-xl border border-slate-200 mx-auto" onerror="this.src='https://placehold.co/800x400/fffbeb/b45309?text=Limitations+Visual+Analysis'">
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Standard Map Preview Section -->
-                <div id="standardMapSection" class="space-y-6">
-                    <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-300 shadow-md relative group">
-                        <img src="" alt="Geospatial Map Visualization" id="mapModalImage" class="w-full h-72 sm:h-96 md:h-[450px] object-cover">
-                        <span class="absolute top-4 left-4 bg-slate-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-lg backdrop-blur-sm shadow-xs" id="mapModalBadge">
-                            Active Spatial Layer
-                        </span>
-                        <div class="absolute bottom-4 right-4 bg-slate-950/80 text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm border border-white/10 flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span id="mapModalLayerInfo">Layer: Gazetted Zoning Plan</span>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-3 gap-2">
-                            <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
-                                <i class="fas fa-info-circle text-emerald-600"></i> Spatial Specifications &amp; Methodology
-                            </h5>
-                            <span class="text-xs font-semibold text-slate-500" id="mapModalCRS">CRS: Timbalai 1948 / RSO Borneo</span>
-                        </div>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-justify" id="mapModalDescription">
-                            Detailed spatial inspection notes will appear here.
-                        </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1" id="mapModalStats">
-                            <!-- Dynamic stats -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
-                <span>Verified Spatial Data &bull; Gs. Mohamad Nazril Professional GIS Portfolio</span>
-                <button onclick="closeMapModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition cursor-pointer">
                     Close Window
                 </button>
             </div>
