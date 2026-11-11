@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Gs. Mohamad Nazril Bin Sharil</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -21,10 +18,10 @@
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav class="bg-white/95 backdrop-blur-md border-b border-slate-200 fixed w-full z-40 top-0 shadow-xs">
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200/80 fixed w-full z-40 top-0 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2 group">
-                <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-700 to-teal-500 flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-700 to-teal-500 flex items-center justify-center text-white shadow-sm shadow-emerald-500/20 group-hover:scale-105 transition-transform">
                     <i class="fas fa-globe-asia text-sm"></i>
                 </span>
                 <span class="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-emerald-700 transition-colors">
@@ -33,7 +30,7 @@
             </a>
             <div class="space-x-7 hidden md:flex font-semibold text-slate-600 text-sm">
                 <a href="#expertise" class="hover:text-emerald-600 transition">Expertise</a>
-                <a href="#flagship" class="hover:text-emerald-600 transition">Flagship</a>
+                <a href="#flagship" class="hover:text-emerald-600 transition">Flagship GeoAI</a>
                 <a href="#urban-planning" class="hover:text-emerald-600 transition">Urban Planning</a>
                 <a href="#environmental" class="hover:text-emerald-600 transition">Environmental</a>
                 <a href="#development-plans" class="hover:text-emerald-600 transition">Land Development</a>
@@ -48,7 +45,7 @@
     <!-- Hero Section -->
     <header class="hero-pattern text-white pt-36 pb-24 mt-12 relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 text-xs font-semibold mb-6 backdrop-blur-sm">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 text-xs font-semibold mb-6 backdrop-blur-sm">
                 <i class="fas fa-certificate text-emerald-400"></i> Certified Geospatial Practitioner | IGRSM & MBOT
             </div>
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-5 leading-tight">
@@ -78,7 +75,7 @@
                 <!-- Expertise Card -->
                 <div class="bg-gradient-to-br from-slate-50 to-emerald-50/30 rounded-2xl p-7 border border-slate-200 shadow-xs">
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-xs">
+                        <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-sm shadow-emerald-600/20">
                             <i class="fas fa-brain"></i>
                         </span>
                         <div>
@@ -126,7 +123,7 @@
                 <div class="bg-gradient-to-br from-slate-50 to-teal-50/30 rounded-2xl p-7 border border-slate-200 shadow-xs flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-6">
-                            <span class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center font-bold shadow-xs">
+                            <span class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center font-bold shadow-sm shadow-teal-600/20">
                                 <i class="fas fa-microchip"></i>
                             </span>
                             <div>
@@ -135,16 +132,16 @@
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">ArcGIS Pro & ArcMap</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">QGIS Desktop</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">Python (ArcPy, GeoPandas)</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">PostGIS / PostgreSQL</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">Google Earth Engine</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">U-Net++ & ResNet50 GeoAI</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">Rasterio & Shapely</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">AHP Multicriteria Engine</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">DJI Terra Photogrammetry</span>
-                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs">Sabah Cap. 141 Compliance</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">ArcGIS Pro & ArcMap</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">QGIS Desktop</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">Python (ArcPy, GeoPandas)</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">PostGIS / PostgreSQL</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">Google Earth Engine</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">U-Net++ & ResNet50 GeoAI</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">Rasterio & Shapely</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">AHP Multicriteria Engine</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">DJI Terra Photogrammetry</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">Sabah Cap. 141 Compliance</span>
                         </div>
                     </div>
                     <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500 flex items-center justify-between">
@@ -185,7 +182,8 @@
                 <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col lg:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
                     <div class="lg:w-2/5 bg-slate-100 relative group overflow-hidden">
                         <img src="https://placehold.co/700x480/064e3b/ffffff?text=GeoAI+Deep+Learning+Pipeline" alt="GeoAI Pipeline" class="object-cover w-full h-full min-h-[260px] group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-xs">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-sm">
                             <i class="fas fa-robot mr-1 text-emerald-600"></i> Active Pipeline
                         </span>
                     </div>
@@ -212,7 +210,7 @@
                         </div>
                         <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
                             <span class="text-xs text-slate-400 font-medium">Target: Automated Parcel Mapping</span>
-                            <a href="projek-portfolio.html" class="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-xs">
+                            <a href="projek-portfolio.html" class="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-sm shadow-emerald-600/30">
                                 View Technical Case Study <i class="fas fa-arrow-right ml-2 text-xs"></i>
                             </a>
                         </div>
@@ -222,9 +220,10 @@
 
             <!-- ========================================================================= -->
             <!-- 2. GIS SUPPORT FOR URBAN PLANNING CONSULTANCY PROJECTS                     -->
-            <!-- (EXACT ORDER: IMAGE 1 -> IMAGE 2 -> IMAGE 3 -> IMAGE 4 -> PROJECTS)       -->
+            <!-- (ORDER: IMAGE 1 -> IMAGE 2 -> IMAGE 3 -> IMAGE 4 -> INDIVIDUAL PROJECTS)  -->
             <!-- ========================================================================= -->
             <section id="urban-planning" class="mb-24">
+                
                 <!-- Section Header -->
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 border-b-2 border-emerald-200 pb-4">
                     <div>
@@ -995,7 +994,7 @@
                     <!-- Item 5 -->
                     <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Sin+On+Road+Tawau" alt="Tawau" class="w-full h-36 object-cover">
-                        <div class="p-4 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Commercial Rezoning</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Sin On Road, Tawau</h5>
