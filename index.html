@@ -114,7 +114,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Split Layout: Teks di Kiri, Gambar Profil di Kanan) -->
     <header class="hero-dark-canvas text-white pt-32 pb-24 mt-12 relative overflow-hidden border-b border-emerald-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
@@ -367,7 +367,6 @@
                                 <i class="fas fa-book-open text-base"></i>
                                 <span>Overview</span>
                             </button>
-                            <!-- Pautan ke Galeri Peta Urban Planning -->
                             <button onclick="openMapModal('urban')" class="btn-slate-dark font-extrabold px-6 py-4 rounded-2xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
                                 <i class="fas fa-map-location-dot text-base text-emerald-400"></i>
                                 <span>Explore Maps</span>
@@ -381,7 +380,7 @@
                     <span class="h-px bg-slate-300 flex-grow"></span>
                 </div>
 
-                <!-- INDIVIDUAL PROJECT CARDS (KK, Kudat, Keningau) -->
+                <!-- INDIVIDUAL PROJECT CARDS -->
                 <div class="space-y-6">
                     <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
                         <div class="md:w-1/3 signature-dark-card relative flex items-center justify-center p-6 text-center">
@@ -472,47 +471,6 @@
                 </div>
             </section>
 
-            <!-- ============================================================= -->
-            <!-- 3. ENVIRONMENTAL & BASIN MANAGEMENT PROJECTS                  -->
-            <!-- ============================================================= -->
-            <section id="environmental" class="mb-24">
-                <div class="flex items-center gap-3 mb-8 border-b-2 border-slate-200 pb-3">
-                    <span class="w-3 h-7 bg-emerald-500 rounded-md"></span>
-                    <h3 class="text-xl sm:text-2xl font-black text-slate-900">3. GIS Support for Environmental Projects</h3>
-                </div>
-
-                <div class="space-y-6">
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=IRBM+Tuaran+Basin" alt="IRBM Tuaran" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">
-                                Catchment Master Plan
-                            </span>
-                        </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Environmental Management</span>
-                                    <span class="text-slate-300">&bull;</span>
-                                    <span class="text-xs text-slate-500 font-semibold">Hydrological Catchment</span>
-                                </div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">IRBM Plan For Sungai Tuaran Basin</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: Watershed Delineation, Land Use Pressure & Riparian Buffer Modeling</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Extracted watershed basin boundaries from high-resolution terrain surfaces, evaluated surface runoff vulnerability from agricultural expansion, and delineated riparian reserves to formulate sustainable river basin preservation policies.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-500 font-semibold">Status: Completed Documentation</span>
-                                <a href="projek-irbm.html" class="btn-emerald-glow px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2">
-                                    <i class="fas fa-map-marked-alt"></i> View Case Study & Maps
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </div>
     </main>
 
@@ -532,72 +490,41 @@
         </div>
     </footer>
 
-    <!-- ========================================================================= -->
     <!-- MODAL 1: GEOAI OVERVIEW -->
-    <!-- ========================================================================= -->
     <div id="geoaiModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/80 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
         <div class="bg-white w-full max-w-5xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="geoaiModalCard">
             <div class="signature-dark-card text-white px-6 py-5 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
-                <div class="flex items-center gap-3">
-                    <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm">
-                        <i class="fas fa-brain"></i>
-                    </span>
-                    <div>
-                        <h3 class="text-base sm:text-lg font-black tracking-tight text-white uppercase">GeoAI Model Development for Land Use Mapping</h3>
-                        <p class="text-xs text-slate-400">Technical Overview &bull; Meeting Urban Planning Standards &bull; Prepared by: Gs. Nazril</p>
-                    </div>
-                </div>
-                <button onclick="closeGeoaiModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm cursor-pointer">
-                    <i class="fas fa-times"></i>
-                </button>
+                <h3 class="text-base sm:text-lg font-black tracking-tight text-white uppercase">GeoAI Model Development for Land Use Mapping</h3>
+                <button onclick="closeGeoaiModal()" class="w-9 h-9 rounded-xl bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center cursor-pointer"><i class="fas fa-times"></i></button>
             </div>
-            <!-- (Kandungan Modal GeoAI diringkaskan untuk penjimatan ruang kod, fungsi asal dikekalkan) -->
             <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-6 bg-slate-50/50">
-                <p class="text-sm text-slate-700">Kandungan perincian GeoAI terpapar di sini.</p>
+                <p class="text-sm text-slate-700">Perincian metodologi GeoAI.</p>
             </div>
-            <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
-                <span>GeoAI Overview</span>
+            <div class="bg-slate-100 px-6 py-4 border-t flex justify-end">
                 <button onclick="closeGeoaiModal()" class="px-4 py-2 bg-slate-900 text-white font-bold rounded-xl cursor-pointer">Close</button>
             </div>
         </div>
     </div>
 
-    <!-- ========================================================================= -->
     <!-- MODAL 2: URBAN PLANNING OVERVIEW -->
-    <!-- ========================================================================= -->
     <div id="urbanModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/80 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
         <div class="bg-white w-full max-w-6xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="urbanModalCard">
             <div class="signature-dark-card text-white px-6 py-5 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
-                <div class="flex items-center gap-3">
-                    <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm">
-                        <i class="fas fa-layer-group"></i>
-                    </span>
-                    <div>
-                        <h3 class="text-base sm:text-lg font-black tracking-tight text-white">Urban Planning & Geospatial Development Framework</h3>
-                        <p class="text-xs text-slate-400">Sabah Cap. 141 &bull; 8 Sectoral Studies &bull; GIS Database &bull; Workflow Matrix</p>
-                    </div>
-                </div>
-                <button onclick="closeUrbanModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm cursor-pointer">
-                    <i class="fas fa-times"></i>
-                </button>
+                <h3 class="text-base sm:text-lg font-black tracking-tight text-white">Urban Planning & Geospatial Development Framework</h3>
+                <button onclick="closeUrbanModal()" class="w-9 h-9 rounded-xl bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center cursor-pointer"><i class="fas fa-times"></i></button>
             </div>
-            <!-- (Kandungan Modal Urban Planning) -->
             <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-6 bg-slate-50/50">
-                <h4 class="text-xl font-bold">03. GIS DATABASE & SYSTEM INTEGRATION</h4>
+                <h4 class="text-xl font-bold">03. GIS DATABASE</h4>
                 <p class="text-xs text-slate-600">System Integration Database</p>
             </div>
-            <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
-                <span>Standardized Urban Planning Framework</span>
+            <div class="bg-slate-100 px-6 py-4 border-t flex justify-end">
                 <button onclick="closeUrbanModal()" class="px-4 py-2 bg-slate-900 text-white font-bold rounded-xl cursor-pointer">Close</button>
             </div>
         </div>
     </div>
 
-    <!-- ========================================================================= -->
-    <!-- MODAL 3: EXPLORE MAPS & MULTI-MAP GALLERY (DENGAN TAB URBAN PLANNING)     -->
-    <!-- ========================================================================= -->
+    <!-- MODAL 3: EXPLORE MAPS & MULTI-MAP GALLERY (DENGAN TAB URBAN PLANNING) -->
     <div id="mapViewerModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/85 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
-        
         <div class="bg-white w-full max-w-5xl max-h-[92vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="mapViewerModalCard">
             
             <div class="signature-dark-card text-white px-6 py-4 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
@@ -610,7 +537,7 @@
                         <p class="text-xs text-slate-400" id="mapModalSubtitle">High-Resolution Geospatial Visuals, Workflows &amp; Map Layers</p>
                     </div>
                 </div>
-                <button onclick="closeMapModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm cursor-pointer">
+                <button onclick="closeMapModal()" class="w-9 h-9 rounded-xl bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center cursor-pointer">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
@@ -621,96 +548,98 @@
                 <div id="geoaiVisualGallery" class="space-y-6 hidden">
                     <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
                         <button onclick="switchGeoaiVisual('infographic')" id="btn-vis-infographic" class="geoai-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-800 text-white transition cursor-pointer">
-                            1. Full Workflow Infographic
+                            1. Workflow Infographic
                         </button>
-                        <button onclick="switchGeoaiVisual('steps')" id="btn-vis-steps" class="geoai-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer">
-                            2. 4-Stage Execution Visuals
+                        <button onclick="switchGeoaiVisual('steps')" id="btn-vis-steps" class="geoai-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 transition cursor-pointer">
+                            2. Execution Visuals
                         </button>
-                        <button onclick="switchGeoaiVisual('phases')" id="btn-vis-phases" class="geoai-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer">
-                            3. Model Test Results &amp; Limitations
+                        <button onclick="switchGeoaiVisual('phases')" id="btn-vis-phases" class="geoai-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 transition cursor-pointer">
+                            3. Model Test Results
                         </button>
                     </div>
 
-                    <div id="vis-infographic" class="geoai-vis-panel space-y-2">
-                        <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm text-center">
-                            <img src="WhatsApp Image 2026-10-26 at 8.15.22 AM.jpeg" alt="GeoAI Infographic Workflow" class="w-full h-auto rounded-xl mx-auto max-h-[650px] object-contain" onerror="this.src='https://placehold.co/1000x650/032219/34d399?text=GeoAI+Workflow+Infographic'">
-                        </div>
+                    <div id="vis-infographic" class="geoai-vis-panel space-y-2 text-center">
+                        <img src="WhatsApp Image 2026-10-26 at 8.15.22 AM.jpeg" alt="Workflow" class="w-full h-auto rounded-xl mx-auto max-h-[600px] object-contain" onerror="this.src='https://placehold.co/1000x600/032219/34d399?text=GeoAI+Workflow+Infographic'">
                     </div>
-                    <div id="vis-steps" class="geoai-vis-panel hidden space-y-4">
-                        <p class="text-xs text-slate-600">Paparan 4 peringkat pelaksanaan GeoAI.</p>
+                    <div id="vis-steps" class="geoai-vis-panel hidden grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <img src="Step 1.jpg" alt="Step 1" class="w-full h-48 object-cover rounded-xl border" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+1'">
+                        <img src="Step 2.png" alt="Step 2" class="w-full h-48 object-cover rounded-xl border" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+2'">
+                        <img src="Step 3.png" alt="Step 3" class="w-full h-48 object-cover rounded-xl border" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+3'">
+                        <img src="Step 4.png" alt="Step 4" class="w-full h-48 object-cover rounded-xl border" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+4'">
                     </div>
                     <div id="vis-phases" class="geoai-vis-panel hidden space-y-4">
-                        <p class="text-xs text-slate-600">Paparan keputusan fasa ujian model.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <img src="phase 1.jpg" alt="Phase 1" class="w-full h-48 object-cover rounded-xl border" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Phase+1'">
+                            <img src="Phase 2.jpg" alt="Phase 2" class="w-full h-48 object-cover rounded-xl border" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Phase+2'">
+                        </div>
+                        <img src="Limitations.jpg" alt="Limitations" class="w-full h-auto max-h-[350px] object-contain rounded-xl border mx-auto" onerror="this.src='https://placehold.co/800x400/032219/34d399?text=Limitations+Analysis'">
                     </div>
                 </div>
 
-                <!-- 2. Urban Planning Multi-Map Gallery (BARU & LENGKAP) -->
+                <!-- 2. Urban Planning Multi-Map Gallery (TAB 1, TAB 2, TAB 3) -->
                 <div id="urbanVisualGallery" class="space-y-6 hidden">
                     
-                    <!-- Tab Butang Pilihan Peta -->
+                    <!-- Tab Navigation Buttons -->
                     <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
-                        <button onclick="switchUrbanVisual('landuse')" id="btn-urb-landuse" class="urban-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-800 text-white transition cursor-pointer shadow-xs">
+                        <button onclick="switchUrbanVisual('landuse')" id="btn-urb-landuse" class="urban-vis-btn px-4 py-2 rounded-xl text-xs font-bold bg-emerald-800 text-white transition cursor-pointer shadow-sm">
                             1. Land Use &amp; Zoning Plans
                         </button>
-                        <button onclick="switchUrbanVisual('suitability')" id="btn-urb-suitability" class="urban-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer shadow-xs">
+                        <button onclick="switchUrbanVisual('suitability')" id="btn-urb-suitability" class="urban-vis-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer shadow-sm">
                             2. Land Suitability Maps
                         </button>
-                        <button onclick="switchUrbanVisual('physical')" id="btn-urb-physical" class="urban-vis-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer shadow-xs">
+                        <button onclick="switchUrbanVisual('physical')" id="btn-urb-physical" class="urban-vis-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer shadow-sm">
                             3. Physical &amp; Terrain Maps
                         </button>
                     </div>
 
-                    <!-- Panel Tab 1: Land Use & Zoning Plans -->
+                    <!-- Tab 1: Land Use & Zoning Plans -->
                     <div id="urb-landuse" class="urban-vis-panel space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Spatial Inventory</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Existing Land Use Map</h6>
-                                <!-- TUKAR NAMA FAIL GAMBAR PETA GUNA TANAH ANDA DI SINI -->
-                                <img src="peta-landuse.jpg" alt="Land Use Plan" class="w-full h-56 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Existing+Land+Use+Map'">
+                                <img src="peta-landuse.jpg" alt="Existing Land Use Map" class="w-full h-64 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=peta-landuse.jpg'">
                             </div>
                             <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Statutory Scheme</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Proposed Zoning Plan (Cap. 141)</h6>
-                                <!-- TUKAR NAMA FAIL GAMBAR PETA ZONING ANDA DI SINI -->
-                                <img src="peta-zoning.jpg" alt="Zoning Plan" class="w-full h-56 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Proposed+Zoning+Plan'">
+                                <img src="peta-zoning.jpg" alt="Proposed Zoning Plan" class="w-full h-64 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=peta-zoning.jpg'">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Panel Tab 2: Land Suitability Maps -->
+                    <!-- Tab 2: Land Suitability Maps -->
                     <div id="urb-suitability" class="urban-vis-panel hidden space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Multicriteria Analysis</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">AHP Land Suitability Model</h6>
-                                <!-- TUKAR NAMA FAIL GAMBAR PETA KESESUAIAN TANAH ANDA DI SINI -->
-                                <img src="peta-suitability.jpg" alt="Land Suitability Map" class="w-full h-56 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=AHP+Land+Suitability+Map'">
+                                <img src="peta-suitability.jpg" alt="Land Suitability Map" class="w-full h-64 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=peta-suitability.jpg'">
                             </div>
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Constraint Analysis</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Land Availability &amp; Exclusion Areas</h6>
-                                <img src="peta-availability.jpg" alt="Land Availability" class="w-full h-56 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Land+Availability+Map'">
+                                <img src="peta-availability.jpg" alt="Land Availability Map" class="w-full h-64 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=peta-availability.jpg'">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Panel Tab 3: Physical & Terrain Maps -->
+                    <!-- Tab 3: Physical & Terrain Maps -->
                     <div id="urb-physical" class="urban-vis-panel hidden space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Topographical Modeling</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Slope Gradient &amp; Hazard Zones</h6>
-                                <!-- TUKAR NAMA FAIL GAMBAR PETA FIZIKAL/KECERUNAN ANDA DI SINI -->
-                                <img src="peta-slope.jpg" alt="Physical Slope Map" class="w-full h-56 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Slope+Gradient+Map'">
+                                <img src="peta-slope.jpg" alt="Physical Slope Map" class="w-full h-64 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=peta-slope.jpg'">
                             </div>
-                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Elevation Analysis</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Digital Elevation Model (DEM / DTM)</h6>
-                                <img src="peta-dem.jpg" alt="DEM Map" class="w-full h-56 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Digital+Elevation+Model'">
+                                <img src="peta-dem.jpg" alt="DEM Map" class="w-full h-64 object-cover rounded-xl border border-slate-200" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=peta-dem.jpg'">
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- 3. Standard Map Preview Section (Untuk KK, Kudat, Keningau) -->
