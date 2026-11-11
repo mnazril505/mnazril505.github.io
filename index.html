@@ -13,18 +13,6 @@
             background-color: #064e3b; 
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='0.35'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
         }
-        .mindmap-connector {
-            position: relative;
-        }
-        .mindmap-connector::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: -20px;
-            width: 20px;
-            height: 2px;
-            background: #cbd5e1;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
@@ -230,316 +218,500 @@
                 </div>
             </section>
 
-            <!-- ============================================================= -->
-            <!-- 2. URBAN PLANNING CONSULTANCY & METHODOLOGY ENGINE           -->
-            <!-- ============================================================= -->
+            <!-- ========================================================================= -->
+            <!-- 2. GIS SUPPORT FOR URBAN PLANNING CONSULTANCY PROJECTS                     -->
+            <!-- (ORDER: IMAGE 1 -> IMAGE 2 -> IMAGE 3 -> IMAGE 4 -> INDIVIDUAL PROJECTS)  -->
+            <!-- ========================================================================= -->
             <section id="urban-planning" class="mb-24">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-emerald-200 pb-4">
+                
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 border-b-2 border-emerald-200 pb-4">
                     <div>
-                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700">Statutory Master Planning</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">2. GIS Support for Urban Planning Consultancy Projects</h3>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100/70 px-3 py-1 rounded-full">
+                            Statutory Spatial Framework
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 tracking-tight">
+                            2. GIS Support for Urban Planning Consultancy Projects
+                        </h3>
                     </div>
-                    <span class="text-xs font-semibold text-slate-500 mt-2 md:mt-0 bg-slate-200/70 px-3 py-1.5 rounded-md">
-                        Governed by Sabah Cap. 141[cite: 1, 6, 7]
+                    <span class="text-xs font-bold text-slate-600 mt-3 md:mt-0 bg-slate-100 px-3.5 py-1.5 rounded-lg border border-slate-200">
+                        Town and Country Planning Ordinance (Sabah Cap. 141)[cite: 1, 6, 7, 10]
                     </span>
                 </div>
 
-                <!-- INTERACTIVE METHODOLOGY & FRAMEWORK HUB -->
-                <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden mb-12">
-                    
-                    <!-- Hub Navigation Header -->
-                    <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 text-white p-6 sm:p-8">
-                        <div class="max-w-4xl">
-                            <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold rounded-full uppercase tracking-wider mb-2">
-                                Standardized SOP & Sectoral Architecture
-                            </span>
-                            <h4 class="text-xl sm:text-2xl font-black tracking-tight">Urban Planning & Geospatial Development Engine</h4>
-                            <p class="text-slate-300 text-xs sm:text-sm mt-1.5 leading-relaxed">
-                                Explore how statutory policies[cite: 1, 6, 7], 3-stage GIS workflow pipelines[cite: 5, 9], and the 8-domain database architecture[cite: 2, 6, 7] converge to deliver legally sound local plans across Sabah.
-                            </p>
-                        </div>
-
-                        <!-- View Switcher Tabs -->
-                        <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800">
-                            <button onclick="switchView('view-flowchart')" id="btn-view-flowchart" class="view-tab-btn active-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-emerald-950 shadow-sm">
-                                <i class="fas fa-stream mr-2 text-emerald-600"></i> 1. Workflow Flowchart[cite: 5, 9]
-                            </button>
-                            <button onclick="switchView('view-mindmap')" id="btn-view-mindmap" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
-                                <i class="fas fa-sitemap mr-2 text-teal-400"></i> 2. Sectoral Mind Map (Base Map Hub)[cite: 4, 8]
-                            </button>
-                            <button onclick="switchView('view-matrix')" id="btn-view-matrix" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
-                                <i class="fas fa-table-cells mr-2 text-amber-400"></i> 3. Database Matrix[cite: 5, 9]
-                            </button>
-                            <button onclick="switchView('view-mandate')" id="btn-view-mandate" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
-                                <i class="fas fa-scale-balanced mr-2 text-blue-400"></i> 4. Sabah Cap. 141 Mandate[cite: 1, 6, 7]
-                            </button>
+                <!-- [IMAGE 1] PART 1: URBAN PLANNING & DEVELOPMENT -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-10 mb-12">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="w-9 h-9 rounded-xl bg-emerald-800 text-white flex items-center justify-center font-bold text-sm shadow-xs">
+                            01
+                        </span>
+                        <div>
+                            <h4 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">URBAN PLANNING & DEVELOPMENT[cite: 6, 7, 10]</h4>
+                            <p class="text-xs text-slate-500 font-medium">Statutory translation, policy alignment, and sectoral study methodology</p>
                         </div>
                     </div>
 
-                    <!-- VIEW CONTAINER -->
-                    <div class="p-6 sm:p-8 bg-slate-50/60">
-
-                        <!-- ============================================== -->
-                        <!-- 1. WORKFLOW FLOWCHART VIEW                     -->
-                        <!-- ============================================== -->
-                        <div id="view-flowchart" class="view-panel block space-y-6">
-                            <div class="text-center max-w-2xl mx-auto mb-6">
-                                <h5 class="text-base font-bold text-slate-900">3-Stage Geospatial Processing Pipeline</h5>
-                                <p class="text-xs text-slate-500">From baseline heterogeneous raw data to multi-criteria land decision models[cite: 5, 9].</p>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-                                <!-- Stage 1 -->
-                                <div class="bg-white rounded-2xl p-6 border-t-4 border-emerald-600 border-x border-b border-slate-200 shadow-xs relative">
-                                    <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-xs flex items-center justify-center mb-3">
-                                        01
-                                    </div>
-                                    <h6 class="font-bold text-slate-900 text-sm mb-1">Spatial & Non-Spatial Collection[cite: 5, 9]</h6>
-                                    <p class="text-xs text-emerald-700 font-semibold mb-3">Baseline Survey & Acquisition[cite: 5, 9]</p>
-                                    <ul class="space-y-1.5 text-xs text-slate-600">
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Cadastral lots & UAV orthophotos[cite: 5, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Topography, rivers, terrain & coastline[cite: 5, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Existing land use ground truthing[cite: 5, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Census block demography & income data[cite: 3, 5, 8, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Utilities network & government assets[cite: 3, 5, 8, 9]</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Stage 2 -->
-                                <div class="bg-white rounded-2xl p-6 border-t-4 border-teal-600 border-x border-b border-slate-200 shadow-xs relative">
-                                    <div class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 font-extrabold text-xs flex items-center justify-center mb-3">
-                                        02
-                                    </div>
-                                    <h6 class="font-bold text-slate-900 text-sm mb-1">GIS Database Development[cite: 5, 9]</h6>
-                                    <p class="text-xs text-teal-700 font-semibold mb-3">Architecture & Schema Standardization[cite: 3, 8]</p>
-                                    <ul class="space-y-1.5 text-xs text-slate-600">
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Central Enterprise Geodatabase schema[cite: 4, 8]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Geometric cleaning & topology verification</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Cadastral parcel alignment & snapping</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Demographic tabular-to-spatial joining[cite: 3, 5, 8, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Road network topology & routing datasets[cite: 3, 4, 8]</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Stage 3 -->
-                                <div class="bg-white rounded-2xl p-6 border-t-4 border-slate-800 border-x border-b border-slate-200 shadow-xs relative">
-                                    <div class="w-8 h-8 rounded-full bg-slate-200 text-slate-800 font-extrabold text-xs flex items-center justify-center mb-3">
-                                        03
-                                    </div>
-                                    <h6 class="font-bold text-slate-900 text-sm mb-1">Spatial Analysis & Modeling[cite: 5, 9]</h6>
-                                    <p class="text-xs text-slate-700 font-semibold mb-3">SDSS & Statutory Map Production[cite: 5, 9]</p>
-                                    <ul class="space-y-1.5 text-xs text-slate-600">
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Multi-Criteria Land Suitability (AHP)[cite: 5, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Environmentally Sensitive Areas (ESA/KSAS)[cite: 5, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Slope & DEM elevation constraint modeling[cite: 3, 5, 8, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Vacant land availability & infill density[cite: 5, 9]</li>
-                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Statutory zoning conflicts resolution</li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <!-- 1.1 Introduction Card -->
+                    <div class="bg-slate-50/70 rounded-2xl p-6 sm:p-8 border border-slate-200 mb-10">
+                        <div class="inline-block px-3.5 py-1.5 bg-slate-800 text-white text-xs font-bold rounded-lg uppercase tracking-wider mb-6">
+                            Introduction[cite: 6, 7, 10]
                         </div>
-
-                        <!-- ============================================== -->
-                        <!-- 2. SECTORAL MIND MAP VIEW (BASE MAP CENTRAL)   -->
-                        <!-- ============================================== -->
-                        <div id="view-mindmap" class="view-panel hidden">
-                            <div class="text-center max-w-xl mx-auto mb-8">
-                                <h5 class="text-base font-bold text-slate-900">Sectoral Domain Mind Map (Base Map Hub)[cite: 4, 8]</h5>
-                                <p class="text-xs text-slate-500">Replicating the core centralized geodatabase design: Base Map at the nucleus feeding into the 8 specialized domain modules[cite: 2, 4, 6, 7, 8].</p>
+                        
+                        <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+                                <p>It translates national and state development policies into practical strategies that shape growth and align public–private investment.[cite: 1, 6, 7, 10]</p>
                             </div>
-
-                            <!-- Radial Architecture Grid -->
-                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-                                <!-- Left Wings (4 Sectors) -->
-                                <div class="space-y-3">
-                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-bold text-slate-800">1. Population & Demography[cite: 2, 6, 7]</span>
-                                            <i class="fas fa-users text-emerald-600 text-xs"></i>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500">Population & settlement, labor force, and future growth projection blocks[cite: 2, 6, 7].</p>
-                                    </div>
-                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-bold text-slate-800">2. Physical Conditions & Environment[cite: 2, 6, 7]</span>
-                                            <i class="fas fa-mountain-sun text-emerald-600 text-xs"></i>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500">Forestry reserves, sensitive river corridors (KSAS), terrain & geology[cite: 2, 3, 6, 7, 8].</p>
-                                    </div>
-                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-bold text-slate-800">3. Land Uses & Master Zoning[cite: 2, 3, 6, 7, 8]</span>
-                                            <i class="fas fa-map-location-dot text-emerald-600 text-xs"></i>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500">Key land use areas, housing zones, commercial centres, and industrial parks[cite: 2, 6, 7].</p>
-                                    </div>
-                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-bold text-slate-800">4. Road & Transportation[cite: 2, 6, 7]</span>
-                                            <i class="fas fa-road text-emerald-600 text-xs"></i>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500">Main highway hierarchies, railways, transit nodes, and traffic volume zones[cite: 2, 3, 4, 6, 7, 8].</p>
-                                    </div>
-                                </div>
-
-                                <!-- Center Nucleus: BASE MAP & DATABASE CYLINDER -->
-                                <div class="bg-gradient-to-b from-emerald-900 to-teal-950 text-white rounded-2xl p-7 text-center shadow-lg border border-emerald-700/50 relative">
-                                    <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md mx-auto flex items-center justify-center text-emerald-300 text-2xl mb-3 shadow-inner">
-                                        <i class="fas fa-layer-group"></i>
-                                    </div>
-                                    <h6 class="text-lg font-black tracking-tight mb-1">BASE MAP NUCLEUS[cite: 4, 8]</h6>
-                                    <p class="text-xs text-emerald-200 mb-4">Cadastral Boundaries & Official Coordinates[cite: 3, 4, 8]</p>
-                                    <div class="h-0.5 w-12 bg-emerald-400 mx-auto mb-4"></div>
-                                    <div class="bg-white/10 rounded-xl p-3 border border-white/15">
-                                        <i class="fas fa-database text-teal-300 text-lg mb-1"></i>
-                                        <p class="text-xs font-bold uppercase tracking-wider text-white">Central GIS Geodatabase[cite: 4, 8]</p>
-                                        <p class="text-[11px] text-emerald-100/70 mt-0.5">Unified Spatial Feature Classes[cite: 4, 8]</p>
-                                    </div>
-                                </div>
-
-                                <!-- Right Wings (4 Sectors) -->
-                                <div class="space-y-3">
-                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-bold text-slate-800">5. Community Facilities[cite: 2, 6, 7]</span>
-                                            <i class="fas fa-hospital-user text-emerald-600 text-xs"></i>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500">Schools, clinics, emergency services (police/fire), and community halls[cite: 2, 3, 4, 6, 7, 8].</p>
-                                    </div>
-                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-bold text-slate-800">6. Infrastructure & Utilities[cite: 2, 6, 7]</span>
-                                            <i class="fas fa-faucet-drip text-emerald-600 text-xs"></i>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500">Reticulated water supply, power lines, sewage plants, and drainage systems[cite: 2, 3, 4, 6, 7, 8].</p>
-                                    </div>
-                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-bold text-slate-800">7. Tourism & Heritage[cite: 2, 6, 7]</span>
-                                            <i class="fas fa-monument text-emerald-600 text-xs"></i>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500">Gazetted historical monuments, cultural preservation corridors, and eco-tourism[cite: 2, 6, 7].</p>
-                                    </div>
-                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-bold text-slate-800">8. Open Space & Recreation[cite: 2, 6, 7]</span>
-                                            <i class="fas fa-tree text-emerald-600 text-xs"></i>
-                                        </div>
-                                        <p class="text-[11px] text-slate-500">Public parks, sports fields, coastal promenade esplanades, and green lungs[cite: 2, 3, 6, 7, 8].</p>
-                                    </div>
-                                </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+                                <p>The plan sets land-use and development guidance to keep growth consistent with the <strong>Sabah Structure Plan 2033</strong>, while balancing community needs, economic opportunities, and sustainable urbanism.[cite: 1, 6, 7, 10]</p>
                             </div>
-                        </div>
-
-                        <!-- ============================================== -->
-                        <!-- 3. WORKFLOW MATRIX TABLE VIEW                  -->
-                        <!-- ============================================== -->
-                        <div id="view-matrix" class="view-panel hidden">
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-left text-xs bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                    <thead class="bg-slate-100 text-slate-800 font-bold uppercase text-[11px] tracking-wider border-b border-slate-200">
-                                        <tr>
-                                            <th class="p-3.5 w-1/3">1. Spatial & Non-Spatial Collection[cite: 5, 9]</th>
-                                            <th class="p-3.5 w-1/3">2. GIS Database Development[cite: 5, 9]</th>
-                                            <th class="p-3.5 w-1/3">3. GIS Analysis & Data Modeling[cite: 5, 9]</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-slate-100 text-slate-600 leading-relaxed">
-                                        <tr>
-                                            <td class="p-3.5 font-medium text-slate-800">Basemap (Cadastral lots, Aerial photography)[cite: 5, 9]</td>
-                                            <td class="p-3.5">Administrative & Baseline Boundary Feature Classes[cite: 3, 4, 5, 8, 9]</td>
-                                            <td class="p-3.5 text-emerald-700 font-semibold">Vacant Land Availability Modeling[cite: 5, 9]</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3.5 font-medium text-slate-800">Physical (Topography, Soil, River, Coastline)[cite: 5, 9]</td>
-                                            <td class="p-3.5">Physical Terrain & Hydrological Surface Datasets[cite: 3, 4, 5, 8, 9]</td>
-                                            <td class="p-3.5 text-emerald-700 font-semibold">Environmentally Sensitive Area (ESA / KSAS)[cite: 5, 9]</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3.5 font-medium text-slate-800">Land Use Schemes (Local & District Plans)[cite: 5, 9]</td>
-                                            <td class="p-3.5">Standardized Land Use Classification Scheme[cite: 3, 5, 8, 9]</td>
-                                            <td class="p-3.5 text-emerald-700 font-semibold">Multi-Criteria Land Suitability (AHP)[cite: 5, 9]</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3.5 font-medium text-slate-800">Basic Infrastructure & Utilities Reticulation[cite: 3, 5, 8, 9]</td>
-                                            <td class="p-3.5">Linear Network Datasets (Water, Electric, Sewerage)[cite: 2, 4, 6, 7, 8]</td>
-                                            <td class="p-3.5 text-emerald-700 font-semibold">Service Buffering & Infrastructure Accessibility</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3.5 font-medium text-slate-800">Open Space, Recreation & Cultural Heritage[cite: 2, 5, 6, 7, 9]</td>
-                                            <td class="p-3.5">Tourism & Green Lung Attribute Profiles[cite: 2, 3, 5, 6, 7, 8, 9]</td>
-                                            <td class="p-3.5 text-emerald-700 font-semibold">Tourism & Recreation Potential Mapping[cite: 5, 9]</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3.5 font-medium text-slate-800">Demographic Census & Socio-Economic Surveys[cite: 3, 5, 8, 9]</td>
-                                            <td class="p-3.5">Demography & Household Density Joins[cite: 3, 5, 8, 9]</td>
-                                            <td class="p-3.5 text-emerald-700 font-semibold">Population Growth Allocation & Pressure Nodes</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-3.5 font-medium text-slate-800">Elevation Contours & DEM Raster Surfaces[cite: 3, 8]</td>
-                                            <td class="p-3.5">Digital Elevation Models (DEM/DTM) & Contours[cite: 3, 8]</td>
-                                            <td class="p-3.5 text-emerald-700 font-semibold">Slope Steepness & Elevation Class Modeling[cite: 5, 9]</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+                                <p>It establishes a clear policy framework—covering design standards, zoning, environmental safeguards, and infrastructure provision—to drive economic progress and protect community priorities.[cite: 1, 6, 7, 10]</p>
                             </div>
-                        </div>
-
-                        <!-- ============================================== -->
-                        <!-- 4. STATUTORY MANDATE & POLICIES VIEW           -->
-                        <!-- ============================================== -->
-                        <div id="view-mandate" class="view-panel hidden space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                                    <div class="flex items-center gap-2 mb-3 text-emerald-900 font-bold text-sm">
-                                        <i class="fas fa-file-contract text-emerald-600"></i> Policy Translation & Objectives[cite: 1, 6, 7]
-                                    </div>
-                                    <ul class="space-y-3 text-xs text-slate-600 leading-relaxed">
-                                        <li class="flex items-start gap-2">
-                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
-                                            <span>Translates national and state development agendas into actionable spatial zoning strategies that stimulate public-private capital deployment[cite: 1, 6, 7].</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
-                                            <span>Establishes development guidance consistent with the <strong>Sabah Structure Plan 2033</strong>, balancing community vitality, economic viability, and ecological urbanism[cite: 1, 6, 7].</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
-                                            <span>Institutes clear statutory frameworks encompassing design thresholds, allowable plot ratios, environmental safeguards, and essential infrastructure reservations[cite: 1, 6, 7].</span>
-                                        </li>
-                                    </ul>
+                            
+                            <!-- Statutory Plan in Sabah Box -->
+                            <div class="mt-6 pt-6 border-t border-slate-200">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center flex-shrink-0">4</span>
+                                    <h5 class="font-bold text-slate-900 text-sm">Statutory Plan In Sabah[cite: 1, 6, 7, 10]</h5>
                                 </div>
-
-                                <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                                    <div class="flex items-center gap-2 mb-3 text-emerald-900 font-bold text-sm">
-                                        <i class="fas fa-gavel text-emerald-600"></i> Sabah Cap. 141 Statutory Hierarchy[cite: 1, 6, 7]
-                                    </div>
-                                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                        <strong>The Town and Country Planning Ordinance (Sabah Cap. 141)</strong> provides the authoritative legal architecture for physical planning and state-wide territorial development[cite: 1, 6, 7]:
+                                <div class="ml-9 p-4 bg-white rounded-xl border border-slate-200 space-y-2 text-xs text-slate-600">
+                                    <p class="flex items-start gap-2">
+                                        <i class="fas fa-circle text-[6px] text-emerald-600 mt-1.5 flex-shrink-0"></i>
+                                        <span>The Town and Country Planning Ordinance (Sabah Cap. 141) serves as the primary legislation governing town and country planning in Sabah.[cite: 1, 6, 7, 10]</span>
                                     </p>
-                                    <div class="p-3.5 bg-emerald-50/70 border border-emerald-200 rounded-xl space-y-2 text-xs text-emerald-950">
-                                        <p><strong>Tier 1 - Structure Plan:</strong> Overarching macro plan for the state and territorial waters, prepared by the Director of Town and Regional Planning for the State Planning Council and endorsed by Cabinet under Section 4C(1)[cite: 1, 6, 7].</p>
-                                        <p><strong>Tier 2 - Local Plan:</strong> Detailed micro-level zoning blueprints regulating land parcel rights, road alignments, density standards, and public facilities reservations.</p>
-                                    </div>
+                                    <p class="flex items-start gap-2">
+                                        <i class="fas fa-circle text-[6px] text-emerald-600 mt-1.5 flex-shrink-0"></i>
+                                        <span>This ordinance mandates two levels of statutory plans for Sabah.[cite: 1, 6, 7, 10] The first tier is the Structure Plan, which serves as the overarching plan for the entire state, including both the land and its territorial waters.[cite: 1, 6, 7, 10] It is prepared by the Director of the Sabah Town and Regional Planning Department on behalf of the State Planning Council and approved by the Cabinet under Section 4C(1).[cite: 1, 6, 7, 10]</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <!-- 1.2 Methodology / Sectoral Studies (8 Cards) -->
+                    <div>
+                        <div class="text-center mb-8">
+                            <span class="inline-block px-5 py-2 bg-slate-900 text-white text-xs font-extrabold uppercase tracking-widest rounded-xl shadow-xs">
+                                METHODOLOGY / SECTORAL STUDIES[cite: 2, 6, 7, 10]
+                            </span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <!-- Sector 1 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
+                                <div class="bg-slate-600 text-white p-3.5 text-center">
+                                    <h6 class="font-bold text-xs uppercase tracking-wide">Population & Demography[cite: 2, 6, 7, 10]</h6>
+                                </div>
+                                <div class="p-4">
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Population & Settlement[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Labor Force[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Future Growth[cite: 2, 6, 7, 10]</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Sector 2 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
+                                <div class="bg-slate-600 text-white p-3.5 text-center">
+                                    <h6 class="font-bold text-xs uppercase tracking-wide">Physical Conditions & Environment[cite: 2, 6, 7, 10]</h6>
+                                </div>
+                                <div class="p-4">
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Nature & Forestry[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Key Environment Areas[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Heritage Sites[cite: 2, 6, 7, 10]</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Sector 3 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
+                                <div class="bg-slate-600 text-white p-3.5 text-center">
+                                    <h6 class="font-bold text-xs uppercase tracking-wide">Land Uses[cite: 2, 6, 7, 10]</h6>
+                                </div>
+                                <div class="p-4">
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Key Land Uses Areas[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Housing Zone[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Industry & Commerce[cite: 2, 6, 7, 10]</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Sector 4 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
+                                <div class="bg-slate-600 text-white p-3.5 text-center">
+                                    <h6 class="font-bold text-xs uppercase tracking-wide">Road & Transportation[cite: 2, 6, 7, 10]</h6>
+                                </div>
+                                <div class="p-4">
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Main Road Network[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Public Transportation Network[cite: 2, 6, 7, 10]</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Sector 5 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
+                                <div class="bg-slate-600 text-white p-3.5 text-center">
+                                    <h6 class="font-bold text-xs uppercase tracking-wide">Community Facilities[cite: 2, 6, 7, 10]</h6>
+                                </div>
+                                <div class="p-4">
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> School[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Healthcare[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Public Halls[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Security[cite: 2, 6, 7, 10]</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Sector 6 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
+                                <div class="bg-slate-600 text-white p-3.5 text-center">
+                                    <h6 class="font-bold text-xs uppercase tracking-wide">Infrastructure & Utilities[cite: 2, 6, 7, 10]</h6>
+                                </div>
+                                <div class="p-4">
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Water Supply[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Electric Supply[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Sewerage Supply[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Drainage & Irrigation[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Garbage Disposal and etc[cite: 2, 6, 7, 10]</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Sector 7 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
+                                <div class="bg-slate-600 text-white p-3.5 text-center">
+                                    <h6 class="font-bold text-xs uppercase tracking-wide">Tourism & Heritage[cite: 2, 6, 7, 10]</h6>
+                                </div>
+                                <div class="p-4">
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> State Cultural Areas[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Key Historical Sites[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Potential New Site[cite: 2, 6, 7, 10]</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Sector 8 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
+                                <div class="bg-slate-600 text-white p-3.5 text-center">
+                                    <h6 class="font-bold text-xs uppercase tracking-wide">Open Space & Recreation[cite: 2, 6, 7, 10]</h6>
+                                </div>
+                                <div class="p-4">
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Existing Open Space[cite: 2, 6, 7, 10]</li>
+                                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Existing Recreation[cite: 2, 6, 7, 10]</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- INDIVIDUAL PROJECT CARDS (KK -> KUDAT -> KENINGAU) -->
+                <!-- [IMAGE 2] PART 2: GIS DATABASE DEVELOPMENT (CORE SPATIAL DATA DOMAIN) -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-10 mb-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-9 h-9 rounded-xl bg-teal-800 text-white flex items-center justify-center font-bold text-sm shadow-xs">
+                            02
+                        </span>
+                        <div>
+                            <h4 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">GIS DATABASE DEVELOPMENT[cite: 3, 8, 11]</h4>
+                            <p class="text-xs text-slate-500 font-medium">Core spatial data domain definitions for urban master planning</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50/80 rounded-2xl p-6 sm:p-8 border border-slate-200">
+                        <h5 class="text-sm font-bold text-slate-800 mb-4">Core spatial data domain for Urban Planning :[cite: 3, 8, 11]</h5>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700">
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-2.5">
+                                <i class="fas fa-check text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
+                                <div>
+                                    <strong class="text-slate-900">Administrative & Base Maps:</strong> Land boundaries, districts and census area.[cite: 3, 8, 11]
+                                </div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-2.5">
+                                <i class="fas fa-check text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
+                                <div>
+                                    <strong class="text-slate-900">Population & Socio-economic:</strong> Population numbers, density, households and income.[cite: 3, 8, 11]
+                                </div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-2.5">
+                                <i class="fas fa-check text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
+                                <div>
+                                    <strong class="text-slate-900">Land Use & Zoning:</strong> Current land use, zoning regulations and land ownership.[cite: 3, 8, 11]
+                                </div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-2.5">
+                                <i class="fas fa-check text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
+                                <div>
+                                    <strong class="text-slate-900">Transportation:</strong> Roads, public transport, traffic, and travel routes.[cite: 3, 8, 11]
+                                </div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-2.5">
+                                <i class="fas fa-check text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
+                                <div>
+                                    <strong class="text-slate-900">Environment & Green Areas:</strong> Parks, forests, rivers, flood risks and pollution.[cite: 3, 8, 11]
+                                </div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-2.5">
+                                <i class="fas fa-check text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
+                                <div>
+                                    <strong class="text-slate-900">Physical Terrain:</strong> Land Elevation, slopes, soil, geology and climate.[cite: 3, 8, 11]
+                                </div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-2.5 md:col-span-2">
+                                <i class="fas fa-check text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
+                                <div>
+                                    <strong class="text-slate-900">Utilities & Public Services:</strong> Water, electricity, drainage, hospitals, schools.[cite: 3, 8, 11] Police and fire services.[cite: 3, 8, 11]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [IMAGE 3] PART 3: GIS DATABASE CONCEPTUAL ARCHITECTURE -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-10 mb-12">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="w-9 h-9 rounded-xl bg-emerald-900 text-white flex items-center justify-center font-bold text-sm shadow-xs">
+                            03
+                        </span>
+                        <div>
+                            <h4 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">GIS DATABASE ARCHITECTURE[cite: 4, 8, 12]</h4>
+                            <p class="text-xs text-slate-500 font-medium">System integration diagram: Base Map nucleus feeding the enterprise GIS database</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row items-center gap-8">
+                        <!-- Red-Dashed Box -->
+                        <div class="w-full lg:w-4/5 border-2 border-dashed border-red-500 rounded-3xl p-5 sm:p-8 bg-slate-50/50">
+                            <!-- Administration (Top) -->
+                            <div class="flex flex-col items-center justify-center mb-8">
+                                <div class="w-full max-w-xs mb-6 text-center">
+                                    <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Administration[cite: 4, 8, 12]</span>
+                                    <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs">
+                                        <div class="py-0.5">State Boundary[cite: 4, 8, 12]</div>
+                                        <div class="py-0.5">District Boundary[cite: 4, 8, 12]</div>
+                                        <div class="py-0.5">Local Authority Boundary[cite: 4, 8, 12]</div>
+                                        <div class="py-0.5">Political Boundary[cite: 4, 8, 12]</div>
+                                        <div class="py-0.5">Rating Boundary[cite: 4, 8, 12]</div>
+                                        <div class="py-0.5">Census District & Block[cite: 4, 8, 12]</div>
+                                    </div>
+                                    <div class="w-0.5 h-4 bg-slate-400 mx-auto mt-1"></div>
+                                    <i class="fas fa-arrow-down text-slate-400 text-xs"></i>
+                                </div>
+
+                                <!-- Base Map Trapezoid -->
+                                <div class="relative bg-gradient-to-r from-slate-100 via-white to-slate-100 border-2 border-slate-400 px-10 py-3 rounded-lg shadow-xs text-center">
+                                    <span class="font-black text-sm tracking-widest text-slate-900 uppercase">BASE MAP[cite: 4, 8, 12]</span>
+                                </div>
+                            </div>
+
+                            <!-- Left and Right Feature Clusters -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                                <!-- Left Column -->
+                                <div class="space-y-4">
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Infrastructure & Utilities[cite: 4, 8, 12]</span>
+                                        <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs">
+                                            <div class="py-0.5 px-2">Electrical Line[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Electrical Transmission[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Water Pipe[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Water Tank[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Sewerage Pipe[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Sewerage[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Drainage[cite: 4, 8, 12]</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Physical[cite: 4, 8, 12]</span>
+                                        <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs">
+                                            <div class="py-0.5 px-2">Soil[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Geology[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Weather[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">River[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Topography[cite: 4, 8, 12]</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Land Information[cite: 4, 8, 12]</span>
+                                        <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs">
+                                            <div class="py-0.5 px-2">Current Land Use[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Land Owner[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Land Value[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Present Land Use[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Committed[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Housing[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Commercial[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Squatters[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Town Centre[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Industry[cite: 4, 8, 12]</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="space-y-4">
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Population and Socio-Economic[cite: 4, 8, 12]</span>
+                                        <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs">
+                                            <div class="py-0.5 px-2">Socio Economy by District[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Population by Census District & Block[cite: 4, 8, 12]</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Green Area and Recreational[cite: 4, 8, 12]</span>
+                                        <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs">
+                                            <div class="py-0.5 px-2">Forest[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Recreational Area[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Green Area[cite: 4, 8, 12]</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Roads & Transportation[cite: 4, 8, 12]</span>
+                                        <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs">
+                                            <div class="py-0.5 px-2">Road[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Railways[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Station[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Traffic Zone[cite: 4, 8, 12]</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Environmental[cite: 4, 8, 12]</span>
+                                        <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs">
+                                            <div class="py-0.5 px-2">River[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Water Quality[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Air Quality[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Noise[cite: 4, 8, 12]</div>
+                                            <div class="py-0.5 px-2">Flood Area[cite: 4, 8, 12]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bottom: Public Facilities and Services -->
+                            <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col items-center">
+                                <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider block mb-1 text-center">Public Facilities and Services[cite: 4, 8, 12]</span>
+                                <div class="w-full max-w-sm bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200 shadow-2xs text-center">
+                                    <div class="py-0.5">Fire Brigade[cite: 4, 8, 12]</div>
+                                    <div class="py-0.5">Police[cite: 4, 8, 12]</div>
+                                    <div class="py-0.5">Health[cite: 4, 8, 12]</div>
+                                    <div class="py-0.5">Education[cite: 4, 8, 12]</div>
+                                    <div class="py-0.5">Cemetery[cite: 4, 8, 12]</div>
+                                    <div class="py-0.5">Religious[cite: 4, 8, 12]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Direction Arrow & Geodatabase Cylinder -->
+                        <div class="w-full lg:w-1/5 flex flex-col items-center justify-center text-center">
+                            <div class="hidden lg:flex items-center text-red-600 text-3xl mb-3">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="flex lg:hidden items-center text-red-600 text-2xl my-2">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="bg-gradient-to-b from-slate-800 to-slate-950 text-white rounded-3xl p-6 shadow-xl border border-slate-700 w-full max-w-[200px]">
+                                <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mx-auto mb-3 border border-emerald-400/30">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h6 class="font-black text-sm tracking-widest uppercase">GIS DATABASE[cite: 4, 8, 12]</h6>
+                                <p class="text-[10px] text-slate-400 mt-1">Enterprise Geodatabase Repository</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [IMAGE 4] PART 4: GEOSPATIAL WORKFLOW MATRIX TABLE -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-10 mb-14">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-xs">
+                            04
+                        </span>
+                        <div>
+                            <h4 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">DATA WORKFLOW & MODELING MATRIX</h4>
+                            <p class="text-xs text-slate-500 font-medium">Standardized progression from data collection to advanced spatial decision models</p>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                        <table class="w-full text-left text-xs text-slate-700">
+                            <thead>
+                                <tr class="bg-emerald-900 text-white font-extrabold uppercase text-[11px] tracking-wider divide-x divide-emerald-800/60">
+                                    <th class="p-4 w-1/3">Spatial & Non Spatial Collection[cite: 5, 9, 13]</th>
+                                    <th class="p-4 w-1/3">GIS Database Development[cite: 5, 9, 13]</th>
+                                    <th class="p-4 w-1/3">GIS Analysis & Data Modelling[cite: 5, 9, 13]</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 font-medium">
+                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
+                                    <td class="p-3.5">Basemap (Cadastral. Aerial Photo)[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5">Basemap[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5 font-bold text-emerald-900">Land Availability[cite: 5, 9, 13]</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
+                                    <td class="p-3.5">Physical (Topography, Soil, River, Sea, Boundary)[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5">Physical[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5 font-bold text-emerald-900">Environmental Sensitive Area[cite: 5, 9, 13]</td>
+                                </tr>
+                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
+                                    <td class="p-3.5">Land use Scheme (Local Plan, District Plan)[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5">Demography[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5 font-bold text-emerald-900">Tourism Potential Area[cite: 5, 9, 13]</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
+                                    <td class="p-3.5">Basic Infrastructure & Utilities[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5">Land Use[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5 font-bold text-emerald-900">Recreation Potential Area[cite: 5, 9, 13]</td>
+                                </tr>
+                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
+                                    <td class="p-3.5">Open Space, Recreation & Tourism.[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5">Roads & Transportation[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5 font-bold text-emerald-900">Slope Analysis[cite: 5, 9, 13]</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
+                                    <td class="p-3.5">Population[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5">Basic Infrastructure & Utilities[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5 font-bold text-emerald-900">Height Elevation Analysis[cite: 5, 9, 13]</td>
+                                </tr>
+                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
+                                    <td class="p-3.5">Government & Community Facilities[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5">Government & Community Facilities[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5 font-bold text-emerald-900">Land Suitability[cite: 5, 9, 13]</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
+                                    <td class="p-3.5">Existing Landuse[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5">Open Space, Recreation & Tourism[cite: 5, 9, 13]</td>
+                                    <td class="p-3.5 text-slate-400 italic">&mdash;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- STATUTORY MASTER PLAN PROJECT CARDS (IMPLEMENTATION) -->
+                <div class="flex items-center gap-3 mb-8">
+                    <h4 class="text-xl font-bold text-slate-900">Statutory Master Plans Portfolio (Implementation)</h4>
+                    <span class="h-px bg-slate-200 flex-grow"></span>
+                </div>
+
                 <div class="space-y-6">
-                    
-                    <!-- Card 1: Kota Kinabalu Local Plan -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                    <!-- KK Local Plan -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/0284c7/ffffff?text=Kota+Kinabalu+Local+Plan" alt="KK Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
-                                Metropolitan Plan
+                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                                Metropolitan Master Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
@@ -547,14 +719,14 @@
                                     <span class="text-xs text-slate-500 font-semibold">Tier 2 Local Plan</span>
                                 </div>
                                 <h4 class="text-xl font-bold text-slate-900 mb-1">Kota Kinabalu Local Plan</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: High-Density Zoning Harmonization & Metropolitan Cadastral Alignment</p>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Urban Density Harmonization & Cadastral Boundary Alignment</p>
                                 <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Administered spatial database consolidation across Greater Kota Kinabalu. Formulated high-density commercial and residential zoning criteria, analyzed major transit corridors, and aligned land titles with gazetted planning scheme boundaries under the Cap. 141 framework.
+                                    Administered spatial database consolidation across Greater Kota Kinabalu. Formulated high-density commercial and residential zoning criteria, analyzed major transit corridors, and aligned land titles with gazetted planning scheme boundaries under the Cap. 141 framework.[cite: 1, 6, 7, 10]
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
                                     <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">ArcGIS Pro</span>
                                     <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Cadastral Snapping</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Urban Density Analysis</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">High-Density Zoning</span>
                                     <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Sabah Cap. 141</span>
                                 </div>
                             </div>
@@ -567,15 +739,15 @@
                         </div>
                     </div>
 
-                    <!-- Card 2: Kudat Local Plan 2030 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                    <!-- Kudat Local Plan 2030 -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/0284c7/ffffff?text=Kudat+Local+Plan+2030" alt="Kudat Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 District Plan 2030
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
@@ -603,15 +775,15 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Draft Keningau Local Plan 2030 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                    <!-- Draft Keningau Local Plan 2030 -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/0284c7/ffffff?text=Keningau+Local+Plan+2030" alt="Keningau Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 Inland Corridor Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
@@ -638,7 +810,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -759,7 +930,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -824,7 +994,7 @@
                     <!-- Item 5 -->
                     <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Sin+On+Road+Tawau" alt="Tawau" class="w-full h-36 object-cover">
-                        <div class="p-4 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Commercial Rezoning</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Sin On Road, Tawau</h5>
@@ -969,35 +1139,5 @@
         </div>
     </footer>
 
-    <!-- Interactive View Switcher JavaScript -->
-    <script>
-        function switchView(viewId) {
-            // Hide all view panels
-            document.querySelectorAll('.view-panel').forEach(panel => {
-                panel.classList.add('hidden');
-                panel.classList.remove('block');
-            });
-
-            // Reset tab button states
-            document.querySelectorAll('.view-tab-btn').forEach(btn => {
-                btn.classList.remove('bg-white', 'text-emerald-950', 'shadow-sm');
-                btn.classList.add('bg-slate-800/80', 'text-slate-200');
-            });
-
-            // Show selected view panel
-            const activePanel = document.getElementById(viewId);
-            if (activePanel) {
-                activePanel.classList.remove('hidden');
-                activePanel.classList.add('block');
-            }
-
-            // Highlight clicked button
-            const activeBtn = document.getElementById('btn-' + viewId);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-slate-800/80', 'text-slate-200');
-                activeBtn.classList.add('bg-white', 'text-emerald-950', 'shadow-sm');
-            }
-        }
-    </script>
 </body>
 </html>
