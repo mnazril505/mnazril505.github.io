@@ -13,19 +13,17 @@
             background-color: #064e3b; 
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='0.35'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
         }
-        /* Custom scrollbar for modal */
-        .modal-scroll::-webkit-scrollbar {
-            width: 8px;
+        .mindmap-connector {
+            position: relative;
         }
-        .modal-scroll::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        .modal-scroll::-webkit-scrollbar-thumb {
+        .mindmap-connector::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            width: 20px;
+            height: 2px;
             background: #cbd5e1;
-            border-radius: 9999px;
-        }
-        .modal-scroll::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
         }
     </style>
 </head>
@@ -72,9 +70,9 @@
                 Bridging advanced spatial data science with statutory urban planning standards. Specialized in AHP multicriteria evaluation, automated geospatial workflows, geodatabase architecture, and Deep Learning vision models for sustainable land administration.
             </p>
             <div class="flex flex-wrap justify-center gap-3">
-                <button onclick="openUrbanModal()" class="bg-white text-emerald-950 font-bold px-6 py-3 rounded-xl shadow-lg shadow-emerald-950/20 hover:bg-emerald-50 transition transform hover:-translate-y-0.5 text-sm">
+                <a href="#urban-planning" class="bg-white text-emerald-950 font-bold px-6 py-3 rounded-xl shadow-lg shadow-emerald-950/20 hover:bg-emerald-50 transition transform hover:-translate-y-0.5 text-sm">
                     View Statutory Framework <i class="fas fa-layer-group ml-2 text-emerald-600"></i>
-                </button>
+                </a>
                 <a href="#projects" class="bg-emerald-800/80 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl border border-emerald-600/50 transition text-sm">
                     Browse Projects Catalog
                 </a>
@@ -87,7 +85,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Expertise Card -->
-                <div class="bg-gradient-to-br from-slate-50 to-emerald-50/30 rounded-3xl p-7 border border-slate-200 shadow-xs">
+                <div class="bg-gradient-to-br from-slate-50 to-emerald-50/30 rounded-2xl p-7 border border-slate-200 shadow-xs">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-sm shadow-emerald-600/20">
                             <i class="fas fa-brain"></i>
@@ -98,35 +96,35 @@
                         </div>
                     </div>
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700">
-                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
                             <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
                             <span>Spatial Modeling & Multicriteria Analysis</span>
                         </li>
-                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
                             <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
                             <span>Remote Sensing & Earth Observation</span>
                         </li>
-                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
                             <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
                             <span>Multi-Temporal Land Use Trajectory</span>
                         </li>
-                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
                             <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
                             <span>UAV Drone Survey & DSM/DTM Extraction</span>
                         </li>
-                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
                             <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
                             <span>Interactive Web GIS Architectures</span>
                         </li>
-                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
                             <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
                             <span>Statutory Geodatabase Normalization</span>
                         </li>
-                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
                             <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
                             <span>Catchment & Hydrological Delineation</span>
                         </li>
-                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
                             <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
                             <span>Spatial Decision Support Systems (SDSS)</span>
                         </li>
@@ -134,7 +132,7 @@
                 </div>
 
                 <!-- Technical Stacks -->
-                <div class="bg-gradient-to-br from-slate-50 to-teal-50/30 rounded-3xl p-7 border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div class="bg-gradient-to-br from-slate-50 to-teal-50/30 rounded-2xl p-7 border border-slate-200 shadow-xs flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-6">
                             <span class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center font-bold shadow-sm shadow-teal-600/20">
@@ -172,7 +170,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100/70 px-3.5 py-1.5 rounded-full">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100/60 px-3.5 py-1.5 rounded-full">
                     Geospatial Production Portfolio
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 tracking-tight">
@@ -186,163 +184,362 @@
 
             <!-- ============================================================= -->
             <!-- 1. FLAGSHIP PROJECT: GEOAI & SPATIAL AUTOMATION               -->
-            <!-- (STANDARDIZED WITH EXECUTIVE BANNER + MODAL POPUP TRIGGER)   -->
             <!-- ============================================================= -->
             <section id="flagship" class="mb-24">
-                
-                <!-- Section Header -->
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-emerald-200 pb-4">
-                    <div>
-                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100/70 px-3 py-1 rounded-full">
-                            Research & Applied Innovation
-                        </span>
-                        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 tracking-tight">
-                            1. Flagship Project: GeoAI & Spatial Automation
-                        </h3>
-                    </div>
-                    <span class="text-xs font-bold text-slate-600 mt-3 md:mt-0 bg-slate-100 px-3.5 py-1.5 rounded-lg border border-slate-200">
-                        Deep Learning & Cadastral Vector Compliance
-                    </span>
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-2.5 h-6 bg-emerald-600 rounded-md"></span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">1. Flagship Project: GeoAI & Spatial Automation</h3>
                 </div>
 
-                <!-- STANDARDIZED EXECUTIVE BANNER FOR GEOAI -->
-                <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 rounded-3xl p-6 sm:p-9 text-white mb-8 shadow-md border border-slate-800">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-                        <div class="max-w-3xl">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
-                                <i class="fas fa-brain text-emerald-400"></i> Computer Vision & Automated GIS Pipeline
-                            </div>
-                            <h4 class="text-xl sm:text-2xl font-black tracking-tight text-white mb-2">
-                                GeoAI Deep Learning Model for Land Use Mapping
-                            </h4>
-                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 text-justify">
-                                Bridging the gap between raw semantic segmentation predictions and statutory urban planning cadastral lot bounds. Utilizing <strong>U-Net++ and ResNet50</strong> architectures on ultra-high-resolution drone orthomosaics with custom post-processing to eliminate raster slivers and enforce clean topological geometry.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="px-2.5 py-1 bg-white/10 rounded-md text-emerald-200 border border-white/10">PyTorch & U-Net++</span>
-                                <span class="px-2.5 py-1 bg-white/10 rounded-md text-emerald-200 border border-white/10">UAV Orthomosaic Tiling</span>
-                                <span class="px-2.5 py-1 bg-white/10 rounded-md text-emerald-200 border border-white/10">Cadastral Snapping Engine</span>
-                                <span class="px-2.5 py-1 bg-white/10 rounded-md text-emerald-200 border border-white/10">Zero-Topology Polygonization</span>
-                            </div>
-                        </div>
-
-                        <!-- Button Trigger for GeoAI Modal Window -->
-                        <div class="flex-shrink-0">
-                            <button onclick="openGeoaiModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold px-6 py-4 rounded-2xl transition duration-300 shadow-lg shadow-emerald-500/20 hover:scale-102 text-sm">
-                                <i class="fas fa-window-restore text-lg"></i>
-                                <span>Open Full GeoAI Architecture & Pipeline</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- STANDARDIZED IMPLEMENTATION CARD -->
-                <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
-                    <div class="md:w-1/3 bg-slate-100 relative group overflow-hidden">
-                        <img src="https://placehold.co/600x400/064e3b/ffffff?text=GeoAI+Model+Training" alt="GeoAI Pipeline" class="object-cover w-full h-full min-h-[220px] group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
-                            Active Flagship Initiative
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col lg:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="lg:w-2/5 bg-slate-100 relative group overflow-hidden">
+                        <img src="https://placehold.co/700x480/064e3b/ffffff?text=GeoAI+Deep+Learning+Pipeline" alt="GeoAI Pipeline" class="object-cover w-full h-full min-h-[260px] group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-sm">
+                            <i class="fas fa-robot mr-1 text-emerald-600"></i> Active Pipeline
                         </span>
                     </div>
-                    <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                    <div class="lg:w-3/5 p-7 sm:p-9 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-2 mb-1.5">
-                                <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Applied Geospatial AI</span>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="px-2.5 py-0.5 text-xs font-bold bg-emerald-100 text-emerald-800 rounded-md">Computer Vision</span>
                                 <span class="text-slate-300">&bull;</span>
-                                <span class="text-xs text-slate-500 font-semibold">Automated Parcel Mapping</span>
+                                <span class="text-xs text-slate-500 font-medium">U-Net++ &bull; ResNet50 &bull; UAV Orthomosaic</span>
                             </div>
-                            <h4 class="text-xl font-bold text-slate-900 mb-1">High-Resolution UAV Land Cover Extraction</h4>
-                            <p class="text-xs font-semibold text-emerald-800 mb-3">Model Core: ResNet50 Backbone with Deep Supervision & Boundary Refinement</p>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                Generates production-ready shapefiles from raw drone imagery at 5cm GSD. Aligns segmented vegetative, built-up, and infrastructure boundaries directly with Land and Surveys Department cadastral parcel registries.
+                            <h4 class="text-2xl font-black text-slate-900 mb-3 tracking-tight">
+                                GeoAI Model Development for Automated Land Use Mapping
+                            </h4>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+                                Bridging the gap between raw AI predictions and rigid urban planning regulations. This project implements a Deep Learning semantic segmentation architecture (U-Net++ and ResNet50) tailored for ultra-high-resolution drone orthomosaics. Includes custom post-processing geometric smoothing algorithms to resolve raster slivers and snap vector boundaries onto gazetted cadastral lot lines with zero topological errors.
                             </p>
-                            <div class="flex flex-wrap gap-1.5 mb-4">
+                            <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">PyTorch</span>
                                 <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">GeoPandas</span>
                                 <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Rasterio</span>
                                 <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Cadastral Snapping</span>
+                                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Test-Time Augmentation</span>
                             </div>
                         </div>
-                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs text-slate-400 font-medium">Status: In Progress &bull; Version 1.2 Pipeline</span>
-                            <button onclick="openGeoaiModal()" class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
-                                View Technical Pipeline <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
-                            </button>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400 font-medium">Target: Automated Parcel Mapping</span>
+                            <a href="projek-portfolio.html" class="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-sm shadow-emerald-600/30">
+                                View Technical Case Study <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-
             </section>
 
             <!-- ============================================================= -->
-            <!-- 2. GIS SUPPORT FOR URBAN PLANNING CONSULTANCY PROJECTS        -->
+            <!-- 2. URBAN PLANNING CONSULTANCY & METHODOLOGY ENGINE           -->
             <!-- ============================================================= -->
             <section id="urban-planning" class="mb-24">
-                
-                <!-- Section Header -->
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-emerald-200 pb-4">
                     <div>
-                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100/70 px-3 py-1 rounded-full">
-                            Statutory Master Planning
-                        </span>
-                        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 tracking-tight">
-                            2. GIS Support for Urban Planning Consultancy Projects
-                        </h3>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700">Statutory Master Planning</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">2. GIS Support for Urban Planning Consultancy Projects</h3>
                     </div>
-                    <span class="text-xs font-bold text-slate-600 mt-3 md:mt-0 bg-slate-100 px-3.5 py-1.5 rounded-lg border border-slate-200">
-                        Governed by Sabah Cap. 141
+                    <span class="text-xs font-semibold text-slate-500 mt-2 md:mt-0 bg-slate-200/70 px-3 py-1.5 rounded-md">
+                        Governed by Sabah Cap. 141[cite: 1, 6, 7]
                     </span>
                 </div>
 
-                <!-- STREAMLINED EXECUTIVE BANNER WITH MODAL TRIGGER -->
-                <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 rounded-3xl p-6 sm:p-9 text-white mb-10 shadow-md border border-slate-800">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-                        <div class="max-w-3xl">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
-                                <i class="fas fa-layer-group text-emerald-400"></i> Standardized Geospatial Framework & SOP
-                            </div>
-                            <h4 class="text-xl sm:text-2xl font-black tracking-tight text-white mb-2">
-                                Statutory Urban Planning GIS Engine
-                            </h4>
-                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 text-justify">
-                                Translating national and state development policies into spatial strategies under the <strong>Town and Country Planning Ordinance (Sabah Cap. 141)</strong> and <strong>Sabah Structure Plan 2033</strong>. Encompasses 8 sectoral domain studies, central enterprise geodatabase schemas, and multi-criteria land suitability models (AHP).
+                <!-- INTERACTIVE METHODOLOGY & FRAMEWORK HUB -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+                    
+                    <!-- Hub Navigation Header -->
+                    <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 text-white p-6 sm:p-8">
+                        <div class="max-w-4xl">
+                            <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold rounded-full uppercase tracking-wider mb-2">
+                                Standardized SOP & Sectoral Architecture
+                            </span>
+                            <h4 class="text-xl sm:text-2xl font-black tracking-tight">Urban Planning & Geospatial Development Engine</h4>
+                            <p class="text-slate-300 text-xs sm:text-sm mt-1.5 leading-relaxed">
+                                Explore how statutory policies[cite: 1, 6, 7], 3-stage GIS workflow pipelines[cite: 5, 9], and the 8-domain database architecture[cite: 2, 6, 7] converge to deliver legally sound local plans across Sabah.
                             </p>
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="px-2.5 py-1 bg-white/10 rounded-md text-emerald-200 border border-white/10">Cap. 141 Mandate</span>
-                                <span class="px-2.5 py-1 bg-white/10 rounded-md text-emerald-200 border border-white/10">8 Sectoral Domains</span>
-                                <span class="px-2.5 py-1 bg-white/10 rounded-md text-emerald-200 border border-white/10">Base Map Hub Architecture</span>
-                                <span class="px-2.5 py-1 bg-white/10 rounded-md text-emerald-200 border border-white/10">3-Stage Workflow Matrix</span>
-                            </div>
                         </div>
 
-                        <!-- Button Trigger for Modal Window -->
-                        <div class="flex-shrink-0">
-                            <button onclick="openUrbanModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold px-6 py-4 rounded-2xl transition duration-300 shadow-lg shadow-emerald-500/20 hover:scale-102 text-sm">
-                                <i class="fas fa-window-restore text-lg"></i>
-                                <span>Open Full Methodology & Framework</span>
+                        <!-- View Switcher Tabs -->
+                        <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800">
+                            <button onclick="switchView('view-flowchart')" id="btn-view-flowchart" class="view-tab-btn active-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-emerald-950 shadow-sm">
+                                <i class="fas fa-stream mr-2 text-emerald-600"></i> 1. Workflow Flowchart[cite: 5, 9]
+                            </button>
+                            <button onclick="switchView('view-mindmap')" id="btn-view-mindmap" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
+                                <i class="fas fa-sitemap mr-2 text-teal-400"></i> 2. Sectoral Mind Map (Base Map Hub)[cite: 4, 8]
+                            </button>
+                            <button onclick="switchView('view-matrix')" id="btn-view-matrix" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
+                                <i class="fas fa-table-cells mr-2 text-amber-400"></i> 3. Database Matrix[cite: 5, 9]
+                            </button>
+                            <button onclick="switchView('view-mandate')" id="btn-view-mandate" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
+                                <i class="fas fa-scale-balanced mr-2 text-blue-400"></i> 4. Sabah Cap. 141 Mandate[cite: 1, 6, 7]
                             </button>
                         </div>
                     </div>
-                </div>
 
-                <!-- SUB-HEADING: INDIVIDUAL PROJECTS -->
-                <div class="flex items-center gap-3 mb-6">
-                    <h4 class="text-lg font-bold text-slate-800">Statutory Master Plans Portfolio (Implementation)</h4>
-                    <span class="h-px bg-slate-200 flex-grow"></span>
+                    <!-- VIEW CONTAINER -->
+                    <div class="p-6 sm:p-8 bg-slate-50/60">
+
+                        <!-- ============================================== -->
+                        <!-- 1. WORKFLOW FLOWCHART VIEW                     -->
+                        <!-- ============================================== -->
+                        <div id="view-flowchart" class="view-panel block space-y-6">
+                            <div class="text-center max-w-2xl mx-auto mb-6">
+                                <h5 class="text-base font-bold text-slate-900">3-Stage Geospatial Processing Pipeline</h5>
+                                <p class="text-xs text-slate-500">From baseline heterogeneous raw data to multi-criteria land decision models[cite: 5, 9].</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                                <!-- Stage 1 -->
+                                <div class="bg-white rounded-2xl p-6 border-t-4 border-emerald-600 border-x border-b border-slate-200 shadow-xs relative">
+                                    <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-xs flex items-center justify-center mb-3">
+                                        01
+                                    </div>
+                                    <h6 class="font-bold text-slate-900 text-sm mb-1">Spatial & Non-Spatial Collection[cite: 5, 9]</h6>
+                                    <p class="text-xs text-emerald-700 font-semibold mb-3">Baseline Survey & Acquisition[cite: 5, 9]</p>
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Cadastral lots & UAV orthophotos[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Topography, rivers, terrain & coastline[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Existing land use ground truthing[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Census block demography & income data[cite: 3, 5, 8, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Utilities network & government assets[cite: 3, 5, 8, 9]</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Stage 2 -->
+                                <div class="bg-white rounded-2xl p-6 border-t-4 border-teal-600 border-x border-b border-slate-200 shadow-xs relative">
+                                    <div class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 font-extrabold text-xs flex items-center justify-center mb-3">
+                                        02
+                                    </div>
+                                    <h6 class="font-bold text-slate-900 text-sm mb-1">GIS Database Development[cite: 5, 9]</h6>
+                                    <p class="text-xs text-teal-700 font-semibold mb-3">Architecture & Schema Standardization[cite: 3, 8]</p>
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Central Enterprise Geodatabase schema[cite: 4, 8]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Geometric cleaning & topology verification</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Cadastral parcel alignment & snapping</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Demographic tabular-to-spatial joining[cite: 3, 5, 8, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Road network topology & routing datasets[cite: 3, 4, 8]</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Stage 3 -->
+                                <div class="bg-white rounded-2xl p-6 border-t-4 border-slate-800 border-x border-b border-slate-200 shadow-xs relative">
+                                    <div class="w-8 h-8 rounded-full bg-slate-200 text-slate-800 font-extrabold text-xs flex items-center justify-center mb-3">
+                                        03
+                                    </div>
+                                    <h6 class="font-bold text-slate-900 text-sm mb-1">Spatial Analysis & Modeling[cite: 5, 9]</h6>
+                                    <p class="text-xs text-slate-700 font-semibold mb-3">SDSS & Statutory Map Production[cite: 5, 9]</p>
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Multi-Criteria Land Suitability (AHP)[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Environmentally Sensitive Areas (ESA/KSAS)[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Slope & DEM elevation constraint modeling[cite: 3, 5, 8, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Vacant land availability & infill density[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Statutory zoning conflicts resolution</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ============================================== -->
+                        <!-- 2. SECTORAL MIND MAP VIEW (BASE MAP CENTRAL)   -->
+                        <!-- ============================================== -->
+                        <div id="view-mindmap" class="view-panel hidden">
+                            <div class="text-center max-w-xl mx-auto mb-8">
+                                <h5 class="text-base font-bold text-slate-900">Sectoral Domain Mind Map (Base Map Hub)[cite: 4, 8]</h5>
+                                <p class="text-xs text-slate-500">Replicating the core centralized geodatabase design: Base Map at the nucleus feeding into the 8 specialized domain modules[cite: 2, 4, 6, 7, 8].</p>
+                            </div>
+
+                            <!-- Radial Architecture Grid -->
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+                                <!-- Left Wings (4 Sectors) -->
+                                <div class="space-y-3">
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">1. Population & Demography[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-users text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Population & settlement, labor force, and future growth projection blocks[cite: 2, 6, 7].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">2. Physical Conditions & Environment[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-mountain-sun text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Forestry reserves, sensitive river corridors (KSAS), terrain & geology[cite: 2, 3, 6, 7, 8].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">3. Land Uses & Master Zoning[cite: 2, 3, 6, 7, 8]</span>
+                                            <i class="fas fa-map-location-dot text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Key land use areas, housing zones, commercial centres, and industrial parks[cite: 2, 6, 7].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">4. Road & Transportation[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-road text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Main highway hierarchies, railways, transit nodes, and traffic volume zones[cite: 2, 3, 4, 6, 7, 8].</p>
+                                    </div>
+                                </div>
+
+                                <!-- Center Nucleus: BASE MAP & DATABASE CYLINDER -->
+                                <div class="bg-gradient-to-b from-emerald-900 to-teal-950 text-white rounded-2xl p-7 text-center shadow-lg border border-emerald-700/50 relative">
+                                    <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md mx-auto flex items-center justify-center text-emerald-300 text-2xl mb-3 shadow-inner">
+                                        <i class="fas fa-layer-group"></i>
+                                    </div>
+                                    <h6 class="text-lg font-black tracking-tight mb-1">BASE MAP NUCLEUS[cite: 4, 8]</h6>
+                                    <p class="text-xs text-emerald-200 mb-4">Cadastral Boundaries & Official Coordinates[cite: 3, 4, 8]</p>
+                                    <div class="h-0.5 w-12 bg-emerald-400 mx-auto mb-4"></div>
+                                    <div class="bg-white/10 rounded-xl p-3 border border-white/15">
+                                        <i class="fas fa-database text-teal-300 text-lg mb-1"></i>
+                                        <p class="text-xs font-bold uppercase tracking-wider text-white">Central GIS Geodatabase[cite: 4, 8]</p>
+                                        <p class="text-[11px] text-emerald-100/70 mt-0.5">Unified Spatial Feature Classes[cite: 4, 8]</p>
+                                    </div>
+                                </div>
+
+                                <!-- Right Wings (4 Sectors) -->
+                                <div class="space-y-3">
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">5. Community Facilities[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-hospital-user text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Schools, clinics, emergency services (police/fire), and community halls[cite: 2, 3, 4, 6, 7, 8].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">6. Infrastructure & Utilities[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-faucet-drip text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Reticulated water supply, power lines, sewage plants, and drainage systems[cite: 2, 3, 4, 6, 7, 8].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">7. Tourism & Heritage[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-monument text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Gazetted historical monuments, cultural preservation corridors, and eco-tourism[cite: 2, 6, 7].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">8. Open Space & Recreation[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-tree text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Public parks, sports fields, coastal promenade esplanades, and green lungs[cite: 2, 3, 6, 7, 8].</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ============================================== -->
+                        <!-- 3. WORKFLOW MATRIX TABLE VIEW                  -->
+                        <!-- ============================================== -->
+                        <div id="view-matrix" class="view-panel hidden">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-xs bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
+                                    <thead class="bg-slate-100 text-slate-800 font-bold uppercase text-[11px] tracking-wider border-b border-slate-200">
+                                        <tr>
+                                            <th class="p-3.5 w-1/3">1. Spatial & Non-Spatial Collection[cite: 5, 9]</th>
+                                            <th class="p-3.5 w-1/3">2. GIS Database Development[cite: 5, 9]</th>
+                                            <th class="p-3.5 w-1/3">3. GIS Analysis & Data Modeling[cite: 5, 9]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100 text-slate-600 leading-relaxed">
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Basemap (Cadastral lots, Aerial photography)[cite: 5, 9]</td>
+                                            <td class="p-3.5">Administrative & Baseline Boundary Feature Classes[cite: 3, 4, 5, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Vacant Land Availability Modeling[cite: 5, 9]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Physical (Topography, Soil, River, Coastline)[cite: 5, 9]</td>
+                                            <td class="p-3.5">Physical Terrain & Hydrological Surface Datasets[cite: 3, 4, 5, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Environmentally Sensitive Area (ESA / KSAS)[cite: 5, 9]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Land Use Schemes (Local & District Plans)[cite: 5, 9]</td>
+                                            <td class="p-3.5">Standardized Land Use Classification Scheme[cite: 3, 5, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Multi-Criteria Land Suitability (AHP)[cite: 5, 9]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Basic Infrastructure & Utilities Reticulation[cite: 3, 5, 8, 9]</td>
+                                            <td class="p-3.5">Linear Network Datasets (Water, Electric, Sewerage)[cite: 2, 4, 6, 7, 8]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Service Buffering & Infrastructure Accessibility</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Open Space, Recreation & Cultural Heritage[cite: 2, 5, 6, 7, 9]</td>
+                                            <td class="p-3.5">Tourism & Green Lung Attribute Profiles[cite: 2, 3, 5, 6, 7, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Tourism & Recreation Potential Mapping[cite: 5, 9]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Demographic Census & Socio-Economic Surveys[cite: 3, 5, 8, 9]</td>
+                                            <td class="p-3.5">Demography & Household Density Joins[cite: 3, 5, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Population Growth Allocation & Pressure Nodes</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Elevation Contours & DEM Raster Surfaces[cite: 3, 8]</td>
+                                            <td class="p-3.5">Digital Elevation Models (DEM/DTM) & Contours[cite: 3, 8]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Slope Steepness & Elevation Class Modeling[cite: 5, 9]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- ============================================== -->
+                        <!-- 4. STATUTORY MANDATE & POLICIES VIEW           -->
+                        <!-- ============================================== -->
+                        <div id="view-mandate" class="view-panel hidden space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-3 text-emerald-900 font-bold text-sm">
+                                        <i class="fas fa-file-contract text-emerald-600"></i> Policy Translation & Objectives[cite: 1, 6, 7]
+                                    </div>
+                                    <ul class="space-y-3 text-xs text-slate-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
+                                            <span>Translates national and state development agendas into actionable spatial zoning strategies that stimulate public-private capital deployment[cite: 1, 6, 7].</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
+                                            <span>Establishes development guidance consistent with the <strong>Sabah Structure Plan 2033</strong>, balancing community vitality, economic viability, and ecological urbanism[cite: 1, 6, 7].</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
+                                            <span>Institutes clear statutory frameworks encompassing design thresholds, allowable plot ratios, environmental safeguards, and essential infrastructure reservations[cite: 1, 6, 7].</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-3 text-emerald-900 font-bold text-sm">
+                                        <i class="fas fa-gavel text-emerald-600"></i> Sabah Cap. 141 Statutory Hierarchy[cite: 1, 6, 7]
+                                    </div>
+                                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                        <strong>The Town and Country Planning Ordinance (Sabah Cap. 141)</strong> provides the authoritative legal architecture for physical planning and state-wide territorial development[cite: 1, 6, 7]:
+                                    </p>
+                                    <div class="p-3.5 bg-emerald-50/70 border border-emerald-200 rounded-xl space-y-2 text-xs text-emerald-950">
+                                        <p><strong>Tier 1 - Structure Plan:</strong> Overarching macro plan for the state and territorial waters, prepared by the Director of Town and Regional Planning for the State Planning Council and endorsed by Cabinet under Section 4C(1)[cite: 1, 6, 7].</p>
+                                        <p><strong>Tier 2 - Local Plan:</strong> Detailed micro-level zoning blueprints regulating land parcel rights, road alignments, density standards, and public facilities reservations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
                 <!-- INDIVIDUAL PROJECT CARDS (KK -> KUDAT -> KENINGAU) -->
                 <div class="space-y-6">
                     
                     <!-- Card 1: Kota Kinabalu Local Plan -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/0284c7/ffffff?text=Kota+Kinabalu+Local+Plan" alt="KK Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
-                                Metropolitan Master Plan
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                                Metropolitan Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
@@ -350,14 +547,14 @@
                                     <span class="text-xs text-slate-500 font-semibold">Tier 2 Local Plan</span>
                                 </div>
                                 <h4 class="text-xl font-bold text-slate-900 mb-1">Kota Kinabalu Local Plan</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Urban Density Harmonization & Cadastral Boundary Alignment</p>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: High-Density Zoning Harmonization & Metropolitan Cadastral Alignment</p>
                                 <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
                                     Administered spatial database consolidation across Greater Kota Kinabalu. Formulated high-density commercial and residential zoning criteria, analyzed major transit corridors, and aligned land titles with gazetted planning scheme boundaries under the Cap. 141 framework.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
                                     <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">ArcGIS Pro</span>
                                     <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Cadastral Snapping</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">High-Density Zoning</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Urban Density Analysis</span>
                                     <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Sabah Cap. 141</span>
                                 </div>
                             </div>
@@ -371,14 +568,14 @@
                     </div>
 
                     <!-- Card 2: Kudat Local Plan 2030 -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/0284c7/ffffff?text=Kudat+Local+Plan+2030" alt="Kudat Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 District Plan 2030
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
@@ -407,14 +604,14 @@
                     </div>
 
                     <!-- Card 3: Draft Keningau Local Plan 2030 -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/0284c7/ffffff?text=Keningau+Local+Plan+2030" alt="Keningau Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 Inland Corridor Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
@@ -441,6 +638,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
 
@@ -455,14 +653,14 @@
 
                 <div class="space-y-6">
                     <!-- Project 1: IRBM Tuaran -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/059669/ffffff?text=IRBM+Tuaran+Basin" alt="IRBM Tuaran" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 Catchment Master Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Environmental Management</span>
@@ -491,14 +689,14 @@
                     </div>
 
                     <!-- Project 2: Sabah SMP -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/059669/ffffff?text=Sabah+Shoreline+SMP" alt="Sabah SMP" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 State-Wide Coastline
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Coastal Spatial Analysis</span>
@@ -527,14 +725,14 @@
                     </div>
 
                     <!-- Project 3: ISMP Kudat-Tawau -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
                         <div class="md:w-1/3 bg-slate-100 relative">
                             <img src="https://placehold.co/600x400/059669/ffffff?text=ISMP+Kudat-Tawau" alt="ISMP Kudat Tawau" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 Regional Corridor
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Integrated Coastal GIS</span>
@@ -561,6 +759,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
 
@@ -575,9 +774,9 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     <!-- Item 1 -->
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Kudat+Blue+Econ+Park" alt="Kudat BE" class="w-full h-36 object-cover">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Industrial Master Plan</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kudat Blue Economy Industrial Park</h5>
@@ -587,9 +786,9 @@
                     </div>
 
                     <!-- Item 2 -->
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Railway+Putatan-Sepanggar" alt="Railway" class="w-full h-36 object-cover">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Transit & Corridor</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Railway: Putatan to Sepanggar Port</h5>
@@ -599,9 +798,9 @@
                     </div>
 
                     <!-- Item 3 -->
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Mile+9+Labuk+Sandakan" alt="Sandakan" class="w-full h-36 object-cover">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Land Layout Scheme</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Mile 9, Labuk Road Sandakan</h5>
@@ -611,9 +810,9 @@
                     </div>
 
                     <!-- Item 4 -->
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=KKIP+Lot+Rezoning" alt="KKIP" class="w-full h-36 object-cover">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Rezoning Justification</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">KKIP Sepanggar CL015608750</h5>
@@ -623,9 +822,9 @@
                     </div>
 
                     <!-- Item 5 -->
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Sin+On+Road+Tawau" alt="Tawau" class="w-full h-36 object-cover">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Commercial Rezoning</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Sin On Road, Tawau</h5>
@@ -635,9 +834,9 @@
                     </div>
 
                     <!-- Item 6 -->
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Kg+Pandewan+Nabawan" alt="Nabawan" class="w-full h-36 object-cover">
-                        <div class="p-5 flex-grow flex-col justify-between">
+                        <div class="p-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Land Use Conversion</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kg Pandewan, Nabawan</h5>
@@ -647,9 +846,9 @@
                     </div>
 
                     <!-- Item 7 -->
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Jalan+Balung+Semporna" alt="Semporna" class="w-full h-36 object-cover">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Suburban Growth</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Jalan Balung, Semporna</h5>
@@ -659,9 +858,9 @@
                     </div>
 
                     <!-- Item 8 -->
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Kudat+BE+Masterplan+2026" alt="Kudat 2026" class="w-full h-36 object-cover">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div class="p-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Regional Master Plan</span>
                                 <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kudat Blue Economy Plan (2026)</h5>
@@ -683,14 +882,14 @@
 
                 <div class="space-y-6">
                     <!-- D1: PSPD Kudat -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
                         <div class="md:w-1/3 bg-slate-100 relative">
-                            <img src="https://placehold.co/600x400/d97706/ffffff?text=PSPD+Kudat" alt="PSPD Kudat" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-slate-900 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <img src="https://placehold.co/600x400/d97706/ffffff?text=PSPD+Kudat" alt="PSPD Kudat" class="object-cover w-full h-full min-h-[200px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-slate-900 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 District Strategic Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-amber-700 uppercase tracking-wider">Regional Strategy</span>
@@ -718,14 +917,14 @@
                     </div>
 
                     <!-- D2: Beluran Strategic Plan -->
-                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
                         <div class="md:w-1/3 bg-slate-100 relative">
-                            <img src="https://placehold.co/600x400/d97706/ffffff?text=Beluran+2025-2035" alt="Beluran" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-slate-900 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                            <img src="https://placehold.co/600x400/d97706/ffffff?text=Beluran+2025-2035" alt="Beluran" class="object-cover w-full h-full min-h-[200px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-slate-900 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 10-Year Master Framework
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="text-xs font-extrabold text-amber-700 uppercase tracking-wider">Regional Strategy</span>
@@ -770,731 +969,35 @@
         </div>
     </footer>
 
-    <!-- ========================================================================= -->
-    <!-- MODAL 1: GEOAI & SPATIAL AUTOMATION TECHNICAL FRAMEWORK                   -->
-    <!-- ========================================================================= -->
-    <div id="geoaiModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/80 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
-        
-        <!-- Modal Card Container -->
-        <div class="bg-white w-full max-w-6xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="geoaiModalCard">
-            
-            <!-- Modal Header (Sticky) -->
-            <div class="bg-slate-900 text-white px-6 py-5 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
-                <div class="flex items-center gap-3">
-                    <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm">
-                        <i class="fas fa-brain"></i>
-                    </span>
-                    <div>
-                        <h3 class="text-base sm:text-lg font-black tracking-tight text-white">GeoAI Deep Learning Pipeline & Cadastral Compliance</h3>
-                        <p class="text-xs text-slate-400">ResNet50 Backbone &bull; U-Net++ Architecture &bull; UAV Photogrammetry &bull; Automated Vectorization</p>
-                    </div>
-                </div>
-                <!-- Close Button -->
-                <button onclick="closeGeoaiModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <!-- Modal Body (Scrollable Technical Details) -->
-            <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-10 bg-slate-50/50">
-
-                <!-- 1. Pipeline Architecture Overview -->
-                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-lg bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">
-                            01
-                        </span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">PIPELINE ARCHITECTURE & OBJECTIVES</h4>
-                            <p class="text-xs text-slate-500 font-medium">Bridging semantic segmentation neural networks with strict land survey geometry</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200">
-                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold mb-3">A</span>
-                            <h5 class="font-bold text-slate-900 text-sm mb-1.5">Model Backbone</h5>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                ResNet50 encoder paired with nested dense skip pathways (U-Net++) to capture multi-scale feature representations from UAV orthomosaics at sub-decimeter resolution.
-                            </p>
-                        </div>
-                        <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200">
-                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold mb-3">B</span>
-                            <h5 class="font-bold text-slate-900 text-sm mb-1.5">Tiling & Inference</h5>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Sliding-window patch extraction (512&times;512 px) with 20% overlap, combined with Test-Time Augmentation (TTA) to eliminate edge artifacts across patch borders.
-                            </p>
-                        </div>
-                        <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200">
-                            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold mb-3">C</span>
-                            <h5 class="font-bold text-slate-900 text-sm mb-1.5">Cadastral Snapping</h5>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Custom post-processing engine using GeoPandas, Rasterio, and Shapely to snap segmented building/land boundaries to official Land & Surveys lot records with zero topology errors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Four-Stage Automated Flowchart -->
-                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-lg bg-teal-800 text-white flex items-center justify-center font-bold text-xs">
-                            02
-                        </span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">END-TO-END GEOAI PROCESSING PIPELINE</h4>
-                            <p class="text-xs text-slate-500 font-medium">Standardized workflow from raw sensor acquisition to validated vector deliverables</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
-                            <div class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider mb-1">Step 1</div>
-                            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-2">UAV Sensor Data Input</h5>
-                            <ul class="text-xs text-slate-600 space-y-1">
-                                <li>&bull; DJI Matrice 4T / Mavic 3E</li>
-                                <li>&bull; RTK & GCP photogrammetry</li>
-                                <li>&bull; 5cm GSD Orthomosaic generation</li>
-                                <li>&bull; Radiometric calibration</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
-                            <div class="text-[10px] font-bold text-teal-700 uppercase tracking-wider mb-1">Step 2</div>
-                            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-2">Deep Learning Inference</h5>
-                            <ul class="text-xs text-slate-600 space-y-1">
-                                <li>&bull; PyTorch + CUDA acceleration</li>
-                                <li>&bull; U-Net++ multiclass segmentation</li>
-                                <li>&bull; Softmax probability output</li>
-                                <li>&bull; Weighted Cross-Entropy Loss</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
-                            <div class="text-[10px] font-bold text-amber-700 uppercase tracking-wider mb-1">Step 3</div>
-                            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-2">Vector Post-Processing</h5>
-                            <ul class="text-xs text-slate-600 space-y-1">
-                                <li>&bull; Raster-to-polygon conversion</li>
-                                <li>&bull; Douglas-Peucker simplification</li>
-                                <li>&bull; Sliver & hole removal</li>
-                                <li>&bull; Snapping to cadastral parcels</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
-                            <div class="text-[10px] font-bold text-blue-700 uppercase tracking-wider mb-1">Step 4</div>
-                            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-2">Statutory Quality Check</h5>
-                            <ul class="text-xs text-slate-600 space-y-1">
-                                <li>&bull; Zero overlap & gap check</li>
-                                <li>&bull; Attribute table normalization</li>
-                                <li>&bull; Enterprise Geodatabase push</li>
-                                <li>&bull; Production shapefile export</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Target Classes & Metric Performance -->
-                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-xs">
-                            03
-                        </span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">SEMANTIC EXTRACTION TARGETS & PERFORMANCE MATRIX</h4>
-                            <p class="text-xs text-slate-500 font-medium">Evaluation metrics on testing benchmark datasets</p>
-                        </div>
-                    </div>
-
-                    <div class="overflow-x-auto rounded-2xl border border-slate-200">
-                        <table class="w-full text-left text-xs text-slate-700">
-                            <thead>
-                                <tr class="bg-emerald-900 text-white font-extrabold uppercase text-[10px] tracking-wider divide-x divide-emerald-800/60">
-                                    <th class="p-3 w-1/4">Land Cover Target</th>
-                                    <th class="p-3 w-1/4">Planning Classification</th>
-                                    <th class="p-3 w-1/4">Extraction Precision</th>
-                                    <th class="p-3 w-1/4">Mean IoU Benchmark</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-200 font-medium text-xs">
-                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
-                                    <td class="p-3 font-bold text-slate-900">Residential & Commercial Footprints</td>
-                                    <td class="p-3">Built-Up Structures</td>
-                                    <td class="p-3 text-emerald-700 font-semibold">92.4%</td>
-                                    <td class="p-3 font-mono font-bold text-slate-800">0.865</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
-                                    <td class="p-3 font-bold text-slate-900">Paved Road & Transit Networks</td>
-                                    <td class="p-3">Transportation & Infrastructure</td>
-                                    <td class="p-3 text-emerald-700 font-semibold">89.8%</td>
-                                    <td class="p-3 font-mono font-bold text-slate-800">0.832</td>
-                                </tr>
-                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
-                                    <td class="p-3 font-bold text-slate-900">Agriculture & Cultivated Fields</td>
-                                    <td class="p-3">Agricultural Use</td>
-                                    <td class="p-3 text-emerald-700 font-semibold">94.1%</td>
-                                    <td class="p-3 font-mono font-bold text-slate-800">0.887</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
-                                    <td class="p-3 font-bold text-slate-900">Forest Canopy & River Buffers</td>
-                                    <td class="p-3">Environmentally Sensitive (KSAS)</td>
-                                    <td class="p-3 text-emerald-700 font-semibold">95.6%</td>
-                                    <td class="p-3 font-mono font-bold text-slate-800">0.910</td>
-                                </tr>
-                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
-                                    <td class="p-3 font-bold text-slate-900">Vacant Lots & Cleared Ground</td>
-                                    <td class="p-3">Development Availability</td>
-                                    <td class="p-3 text-emerald-700 font-semibold">88.3%</td>
-                                    <td class="p-3 font-mono font-bold text-slate-800">0.814</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Modal Footer -->
-            <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
-                <span>GeoAI Deep Learning Pipeline &bull; Automated Vector Extraction Engine</span>
-                <button onclick="closeGeoaiModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition">
-                    Close Window
-                </button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- MODAL 2: URBAN PLANNING STATUTORY FRAMEWORK & METHODOLOGY                 -->
-    <!-- ========================================================================= -->
-    <div id="urbanModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/80 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
-        
-        <!-- Modal Card Container -->
-        <div class="bg-white w-full max-w-6xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="urbanModalCard">
-            
-            <!-- Modal Header (Sticky) -->
-            <div class="bg-slate-900 text-white px-6 py-5 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
-                <div class="flex items-center gap-3">
-                    <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm">
-                        <i class="fas fa-layer-group"></i>
-                    </span>
-                    <div>
-                        <h3 class="text-base sm:text-lg font-black tracking-tight text-white">Urban Planning & Geospatial Development Framework</h3>
-                        <p class="text-xs text-slate-400">Sabah Cap. 141 &bull; 8 Sectoral Studies &bull; Geodatabase Schema &bull; Workflow Matrix</p>
-                    </div>
-                </div>
-                <!-- Close Button -->
-                <button onclick="closeUrbanModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <!-- Modal Body (Scrollable from Top to Bottom) -->
-            <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-12 bg-slate-50/50">
-
-                <!-- PART 1: URBAN PLANNING & DEVELOPMENT -->
-                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-lg bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">
-                            01
-                        </span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">URBAN PLANNING & DEVELOPMENT</h4>
-                            <p class="text-xs text-slate-500 font-medium">Statutory translation, policy alignment, and sectoral study methodology</p>
-                        </div>
-                    </div>
-
-                    <!-- 1.1 Introduction -->
-                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 mb-8">
-                        <span class="inline-block px-3 py-1 bg-slate-800 text-white text-[11px] font-bold rounded-lg uppercase tracking-wider mb-4">
-                            Introduction
-                        </span>
-                        <div class="space-y-3.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
-                            <div class="flex items-start gap-3">
-                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px] flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
-                                <p>It translates national and state development policies into practical strategies that shape growth and align public–private investment.</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px] flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
-                                <p>The plan sets land-use and development guidance to keep growth consistent with the <strong>Sabah Structure Plan 2033</strong>, while balancing community needs, economic opportunities, and sustainable urbanism.</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px] flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
-                                <p>It establishes a clear policy framework—covering design standards, zoning, environmental safeguards, and infrastructure provision—to drive economic progress and protect community priorities.</p>
-                            </div>
-                            
-                            <!-- Statutory Plan in Sabah Box -->
-                            <div class="mt-4 pt-4 border-t border-slate-200">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px] flex items-center justify-center flex-shrink-0">4</span>
-                                    <h5 class="font-bold text-slate-900 text-xs sm:text-sm">Statutory Plan In Sabah</h5>
-                                </div>
-                                <div class="ml-8 p-3.5 bg-white rounded-xl border border-slate-200 space-y-2 text-xs text-slate-600">
-                                    <p class="flex items-start gap-2">
-                                        <i class="fas fa-circle text-[5px] text-emerald-600 mt-1.5 flex-shrink-0"></i>
-                                        <span>The Town and Country Planning Ordinance (Sabah Cap. 141) serves as the primary legislation governing town and country planning in Sabah.</span>
-                                    </p>
-                                    <p class="flex items-start gap-2">
-                                        <i class="fas fa-circle text-[5px] text-emerald-600 mt-1.5 flex-shrink-0"></i>
-                                        <span>This ordinance mandates two levels of statutory plans for Sabah. The first tier is the Structure Plan, which serves as the overarching plan for the entire state, including both the land and its territorial waters. It is prepared by the Director of the Sabah Town and Regional Planning Department on behalf of the State Planning Council and approved by the Cabinet under Section 4C(1).</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 1.2 Methodology / Sectoral Studies (8 Cards) -->
-                    <div>
-                        <div class="text-center mb-6">
-                            <span class="inline-block px-4 py-1.5 bg-slate-900 text-white text-xs font-extrabold uppercase tracking-widest rounded-xl">
-                                METHODOLOGY / SECTORAL STUDIES
-                            </span>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
-                            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                <div class="bg-slate-700 text-white p-2.5 text-center font-bold text-xs uppercase tracking-wide">
-                                    Population & Demography
-                                </div>
-                                <div class="p-3 text-xs text-slate-600 space-y-1">
-                                    <div>&bull; Population & Settlement</div>
-                                    <div>&bull; Labor Force</div>
-                                    <div>&bull; Future Growth</div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                <div class="bg-slate-700 text-white p-2.5 text-center font-bold text-xs uppercase tracking-wide">
-                                    Physical Conditions & Environment
-                                </div>
-                                <div class="p-3 text-xs text-slate-600 space-y-1">
-                                    <div>&bull; Nature & Forestry</div>
-                                    <div>&bull; Key Environment Areas</div>
-                                    <div>&bull; Heritage Sites</div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                <div class="bg-slate-700 text-white p-2.5 text-center font-bold text-xs uppercase tracking-wide">
-                                    Land Uses
-                                </div>
-                                <div class="p-3 text-xs text-slate-600 space-y-1">
-                                    <div>&bull; Key Land Uses Areas</div>
-                                    <div>&bull; Housing Zone</div>
-                                    <div>&bull; Industry & Commerce</div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                <div class="bg-slate-700 text-white p-2.5 text-center font-bold text-xs uppercase tracking-wide">
-                                    Road & Transportation
-                                </div>
-                                <div class="p-3 text-xs text-slate-600 space-y-1">
-                                    <div>&bull; Main Road Network</div>
-                                    <div>&bull; Public Transportation Network</div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                <div class="bg-slate-700 text-white p-2.5 text-center font-bold text-xs uppercase tracking-wide">
-                                    Community Facilities
-                                </div>
-                                <div class="p-3 text-xs text-slate-600 space-y-1">
-                                    <div>&bull; School</div>
-                                    <div>&bull; Healthcare</div>
-                                    <div>&bull; Public Halls</div>
-                                    <div>&bull; Security</div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                <div class="bg-slate-700 text-white p-2.5 text-center font-bold text-xs uppercase tracking-wide">
-                                    Infrastructure & Utilities
-                                </div>
-                                <div class="p-3 text-xs text-slate-600 space-y-1">
-                                    <div>&bull; Water Supply</div>
-                                    <div>&bull; Electric Supply</div>
-                                    <div>&bull; Sewerage Supply</div>
-                                    <div>&bull; Drainage & Irrigation</div>
-                                    <div>&bull; Garbage Disposal and etc</div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                <div class="bg-slate-700 text-white p-2.5 text-center font-bold text-xs uppercase tracking-wide">
-                                    Tourism & Heritage
-                                </div>
-                                <div class="p-3 text-xs text-slate-600 space-y-1">
-                                    <div>&bull; State Cultural Areas</div>
-                                    <div>&bull; Key Historical Sites</div>
-                                    <div>&bull; Potential New Site</div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
-                                <div class="bg-slate-700 text-white p-2.5 text-center font-bold text-xs uppercase tracking-wide">
-                                    Open Space & Recreation
-                                </div>
-                                <div class="p-3 text-xs text-slate-600 space-y-1">
-                                    <div>&bull; Existing Open Space</div>
-                                    <div>&bull; Existing Recreation</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PART 2: GIS DATABASE DEVELOPMENT (CORE SPATIAL DATA DOMAIN) -->
-                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-lg bg-teal-800 text-white flex items-center justify-center font-bold text-xs">
-                            02
-                        </span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">GIS DATABASE DEVELOPMENT</h4>
-                            <p class="text-xs text-slate-500 font-medium">Core spatial data domain definitions for urban master planning</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-                        <h5 class="text-xs sm:text-sm font-bold text-slate-800 mb-4">Core spatial data domain for Urban Planning :</h5>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700">
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-start gap-2">
-                                <i class="fas fa-check text-emerald-600 mt-0.5 text-xs"></i>
-                                <div><strong class="text-slate-900">Administrative & Base Maps:</strong> Land boundaries, districts and census area.</div>
-                            </div>
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-start gap-2">
-                                <i class="fas fa-check text-emerald-600 mt-0.5 text-xs"></i>
-                                <div><strong class="text-slate-900">Population & Socio-economic:</strong> Population numbers, density, households and income.</div>
-                            </div>
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-start gap-2">
-                                <i class="fas fa-check text-emerald-600 mt-0.5 text-xs"></i>
-                                <div><strong class="text-slate-900">Land Use & Zoning:</strong> Current land use, zoning regulations and land ownership.</div>
-                            </div>
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-start gap-2">
-                                <i class="fas fa-check text-emerald-600 mt-0.5 text-xs"></i>
-                                <div><strong class="text-slate-900">Transportation:</strong> Roads, public transport, traffic, and travel routes.</div>
-                            </div>
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-start gap-2">
-                                <i class="fas fa-check text-emerald-600 mt-0.5 text-xs"></i>
-                                <div><strong class="text-slate-900">Environment & Green Areas:</strong> Parks, forests, rivers, flood risks and pollution.</div>
-                            </div>
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-start gap-2">
-                                <i class="fas fa-check text-emerald-600 mt-0.5 text-xs"></i>
-                                <div><strong class="text-slate-900">Physical Terrain:</strong> Land Elevation, slopes, soil, geology and climate.</div>
-                            </div>
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-start gap-2 md:col-span-2">
-                                <i class="fas fa-check text-emerald-600 mt-0.5 text-xs"></i>
-                                <div><strong class="text-slate-900">Utilities & Public Services:</strong> Water, electricity, drainage, hospitals, schools. Police and fire services.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PART 3: GIS DATABASE ARCHITECTURE (SYSTEM INTEGRATION DIAGRAM) -->
-                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-lg bg-emerald-900 text-white flex items-center justify-center font-bold text-xs">
-                            03
-                        </span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">GIS DATABASE ARCHITECTURE</h4>
-                            <p class="text-xs text-slate-500 font-medium">System integration diagram: Base Map nucleus feeding the enterprise GIS database</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col lg:flex-row items-center gap-6">
-                        <!-- Red Dashed Enclosure Box -->
-                        <div class="w-full lg:w-4/5 border-2 border-dashed border-red-500 rounded-3xl p-5 sm:p-6 bg-slate-50/60">
-                            <!-- Administration (Top) -->
-                            <div class="flex flex-col items-center justify-center mb-6">
-                                <div class="w-full max-w-xs mb-4 text-center">
-                                    <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Administration</span>
-                                    <div class="bg-white rounded-lg border border-slate-300 text-[10px] text-slate-600 divide-y divide-slate-200">
-                                        <div class="py-0.5">State Boundary</div>
-                                        <div class="py-0.5">District Boundary</div>
-                                        <div class="py-0.5">Local Authority Boundary</div>
-                                        <div class="py-0.5">Political Boundary</div>
-                                        <div class="py-0.5">Rating Boundary</div>
-                                        <div class="py-0.5">Census District & Block</div>
-                                    </div>
-                                    <div class="w-0.5 h-3 bg-slate-400 mx-auto mt-1"></div>
-                                    <i class="fas fa-arrow-down text-slate-400 text-[10px]"></i>
-                                </div>
-
-                                <!-- Base Map Center Box -->
-                                <div class="bg-gradient-to-r from-slate-100 via-white to-slate-100 border-2 border-slate-400 px-8 py-2 rounded-lg text-center">
-                                    <span class="font-black text-xs tracking-widest text-slate-900 uppercase">BASE MAP</span>
-                                </div>
-                            </div>
-
-                            <!-- Left and Right Clusters -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
-                                <!-- Left Column -->
-                                <div class="space-y-3.5">
-                                    <div>
-                                        <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Infrastructure & Utilities</span>
-                                        <div class="bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200">
-                                            <div class="py-0.5 px-2">Electrical Line</div>
-                                            <div class="py-0.5 px-2">Electrical Transmission</div>
-                                            <div class="py-0.5 px-2">Water Pipe</div>
-                                            <div class="py-0.5 px-2">Water Tank</div>
-                                            <div class="py-0.5 px-2">Sewerage Pipe</div>
-                                            <div class="py-0.5 px-2">Sewerage</div>
-                                            <div class="py-0.5 px-2">Drainage</div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Physical</span>
-                                        <div class="bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200">
-                                            <div class="py-0.5 px-2">Soil</div>
-                                            <div class="py-0.5 px-2">Geology</div>
-                                            <div class="py-0.5 px-2">Weather</div>
-                                            <div class="py-0.5 px-2">River</div>
-                                            <div class="py-0.5 px-2">Topography</div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Land Information</span>
-                                        <div class="bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200">
-                                            <div class="py-0.5 px-2">Current Land Use</div>
-                                            <div class="py-0.5 px-2">Land Owner</div>
-                                            <div class="py-0.5 px-2">Land Value</div>
-                                            <div class="py-0.5 px-2">Present Land Use</div>
-                                            <div class="py-0.5 px-2">Committed</div>
-                                            <div class="py-0.5 px-2">Housing</div>
-                                            <div class="py-0.5 px-2">Commercial</div>
-                                            <div class="py-0.5 px-2">Squatters</div>
-                                            <div class="py-0.5 px-2">Town Centre</div>
-                                            <div class="py-0.5 px-2">Industry</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Right Column -->
-                                <div class="space-y-3.5">
-                                    <div>
-                                        <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Population and Socio-Economic</span>
-                                        <div class="bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200">
-                                            <div class="py-0.5 px-2">Socio Economy by District</div>
-                                            <div class="py-0.5 px-2">Population by Census District & Block</div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Green Area and Recreational</span>
-                                        <div class="bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200">
-                                            <div class="py-0.5 px-2">Forest</div>
-                                            <div class="py-0.5 px-2">Recreational Area</div>
-                                            <div class="py-0.5 px-2">Green Area</div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Roads & Transportation</span>
-                                        <div class="bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200">
-                                            <div class="py-0.5 px-2">Road</div>
-                                            <div class="py-0.5 px-2">Railways</div>
-                                            <div class="py-0.5 px-2">Station</div>
-                                            <div class="py-0.5 px-2">Traffic Zone</div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Environmental</span>
-                                        <div class="bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200">
-                                            <div class="py-0.5 px-2">River</div>
-                                            <div class="py-0.5 px-2">Water Quality</div>
-                                            <div class="py-0.5 px-2">Air Quality</div>
-                                            <div class="py-0.5 px-2">Noise</div>
-                                            <div class="py-0.5 px-2">Flood Area</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Bottom: Public Facilities and Services -->
-                            <div class="mt-4 pt-3 border-t border-slate-200 flex flex-col items-center">
-                                <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1 text-center">Public Facilities and Services</span>
-                                <div class="w-full max-w-sm bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200 text-center">
-                                    <div class="py-0.5">Fire Brigade</div>
-                                    <div class="py-0.5">Police</div>
-                                    <div class="py-0.5">Health</div>
-                                    <div class="py-0.5">Education</div>
-                                    <div class="py-0.5">Cemetery</div>
-                                    <div class="py-0.5">Religious</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Arrow & Database Cylinder -->
-                        <div class="w-full lg:w-1/5 flex flex-col items-center justify-center text-center">
-                            <div class="hidden lg:flex items-center text-red-600 text-2xl mb-2">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                            <div class="flex lg:hidden items-center text-red-600 text-xl my-2">
-                                <i class="fas fa-arrow-down"></i>
-                            </div>
-                            <div class="bg-gradient-to-b from-slate-800 to-slate-950 text-white rounded-2xl p-5 shadow-lg border border-slate-700 w-full max-w-[170px]">
-                                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mx-auto mb-2 border border-emerald-400/30">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <h6 class="font-black text-xs tracking-widest uppercase">GIS DATABASE</h6>
-                                <p class="text-[9px] text-slate-400 mt-0.5">Enterprise Geodatabase</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PART 4: DATA WORKFLOW & MODELING MATRIX TABLE -->
-                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-xs">
-                            04
-                        </span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">DATA WORKFLOW & MODELING MATRIX</h4>
-                            <p class="text-xs text-slate-500 font-medium">Standardized progression from data collection to advanced spatial decision models</p>
-                        </div>
-                    </div>
-
-                    <div class="overflow-x-auto rounded-2xl border border-slate-200">
-                        <table class="w-full text-left text-xs text-slate-700">
-                            <thead>
-                                <tr class="bg-emerald-900 text-white font-extrabold uppercase text-[10px] tracking-wider divide-x divide-emerald-800/60">
-                                    <th class="p-3 w-1/3">Spatial & Non Spatial Collection</th>
-                                    <th class="p-3 w-1/3">GIS Database Development</th>
-                                    <th class="p-3 w-1/3">GIS Analysis & Data Modelling</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-200 font-medium text-xs">
-                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
-                                    <td class="p-3">Basemap (Cadastral. Aerial Photo)</td>
-                                    <td class="p-3">Basemap</td>
-                                    <td class="p-3 font-bold text-emerald-900">Land Availability</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
-                                    <td class="p-3">Physical (Topography, Soil, River, Sea, Boundary)</td>
-                                    <td class="p-3">Physical</td>
-                                    <td class="p-3 font-bold text-emerald-900">Environmental Sensitive Area</td>
-                                </tr>
-                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
-                                    <td class="p-3">Land use Scheme (Local Plan, District Plan)</td>
-                                    <td class="p-3">Demography</td>
-                                    <td class="p-3 font-bold text-emerald-900">Tourism Potential Area</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
-                                    <td class="p-3">Basic Infrastructure & Utilities</td>
-                                    <td class="p-3">Land Use</td>
-                                    <td class="p-3 font-bold text-emerald-900">Recreation Potential Area</td>
-                                </tr>
-                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
-                                    <td class="p-3">Open Space, Recreation & Tourism.</td>
-                                    <td class="p-3">Roads & Transportation</td>
-                                    <td class="p-3 font-bold text-emerald-900">Slope Analysis</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
-                                    <td class="p-3">Population</td>
-                                    <td class="p-3">Basic Infrastructure & Utilities</td>
-                                    <td class="p-3 font-bold text-emerald-900">Height Elevation Analysis</td>
-                                </tr>
-                                <tr class="bg-emerald-50/40 hover:bg-emerald-50/70 transition divide-x divide-slate-200">
-                                    <td class="p-3">Government & Community Facilities</td>
-                                    <td class="p-3">Government & Community Facilities</td>
-                                    <td class="p-3 font-bold text-emerald-900">Land Suitability</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50 transition divide-x divide-slate-200">
-                                    <td class="p-3">Existing Landuse</td>
-                                    <td class="p-3">Open Space, Recreation & Tourism</td>
-                                    <td class="p-3 text-slate-400 italic">&mdash;</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Modal Footer -->
-            <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
-                <span>Standardized Urban Planning Framework &bull; Sabah Statutory Regulations</span>
-                <button onclick="closeUrbanModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition">
-                    Close Window
-                </button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- JavaScript to Handle Both Modal Windows (GeoAI & Urban Planning) -->
+    <!-- Interactive View Switcher JavaScript -->
     <script>
-        // --- Urban Planning Modal Handlers ---
-        function openUrbanModal() {
-            const modal = document.getElementById('urbanModal');
-            const card = document.getElementById('urbanModalCard');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                card.classList.remove('scale-95');
-                card.classList.add('scale-100');
-            }, 10);
-            document.body.style.overflow = 'hidden';
-        }
+        function switchView(viewId) {
+            // Hide all view panels
+            document.querySelectorAll('.view-panel').forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('block');
+            });
 
-        function closeUrbanModal() {
-            const modal = document.getElementById('urbanModal');
-            const card = document.getElementById('urbanModalCard');
-            modal.classList.add('opacity-0');
-            card.classList.remove('scale-100');
-            card.classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
-        }
+            // Reset tab button states
+            document.querySelectorAll('.view-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-white', 'text-emerald-950', 'shadow-sm');
+                btn.classList.add('bg-slate-800/80', 'text-slate-200');
+            });
 
-        // --- GeoAI Modal Handlers ---
-        function openGeoaiModal() {
-            const modal = document.getElementById('geoaiModal');
-            const card = document.getElementById('geoaiModalCard');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                card.classList.remove('scale-95');
-                card.classList.add('scale-100');
-            }, 10);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeGeoaiModal() {
-            const modal = document.getElementById('geoaiModal');
-            const card = document.getElementById('geoaiModalCard');
-            modal.classList.add('opacity-0');
-            card.classList.remove('scale-100');
-            card.classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
-        }
-
-        // --- Common Keydown & Outside Click Handlers ---
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeUrbanModal();
-                closeGeoaiModal();
+            // Show selected view panel
+            const activePanel = document.getElementById(viewId);
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+                activePanel.classList.add('block');
             }
-        });
 
-        document.getElementById('urbanModal').addEventListener('click', function(event) {
-            if (event.target === this) {
-                closeUrbanModal();
+            // Highlight clicked button
+            const activeBtn = document.getElementById('btn-' + viewId);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-slate-800/80', 'text-slate-200');
+                activeBtn.classList.add('bg-white', 'text-emerald-950', 'shadow-sm');
             }
-        });
-
-        document.getElementById('geoaiModal').addEventListener('click', function(event) {
-            if (event.target === this) {
-                closeGeoaiModal();
-            }
-        });
+        }
     </script>
 </body>
 </html>
