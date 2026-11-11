@@ -1,82 +1,164 @@
 <!DOCTYPE html>
-<html lang="ms" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Gs. Mohamad Nazril Bin Sharil</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .hero-pattern { 
             background-color: #064e3b; 
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='0.35'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+        }
+        .mindmap-connector {
+            position: relative;
+        }
+        .mindmap-connector::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            width: 20px;
+            height: 2px;
+            background: #cbd5e1;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed w-full z-30 top-0">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="font-bold text-xl text-emerald-800 tracking-tight">Gs. Mohamad Nazril</h1>
-            <div class="space-x-6 hidden md:block font-semibold text-gray-600 text-sm">
-                <a href="#expertise" class="hover:text-emerald-600 transition">Kepakaran</a>
-                <a href="#flagship" class="hover:text-emerald-600 transition">Flagship</a>
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200/80 fixed w-full z-40 top-0 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-700 to-teal-500 flex items-center justify-center text-white shadow-sm shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                    <i class="fas fa-globe-asia text-sm"></i>
+                </span>
+                <span class="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-emerald-700 transition-colors">
+                    Gs. Mohamad Nazril
+                </span>
+            </a>
+            <div class="space-x-7 hidden md:flex font-semibold text-slate-600 text-sm">
+                <a href="#expertise" class="hover:text-emerald-600 transition">Expertise</a>
+                <a href="#flagship" class="hover:text-emerald-600 transition">Flagship GeoAI</a>
                 <a href="#urban-planning" class="hover:text-emerald-600 transition">Urban Planning</a>
-                <a href="#environmental" class="hover:text-emerald-600 transition">Alam Sekitar</a>
-                <a href="#development-plans" class="hover:text-emerald-600 transition">Pembangunan Tanah</a>
-                <a href="#strategic-plans" class="hover:text-emerald-600 transition">Pelan Strategik</a>
+                <a href="#environmental" class="hover:text-emerald-600 transition">Environmental</a>
+                <a href="#development-plans" class="hover:text-emerald-600 transition">Land Development</a>
+                <a href="#strategic-plans" class="hover:text-emerald-600 transition">Strategic Plans</a>
             </div>
+            <a href="#projects" class="hidden sm:inline-flex items-center text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200 px-3.5 py-2 rounded-lg hover:bg-emerald-600 hover:text-white transition">
+                Explore Maps <i class="fas fa-arrow-down ml-2"></i>
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-pattern text-white pt-32 pb-20 mt-10">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Gs. Mohamad Nazril Bin Sharil</h2>
-            <h3 class="text-xl md:text-2xl text-emerald-200 mb-6 font-light">GIS Practitioner | GeoAI & UAV Mapping | Land Suitability Expert</h3>
-            <p class="max-w-3xl mx-auto text-emerald-50 mb-8 leading-relaxed text-sm md:text-base">
-                Pengamal Geospatial pelbagai disiplin (IGRSM & MBOT). Berpengalaman luas dalam Analisis Spatial Lanjutan, Pemodelan AHP, Automasi Python, Pangkalan Data Spatial Berkanun, dan Integrasi GeoAI bagi sektor perancangan bandar, persisiran pantai, serta pemeliharaan alam sekitar.
+    <header class="hero-pattern text-white pt-36 pb-24 mt-12 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 text-xs font-semibold mb-6 backdrop-blur-sm">
+                <i class="fas fa-certificate text-emerald-400"></i> Certified Geospatial Practitioner | IGRSM & MBOT
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-5 leading-tight">
+                Gs. Mohamad Nazril Bin Sharil
+            </h1>
+            <p class="text-lg sm:text-xl text-emerald-200 font-light mb-8 max-w-3xl mx-auto">
+                GIS Practitioner &bull; GeoAI & UAV Photogrammetry &bull; Land Suitability Specialist
             </p>
+            <p class="max-w-2xl mx-auto text-emerald-100/90 text-sm sm:text-base leading-relaxed mb-10">
+                Bridging advanced spatial data science with statutory urban planning standards. Specialized in AHP multicriteria evaluation, automated geospatial workflows, geodatabase architecture, and Deep Learning vision models for sustainable land administration.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#urban-planning" class="bg-white text-emerald-950 font-bold px-6 py-3 rounded-xl shadow-lg shadow-emerald-950/20 hover:bg-emerald-50 transition transform hover:-translate-y-0.5 text-sm">
+                    View Statutory Framework <i class="fas fa-layer-group ml-2 text-emerald-600"></i>
+                </a>
+                <a href="#projects" class="bg-emerald-800/80 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl border border-emerald-600/50 transition text-sm">
+                    Browse Projects Catalog
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Expertise & Skills -->
-    <section id="expertise" class="py-16 bg-white border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4">
+    <!-- Key Expertise & Skills Grid -->
+    <section id="expertise" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 shadow-xs">
-                    <h3 class="text-xl font-bold text-emerald-800 mb-6 flex items-center">
-                        <i class="fas fa-brain mr-3 text-emerald-600"></i>Key Expertise
-                    </h3>
-                    <ul class="space-y-3 text-gray-700 text-sm md:text-base">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2.5"></i> Advanced Geospatial Analysis & Spatial Modeling</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2.5"></i> Remote Sensing & Earth Observation</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2.5"></i> Temporal Analysis & Time-Series Land Use</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2.5"></i> UAV / Drone Aerial Mapping (RTK & GCP)</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2.5"></i> Web GIS & Spatial Visualization Architecture</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2.5"></i> Statutory Spatial Geodatabase Development</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2.5"></i> Environmental Monitoring & Catchment Delineation</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2.5"></i> Spatial Decision Support Systems (SDSS & AHP)</li>
+                <!-- Expertise Card -->
+                <div class="bg-gradient-to-br from-slate-50 to-emerald-50/30 rounded-2xl p-7 border border-slate-200 shadow-xs">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-sm shadow-emerald-600/20">
+                            <i class="fas fa-brain"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Key Expertise</h3>
+                            <p class="text-xs text-slate-500">Core geospatial analytical competencies</p>
+                        </div>
+                    </div>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700">
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
+                            <span>Spatial Modeling & Multicriteria Analysis</span>
+                        </li>
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
+                            <span>Remote Sensing & Earth Observation</span>
+                        </li>
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
+                            <span>Multi-Temporal Land Use Trajectory</span>
+                        </li>
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
+                            <span>UAV Drone Survey & DSM/DTM Extraction</span>
+                        </li>
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
+                            <span>Interactive Web GIS Architectures</span>
+                        </li>
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
+                            <span>Statutory Geodatabase Normalization</span>
+                        </li>
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
+                            <span>Catchment & Hydrological Delineation</span>
+                        </li>
+                        <li class="flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-600 mt-0.5"></i>
+                            <span>Spatial Decision Support Systems (SDSS)</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 shadow-xs">
-                    <h3 class="text-xl font-bold text-emerald-800 mb-6 flex items-center">
-                        <i class="fas fa-tools mr-3 text-emerald-600"></i>Key Skills & Toolkit
-                    </h3>
-                    <div class="flex flex-wrap gap-2.5">
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">GIS & Cartography</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">Remote Sensing</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">Spatial Data Analysis</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">UAV Photogrammetry</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">Python / ArcPy Scripting</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">PostGIS / PostgreSQL</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">MCDM - AHP Modeling</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">GeoAI (U-Net / ResNet)</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">QGIS & ArcGIS Pro</span>
-                        <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-semibold text-xs md:text-sm">Statutory Plan Standards</span>
+
+                <!-- Technical Stacks -->
+                <div class="bg-gradient-to-br from-slate-50 to-teal-50/30 rounded-2xl p-7 border border-slate-200 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center font-bold shadow-sm shadow-teal-600/20">
+                                <i class="fas fa-microchip"></i>
+                            </span>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Technical Toolkit</h3>
+                                <p class="text-xs text-slate-500">Software, scripting libraries, and platforms</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">ArcGIS Pro & ArcMap</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">QGIS Desktop</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">Python (ArcPy, GeoPandas)</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">PostGIS / PostgreSQL</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">Google Earth Engine</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">U-Net++ & ResNet50 GeoAI</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">Rasterio & Shapely</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">AHP Multicriteria Engine</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">DJI Terra Photogrammetry</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-800 shadow-2xs hover:border-emerald-500 transition">Sabah Cap. 141 Compliance</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500 flex items-center justify-between">
+                        <span>Workflow Discipline: Automation & Clean Topology</span>
+                        <i class="fas fa-code-branch text-slate-400"></i>
                     </div>
                 </div>
             </div>
@@ -84,241 +166,361 @@
     </section>
 
     <!-- Main Projects Section -->
-    <section id="projects" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
+    <main id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Portfolio Projek & Pemetaan Geospatial</h2>
-                <div class="w-24 h-1.5 bg-emerald-600 mx-auto mt-4 rounded-full"></div>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm">
-                    Koleksi komprehensif projek pemodelan spatial, perancangan guna tanah berkanun, pengurusan alam sekitar, dan penyelesaian GeoAI.
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100/60 px-3.5 py-1.5 rounded-full">
+                    Geospatial Production Portfolio
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 tracking-tight">
+                    Spatial Projects & Statutory Master Plans
+                </h2>
+                <div class="w-20 h-1.5 bg-emerald-600 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-600 mt-4 text-sm sm:text-base leading-relaxed">
+                    A curated catalog of environmental basin plans, statutory local plans, land development analyses, and intelligent GeoAI pipelines.
                 </p>
             </div>
 
             <!-- ============================================================= -->
             <!-- 1. FLAGSHIP PROJECT: GEOAI & SPATIAL AUTOMATION               -->
             <!-- ============================================================= -->
-            <div id="flagship" class="mb-20">
-                <h3 class="text-xl font-bold text-emerald-900 mb-6 border-b-2 border-emerald-200 pb-3 flex items-center">
-                    <span class="w-2.5 h-6 bg-emerald-600 rounded mr-3"></span>
-                    1. Flagship Project: GeoAI & Spatial Automation
-                </h3>
-                
-                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                    <div class="md:w-1/3 bg-gray-200 relative">
-                        <img src="https://placehold.co/600x400/10b981/ffffff?text=GeoAI+Model+Training" alt="GeoAI Pipeline" class="object-cover w-full h-full min-h-[220px]">
-                        <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
-                            Research & Pipeline
+            <section id="flagship" class="mb-24">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-2.5 h-6 bg-emerald-600 rounded-md"></span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">1. Flagship Project: GeoAI & Spatial Automation</h3>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col lg:flex-row hover:shadow-xl hover:border-emerald-500/40 transition duration-300">
+                    <div class="lg:w-2/5 bg-slate-100 relative group overflow-hidden">
+                        <img src="https://placehold.co/700x480/064e3b/ffffff?text=GeoAI+Deep+Learning+Pipeline" alt="GeoAI Pipeline" class="object-cover w-full h-full min-h-[260px] group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-emerald-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-sm">
+                            <i class="fas fa-robot mr-1 text-emerald-600"></i> Active Pipeline
                         </span>
                     </div>
-                    <div class="md:w-2/3 p-6 md:p-8 flex flex-col justify-between">
+                    <div class="lg:w-3/5 p-7 sm:p-9 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-2 mb-2">
-                                <span class="px-2.5 py-0.5 text-xs font-semibold bg-emerald-100 text-emerald-800 rounded">GeoAI Pipeline</span>
-                                <span class="text-gray-300">•</span>
-                                <span class="text-xs text-gray-500 font-medium">Deep Learning & Cadastral Compliance</span>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="px-2.5 py-0.5 text-xs font-bold bg-emerald-100 text-emerald-800 rounded-md">Computer Vision</span>
+                                <span class="text-slate-300">&bull;</span>
+                                <span class="text-xs text-slate-500 font-medium">U-Net++ &bull; ResNet50 &bull; UAV Orthomosaic</span>
                             </div>
-                            <h4 class="text-xl font-bold text-gray-900 mb-2">GeoAI Model Development for Land Use Mapping</h4>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                Inisiatif pembangunan saluran paip *Deep Learning* (U-Net++/ResNet50) bagi membolehkan pengesanan dan klasifikasi guna tanah automatik berketepatan tinggi daripada ortofoto UAV resolusi tinggi. Dilengkapi algoritma pelarasan sempadan bagi menyelaraskan hasil segmentasi AI dengan pematuhan lot kadaster berkanun dan piawaian perancangan bandar.
+                            <h4 class="text-2xl font-black text-slate-900 mb-3 tracking-tight">
+                                GeoAI Model Development for Automated Land Use Mapping
+                            </h4>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+                                Bridging the gap between raw AI predictions and rigid urban planning regulations. This project implements a Deep Learning semantic segmentation architecture (U-Net++ and ResNet50) tailored for ultra-high-resolution drone orthomosaics. Includes custom post-processing geometric smoothing algorithms to resolve raster slivers and snap vector boundaries onto gazetted cadastral lot lines with zero topological errors.
                             </p>
-                            <div class="flex flex-wrap gap-1.5 mb-4">
-                                <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">PyTorch</span>
-                                <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">U-Net++</span>
-                                <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">GeoPandas & Rasterio</span>
-                                <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Topology Verification</span>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">PyTorch</span>
+                                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">GeoPandas</span>
+                                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Rasterio</span>
+                                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Cadastral Snapping</span>
+                                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Test-Time Augmentation</span>
                             </div>
                         </div>
-                        <div class="pt-3 border-t border-gray-100">
-                            <a href="projek-portfolio.html" class="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-xs">
-                                <i class="fas fa-desktop mr-2"></i>Preview Project Overview
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400 font-medium">Target: Automated Parcel Mapping</span>
+                            <a href="projek-portfolio.html" class="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-sm shadow-emerald-600/30">
+                                View Technical Case Study <i class="fas fa-arrow-right ml-2 text-xs"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- ============================================================= -->
-            <!-- 2. GIS SUPPORT FOR URBAN PLANNING CONSULTANCY PROJECTS        -->
+            <!-- 2. URBAN PLANNING CONSULTANCY & METHODOLOGY ENGINE           -->
             <!-- ============================================================= -->
-            <div id="urban-planning" class="mb-20">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-emerald-200 pb-3">
-                    <h3 class="text-xl font-bold text-emerald-900 flex items-center">
-                        <span class="w-2.5 h-6 bg-emerald-600 rounded mr-3"></span>
-                        2. GIS Support for Urban Planning Consultancy Projects
-                    </h3>
-                    <span class="text-xs font-semibold text-emerald-700 mt-2 md:mt-0">Town and Country Planning Ordinance (Sabah Cap. 141)</span>
+            <section id="urban-planning" class="mb-24">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-emerald-200 pb-4">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700">Statutory Master Planning</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">2. GIS Support for Urban Planning Consultancy Projects</h3>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500 mt-2 md:mt-0 bg-slate-200/70 px-3 py-1.5 rounded-md">
+                        Governed by Sabah Cap. 141[cite: 1, 6, 7]
+                    </span>
                 </div>
 
-                <!-- MASTER FRAMEWORK HUB (EXECUTIVE METHODOLOGY BANNER) -->
-                <div class="bg-white rounded-2xl shadow-sm border border-emerald-100 overflow-hidden mb-12">
-                    <div class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-teal-950 text-white p-6 md:p-8">
-                        <span class="inline-block px-3 py-1 bg-emerald-500/30 text-emerald-200 border border-emerald-400/30 text-xs font-semibold rounded-full uppercase tracking-wider mb-2">
-                            Standardized Statutory Framework
-                        </span>
-                        <h4 class="text-xl md:text-2xl font-bold">Urban Planning & Development GIS Framework</h4>
-                        <p class="text-emerald-100/90 text-xs md:text-sm mt-1 max-w-3xl leading-relaxed">
-                            Kerangka teras penyediaan pelan berkanun di Sabah, merangkumi mandat perundangan, saluran paip aliran kerja 3-peringkat, serta seni bina pangkalan data geospasial bagi 8 domain sektoral.
-                        </p>
+                <!-- INTERACTIVE METHODOLOGY & FRAMEWORK HUB -->
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+                    
+                    <!-- Hub Navigation Header -->
+                    <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 text-white p-6 sm:p-8">
+                        <div class="max-w-4xl">
+                            <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold rounded-full uppercase tracking-wider mb-2">
+                                Standardized SOP & Sectoral Architecture
+                            </span>
+                            <h4 class="text-xl sm:text-2xl font-black tracking-tight">Urban Planning & Geospatial Development Engine</h4>
+                            <p class="text-slate-300 text-xs sm:text-sm mt-1.5 leading-relaxed">
+                                Explore how statutory policies[cite: 1, 6, 7], 3-stage GIS workflow pipelines[cite: 5, 9], and the 8-domain database architecture[cite: 2, 6, 7] converge to deliver legally sound local plans across Sabah.
+                            </p>
+                        </div>
 
-                        <!-- Tab Buttons -->
-                        <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-emerald-800/80">
-                            <button onclick="switchUrbanTab('tab-mandate')" id="btn-tab-mandate" class="urban-tab-btn px-4 py-2 rounded-lg text-xs md:text-sm font-semibold transition bg-white text-emerald-950 shadow-xs">
-                                <i class="fas fa-balance-scale mr-2"></i>1. Mandat & Polisi
+                        <!-- View Switcher Tabs -->
+                        <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800">
+                            <button onclick="switchView('view-flowchart')" id="btn-view-flowchart" class="view-tab-btn active-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-emerald-950 shadow-sm">
+                                <i class="fas fa-stream mr-2 text-emerald-600"></i> 1. Workflow Flowchart[cite: 5, 9]
                             </button>
-                            <button onclick="switchUrbanTab('tab-workflow')" id="btn-tab-workflow" class="urban-tab-btn px-4 py-2 rounded-lg text-xs md:text-sm font-semibold transition bg-emerald-900/60 hover:bg-emerald-800 text-emerald-100">
-                                <i class="fas fa-project-diagram mr-2"></i>2. Aliran Kerja 3-Peringkat
+                            <button onclick="switchView('view-mindmap')" id="btn-view-mindmap" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
+                                <i class="fas fa-sitemap mr-2 text-teal-400"></i> 2. Sectoral Mind Map (Base Map Hub)[cite: 4, 8]
                             </button>
-                            <button onclick="switchUrbanTab('tab-sectoral')" id="btn-tab-sectoral" class="urban-tab-btn px-4 py-2 rounded-lg text-xs md:text-sm font-semibold transition bg-emerald-900/60 hover:bg-emerald-800 text-emerald-100">
-                                <i class="fas fa-database mr-2"></i>3. 8 Domain Sektor & Senibina Geodatabase
+                            <button onclick="switchView('view-matrix')" id="btn-view-matrix" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
+                                <i class="fas fa-table-cells mr-2 text-amber-400"></i> 3. Database Matrix[cite: 5, 9]
+                            </button>
+                            <button onclick="switchView('view-mandate')" id="btn-view-mandate" class="view-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-800/80 hover:bg-slate-800 text-slate-200">
+                                <i class="fas fa-scale-balanced mr-2 text-blue-400"></i> 4. Sabah Cap. 141 Mandate[cite: 1, 6, 7]
                             </button>
                         </div>
                     </div>
 
-                    <!-- Tab Contents -->
-                    <div class="p-6 md:p-8 bg-gray-50/60">
+                    <!-- VIEW CONTAINER -->
+                    <div class="p-6 sm:p-8 bg-slate-50/60">
 
-                        <!-- Tab 1: Mandat & Polisi -->
-                        <div id="tab-mandate" class="urban-tab-content space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-2xs">
-                                    <div class="flex items-center gap-3 text-emerald-900 font-bold text-sm md:text-base mb-4">
-                                        <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">01</span>
-                                        Teras Polisi & Matlamat Perancangan
+                        <!-- ============================================== -->
+                        <!-- 1. WORKFLOW FLOWCHART VIEW                     -->
+                        <!-- ============================================== -->
+                        <div id="view-flowchart" class="view-panel block space-y-6">
+                            <div class="text-center max-w-2xl mx-auto mb-6">
+                                <h5 class="text-base font-bold text-slate-900">3-Stage Geospatial Processing Pipeline</h5>
+                                <p class="text-xs text-slate-500">From baseline heterogeneous raw data to multi-criteria land decision models[cite: 5, 9].</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                                <!-- Stage 1 -->
+                                <div class="bg-white rounded-2xl p-6 border-t-4 border-emerald-600 border-x border-b border-slate-200 shadow-xs relative">
+                                    <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-xs flex items-center justify-center mb-3">
+                                        01
                                     </div>
-                                    <ul class="space-y-3 text-xs md:text-sm text-gray-700 leading-relaxed">
-                                        <li class="flex items-start gap-2.5">
-                                            <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
-                                            <span>Menterjemah dasar-dasar pembangunan nasional dan negeri ke dalam strategi praktikal spatial bagi membentuk pertumbuhan serta menyelaraskan pelaburan awam-swasta[cite: 6, 7].</span>
-                                        </li>
-                                        <li class="flex items-start gap-2.5">
-                                            <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
-                                            <span>Menetapkan panduan guna tanah dan kawalan pembangunan yang selaras dengan <strong>Sabah Structure Plan 2033</strong>, sambil mengimbangi keperluan komuniti, peluang ekonomi, dan perbandaran mampan[cite: 6, 7].</span>
-                                        </li>
-                                        <li class="flex items-start gap-2.5">
-                                            <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0 text-xs"></i>
-                                            <span>Mewujudkan kerangka polisi yang jelas merangkumi standard reka bentuk, pengezonan, perlindungan alam sekitar, dan penyediaan infrastruktur fizikal[cite: 6, 7].</span>
-                                        </li>
+                                    <h6 class="font-bold text-slate-900 text-sm mb-1">Spatial & Non-Spatial Collection[cite: 5, 9]</h6>
+                                    <p class="text-xs text-emerald-700 font-semibold mb-3">Baseline Survey & Acquisition[cite: 5, 9]</p>
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Cadastral lots & UAV orthophotos[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Topography, rivers, terrain & coastline[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Existing land use ground truthing[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Census block demography & income data[cite: 3, 5, 8, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-500 text-[10px]"></i> Utilities network & government assets[cite: 3, 5, 8, 9]</li>
                                     </ul>
                                 </div>
 
-                                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-2xs">
-                                    <div class="flex items-center gap-3 text-emerald-900 font-bold text-sm md:text-base mb-4">
-                                        <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">02</span>
-                                        Statutory Plan In Sabah (Cap. 141)
+                                <!-- Stage 2 -->
+                                <div class="bg-white rounded-2xl p-6 border-t-4 border-teal-600 border-x border-b border-slate-200 shadow-xs relative">
+                                    <div class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 font-extrabold text-xs flex items-center justify-center mb-3">
+                                        02
                                     </div>
-                                    <div class="space-y-3 text-xs md:text-sm text-gray-700 leading-relaxed">
-                                        <p>
-                                            <strong>The Town and Country Planning Ordinance (Sabah Cap. 141)</strong> bertindak sebagai undang-undang primer yang mengawal selia perancangan bandar dan desa di Negeri Sabah[cite: 6, 7].
-                                        </p>
-                                        <div class="p-4 bg-emerald-50 rounded-lg border border-emerald-200 text-xs text-emerald-950 space-y-2">
-                                            <p class="font-bold text-emerald-900">Mandat Dua Tahap Pelan Berkanun Sabah[cite: 6, 7]:</p>
-                                            <p><strong>Tier 1 - Structure Plan:</strong> Pelan struktur peringkat negeri merangkumi keseluruhan kawasan tanah dan perairan wilayah, disediakan oleh Pengarah Jabatan Perancangan Bandar dan Wilayah bagi pihak Majlis Perancangan Negeri dan diluluskan oleh Jemaah Menteri di bawah Seksyen 4C(1)[cite: 6, 7].</p>
-                                            <p><strong>Tier 2 - Local Plan:</strong> Pelan terperinci guna tanah daerah bagi menetapkan zon kawalan pembangunan, rizab jalan, kemudahan asas, dan penyelarasan lot kadaster.</p>
+                                    <h6 class="font-bold text-slate-900 text-sm mb-1">GIS Database Development[cite: 5, 9]</h6>
+                                    <p class="text-xs text-teal-700 font-semibold mb-3">Architecture & Schema Standardization[cite: 3, 8]</p>
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Central Enterprise Geodatabase schema[cite: 4, 8]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Geometric cleaning & topology verification</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Cadastral parcel alignment & snapping</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Demographic tabular-to-spatial joining[cite: 3, 5, 8, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-teal-500 text-[10px]"></i> Road network topology & routing datasets[cite: 3, 4, 8]</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Stage 3 -->
+                                <div class="bg-white rounded-2xl p-6 border-t-4 border-slate-800 border-x border-b border-slate-200 shadow-xs relative">
+                                    <div class="w-8 h-8 rounded-full bg-slate-200 text-slate-800 font-extrabold text-xs flex items-center justify-center mb-3">
+                                        03
+                                    </div>
+                                    <h6 class="font-bold text-slate-900 text-sm mb-1">Spatial Analysis & Modeling[cite: 5, 9]</h6>
+                                    <p class="text-xs text-slate-700 font-semibold mb-3">SDSS & Statutory Map Production[cite: 5, 9]</p>
+                                    <ul class="space-y-1.5 text-xs text-slate-600">
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Multi-Criteria Land Suitability (AHP)[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Environmentally Sensitive Areas (ESA/KSAS)[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Slope & DEM elevation constraint modeling[cite: 3, 5, 8, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Vacant land availability & infill density[cite: 5, 9]</li>
+                                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-slate-700 text-[10px]"></i> Statutory zoning conflicts resolution</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ============================================== -->
+                        <!-- 2. SECTORAL MIND MAP VIEW (BASE MAP CENTRAL)   -->
+                        <!-- ============================================== -->
+                        <div id="view-mindmap" class="view-panel hidden">
+                            <div class="text-center max-w-xl mx-auto mb-8">
+                                <h5 class="text-base font-bold text-slate-900">Sectoral Domain Mind Map (Base Map Hub)[cite: 4, 8]</h5>
+                                <p class="text-xs text-slate-500">Replicating the core centralized geodatabase design: Base Map at the nucleus feeding into the 8 specialized domain modules[cite: 2, 4, 6, 7, 8].</p>
+                            </div>
+
+                            <!-- Radial Architecture Grid -->
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+                                <!-- Left Wings (4 Sectors) -->
+                                <div class="space-y-3">
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">1. Population & Demography[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-users text-emerald-600 text-xs"></i>
                                         </div>
+                                        <p class="text-[11px] text-slate-500">Population & settlement, labor force, and future growth projection blocks[cite: 2, 6, 7].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">2. Physical Conditions & Environment[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-mountain-sun text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Forestry reserves, sensitive river corridors (KSAS), terrain & geology[cite: 2, 3, 6, 7, 8].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">3. Land Uses & Master Zoning[cite: 2, 3, 6, 7, 8]</span>
+                                            <i class="fas fa-map-location-dot text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Key land use areas, housing zones, commercial centres, and industrial parks[cite: 2, 6, 7].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">4. Road & Transportation[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-road text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Main highway hierarchies, railways, transit nodes, and traffic volume zones[cite: 2, 3, 4, 6, 7, 8].</p>
+                                    </div>
+                                </div>
+
+                                <!-- Center Nucleus: BASE MAP & DATABASE CYLINDER -->
+                                <div class="bg-gradient-to-b from-emerald-900 to-teal-950 text-white rounded-2xl p-7 text-center shadow-lg border border-emerald-700/50 relative">
+                                    <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md mx-auto flex items-center justify-center text-emerald-300 text-2xl mb-3 shadow-inner">
+                                        <i class="fas fa-layer-group"></i>
+                                    </div>
+                                    <h6 class="text-lg font-black tracking-tight mb-1">BASE MAP NUCLEUS[cite: 4, 8]</h6>
+                                    <p class="text-xs text-emerald-200 mb-4">Cadastral Boundaries & Official Coordinates[cite: 3, 4, 8]</p>
+                                    <div class="h-0.5 w-12 bg-emerald-400 mx-auto mb-4"></div>
+                                    <div class="bg-white/10 rounded-xl p-3 border border-white/15">
+                                        <i class="fas fa-database text-teal-300 text-lg mb-1"></i>
+                                        <p class="text-xs font-bold uppercase tracking-wider text-white">Central GIS Geodatabase[cite: 4, 8]</p>
+                                        <p class="text-[11px] text-emerald-100/70 mt-0.5">Unified Spatial Feature Classes[cite: 4, 8]</p>
+                                    </div>
+                                </div>
+
+                                <!-- Right Wings (4 Sectors) -->
+                                <div class="space-y-3">
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">5. Community Facilities[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-hospital-user text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Schools, clinics, emergency services (police/fire), and community halls[cite: 2, 3, 4, 6, 7, 8].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">6. Infrastructure & Utilities[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-faucet-drip text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Reticulated water supply, power lines, sewage plants, and drainage systems[cite: 2, 3, 4, 6, 7, 8].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">7. Tourism & Heritage[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-monument text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Gazetted historical monuments, cultural preservation corridors, and eco-tourism[cite: 2, 6, 7].</p>
+                                    </div>
+                                    <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-500 transition">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="text-xs font-bold text-slate-800">8. Open Space & Recreation[cite: 2, 6, 7]</span>
+                                            <i class="fas fa-tree text-emerald-600 text-xs"></i>
+                                        </div>
+                                        <p class="text-[11px] text-slate-500">Public parks, sports fields, coastal promenade esplanades, and green lungs[cite: 2, 3, 6, 7, 8].</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Tab 2: Aliran Kerja 3-Peringkat -->
-                        <div id="tab-workflow" class="urban-tab-content hidden">
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <!-- Step 1 -->
-                                <div class="bg-white p-6 rounded-xl border-t-4 border-emerald-600 border-x border-b border-gray-200 shadow-2xs">
-                                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 block mb-1">Peringkat 01</span>
-                                    <h5 class="font-bold text-gray-900 text-sm md:text-base mb-3">Spatial & Non-Spatial Collection[cite: 9]</h5>
-                                    <ul class="space-y-2 text-xs text-gray-600 leading-relaxed">
-                                        <li>• <strong>Basemap:</strong> Cadastral Lots & Aerial Photos[cite: 9].</li>
-                                        <li>• <strong>Physical:</strong> Topography, Soil, River, Sea, District Boundaries[cite: 9].</li>
-                                        <li>• <strong>Land Use Scheme:</strong> Local Plan & District Plans[cite: 9].</li>
-                                        <li>• <strong>Infrastructure:</strong> Basic Utilities & Network[cite: 9].</li>
-                                        <li>• <strong>Recreation:</strong> Open Space, Recreation & Tourism[cite: 9].</li>
-                                        <li>• <strong>Demography:</strong> Population Data & Census Blocks[cite: 9].</li>
-                                        <li>• <strong>Public Assets:</strong> Government & Community Facilities[cite: 9].</li>
-                                        <li>• <strong>Baseline:</strong> Existing Land Use Mapping[cite: 9].</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Step 2 -->
-                                <div class="bg-white p-6 rounded-xl border-t-4 border-teal-600 border-x border-b border-gray-200 shadow-2xs">
-                                    <span class="text-xs font-bold uppercase tracking-wider text-teal-700 block mb-1">Peringkat 02</span>
-                                    <h5 class="font-bold text-gray-900 text-sm md:text-base mb-3">GIS Database Development[cite: 9]</h5>
-                                    <ul class="space-y-2 text-xs text-gray-600 leading-relaxed">
-                                        <li>• <strong>Basemap Feature Datasets:</strong> Peta asas berstruktur[cite: 9].</li>
-                                        <li>• <strong>Physical Layers:</strong> Lapisan rupa bumi dan hidrologi[cite: 9].</li>
-                                        <li>• <strong>Demography Attributes:</strong> Data atribut demografi[cite: 9].</li>
-                                        <li>• <strong>Standard Land Use:</strong> Penyeragaman kod guna tanah[cite: 9].</li>
-                                        <li>• <strong>Transportation Networks:</strong> Hierarki jalan raya & transit[cite: 9].</li>
-                                        <li>• <strong>Utilities Geodatabase:</strong> Bekalan air, elektrik & kumbahan[cite: 9].</li>
-                                        <li>• <strong>Amenities Layers:</strong> Sekolah, kesihatan & keselamatan[cite: 9].</li>
-                                        <li>• <strong>Topology Engine:</strong> Pembersihan ralat pertindihan sempadan.</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Step 3 -->
-                                <div class="bg-white p-6 rounded-xl border-t-4 border-emerald-800 border-x border-b border-gray-200 shadow-2xs">
-                                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-900 block mb-1">Peringkat 03</span>
-                                    <h5 class="font-bold text-gray-900 text-sm md:text-base mb-3">GIS Analysis & Data Modelling[cite: 9]</h5>
-                                    <ul class="space-y-2 text-xs text-gray-600 leading-relaxed">
-                                        <li>• <strong>Land Availability:</strong> Ketersediaan tanah pembangunan[cite: 9].</li>
-                                        <li>• <strong>KSAS / ESA:</strong> Environmental Sensitive Area Identification[cite: 9].</li>
-                                        <li>• <strong>Tourism Potential:</strong> Pemetaan zon potensi pelancongan[cite: 9].</li>
-                                        <li>• <strong>Recreation Potential:</strong> Model tapak rekreasi berpotensi[cite: 9].</li>
-                                        <li>• <strong>Slope Analysis:</strong> Analisis kecerunan & risiko geobencana[cite: 9].</li>
-                                        <li>• <strong>Height Elevation:</strong> Analisis aras ketinggian (DEM/DTM)[cite: 9].</li>
-                                        <li>• <strong>Land Suitability:</strong> Pemodelan MCDM berasaskan AHP[cite: 9].</li>
-                                        <li>• <strong>Policy Conflicts:</strong> Semakan pertindihan zon perancangan.</li>
-                                    </ul>
-                                </div>
+                        <!-- ============================================== -->
+                        <!-- 3. WORKFLOW MATRIX TABLE VIEW                  -->
+                        <!-- ============================================== -->
+                        <div id="view-matrix" class="view-panel hidden">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-xs bg-white rounded-xl border border-slate-200 overflow-hidden shadow-2xs">
+                                    <thead class="bg-slate-100 text-slate-800 font-bold uppercase text-[11px] tracking-wider border-b border-slate-200">
+                                        <tr>
+                                            <th class="p-3.5 w-1/3">1. Spatial & Non-Spatial Collection[cite: 5, 9]</th>
+                                            <th class="p-3.5 w-1/3">2. GIS Database Development[cite: 5, 9]</th>
+                                            <th class="p-3.5 w-1/3">3. GIS Analysis & Data Modeling[cite: 5, 9]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100 text-slate-600 leading-relaxed">
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Basemap (Cadastral lots, Aerial photography)[cite: 5, 9]</td>
+                                            <td class="p-3.5">Administrative & Baseline Boundary Feature Classes[cite: 3, 4, 5, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Vacant Land Availability Modeling[cite: 5, 9]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Physical (Topography, Soil, River, Coastline)[cite: 5, 9]</td>
+                                            <td class="p-3.5">Physical Terrain & Hydrological Surface Datasets[cite: 3, 4, 5, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Environmentally Sensitive Area (ESA / KSAS)[cite: 5, 9]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Land Use Schemes (Local & District Plans)[cite: 5, 9]</td>
+                                            <td class="p-3.5">Standardized Land Use Classification Scheme[cite: 3, 5, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Multi-Criteria Land Suitability (AHP)[cite: 5, 9]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Basic Infrastructure & Utilities Reticulation[cite: 3, 5, 8, 9]</td>
+                                            <td class="p-3.5">Linear Network Datasets (Water, Electric, Sewerage)[cite: 2, 4, 6, 7, 8]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Service Buffering & Infrastructure Accessibility</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Open Space, Recreation & Cultural Heritage[cite: 2, 5, 6, 7, 9]</td>
+                                            <td class="p-3.5">Tourism & Green Lung Attribute Profiles[cite: 2, 3, 5, 6, 7, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Tourism & Recreation Potential Mapping[cite: 5, 9]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Demographic Census & Socio-Economic Surveys[cite: 3, 5, 8, 9]</td>
+                                            <td class="p-3.5">Demography & Household Density Joins[cite: 3, 5, 8, 9]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Population Growth Allocation & Pressure Nodes</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3.5 font-medium text-slate-800">Elevation Contours & DEM Raster Surfaces[cite: 3, 8]</td>
+                                            <td class="p-3.5">Digital Elevation Models (DEM/DTM) & Contours[cite: 3, 8]</td>
+                                            <td class="p-3.5 text-emerald-700 font-semibold">Slope Steepness & Elevation Class Modeling[cite: 5, 9]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 
-                        <!-- Tab 3: 8 Domain Sektor -->
-                        <div id="tab-sectoral" class="urban-tab-content hidden">
-                            <div class="mb-4 text-xs text-gray-600">
-                                Struktur domain spatial terpusat yang dihubungkan ke pangkalan data geospasial bagi perancangan bandar dan wilayah[cite: 8]:
-                            </div>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                                    <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">01. Demografi</span>
-                                    <h6 class="font-bold text-gray-900 text-xs md:text-sm mb-2">Population & Demography[cite: 6, 7]</h6>
-                                    <p class="text-xs text-gray-600">Population & Settlement distribution, Labor Force, Future Growth projections[cite: 6, 7].</p>
+                        <!-- ============================================== -->
+                        <!-- 4. STATUTORY MANDATE & POLICIES VIEW           -->
+                        <!-- ============================================== -->
+                        <div id="view-mandate" class="view-panel hidden space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-3 text-emerald-900 font-bold text-sm">
+                                        <i class="fas fa-file-contract text-emerald-600"></i> Policy Translation & Objectives[cite: 1, 6, 7]
+                                    </div>
+                                    <ul class="space-y-3 text-xs text-slate-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
+                                            <span>Translates national and state development agendas into actionable spatial zoning strategies that stimulate public-private capital deployment[cite: 1, 6, 7].</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
+                                            <span>Establishes development guidance consistent with the <strong>Sabah Structure Plan 2033</strong>, balancing community vitality, economic viability, and ecological urbanism[cite: 1, 6, 7].</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="fas fa-circle-check text-emerald-600 mt-1"></i>
+                                            <span>Institutes clear statutory frameworks encompassing design thresholds, allowable plot ratios, environmental safeguards, and essential infrastructure reservations[cite: 1, 6, 7].</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                                    <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">02. Fizikal</span>
-                                    <h6 class="font-bold text-gray-900 text-xs md:text-sm mb-2">Physical Conditions & Environment[cite: 6, 7]</h6>
-                                    <p class="text-xs text-gray-600">Nature & Forestry reserves, Key Environmental Areas (KSAS), Heritage Sites[cite: 6, 7].</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                                    <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">03. Guna Tanah</span>
-                                    <h6 class="font-bold text-gray-900 text-xs md:text-sm mb-2">Land Uses[cite: 6, 7]</h6>
-                                    <p class="text-xs text-gray-600">Key Land Uses Areas, Housing Zones, Industry & Commerce[cite: 6, 7].</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                                    <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">04. Pengangkutan</span>
-                                    <h6 class="font-bold text-gray-900 text-xs md:text-sm mb-2">Road & Transportation[cite: 6, 7]</h6>
-                                    <p class="text-xs text-gray-600">Main Road Network, Public Transportation Network, Railway & Station points[cite: 6, 7, 8].</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                                    <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">05. Kemudahan Awam</span>
-                                    <h6 class="font-bold text-gray-900 text-xs md:text-sm mb-2">Community Facilities[cite: 6, 7]</h6>
-                                    <p class="text-xs text-gray-600">Schools, Healthcare, Public Halls, Security (Police & Fire stations)[cite: 6, 7, 8].</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                                    <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">06. Utiliti</span>
-                                    <h6 class="font-bold text-gray-900 text-xs md:text-sm mb-2">Infrastructure & Utilities[cite: 6, 7]</h6>
-                                    <p class="text-xs text-gray-600">Water Supply, Electric Supply, Sewerage Supply, Drainage & Irrigation, Garbage Disposal[cite: 6, 7].</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                                    <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">07. Pelancongan</span>
-                                    <h6 class="font-bold text-gray-900 text-xs md:text-sm mb-2">Tourism & Heritage[cite: 6, 7]</h6>
-                                    <p class="text-xs text-gray-600">State Cultural Areas, Key Historical Sites, Potential New Sites[cite: 6, 7].</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-                                    <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">08. Rekreasi</span>
-                                    <h6 class="font-bold text-gray-900 text-xs md:text-sm mb-2">Open Space & Recreation[cite: 6, 7]</h6>
-                                    <p class="text-xs text-gray-600">Existing Open Space, Gazetted green lungs, Existing Recreation parks[cite: 6, 7].</p>
+
+                                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                                    <div class="flex items-center gap-2 mb-3 text-emerald-900 font-bold text-sm">
+                                        <i class="fas fa-gavel text-emerald-600"></i> Sabah Cap. 141 Statutory Hierarchy[cite: 1, 6, 7]
+                                    </div>
+                                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                        <strong>The Town and Country Planning Ordinance (Sabah Cap. 141)</strong> provides the authoritative legal architecture for physical planning and state-wide territorial development[cite: 1, 6, 7]:
+                                    </p>
+                                    <div class="p-3.5 bg-emerald-50/70 border border-emerald-200 rounded-xl space-y-2 text-xs text-emerald-950">
+                                        <p><strong>Tier 1 - Structure Plan:</strong> Overarching macro plan for the state and territorial waters, prepared by the Director of Town and Regional Planning for the State Planning Council and endorsed by Cabinet under Section 4C(1)[cite: 1, 6, 7].</p>
+                                        <p><strong>Tier 2 - Local Plan:</strong> Detailed micro-level zoning blueprints regulating land parcel rights, road alignments, density standards, and public facilities reservations.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -326,454 +528,474 @@
                     </div>
                 </div>
 
-                <!-- SENARAI KAD PROJEK INDIVIDU -->
-                <div class="flex items-center gap-3 mb-6">
-                    <h4 class="text-lg font-bold text-gray-800">Senarai Projek Berkanun (Statutory Master Plans)</h4>
-                    <span class="h-px bg-gray-200 flex-grow"></span>
-                </div>
-
+                <!-- INDIVIDUAL PROJECT CARDS (KK -> KUDAT -> KENINGAU) -->
                 <div class="space-y-6">
-                    <!-- Kad 1: KK Local Plan -->
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                        <div class="md:w-1/3 bg-gray-200 relative">
-                            <img src="https://placehold.co/600x400/0284c7/ffffff?text=Kota+Kinabalu+Plan" alt="KK Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
-                                Metropolitan Master Plan
+                    
+                    <!-- Card 1: Kota Kinabalu Local Plan -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                        <div class="md:w-1/3 bg-slate-100 relative">
+                            <img src="https://placehold.co/600x400/0284c7/ffffff?text=Kota+Kinabalu+Local+Plan" alt="KK Local Plan" class="object-cover w-full h-full min-h-[220px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                                Metropolitan Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-2 mb-1">
-                                    <span class="text-xs font-bold text-emerald-700 uppercase">Urban Planning Consultancy</span>
-                                    <span class="text-gray-300">•</span>
-                                    <span class="text-xs text-gray-500">Tier 2 Local Plan</span>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
+                                    <span class="text-slate-300">&bull;</span>
+                                    <span class="text-xs text-slate-500 font-semibold">Tier 2 Local Plan</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Kota Kinabalu Local Plan</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">Sokongan GIS: Urban Density Harmonization & Cadastral Boundary Alignment</p>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Mengendalikan integrasi pangkalan data geospasial bagi kawasan metropolitan Kota Kinabalu merangkumi zon pembangunan berkepadatan tinggi, pemodelan koridor pengangkutan, analisis kesesuaian guna tanah komersial serta penyelarasan sempadan lot kadaster dengan pelan warta berkanun.
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Kota Kinabalu Local Plan</h4>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: High-Density Zoning Harmonization & Metropolitan Cadastral Alignment</p>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
+                                    Administered spatial database consolidation across Greater Kota Kinabalu. Formulated high-density commercial and residential zoning criteria, analyzed major transit corridors, and aligned land titles with gazetted planning scheme boundaries under the Cap. 141 framework.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">ArcGIS Pro</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Cadastral Alignment</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">High-Density Zoning</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Sabah Cap. 141</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">ArcGIS Pro</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Cadastral Snapping</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Urban Density Analysis</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Sabah Cap. 141</span>
                                 </div>
                             </div>
-                            <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
-                                <span class="text-xs text-gray-400">Liputan: DBKK Region</span>
-                                <button class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-semibold">
-                                    Perincian GIS & Peta <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">Coverage: DBKK Region</span>
+                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
+                                    Explore GIS Details <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Kad 2: Kudat Local Plan 2030 -->
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                        <div class="md:w-1/3 bg-gray-200 relative">
-                            <img src="https://placehold.co/600x400/0284c7/ffffff?text=Kudat+Local+Plan" alt="Kudat Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
-                                District Local Plan 2030
+                    <!-- Card 2: Kudat Local Plan 2030 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                        <div class="md:w-1/3 bg-slate-100 relative">
+                            <img src="https://placehold.co/600x400/0284c7/ffffff?text=Kudat+Local+Plan+2030" alt="Kudat Local Plan" class="object-cover w-full h-full min-h-[220px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                                District Plan 2030
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-2 mb-1">
-                                    <span class="text-xs font-bold text-emerald-700 uppercase">Urban Planning Consultancy</span>
-                                    <span class="text-gray-300">•</span>
-                                    <span class="text-xs text-gray-500">Statutory Plan</span>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
+                                    <span class="text-slate-300">&bull;</span>
+                                    <span class="text-xs text-slate-500 font-semibold">Gazetted Blueprint</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Kudat Local Plan 2030</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">Sokongan GIS: Coastal Zone Management & Tourism Development Potential</p>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Membangunkan lapisan pangkalan data spatial lengkap bagi Daerah Kudat meliputi inventori guna tanah semasa, zon penampan persisiran pantai, tapak warisan bersejarah, serta pemetaan kesesuaian tanah bagi hab pelancongan dan perindustrian ekonomi biru.
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Kudat Local Plan 2030</h4>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Coastal Buffer Zoning & Tourism Heritage Land Allocation</p>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
+                                    Formulated multi-sectoral geodatabase layers encompassing baseline land use inventories, coastal setback conservation buffers, historical heritage points, and suitability mapping for northern eco-tourism and Blue Economy clusters.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">ArcGIS Pro</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Coastal Zoning</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Tourism Potential</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Geodatabase Dev</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Coastal Zoning</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Tourism Suitability</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Geodatabase Schema</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Topology Validation</span>
                                 </div>
                             </div>
-                            <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
-                                <span class="text-xs text-gray-400">Liputan: Daerah Kudat</span>
-                                <button class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-semibold">
-                                    Perincian GIS & Peta <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">Coverage: Kudat District</span>
+                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
+                                    Explore GIS Details <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Kad 3: Draft Keningau Local Plan 2030 -->
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                        <div class="md:w-1/3 bg-gray-200 relative">
-                            <img src="https://placehold.co/600x400/0284c7/ffffff?text=Keningau+Local+Plan" alt="Keningau Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
+                    <!-- Card 3: Draft Keningau Local Plan 2030 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                        <div class="md:w-1/3 bg-slate-100 relative">
+                            <img src="https://placehold.co/600x400/0284c7/ffffff?text=Keningau+Local+Plan+2030" alt="Keningau Local Plan" class="object-cover w-full h-full min-h-[220px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 Inland Corridor Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-2 mb-1">
-                                    <span class="text-xs font-bold text-emerald-700 uppercase">Urban Planning Consultancy</span>
-                                    <span class="text-gray-300">•</span>
-                                    <span class="text-xs text-gray-500">Draft Statutory Plan</span>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
+                                    <span class="text-slate-300">&bull;</span>
+                                    <span class="text-xs text-slate-500 font-semibold">Draft Scheme</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Draft Keningau Local Plan 2030</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">Sokongan GIS: Slope Terrain Constraints & Agricultural Land Suitability</p>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Melaksanakan analisis topografi muka bumi (cerun dan ketinggian bukit), penetapan zon sensitif alam sekitar (KSAS), serta penyusunan pelan guna tanah masa hadapan bagi menyokong koridor logistik dan pertanian pedalaman Sabah.
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Draft Keningau Local Plan 2030</h4>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Slope Terrain Constraints & Agricultural Expansion Modeling</p>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
+                                    Conducted Digital Elevation Model (DEM) topographical assessments, steep slope hazard exclusion zones, and environmentally sensitive delineation to safeguard the Crocker Range foothills while planning rural logistics hubs.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">ArcGIS Pro</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">DEM Terrain Analysis</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Slope Modeling</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">MCDM-AHP</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">DEM Terrain Model</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Slope Restrictions</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">AHP MCDM</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Agri-Corridor</span>
                                 </div>
                             </div>
-                            <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
-                                <span class="text-xs text-gray-400">Liputan: Daerah Keningau</span>
-                                <button class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-semibold">
-                                    Perincian GIS & Peta <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">Coverage: Keningau District</span>
+                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
+                                    Explore GIS Details <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
+            </section>
 
             <!-- ============================================================= -->
-            <!-- 3. GIS SUPPORT FOR ENVIRONMENTAL PROJECTS                     -->
+            <!-- 3. ENVIRONMENTAL & BASIN MANAGEMENT PROJECTS                  -->
             <!-- ============================================================= -->
-            <div id="environmental" class="mb-20">
-                <h3 class="text-xl font-bold text-emerald-900 mb-6 border-b-2 border-emerald-200 pb-3 flex items-center">
-                    <span class="w-2.5 h-6 bg-emerald-600 rounded mr-3"></span>
-                    3. GIS Support for Environmental Projects
-                </h3>
-                
+            <section id="environmental" class="mb-24">
+                <div class="flex items-center gap-3 mb-8 border-b-2 border-emerald-200 pb-3">
+                    <span class="w-2.5 h-6 bg-emerald-600 rounded-md"></span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">3. GIS Support for Environmental Projects</h3>
+                </div>
+
                 <div class="space-y-6">
-                    <!-- B1: IRBM Sg Tuaran -->
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                        <div class="md:w-1/3 bg-gray-200 relative">
-                            <img src="https://placehold.co/600x400/059669/ffffff?text=IRBM+Tuaran+Basin" alt="IRBM Tuaran" class="object-cover w-full h-full min-h-[200px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
+                    <!-- Project 1: IRBM Tuaran -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                        <div class="md:w-1/3 bg-slate-100 relative">
+                            <img src="https://placehold.co/600x400/059669/ffffff?text=IRBM+Tuaran+Basin" alt="IRBM Tuaran" class="object-cover w-full h-full min-h-[220px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
                                 Catchment Master Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-2 mb-1">
-                                    <span class="text-xs font-bold text-emerald-700 uppercase">Environmental GIS</span>
-                                    <span class="text-gray-300">•</span>
-                                    <span class="text-xs text-gray-500">River Basin Management</span>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Environmental Management</span>
+                                    <span class="text-slate-300">&bull;</span>
+                                    <span class="text-xs text-slate-500 font-semibold">Hydrological Catchment</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">IRBM Plan For Sungai Tuaran Basin</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">Sokongan GIS: Hydrological Delineation, Land Use Pressures & Runoff Modeling</p>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Analisis hidrologi terperinci merangkumi delimitasi kawasan tadahan air (*catchment delineation*), penilaian impak perubahan guna tanah terhadap kualiti air sungai, serta pemodelan zon penampan riparian bagi pengurusan lembangan sungai bersepadu.
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">IRBM Plan For Sungai Tuaran Basin</h4>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Watershed Delineation, Land Use Pressure & Riparian Buffer Modeling</p>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
+                                    Extracted watershed basin boundaries from high-resolution terrain surfaces, evaluated surface runoff vulnerability from agricultural expansion, and delineated riparian reserves to formulate sustainable river basin preservation policies.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Spatial Hydrology</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">DEM Watershed</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Riparian Buffering</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Water Quality Mapping</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Spatial Hydrology</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">DEM Catchment</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Riparian Buffers</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Water Quality Correlation</span>
                                 </div>
                             </div>
-                            <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
-                                <span class="text-xs text-gray-400">Status: Selesai</span>
-                                <a href="projek-irbm.html" class="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold transition shadow-xs">
-                                    <i class="fas fa-map-marked-alt mr-2"></i>Lihat Metodologi & Peta
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">Status: Completed Documentation</span>
+                                <a href="projek-irbm.html" class="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow-xs">
+                                    <i class="fas fa-map-marked-alt mr-2"></i> View Case Study & Maps
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- B2: Sabah Shoreline Management Plan -->
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                        <div class="md:w-1/3 bg-gray-200 relative">
-                            <img src="https://placehold.co/600x400/059669/ffffff?text=Sabah+Shoreline+SMP" alt="SMP Sabah" class="object-cover w-full h-full min-h-[200px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
-                                State Shoreline Plan
+                    <!-- Project 2: Sabah SMP -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                        <div class="md:w-1/3 bg-slate-100 relative">
+                            <img src="https://placehold.co/600x400/059669/ffffff?text=Sabah+Shoreline+SMP" alt="Sabah SMP" class="object-cover w-full h-full min-h-[220px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                                State-Wide Coastline
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-2 mb-1">
-                                    <span class="text-xs font-bold text-emerald-700 uppercase">Coastal GIS</span>
-                                    <span class="text-gray-300">•</span>
-                                    <span class="text-xs text-gray-500">Shoreline Management</span>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Coastal Spatial Analysis</span>
+                                    <span class="text-slate-300">&bull;</span>
+                                    <span class="text-xs text-slate-500 font-semibold">State Master Plan</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Sabah Shoreline Management Plan (SMP)</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">Sokongan GIS: Coastal Dynamics, Erosion Risk & Shoreline Setback Zoning</p>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Pemetaan dinamik perubahan zon pesisiran pantai seluruh Sabah, analisis garis pantai berisiko hakisan menggunakan siri imej satelit temporal, serta pengenalpastian zon anjakan fizikal (*coastal setback*) untuk perlindungan habitat persisiran.
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Sabah Shoreline Management Plan (SMP)</h4>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Shoreline Dynamics, Historical Erosion Rates & Setback Zoning</p>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
+                                    Analyzed multi-decadal coastline movement using satellite earth observation indices, mapped coastal erosion vulnerability, and formulated setback limits to protect beachfront development against sea-level risks.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Remote Sensing</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">DSAS Shoreline</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Erosion Modeling</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Multi-Temporal Sat</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Remote Sensing</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Shoreline Rate Analysis</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Erosion Risk Delineation</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Coastal Setback</span>
                                 </div>
                             </div>
-                            <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
-                                <span class="text-xs text-gray-400">Liputan: Negeri Sabah</span>
-                                <button class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-semibold">
-                                    Perincian GIS <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">Coverage: Entire Sabah Coastline</span>
+                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
+                                    View Shoreline Data <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- B3: ISMP Kudat-Tawau -->
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                        <div class="md:w-1/3 bg-gray-200 relative">
-                            <img src="https://placehold.co/600x400/059669/ffffff?text=ISMP+Kudat-Tawau" alt="ISMP Kudat Tawau" class="object-cover w-full h-full min-h-[200px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
-                                Regional Coastal Plan
+                    <!-- Project 3: ISMP Kudat-Tawau -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                        <div class="md:w-1/3 bg-slate-100 relative">
+                            <img src="https://placehold.co/600x400/059669/ffffff?text=ISMP+Kudat-Tawau" alt="ISMP Kudat Tawau" class="object-cover w-full h-full min-h-[220px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                                Regional Corridor
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-2 mb-1">
-                                    <span class="text-xs font-bold text-emerald-700 uppercase">Integrated Coastal GIS</span>
-                                    <span class="text-gray-300">•</span>
-                                    <span class="text-xs text-gray-500">Regional Marine & Terrestrial</span>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Integrated Coastal GIS</span>
+                                    <span class="text-slate-300">&bull;</span>
+                                    <span class="text-xs text-slate-500 font-semibold">Marine & Terrestrial</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">ISMP Pengurusan Pantai Bersepadu (Kudat-Tawau)</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">Sokongan GIS: Regional Marine-Terrestrial Spatial Integration & Eco-Sensitive Zoning</p>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Penyelarasan pangkalan data spatial antara sektor guna tanah daratan dengan aktiviti marin merangkumi jajaran pantai timur Sabah, perlindungan hutan bakau, terumbu karang, dan perancangan penempatan persisiran.
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">ISMP Integrated Coastal Zone Management (Kudat - Tawau)</h4>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Marine-Terrestrial Spatial Integration & Ecological Zoning</p>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
+                                    Harmonized mainland land administration with offshore marine spatial activities across eastern Sabah, mapping coastal aquaculture, mangrove conservation extents, and maritime navigation channels.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Regional GIS</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Marine Cadastre</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Mangrove Delineation</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Spatial Planning</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Regional Geodatabase</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Marine Cadastre</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Mangrove Protection</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Cross-District Harmonization</span>
                                 </div>
                             </div>
-                            <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
-                                <span class="text-xs text-gray-400">Liputan: Pantai Timur Sabah</span>
-                                <button class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-semibold">
-                                    Perincian GIS <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">Coverage: Eastern Sabah Littoral</span>
+                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
+                                    View Spatial Layers <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
+            </section>
 
             <!-- ============================================================= -->
             <!-- 4. URBAN PLANNING & LAND USE ANALYSIS (DEVELOPMENT)           -->
             <!-- ============================================================= -->
-            <div id="development-plans" class="mb-20">
-                <h3 class="text-xl font-bold text-emerald-900 mb-6 border-b-2 border-emerald-200 pb-3 flex items-center">
-                    <span class="w-2.5 h-6 bg-emerald-600 rounded mr-3"></span>
-                    4. Urban Planning & Land Use Analysis (Development)
-                </h3>
+            <section id="development-plans" class="mb-24">
+                <div class="flex items-center gap-3 mb-8 border-b-2 border-emerald-200 pb-3">
+                    <span class="w-2.5 h-6 bg-emerald-600 rounded-md"></span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">4. Urban Planning & Land Use Analysis (Development)</h3>
+                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <!-- C1 -->
-                    <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden hover:shadow-md transition">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <!-- Item 1 -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Kudat+Blue+Econ+Park" alt="Kudat BE" class="w-full h-36 object-cover">
-                        <div class="p-4">
-                            <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">Industrial Master Plan</span>
-                            <h5 class="font-bold text-gray-900 text-sm mb-2 leading-snug">Kudat Blue Economy Industrial Park Master Plan</h5>
-                            <p class="text-xs text-gray-600">Pengezonan tanah industri marin, kesesuaian cerun dan pemodelan koridor pelabuhan.</p>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Industrial Master Plan</span>
+                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kudat Blue Economy Industrial Park</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">Maritime industrial land zoning, port logistics corridors, and coastal terrain assessment.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- C2 -->
-                    <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden hover:shadow-md transition">
+                    <!-- Item 2 -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Railway+Putatan-Sepanggar" alt="Railway" class="w-full h-36 object-cover">
-                        <div class="p-4">
-                            <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">Transit & Corridor</span>
-                            <h5 class="font-bold text-gray-900 text-sm mb-2 leading-snug">Railway Putatan to Sepanggar Port</h5>
-                            <p class="text-xs text-gray-600">Analisis jajaran landasan kereta api, penyelarasan lot pengambilan balik tanah dan penampan keselamatan.</p>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Transit & Corridor</span>
+                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Railway: Putatan to Sepanggar Port</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">Railway corridor alignment, land acquisition lot verification, and safety buffer zones.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- C3 -->
-                    <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden hover:shadow-md transition">
+                    <!-- Item 3 -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Mile+9+Labuk+Sandakan" alt="Sandakan" class="w-full h-36 object-cover">
-                        <div class="p-4">
-                            <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">Land Development</span>
-                            <h5 class="font-bold text-gray-900 text-sm mb-2 leading-snug">At Mile 9, Labuk Road Sandakan</h5>
-                            <p class="text-xs text-gray-600">Perancangan tatatur perumahan bercampur dan semakan status syarat nyata tanah kadaster.</p>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Land Layout Scheme</span>
+                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Mile 9, Labuk Road Sandakan</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">Mixed-use layout spatial analysis, title express condition checking, and road access.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- C4 -->
-                    <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden hover:shadow-md transition">
+                    <!-- Item 4 -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=KKIP+Lot+Rezoning" alt="KKIP" class="w-full h-36 object-cover">
-                        <div class="p-4">
-                            <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">Rezoning Study</span>
-                            <h5 class="font-bold text-gray-900 text-sm mb-2 leading-snug">KKIP Sepanggar CL015608750 Rezoning</h5>
-                            <p class="text-xs text-gray-600">Analisis justifikasi pengezonan semula zon industri khusus dan pematuhan garisan bangunan.</p>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Rezoning Justification</span>
+                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">KKIP Sepanggar CL015608750</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">Specialized industrial conversion, setback analysis, and setback plot compatibility.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- C5 -->
-                    <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden hover:shadow-md transition">
+                    <!-- Item 5 -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Sin+On+Road+Tawau" alt="Tawau" class="w-full h-36 object-cover">
-                        <div class="p-4">
-                            <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">Commercial Rezoning</span>
-                            <h5 class="font-bold text-gray-900 text-sm mb-2 leading-snug">Rezoning at Sin On Road, Tawau</h5>
-                            <p class="text-xs text-gray-600">Kajian zon komersial baharu, penjanaan zon impak trafik dan inventori guna tanah semasa.</p>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Commercial Rezoning</span>
+                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Sin On Road, Tawau</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">Commercial zone expansion, surrounding land use audit, and traffic accessibility.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- C6 -->
-                    <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden hover:shadow-md transition">
+                    <!-- Item 6 -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Kg+Pandewan+Nabawan" alt="Nabawan" class="w-full h-36 object-cover">
-                        <div class="p-4">
-                            <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">Land Use Conversion</span>
-                            <h5 class="font-bold text-gray-900 text-sm mb-2 leading-snug">Land Use Change Kg Pandewan, Nabawan</h5>
-                            <p class="text-xs text-gray-600">Penilaian pertukaran syarat guna tanah pertanian ke skim penempatan desa terancang.</p>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Land Use Conversion</span>
+                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kg Pandewan, Nabawan</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">Agricultural to village settlement conversion and basic amenity accessibility checks.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- C7 -->
-                    <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden hover:shadow-md transition">
+                    <!-- Item 7 -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Jalan+Balung+Semporna" alt="Semporna" class="w-full h-36 object-cover">
-                        <div class="p-4">
-                            <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">Suburban Expansion</span>
-                            <h5 class="font-bold text-gray-900 text-sm mb-2 leading-snug">Land Use Change Jalan Balung, Semporna</h5>
-                            <p class="text-xs text-gray-600">Pemetaan cerun, kebolehcapaian jalan utama dan analisis zon penampan pertanian komersial.</p>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Suburban Growth</span>
+                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Jalan Balung, Semporna</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">Slope contour mapping, agricultural reserve buffers, and rural development potential.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- C8 -->
-                    <div class="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden hover:shadow-md transition">
+                    <!-- Item 8 -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-md hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/0f766e/ffffff?text=Kudat+BE+Masterplan+2026" alt="Kudat 2026" class="w-full h-36 object-cover">
-                        <div class="p-4">
-                            <span class="text-emerald-700 font-bold text-xs uppercase block mb-1">Macro Master Plan</span>
-                            <h5 class="font-bold text-gray-900 text-sm mb-2 leading-snug">Kudat Blue Economy Master Plan (2026)</h5>
-                            <p class="text-xs text-gray-600">Pelan induk menyeluruh pemanfaatan ekonomi maritim, tenaga boleh diperbaharui dan pelabuhan serantau.</p>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-emerald-700 font-bold text-[11px] uppercase block mb-1">Regional Master Plan</span>
+                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kudat Blue Economy Plan (2026)</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">Macro blueprint for northern renewable ocean energy and sustainable maritime nodes.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- ============================================================= -->
             <!-- 5. STRATEGIC PLANS PROJECT                                    -->
             <!-- ============================================================= -->
-            <div id="strategic-plans" class="mb-12">
-                <h3 class="text-xl font-bold text-emerald-900 mb-6 border-b-2 border-emerald-200 pb-3 flex items-center">
-                    <span class="w-2.5 h-6 bg-emerald-600 rounded mr-3"></span>
-                    5. Strategic Plans Project
-                </h3>
+            <section id="strategic-plans" class="mb-16">
+                <div class="flex items-center gap-3 mb-8 border-b-2 border-emerald-200 pb-3">
+                    <span class="w-2.5 h-6 bg-emerald-600 rounded-md"></span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">5. Strategic Plans Project</h3>
+                </div>
 
                 <div class="space-y-6">
                     <!-- D1: PSPD Kudat -->
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                        <div class="md:w-1/3 bg-gray-200 relative">
-                            <img src="https://placehold.co/600x400/d97706/ffffff?text=PSPD+Kudat" alt="PSPD Kudat" class="object-cover w-full h-full min-h-[190px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
-                                Pelan Strategik Daerah
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                        <div class="md:w-1/3 bg-slate-100 relative">
+                            <img src="https://placehold.co/600x400/d97706/ffffff?text=PSPD+Kudat" alt="PSPD Kudat" class="object-cover w-full h-full min-h-[200px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-slate-900 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                                District Strategic Plan
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-2 mb-1">
-                                    <span class="text-xs font-bold text-amber-700 uppercase">Strategic Planning</span>
-                                    <span class="text-gray-300">•</span>
-                                    <span class="text-xs text-gray-500">Socio-Economic Development</span>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-xs font-extrabold text-amber-700 uppercase tracking-wider">Regional Strategy</span>
+                                    <span class="text-slate-300">&bull;</span>
+                                    <span class="text-xs text-slate-500 font-semibold">Socio-Economic Blueprint</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Pelan Strategik Pembangunan Daerah (PSPD) Kudat</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">Sokongan GIS: Socio-Economic Growth Nodes & Spatial Resource Mapping</p>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Analisis taburan kemudahan asas penduduk, pemetaan kluster tumpuan ekonomi baharu, dan formulasi pelan tindakan strategik bagi memacu pembangunan sosioekonomi mampan Daerah Kudat.
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Pelan Strategik Pembangunan Daerah (PSPD) Kudat</h4>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Growth Node Mapping, Demographic Accessibility & Economic Clustering</p>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
+                                    Geospatial modeling of civic facility service radiuses, population clustering, and commercial nodal points to establish priority socio-economic infrastructure development across Kudat.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Demography GIS</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Accessibility Analysis</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Growth Node Mapping</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Demography GIS</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Spatial Accessibility</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Growth Node Allocation</span>
                                 </div>
                             </div>
-                            <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
-                                <span class="text-xs text-gray-400">Liputan: Daerah Kudat</span>
-                                <button class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-semibold">
-                                    Perincian Strategik <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">District Scale: Kudat</span>
+                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
+                                    Strategic Analysis <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
 
                     <!-- D2: Beluran Strategic Plan -->
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row border-l-4 border-emerald-600 hover:shadow-lg transition">
-                        <div class="md:w-1/3 bg-gray-200 relative">
-                            <img src="https://placehold.co/600x400/d97706/ffffff?text=Beluran+2025-2035" alt="Beluran" class="object-cover w-full h-full min-h-[190px]">
-                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-emerald-900 text-xs font-bold px-2.5 py-1 rounded shadow-xs">
-                                10-Year Strategic Plan
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-lg hover:border-emerald-500/30 transition">
+                        <div class="md:w-1/3 bg-slate-100 relative">
+                            <img src="https://placehold.co/600x400/d97706/ffffff?text=Beluran+2025-2035" alt="Beluran" class="object-cover w-full h-full min-h-[200px]">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-slate-900 text-xs font-extrabold px-3 py-1 rounded-md shadow-xs">
+                                10-Year Master Framework
                             </span>
                         </div>
-                        <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div class="md:w-2/3 p-6 sm:p-7 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-center gap-2 mb-1">
-                                    <span class="text-xs font-bold text-amber-700 uppercase">Strategic Planning</span>
-                                    <span class="text-gray-300">•</span>
-                                    <span class="text-xs text-gray-500">2025 - 2035</span>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-xs font-extrabold text-amber-700 uppercase tracking-wider">Regional Strategy</span>
+                                    <span class="text-slate-300">&bull;</span>
+                                    <span class="text-xs text-slate-500 font-semibold">2025 - 2035</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Kajian Pelan Pembangunan Strategik Beluran 2025-2035</h4>
-                                <p class="text-xs font-semibold text-emerald-800 mb-3">Sokongan GIS: Inland Agri-Corridor & Rural Infrastructure Logistics</p>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Mengenal pasti koridor potensi perladangan, logistik rangkaian perhubungan pedalaman, dan penyusunan pelan ruang berasaskan hala tuju sosioekonomi 10 tahun bagi Daerah Beluran.
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Beluran Strategic Development Plan Study 2025–2035</h4>
+                                <p class="text-xs font-semibold text-emerald-800 mb-3">GIS Scope: Inland Agri-Industrial Logistics & Rural Connectivity Networks</p>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
+                                    Delineating long-range spatial growth corridors for modern commercial agriculture, rural logistical hubs, and road infrastructure networks across the interior of Beluran.
                                 </p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Agri-Corridors</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Rural Connectivity</span>
-                                    <span class="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs">Spatial Strategy</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Agri-Corridors</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Connectivity Analysis</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-medium">Regional Master Plan</span>
                                 </div>
                             </div>
-                            <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
-                                <span class="text-xs text-gray-400">Liputan: Daerah Beluran</span>
-                                <button class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-semibold">
-                                    Perincian Strategik <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">District Scale: Beluran</span>
+                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
+                                    Strategic Analysis <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-emerald-950 text-emerald-100 py-10 text-center border-t border-emerald-900">
-        <div class="max-w-7xl mx-auto px-4 space-y-2">
-            <p class="font-bold text-base">Gs. Mohamad Nazril Bin Sharil</p>
-            <p class="text-xs opacity-75">Professional Geospatial Practitioner & Geographer | IGRSM (M1711) & MBOT (GT240404440)</p>
-            <p class="text-xs opacity-50 pt-2">&copy; 2026 Hak Cipta Terpelihara. Professional GIS Portfolio.</p>
+    <footer class="bg-slate-950 text-slate-300 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <h5 class="text-lg font-extrabold text-white tracking-tight">Gs. Mohamad Nazril Bin Sharil</h5>
+            <p class="text-xs text-slate-400 max-w-xl mx-auto">
+                Professional Geospatial Practitioner & Geographer &bull; Institution of Geospatial and Remote Sensing Malaysia (IGRSM M1711) &bull; Malaysia Board of Technologists (MBOT GT240404440)
+            </p>
+            <p class="text-xs text-slate-500 pt-4 border-t border-slate-900/80">
+                &copy; 2026 Gs. Mohamad Nazril Bin Sharil. Built with Tailwind CSS. All Rights Reserved.
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript Tab Switching Logic -->
+    <!-- Interactive View Switcher JavaScript -->
     <script>
-        function switchUrbanTab(tabId) {
-            // Sembunyikan semua tab content
-            document.querySelectorAll('.urban-tab-content').forEach(tab => {
-                tab.classList.add('hidden');
+        function switchView(viewId) {
+            // Hide all view panels
+            document.querySelectorAll('.view-panel').forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('block');
             });
 
-            // Reset styling semua button tab
-            document.querySelectorAll('.urban-tab-btn').forEach(btn => {
-                btn.classList.remove('bg-white', 'text-emerald-950', 'shadow-xs');
-                btn.classList.add('bg-emerald-900/60', 'text-emerald-100');
+            // Reset tab button states
+            document.querySelectorAll('.view-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-white', 'text-emerald-950', 'shadow-sm');
+                btn.classList.add('bg-slate-800/80', 'text-slate-200');
             });
 
-            // Tunjukkan tab content yang dipilih
-            const targetContent = document.getElementById(tabId);
-            if (targetContent) {
-                targetContent.classList.remove('hidden');
+            // Show selected view panel
+            const activePanel = document.getElementById(viewId);
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+                activePanel.classList.add('block');
             }
 
-            // Aktifkan styling butang yang ditekan
-            const clickedBtn = document.getElementById('btn-' + tabId);
-            if (clickedBtn) {
-                clickedBtn.classList.remove('bg-emerald-900/60', 'text-emerald-100');
-                clickedBtn.classList.add('bg-white', 'text-emerald-950', 'shadow-xs');
+            // Highlight clicked button
+            const activeBtn = document.getElementById('btn-' + viewId);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-slate-800/80', 'text-slate-200');
+                activeBtn.classList.add('bg-white', 'text-emerald-950', 'shadow-sm');
             }
         }
     </script>
