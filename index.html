@@ -10,7 +10,7 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        /* Signature Dark Emerald-Slate Gradient (Matching Reference Image) */
+        /* Signature Dark Emerald-Slate Gradient */
         .signature-dark-card {
             background: linear-gradient(115deg, #032219 0%, #0b1520 52%, #052622 100%);
             box-shadow: 0 20px 40px -15px rgba(3, 34, 25, 0.45);
@@ -89,7 +89,7 @@
 </head>
 <body class="bg-[#f4f7f6] text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
 
-    <!-- Navbar (Dark Glassmorphism matching Hero & Banner) -->
+    <!-- Navbar -->
     <nav class="bg-[#041d17]/90 backdrop-blur-md border-b border-emerald-500/15 fixed w-full z-40 top-0 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2.5 group">
@@ -114,30 +114,60 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Styled with Signature Dark Emerald-Slate Look) -->
-    <header class="hero-dark-canvas text-white pt-36 pb-28 mt-12 relative overflow-hidden border-b border-emerald-500/20">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-pill-emerald text-xs font-bold uppercase tracking-wider mb-6">
-                <i class="fas fa-certificate text-emerald-400"></i> Certified Geospatial Practitioner | IGRSM & MBOT
-            </div>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-5 leading-tight text-white">
-                Gs. Mohamad Nazril Bin Sharil
-            </h1>
-            <p class="text-lg sm:text-xl text-emerald-400 font-semibold mb-6 max-w-3xl mx-auto tracking-wide">
-                GIS Practitioner &bull; GeoAI & UAV Photogrammetry &bull; Land Suitability Specialist
-            </p>
-            <p class="max-w-2xl mx-auto text-slate-300 text-sm sm:text-base leading-relaxed mb-10">
-                Bridging advanced spatial data science with statutory urban planning standards. Specialized in AHP multicriteria evaluation, automated geospatial workflows, geodatabase architecture, and Deep Learning vision models for sustainable land administration.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <button onclick="openUrbanModal()" class="btn-emerald-glow font-extrabold px-7 py-3.5 rounded-2xl text-sm inline-flex items-center gap-2.5 cursor-pointer">
-                    <i class="fas fa-book-open"></i>
-                    <span>View Statutory Framework</span>
-                </button>
-                <a href="#projects" class="btn-slate-dark font-extrabold px-7 py-3.5 rounded-2xl text-sm inline-flex items-center gap-2.5">
-                    <i class="fas fa-map-location-dot text-emerald-400"></i>
-                    <span>Browse Projects Catalog</span>
-                </a>
+    <!-- Hero Section (Split Layout: Teks di Kiri, Gambar Profil di Kanan) -->
+    <header class="hero-dark-canvas text-white pt-32 pb-24 mt-12 relative overflow-hidden border-b border-emerald-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+                
+                <!-- Bahagian Kiri: Teks & Butang -->
+                <div class="w-full lg:w-3/5 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-pill-emerald text-xs font-bold uppercase tracking-wider mb-6">
+                        <i class="fas fa-certificate text-emerald-400"></i> Certified Geospatial Practitioner | IGRSM & MBOT
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 leading-tight text-white">
+                        Gs. Mohamad Nazril Bin Sharil
+                    </h1>
+                    <p class="text-lg sm:text-xl text-emerald-400 font-semibold mb-6 tracking-wide">
+                        GIS Practitioner &bull; GeoAI & UAV Photogrammetry &bull; Land Suitability Specialist
+                    </p>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0 text-justify lg:text-left">
+                        Bridging advanced spatial data science with statutory urban planning standards. Specialized in AHP multicriteria evaluation, automated geospatial workflows, geodatabase architecture, and Deep Learning vision models for sustainable land administration.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <button onclick="openUrbanModal()" class="btn-emerald-glow font-extrabold px-7 py-3.5 rounded-2xl text-sm inline-flex items-center gap-2.5 cursor-pointer">
+                            <i class="fas fa-book-open"></i>
+                            <span>View Statutory Framework</span>
+                        </button>
+                        <a href="#projects" class="btn-slate-dark font-extrabold px-7 py-3.5 rounded-2xl text-sm inline-flex items-center gap-2.5">
+                            <i class="fas fa-map-location-dot text-emerald-400"></i>
+                            <span>Browse Projects Catalog</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bahagian Kanan: Gambar Profil -->
+                <div class="w-full lg:w-2/5 flex justify-center">
+                    <div class="relative group">
+                        <!-- Efek Cahaya Belakang (Glow) -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-tr from-emerald-500 to-teal-400 rounded-[32px] blur-md opacity-35 group-hover:opacity-60 transition duration-500"></div>
+                        
+                        <!-- Bingkai Gambar -->
+                        <div class="relative w-64 h-72 sm:w-80 sm:h-96 rounded-[28px] overflow-hidden border-2 border-emerald-400/40 bg-[#06241c] shadow-2xl">
+                            <!-- TUKAR NAMA FAIL GAMBAR KAU DI SINI (contoh: profil-nazril.jpg) -->
+                            <img src="profil-nazril.jpg" alt="Gs. Mohamad Nazril Bin Sharil" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/500x600/032219/34d399?text=Gs.+Mohamad+Nazril'">
+                            
+                            <!-- Badge Terapung di Bawah Gambar -->
+                            <div class="absolute bottom-3 left-3 right-3 bg-slate-950/85 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 block">Registered Professional</span>
+                                    <span class="text-xs font-extrabold text-white">IGRSM (M1711) &bull; MBOT</span>
+                                </div>
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </header>
@@ -147,7 +177,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Expertise Card (Styled in Signature Dark Theme) -->
+                <!-- Expertise Card -->
                 <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 border border-slate-800 text-white">
                     <div class="flex items-center gap-3.5 mb-6">
                         <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg">
@@ -194,7 +224,7 @@
                     </ul>
                 </div>
 
-                <!-- Technical Stacks (Styled in Signature Dark Theme) -->
+                <!-- Technical Stacks -->
                 <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 border border-slate-800 text-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3.5 mb-6">
@@ -251,7 +281,6 @@
             <!-- ============================================================= -->
             <section id="flagship" class="mb-24">
                 
-                <!-- Section Header -->
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-slate-200 pb-4">
                     <div>
                         <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
@@ -266,7 +295,7 @@
                     </span>
                 </div>
 
-                <!-- EXACT REFERENCE BANNER DESIGN -->
+                <!-- EXECUTIVE BANNER -->
                 <div class="signature-dark-card rounded-[28px] p-7 sm:p-10 text-white border border-slate-800/80">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
                         <div class="max-w-3xl">
@@ -287,7 +316,6 @@
                             </div>
                         </div>
 
-                        <!-- Action Buttons Pair (Matching Reference Image) -->
                         <div class="flex flex-col sm:flex-row lg:flex-col gap-3.5 flex-shrink-0 min-w-[190px]">
                             <button onclick="openGeoaiModal()" class="btn-emerald-glow font-extrabold px-6 py-4 rounded-2xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
                                 <i class="fas fa-book-open text-base"></i>
@@ -308,7 +336,6 @@
             <!-- ============================================================= -->
             <section id="urban-planning" class="mb-24">
                 
-                <!-- Section Header -->
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-slate-200 pb-4">
                     <div>
                         <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
@@ -323,7 +350,7 @@
                     </span>
                 </div>
 
-                <!-- EXACT REFERENCE BANNER DESIGN FOR URBAN PLANNING -->
+                <!-- EXECUTIVE BANNER FOR URBAN PLANNING -->
                 <div class="signature-dark-card rounded-[28px] p-7 sm:p-10 text-white mb-10 border border-slate-800/80">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
                         <div class="max-w-3xl">
@@ -344,7 +371,6 @@
                             </div>
                         </div>
 
-                        <!-- Action Buttons Pair (Matching Reference Image) -->
                         <div class="flex flex-col sm:flex-row lg:flex-col gap-3.5 flex-shrink-0 min-w-[190px]">
                             <button onclick="openUrbanModal()" class="btn-emerald-glow font-extrabold px-6 py-4 rounded-2xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
                                 <i class="fas fa-book-open text-base"></i>
@@ -607,7 +633,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <!-- Item 1 -->
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=Kudat+Blue+Econ+Park" alt="Kudat BE" class="w-full h-36 object-cover">
                         <div class="p-5 flex-grow flex flex-col justify-between">
@@ -619,7 +644,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=Railway+Putatan-Sepanggar" alt="Railway" class="w-full h-36 object-cover">
                         <div class="p-5 flex-grow flex flex-col justify-between">
@@ -631,7 +655,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 3 -->
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=Mile+9+Labuk+Sandakan" alt="Sandakan" class="w-full h-36 object-cover">
                         <div class="p-5 flex-grow flex flex-col justify-between">
@@ -643,7 +666,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 4 -->
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=KKIP+Lot+Rezoning" alt="KKIP" class="w-full h-36 object-cover">
                         <div class="p-5 flex-grow flex flex-col justify-between">
@@ -655,7 +677,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 5 -->
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=Sin+On+Road+Tawau" alt="Tawau" class="w-full h-36 object-cover">
                         <div class="p-5 flex-grow flex flex-col justify-between">
@@ -667,7 +688,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 6 -->
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=Kg+Pandewan+Nabawan" alt="Nabawan" class="w-full h-36 object-cover">
                         <div class="p-5 flex-grow flex flex-col justify-between">
@@ -679,7 +699,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 7 -->
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=Jalan+Balung+Semporna" alt="Semporna" class="w-full h-36 object-cover">
                         <div class="p-5 flex-grow flex flex-col justify-between">
@@ -691,7 +710,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 8 -->
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=Kudat+BE+Masterplan+2026" alt="Kudat 2026" class="w-full h-36 object-cover">
                         <div class="p-5 flex-grow flex flex-col justify-between">
@@ -790,7 +808,7 @@
         </div>
     </main>
 
-    <!-- Footer (Matching Signature Dark Theme) -->
+    <!-- Footer -->
     <footer class="hero-dark-canvas text-slate-300 py-14 border-t border-emerald-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
             <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-emerald-950 mx-auto mb-3 shadow-lg shadow-emerald-500/20">
