@@ -71,7 +71,7 @@
                 Bridging advanced spatial data science with statutory urban planning standards. Specialized in AHP multicriteria evaluation, automated geospatial workflows, geodatabase architecture, and Deep Learning vision models for sustainable land administration.
             </p>
             <div class="flex flex-wrap justify-center gap-3">
-                <button onclick="openUrbanModal()" class="bg-white text-emerald-950 font-bold px-6 py-3 rounded-xl shadow-lg shadow-emerald-950/20 hover:bg-emerald-50 transition transform hover:-translate-y-0.5 text-sm">
+                <button onclick="openUrbanModal()" class="bg-white text-emerald-950 font-bold px-6 py-3 rounded-xl shadow-lg shadow-emerald-950/20 hover:bg-emerald-50 transition transform hover:-translate-y-0.5 text-sm cursor-pointer">
                     View Statutory Framework <i class="fas fa-layer-group ml-2 text-emerald-600"></i>
                 </button>
                 <a href="#projects" class="bg-emerald-800/80 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl border border-emerald-600/50 transition text-sm">
@@ -203,7 +203,7 @@
                     </span>
                 </div>
 
-                <!-- EXECUTIVE BANNER -->
+                <!-- STANDARDIZED EXECUTIVE BANNER (BUTTON 1: OVERVIEW | BUTTON 2: EXPLORE MAPS) -->
                 <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 rounded-3xl p-6 sm:p-9 text-white mb-8 shadow-md border border-slate-800">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                         <div class="max-w-3xl">
@@ -224,11 +224,17 @@
                             </div>
                         </div>
 
-                        <!-- Button Trigger for GeoAI Modal Window -->
-                        <div class="flex-shrink-0">
-                            <button onclick="openGeoaiModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold px-6 py-4 rounded-2xl transition duration-300 shadow-lg shadow-emerald-500/20 hover:scale-102 text-sm cursor-pointer">
-                                <i class="fas fa-window-restore text-lg"></i>
-                                <span>Open Full GeoAI Architecture & Pipeline</span>
+                        <!-- Action Buttons Pair -->
+                        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
+                            <!-- Butang 1: Overview -->
+                            <button onclick="openGeoaiModal()" class="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold px-6 py-3.5 rounded-2xl transition duration-300 shadow-lg shadow-emerald-500/20 hover:scale-102 text-sm cursor-pointer">
+                                <i class="fas fa-book-open text-base"></i>
+                                <span>Overview</span>
+                            </button>
+                            <!-- Butang 2: Explore Maps -->
+                            <button onclick="openMapModal('geoai')" class="inline-flex items-center justify-center gap-2.5 bg-slate-800 hover:bg-slate-700 text-white font-extrabold px-6 py-3.5 rounded-2xl border border-slate-700 transition duration-300 hover:scale-102 text-sm cursor-pointer">
+                                <i class="fas fa-map-location-dot text-base text-emerald-400"></i>
+                                <span>Explore Maps</span>
                             </button>
                         </div>
                     </div>
@@ -263,9 +269,15 @@
                         </div>
                         <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
                             <span class="text-xs text-slate-400 font-medium">Status: In Progress &bull; Version 1.2 Pipeline</span>
-                            <button onclick="openGeoaiModal()" class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center cursor-pointer">
-                                View Technical Pipeline <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
-                            </button>
+                            <div class="flex items-center gap-3">
+                                <button onclick="openGeoaiModal()" class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center cursor-pointer">
+                                    Overview <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                </button>
+                                <span class="text-slate-300">&bull;</span>
+                                <button onclick="openMapModal('geoai')" class="text-slate-600 hover:text-slate-900 text-xs sm:text-sm font-bold inline-flex items-center cursor-pointer">
+                                    Explore Maps <i class="fas fa-map ml-1 text-xs text-emerald-600"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -292,7 +304,7 @@
                     </span>
                 </div>
 
-                <!-- STREAMLINED EXECUTIVE BANNER WITH MODAL TRIGGER -->
+                <!-- STANDARDIZED EXECUTIVE BANNER (BUTTON 1: OVERVIEW | BUTTON 2: EXPLORE MAPS) -->
                 <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 rounded-3xl p-6 sm:p-9 text-white mb-10 shadow-md border border-slate-800">
                     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                         <div class="max-w-3xl">
@@ -313,11 +325,17 @@
                             </div>
                         </div>
 
-                        <!-- Button Trigger for Modal Window -->
-                        <div class="flex-shrink-0">
-                            <button onclick="openUrbanModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold px-6 py-4 rounded-2xl transition duration-300 shadow-lg shadow-emerald-500/20 hover:scale-102 text-sm cursor-pointer">
-                                <i class="fas fa-window-restore text-lg"></i>
-                                <span>Open Full Methodology & Framework</span>
+                        <!-- Action Buttons Pair -->
+                        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
+                            <!-- Butang 1: Overview -->
+                            <button onclick="openUrbanModal()" class="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold px-6 py-3.5 rounded-2xl transition duration-300 shadow-lg shadow-emerald-500/20 hover:scale-102 text-sm cursor-pointer">
+                                <i class="fas fa-book-open text-base"></i>
+                                <span>Overview</span>
+                            </button>
+                            <!-- Butang 2: Explore Maps -->
+                            <button onclick="openMapModal('urban')" class="inline-flex items-center justify-center gap-2.5 bg-slate-800 hover:bg-slate-700 text-white font-extrabold px-6 py-3.5 rounded-2xl border border-slate-700 transition duration-300 hover:scale-102 text-sm cursor-pointer">
+                                <i class="fas fa-map-location-dot text-base text-emerald-400"></i>
+                                <span>Explore Maps</span>
                             </button>
                         </div>
                     </div>
@@ -361,8 +379,8 @@
                             </div>
                             <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
                                 <span class="text-xs text-slate-400 font-medium">Coverage: DBKK Region</span>
-                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
-                                    Explore GIS Details <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                                <button onclick="openDistrictMapModal('kk')" class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center cursor-pointer">
+                                    Explore Maps <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
@@ -397,8 +415,8 @@
                             </div>
                             <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
                                 <span class="text-xs text-slate-400 font-medium">Coverage: Kudat District</span>
-                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
-                                    Explore GIS Details <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                                <button onclick="openDistrictMapModal('kudat')" class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center cursor-pointer">
+                                    Explore Maps <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
@@ -433,8 +451,8 @@
                             </div>
                             <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
                                 <span class="text-xs text-slate-400 font-medium">Coverage: Keningau District</span>
-                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
-                                    Explore GIS Details <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                                <button onclick="openDistrictMapModal('keningau')" class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center cursor-pointer">
+                                    Explore Maps <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
                                 </button>
                             </div>
                         </div>
@@ -769,13 +787,13 @@
     </footer>
 
     <!-- ========================================================================= -->
-    <!-- MODAL 1: GEOAI MODEL DEVELOPMENT (FULL CONTENT FROM PROJEK-PORTFOLIO.HTML)-->
+    <!-- MODAL 1: GEOAI OVERVIEW (FULL CONTENT FROM PROJEK-PORTFOLIO.HTML)         -->
     <!-- ========================================================================= -->
     <div id="geoaiModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/80 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
         
         <div class="bg-white w-full max-w-6xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="geoaiModalCard">
             
-            <!-- Modal Header (Sticky) -->
+            <!-- Modal Header -->
             <div class="bg-slate-900 text-white px-6 py-5 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
                 <div class="flex items-center gap-3">
                     <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm">
@@ -786,7 +804,6 @@
                         <p class="text-xs text-slate-400">Meeting Urban Planning Standards (Work In Progress) &bull; Prepared by: Gs. Nazril</p>
                     </div>
                 </div>
-                <!-- Close Button -->
                 <button onclick="closeGeoaiModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm cursor-pointer">
                     <i class="fas fa-times"></i>
                 </button>
@@ -904,14 +921,12 @@
                         </div>
                     </div>
 
-                    <!-- Main Infographic Banner -->
                     <div class="mb-8 border border-slate-200 rounded-2xl p-4 bg-slate-50 text-center shadow-2xs">
                         <img src="WhatsApp Image 2026-10-26 at 8.15.22 AM.jpeg" alt="GeoAI Infographic Workflow" class="w-full h-auto rounded-xl mx-auto max-h-[600px] object-contain" onerror="this.src='https://placehold.co/1000x600/064e3b/ffffff?text=GeoAI+Model+Development+%26+Workflow+Infographic'">
                         <p class="text-center text-xs font-semibold text-slate-500 mt-3">Rajah Infografik Utama: GeoAI Model Development &amp; Workflow</p>
                     </div>
 
                     <div class="space-y-5">
-                        <!-- Step 1 -->
                         <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-5 items-center">
                             <div class="md:w-3/5">
                                 <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">Stage 01</span>
@@ -923,7 +938,6 @@
                             </div>
                         </div>
 
-                        <!-- Step 2 -->
                         <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-5 items-center">
                             <div class="md:w-3/5">
                                 <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">Stage 02</span>
@@ -935,7 +949,6 @@
                             </div>
                         </div>
 
-                        <!-- Step 3 -->
                         <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-5 items-center">
                             <div class="md:w-3/5">
                                 <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">Stage 03</span>
@@ -947,7 +960,6 @@
                             </div>
                         </div>
 
-                        <!-- Step 4 -->
                         <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-5 items-center">
                             <div class="md:w-3/5">
                                 <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">Stage 04</span>
@@ -974,7 +986,6 @@
                     </div>
 
                     <div class="space-y-5">
-                        <!-- Phase 1 -->
                         <div class="bg-red-50/70 p-5 rounded-2xl border border-red-200 flex flex-col md:flex-row gap-5 items-center">
                             <div class="md:w-3/5">
                                 <span class="px-2.5 py-0.5 bg-red-200 text-red-900 text-[10px] font-bold rounded-md uppercase tracking-wider block w-fit mb-1.5">Baseline Test</span>
@@ -986,7 +997,6 @@
                             </div>
                         </div>
 
-                        <!-- Phase 2 -->
                         <div class="bg-amber-50/70 p-5 rounded-2xl border border-amber-200 flex flex-col md:flex-row gap-5 items-center">
                             <div class="md:w-3/5">
                                 <span class="px-2.5 py-0.5 bg-amber-200 text-amber-900 text-[10px] font-bold rounded-md uppercase tracking-wider block w-fit mb-1.5">Current Phase</span>
@@ -998,7 +1008,6 @@
                             </div>
                         </div>
 
-                        <!-- Phase 3 -->
                         <div class="bg-emerald-50/70 p-5 rounded-2xl border border-emerald-200 flex flex-col md:flex-row gap-5 items-center">
                             <div class="md:w-3/5">
                                 <span class="px-2.5 py-0.5 bg-emerald-200 text-emerald-900 text-[10px] font-bold rounded-md uppercase tracking-wider block w-fit mb-1.5">Target Benchmark</span>
@@ -1081,7 +1090,6 @@
                         </div>
                     </div>
 
-                    <!-- Softwares & Tools Used -->
                     <div>
                         <h5 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">Softwares &amp; Tools Used:</h5>
                         <div class="flex flex-wrap gap-2">
@@ -1107,13 +1115,12 @@
     </div>
 
     <!-- ========================================================================= -->
-    <!-- MODAL 2: URBAN PLANNING STATUTORY FRAMEWORK & METHODOLOGY                 -->
+    <!-- MODAL 2: URBAN PLANNING OVERVIEW (STATUTORY FRAMEWORK & METHODOLOGY)      -->
     <!-- ========================================================================= -->
     <div id="urbanModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/80 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
         
         <div class="bg-white w-full max-w-6xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="urbanModalCard">
             
-            <!-- Modal Header (Sticky) -->
             <div class="bg-slate-900 text-white px-6 py-5 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
                 <div class="flex items-center gap-3">
                     <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm">
@@ -1129,7 +1136,6 @@
                 </button>
             </div>
 
-            <!-- Modal Body -->
             <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-12 bg-slate-50/50">
 
                 <!-- 01. Urban Planning & Development -->
@@ -1162,7 +1168,6 @@
                                 <p>It establishes a clear policy framework—covering design standards, zoning, environmental safeguards, and infrastructure provision—to drive economic progress and protect community priorities.</p>
                             </div>
                             
-                            <!-- Statutory Plan in Sabah Box -->
                             <div class="mt-4 pt-4 border-t border-slate-200">
                                 <div class="flex items-center gap-2 mb-2">
                                     <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px] flex items-center justify-center flex-shrink-0">4</span>
@@ -1182,7 +1187,6 @@
                         </div>
                     </div>
 
-                    <!-- Methodology Sectoral Studies -->
                     <div>
                         <div class="text-center mb-6">
                             <span class="inline-block px-4 py-1.5 bg-slate-900 text-white text-xs font-extrabold uppercase tracking-widest rounded-xl">
@@ -1344,7 +1348,7 @@
 
                     <div class="flex flex-col lg:flex-row items-center gap-6">
                         <div class="w-full lg:w-4/5 border-2 border-dashed border-red-500 rounded-3xl p-5 sm:p-6 bg-slate-50/60">
-                            <!-- Administration (Top) -->
+                            <!-- Administration -->
                             <div class="flex flex-col items-center justify-center mb-6">
                                 <div class="w-full max-w-xs mb-4 text-center">
                                     <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1">Administration</span>
@@ -1360,13 +1364,12 @@
                                     <i class="fas fa-arrow-down text-slate-400 text-[10px]"></i>
                                 </div>
 
-                                <!-- Base Map Center Box -->
                                 <div class="bg-gradient-to-r from-slate-100 via-white to-slate-100 border-2 border-slate-400 px-8 py-2 rounded-lg text-center">
                                     <span class="font-black text-xs tracking-widest text-slate-900 uppercase">BASE MAP</span>
                                 </div>
                             </div>
 
-                            <!-- Left and Right Clusters -->
+                            <!-- Clusters -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
                                 <div class="space-y-3.5">
                                     <div>
@@ -1446,7 +1449,6 @@
                                 </div>
                             </div>
 
-                            <!-- Bottom -->
                             <div class="mt-4 pt-3 border-t border-slate-200 flex flex-col items-center">
                                 <span class="text-[10px] font-bold text-slate-800 uppercase tracking-wider block mb-1 text-center">Public Facilities and Services</span>
                                 <div class="w-full max-w-sm bg-white rounded-lg border border-slate-300 text-[9px] text-slate-600 divide-y divide-slate-200 text-center">
@@ -1460,7 +1462,6 @@
                             </div>
                         </div>
 
-                        <!-- Database Cylinder -->
                         <div class="w-full lg:w-1/5 flex flex-col items-center justify-center text-center">
                             <div class="hidden lg:flex items-center text-red-600 text-2xl mb-2">
                                 <i class="fas fa-arrow-right"></i>
@@ -1548,7 +1549,6 @@
 
             </div>
 
-            <!-- Modal Footer -->
             <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
                 <span>Standardized Urban Planning Framework &bull; Sabah Statutory Regulations</span>
                 <button onclick="closeUrbanModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition cursor-pointer">
@@ -1559,9 +1559,78 @@
         </div>
     </div>
 
-    <!-- JavaScript to Handle All Modal Windows -->
+    <!-- ========================================================================= -->
+    <!-- MODAL 3: EXPLORE MAPS VIEWER (GEOAI, URBAN PLANNING & DISTRICT SCHEMES)   -->
+    <!-- ========================================================================= -->
+    <div id="mapViewerModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/85 backdrop-blur-md p-4 sm:p-6 lg:p-10 flex items-center justify-center transition-opacity duration-300 opacity-0">
+        
+        <div class="bg-white w-full max-w-5xl max-h-[92vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 transition-transform duration-300 scale-95" id="mapViewerModalCard">
+            
+            <!-- Map Header -->
+            <div class="bg-slate-900 text-white px-6 py-4 sm:px-8 flex items-center justify-between border-b border-slate-800 sticky top-0 z-20">
+                <div class="flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm">
+                        <i class="fas fa-map-location-dot"></i>
+                    </span>
+                    <div>
+                        <h3 class="text-base sm:text-lg font-black tracking-tight text-white uppercase" id="mapModalTitle">Geospatial Map Viewer</h3>
+                        <p class="text-xs text-slate-400" id="mapModalSubtitle">High-Resolution Spatial Blueprint &amp; Layer Inspection</p>
+                    </div>
+                </div>
+                <button onclick="closeMapModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm cursor-pointer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Map Body -->
+            <div class="p-6 sm:p-8 overflow-y-auto modal-scroll space-y-6 bg-slate-50/50">
+                
+                <!-- Main Canvas Preview -->
+                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-300 shadow-md relative group">
+                    <img src="" alt="Geospatial Map Visualization" id="mapModalImage" class="w-full h-72 sm:h-96 md:h-[450px] object-cover">
+                    <span class="absolute top-4 left-4 bg-slate-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-lg backdrop-blur-sm shadow-xs" id="mapModalBadge">
+                        Active Spatial Layer
+                    </span>
+                    <div class="absolute bottom-4 right-4 bg-slate-950/80 text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm border border-white/10 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span id="mapModalLayerInfo">Layer: 5cm Orthomosaic + Cadastre</span>
+                    </div>
+                </div>
+
+                <!-- Technical Attributes Card -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-3 gap-2">
+                        <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                            <i class="fas fa-info-circle text-emerald-600"></i> Spatial Specifications &amp; Methodology
+                        </h5>
+                        <span class="text-xs font-semibold text-slate-500" id="mapModalCRS">CRS: RSO Borneo (EPSG:29873)</span>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-justify" id="mapModalDescription">
+                        Detailed spatial inspection notes will appear here.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1" id="mapModalStats">
+                        <!-- Dynamic metadata cards -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Map Footer -->
+            <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
+                <span>Verified Spatial Data &bull; Gs. Mohamad Nazril Professional GIS Portfolio</span>
+                <button onclick="closeMapModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition cursor-pointer">
+                    Close Window
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript to Handle All Modals & Dynamic Data -->
     <script>
-        // --- Urban Planning Modal Handlers ---
+        // --- Urban Planning Overview Modal Handlers ---
         function openUrbanModal() {
             const modal = document.getElementById('urbanModal');
             const card = document.getElementById('urbanModalCard');
@@ -1586,7 +1655,7 @@
             }, 300);
         }
 
-        // --- GeoAI Modal Handlers ---
+        // --- GeoAI Overview Modal Handlers ---
         function openGeoaiModal() {
             const modal = document.getElementById('geoaiModal');
             const card = document.getElementById('geoaiModalCard');
@@ -1611,11 +1680,136 @@
             }, 300);
         }
 
+        // --- Explore Maps Modal Data & Handlers ---
+        const mapCatalog = {
+            'geoai': {
+                title: 'GeoAI Inference & Cadastral Vector Map',
+                subtitle: 'Deep Learning Semantic Extraction &bull; UAV Photogrammetry',
+                image: 'https://placehold.co/1000x550/064e3b/ffffff?text=GeoAI+Cadastral+Snapping+Result+Map',
+                badge: 'Automated Vector Output',
+                layerInfo: 'Layer: U-Net++ Segmented Buildings + Snapped Parcels',
+                crs: 'CRS: RSO Borneo / EPSG:29873',
+                description: 'Displays the post-processed vector shapefile outputs derived from Deep Learning segmentation. Highlights clean geometric edges, elimination of boundary slivers, and exact topological conformity against cadastral baseline lots.',
+                stats: [
+                    { label: 'Ground Resolution', val: '5.0 cm/px GSD' },
+                    { label: 'IoU Accuracy', val: '0.865 Building Footprint' },
+                    { label: 'Cadastral Snapping', val: 'Zero Topology Errors' }
+                ]
+            },
+            'urban': {
+                title: 'Statewide Statutory Planning Schemes Map',
+                subtitle: 'Town and Country Planning Ordinance (Sabah Cap. 141)',
+                image: 'https://placehold.co/1000x550/0284c7/ffffff?text=Sabah+Statewide+Statutory+Planning+Scheme+Map',
+                badge: 'State Planning Database',
+                description: 'Comprehensive overview of statutory planning tiers in Sabah, displaying structure plan regional nodes and local plan gazetted zoning layers harmonized into a centralized enterprise geodatabase.',
+                layerInfo: 'Layer: State Structure Plan 2033 + Local Plan Districts',
+                crs: 'CRS: Timbalai 1948 / RSO Borneo',
+                stats: [
+                    { label: 'Governing Law', val: 'Sabah Cap. 141 Mandate' },
+                    { label: 'Database Modules', val: '8 Core Sectoral Domains' },
+                    { label: 'Statutory Coverage', val: 'Tier 1 & Tier 2 Schemes' }
+                ]
+            },
+            'kk': {
+                title: 'Kota Kinabalu Local Plan Zoning Map',
+                subtitle: 'Metropolitan Master Plan &bull; Tier 2 Statutory Scheme',
+                image: 'https://placehold.co/1000x550/0284c7/ffffff?text=Kota+Kinabalu+Metropolitan+Master+Plan+Zoning+Map',
+                badge: 'DBKK Metropolitan Zone',
+                layerInfo: 'Layer: High-Density Zoning + Transit Corridors',
+                crs: 'CRS: Timbalai 1948 / RSO Borneo',
+                description: 'Detailed zoning scheme for Greater Kota Kinabalu, depicting high-density commercial corridors, residential density hierarchies, road reservations, and aligned title lots complying with gazetted development controls.',
+                stats: [
+                    { label: 'Authority', val: 'DBKK & Town Planning Dept' },
+                    { label: 'Cadastral Parcels', val: '> 45,000 Lots Processed' },
+                    { label: 'Zoning Analysis', val: 'Transit-Oriented Densities' }
+                ]
+            },
+            'kudat': {
+                title: 'Kudat Local Plan 2030 Zoning Map',
+                subtitle: 'District Development Scheme &bull; Gazetted Blueprint',
+                image: 'https://placehold.co/1000x550/0284c7/ffffff?text=Kudat+Local+Plan+2030+Coastal+Zoning+Map',
+                badge: 'Kudat District & Coastal Littoral',
+                layerInfo: 'Layer: 60m Coastal Setback + Tourism Nodes',
+                crs: 'CRS: Timbalai 1948 / RSO Borneo',
+                description: 'Spatial zoning for Kudat peninsula encompassing 60-meter coastal setback lines, sensitive marine-terrestrial boundaries, historical heritage reserves, and the proposed Kudat Blue Economy Industrial Park.',
+                stats: [
+                    { label: 'Setback Zone', val: '60m Coastal Protection Buffer' },
+                    { label: 'Special Growth Area', val: 'Blue Economy Industrial Park' },
+                    { label: 'Conservation Class', val: 'ESA Class 1 & 2 Delineated' }
+                ]
+            },
+            'keningau': {
+                title: 'Draft Keningau Local Plan 2030 Terrain Map',
+                subtitle: 'Inland Corridor Planning Scheme &bull; Slope Constraint Model',
+                image: 'https://placehold.co/1000x550/0284c7/ffffff?text=Draft+Keningau+Local+Plan+2030+Terrain+Map',
+                badge: 'Inland Valley & Foothills',
+                layerInfo: 'Layer: Slope Class 1-4 + Agri Logistics Corridors',
+                crs: 'CRS: Timbalai 1948 / RSO Borneo',
+                description: 'Hydro-conditioned Digital Elevation Model (DEM) and terrain gradient zoning. Identifies slopes exceeding 25 degrees for development hazard exclusion, paired with agricultural expansion corridors.',
+                stats: [
+                    { label: 'Slope Restriction', val: '> 25° Hazard Exclusion Zone' },
+                    { label: 'Terrain Surface', val: 'DEM / DTM Hydro-Conditioned' },
+                    { label: 'Economic Axis', val: 'Inland Agri-Logistics Corridors' }
+                ]
+            }
+        };
+
+        function openMapModal(key) {
+            const data = mapCatalog[key];
+            if (!data) return;
+
+            document.getElementById('mapModalTitle').innerText = data.title;
+            document.getElementById('mapModalSubtitle').innerHTML = data.subtitle;
+            document.getElementById('mapModalImage').src = data.image;
+            document.getElementById('mapModalBadge').innerText = data.badge;
+            document.getElementById('mapModalLayerInfo').innerText = data.layerInfo;
+            document.getElementById('mapModalCRS').innerText = data.crs;
+            document.getElementById('mapModalDescription').innerText = data.description;
+
+            const statsContainer = document.getElementById('mapModalStats');
+            statsContainer.innerHTML = '';
+            data.stats.forEach(item => {
+                statsContainer.innerHTML += `
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <span class="text-[10px] uppercase font-bold text-slate-500 block">${item.label}</span>
+                        <strong class="text-xs text-slate-900">${item.val}</strong>
+                    </div>
+                `;
+            });
+
+            const modal = document.getElementById('mapViewerModal');
+            const card = document.getElementById('mapViewerModalCard');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                card.classList.remove('scale-95');
+                card.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMapModal() {
+            const modal = document.getElementById('mapViewerModal');
+            const card = document.getElementById('mapViewerModalCard');
+            modal.classList.add('opacity-0');
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        function openDistrictMapModal(districtKey) {
+            openMapModal(districtKey);
+        }
+
         // --- Common Keydown & Outside Click Handlers ---
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeUrbanModal();
                 closeGeoaiModal();
+                closeMapModal();
             }
         });
 
@@ -1625,6 +1819,10 @@
 
         document.getElementById('geoaiModal').addEventListener('click', function(event) {
             if (event.target === this) closeGeoaiModal();
+        });
+
+        document.getElementById('mapViewerModal').addEventListener('click', function(event) {
+            if (event.target === this) closeMapModal();
         });
     </script>
 </body>
