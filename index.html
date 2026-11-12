@@ -479,7 +479,7 @@
                                 <i class="fas fa-mountain"></i> 4. Physical Constraints
                             </button>
                             <button onclick="switchUrbanVisual('land-suitability')" id="btn-urban-suitability" class="urban-vis-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer flex items-center gap-1.5">
-                                <i class="fas fa-chart-pie"></i> 5. Land Suitability (MCDM)
+                                <i class="fas fa-chart-pie"></i> 5. Land Suitability
                             </button>
                             <button onclick="switchUrbanVisual('commercial-maps')" id="btn-urban-commercial" class="urban-vis-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer flex items-center gap-1.5">
                                 <i class="fas fa-store"></i> 6. Commercial Analysis
@@ -499,12 +499,8 @@
                                     <span class="text-[11px] font-semibold text-slate-400">Current Land Use</span>
                                 </div>
                                 <h5 class="text-sm font-black text-slate-900 mb-2">Existing Land Use Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Landuse.png" alt="Existing Land Use Map" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Existing Land Use Map', 'Current Physical Land Use Audit')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Landuse.png'">
-                                </div>
-                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Dataset: Land Use Parcel Survey</span>
-                                    <span class="font-bold text-slate-700">Landuse.png</span>
                                 </div>
                             </div>
 
@@ -514,12 +510,8 @@
                                     <span class="text-[11px] font-semibold text-slate-400">Sabah Cap. 141</span>
                                 </div>
                                 <h5 class="text-sm font-black text-slate-900 mb-2">Statutory Zoning Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Zoning.png" alt="Statutory Zoning Map" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Statutory Zoning Map', 'Gazetted Statutory Planning Scheme')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Zoning.png'">
-                                </div>
-                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Compliance: Gazetted Scheme</span>
-                                    <span class="font-bold text-slate-700">Zoning.png</span>
                                 </div>
                             </div>
                         </div>
@@ -534,12 +526,8 @@
                                     <span class="text-[11px] font-semibold text-slate-400">Road Alignment</span>
                                 </div>
                                 <h5 class="text-sm font-black text-slate-900 mb-2">Existing Road Network Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Existing Road.png" alt="Existing Road Network" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Existing Road Network Map', 'Existing Transport Infrastructure')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Existing+Road.png'">
-                                </div>
-                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Dataset: Transport Geometry</span>
-                                    <span class="font-bold text-slate-700">Existing Road.png</span>
                                 </div>
                             </div>
 
@@ -549,12 +537,8 @@
                                     <span class="text-[11px] font-semibold text-slate-400">Right-of-Way</span>
                                 </div>
                                 <h5 class="text-sm font-black text-slate-900 mb-2">Road Hierarchy &amp; Right-of-Way Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Road Hierachy.png" alt="Road Hierarchy Map" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Road Hierarchy & Right-of-Way Map', 'Statutory Road Reservation Standards')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Road+Hierachy.png'">
-                                </div>
-                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Classification: Expressways &bull; Primary &bull; Local</span>
-                                    <span class="font-bold text-slate-700">Road Hierachy.png</span>
                                 </div>
                             </div>
                         </div>
@@ -569,12 +553,8 @@
                                     <span class="text-[11px] font-semibold text-slate-400">Macro Scale</span>
                                 </div>
                                 <h5 class="text-sm font-black text-slate-900 mb-2">Key Plan</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Key Plan.png" alt="Key Plan" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Key Plan', 'Regional Macro Context & Connectivity')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Key+Plan.png'">
-                                </div>
-                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Scope: Regional Macro Plan</span>
-                                    <span class="font-bold text-slate-700">Key Plan.png</span>
                                 </div>
                             </div>
 
@@ -584,12 +564,8 @@
                                     <span class="text-[11px] font-semibold text-slate-400">Micro Scale</span>
                                 </div>
                                 <h5 class="text-sm font-black text-slate-900 mb-2">Location Plan</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Location Plan.png" alt="Location Plan" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Location Plan', 'Immediate Site Delineation & Access Boundaries')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Location+Plan.png'">
-                                </div>
-                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Scope: Site Vicinity Delineation</span>
-                                    <span class="font-bold text-slate-700">Location Plan.png</span>
                                 </div>
                             </div>
                         </div>
@@ -606,10 +582,9 @@
                                     <span class="text-[10px] font-semibold text-slate-400">Elevation</span>
                                 </div>
                                 <h5 class="text-xs font-black text-slate-900 mb-2">Topography Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Topography.png" alt="Topography Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Topography Map', 'Digital Elevation Model & Contours')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Topography.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">Topography.png</span>
                             </div>
 
                             <!-- 2. Slope -->
@@ -619,10 +594,9 @@
                                     <span class="text-[10px] font-semibold text-slate-400">Gradient</span>
                                 </div>
                                 <h5 class="text-xs font-black text-slate-900 mb-2">Slope Constraint Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Slope.png" alt="Slope Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Slope Constraint Map', 'Slope Class 1-4 Hazard Zoning')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Slope.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">Slope.png</span>
                             </div>
 
                             <!-- 3. Seismic -->
@@ -632,10 +606,9 @@
                                     <span class="text-[10px] font-semibold text-slate-400">Tectonic</span>
                                 </div>
                                 <h5 class="text-xs font-black text-slate-900 mb-2">Seismic Hazard Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Seisimic.png" alt="Seismic Hazard Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Seismic Hazard Map', 'Fault Lines & Buffer Zones')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Seisimic.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">Seisimic.png</span>
                             </div>
 
                             <!-- 4. Forest Reserve -->
@@ -645,10 +618,9 @@
                                     <span class="text-[10px] font-semibold text-slate-400">Conservation</span>
                                 </div>
                                 <h5 class="text-xs font-black text-slate-900 mb-2">Forest Reserve Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Forest Reserve.png" alt="Forest Reserve Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Forest Reserve Map', 'Gazetted Forest Reserves & Buffers')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Forest+Reserve.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">Forest Reserve.png</span>
                             </div>
 
                             <!-- 5. Geology -->
@@ -658,10 +630,9 @@
                                     <span class="text-[10px] font-semibold text-slate-400">Stratigraphy</span>
                                 </div>
                                 <h5 class="text-xs font-black text-slate-900 mb-2">Geology Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Geology.png" alt="Geology Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Geology Map', 'Lithological Formations & Soil Class')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Geology.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">Geology.png</span>
                             </div>
 
                             <!-- 6. Hydrology -->
@@ -671,57 +642,48 @@
                                     <span class="text-[10px] font-semibold text-slate-400">Drainage</span>
                                 </div>
                                 <h5 class="text-xs font-black text-slate-900 mb-2">Hydrology Map</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
                                     <img src="Hydrology.png" alt="Hydrology Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Hydrology Map', 'Drainage Networks & River Basin Delineation')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Hydrology.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">Hydrology.png</span>
                             </div>
 
                         </div>
                     </div>
 
-                    <!-- Panel 5: Land Suitability (MCDM) - Dikemaskini ke LandSuita2.png -->
+                    <!-- Panel 5: Land Suitability (MCDM Dibuang, Tajuk & Lencana Diringkaskan) -->
                     <div id="panel-urban-suitability" class="urban-vis-panel hidden space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
-                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase w-max mb-2">Model Tier 01</span>
-                                <h5 class="text-xs font-black text-slate-900 mb-2">Land Suitability Map 1</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
-                                    <img src="LandSuita1.png" alt="Land Suitability 1" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability Map 1', 'MCDM Criteria Layer Integration 01')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita1.png'">
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Land Suitability 1</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
+                                    <img src="LandSuita1.png" alt="Land Suitability 1" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability 1', 'Suitability Assessment Layer 01')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita1.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">LandSuita1.png</span>
                             </div>
 
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
-                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase w-max mb-2">Model Tier 02</span>
-                                <h5 class="text-xs font-black text-slate-900 mb-2">Land Suitability Map 2</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
-                                    <img src="LandSuita2.png" alt="Land Suitability 2" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability Map 2', 'MCDM Criteria Layer Integration 02')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita2.png'">
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Land Suitability 2</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
+                                    <img src="LandSuita2.png" alt="Land Suitability 2" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability 2', 'Suitability Assessment Layer 02')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita2.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">LandSuita2.png</span>
                             </div>
 
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
-                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase w-max mb-2">Model Tier 03</span>
-                                <h5 class="text-xs font-black text-slate-900 mb-2">Land Suitability Map 3</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
-                                    <img src="LandSuita3.png" alt="Land Suitability 3" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability Map 3', 'AHP Multi-Factor Ranking Evaluation')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita3.png'">
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Land Suitability 3</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
+                                    <img src="LandSuita3.png" alt="Land Suitability 3" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability 3', 'Suitability Assessment Layer 03')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita3.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">LandSuita3.png</span>
                             </div>
 
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
-                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase w-max mb-2">Final Synthesis</span>
-                                <h5 class="text-xs font-black text-slate-900 mb-2">Land Suitability Map 4</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
-                                    <img src="LandSuita4.png" alt="Land Suitability 4" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability Map 4', 'Composite Optimal Suitability Zones')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita4.png'">
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Land Suitability 4</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
+                                    <img src="LandSuita4.png" alt="Land Suitability 4" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability 4', 'Composite Optimal Suitability Zones')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita4.png'">
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-500">LandSuita4.png</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Panel 6: Commercial Analysis - Dikemaskini ke Com2.png -->
+                    <!-- Panel 6: Commercial Analysis (Tajuk Commercial 1 & 2 Sahaja) -->
                     <div id="panel-urban-commercial" class="urban-vis-panel hidden space-y-6">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
@@ -729,13 +691,9 @@
                                     <span class="px-2.5 py-1 bg-teal-100 text-teal-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Spatial Catchment</span>
                                     <span class="text-[11px] font-semibold text-slate-400">Demographic Reach</span>
                                 </div>
-                                <h5 class="text-sm font-black text-slate-900 mb-2">Commercial Catchment &amp; Retail Node Map 1</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
-                                    <img src="Com1.png" alt="Commercial Map 1" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Commercial Spatial Analysis Map 1', 'Retail Hierarchy & Market Service Catchment')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Com1.png'">
-                                </div>
-                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Scope: Primary Service Area</span>
-                                    <span class="font-bold text-slate-700">Com1.png</span>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Commercial 1</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
+                                    <img src="Com1.png" alt="Commercial 1" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Commercial 1', 'Retail Hierarchy & Market Service Catchment')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Com1.png'">
                                 </div>
                             </div>
 
@@ -744,13 +702,9 @@
                                     <span class="px-2.5 py-1 bg-teal-100 text-teal-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Accessibility Gradient</span>
                                     <span class="text-[11px] font-semibold text-slate-400">Drive-Time Buffer</span>
                                 </div>
-                                <h5 class="text-sm font-black text-slate-900 mb-2">Commercial Density &amp; Growth Analysis Map 2</h5>
-                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
-                                    <img src="Com2.png" alt="Commercial Map 2" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Commercial Spatial Analysis Map 2', 'Nodal Viability & Growth Potential')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Com2.png'">
-                                </div>
-                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Scope: Secondary Economic Corridor</span>
-                                    <span class="font-bold text-slate-700">Com2.png</span>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Commercial 2</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5">
+                                    <img src="Com2.png" alt="Commercial 2" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Commercial 2', 'Nodal Viability & Growth Potential')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Com2.png'">
                                 </div>
                             </div>
                         </div>
