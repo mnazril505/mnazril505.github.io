@@ -1,259 +1,127 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="ms" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Gs. Mohamad Nazril Bin Sharil</title>
+    <title>Portfolio Geospatial</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind Custom Components (Optimization) -->
-    <style type="text/tailwindcss">
-        @layer components {
-            .btn-primary { @apply font-extrabold px-6 py-3.5 rounded-2xl text-sm inline-flex items-center justify-center gap-2 cursor-pointer bg-emerald-500 text-emerald-950 shadow-[0_8px_25px_-4px_rgba(16,185,129,0.45)] hover:bg-emerald-400 hover:-translate-y-0.5 transition-all; }
-            .btn-secondary { @apply font-extrabold px-6 py-3.5 rounded-2xl text-sm inline-flex items-center justify-center gap-2 cursor-pointer bg-[#1c2636] text-white border border-slate-700 hover:bg-[#263348] hover:border-emerald-500 hover:-translate-y-0.5 transition-all; }
-            
-            .badge-emerald { @apply bg-emerald-500/10 border border-emerald-500/30 text-emerald-500; }
-            
-            .card-project { @apply bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300; }
-            .card-img-box { @apply md:w-1/3 signature-dark-card relative flex items-center justify-center min-h-[220px] overflow-hidden; }
-            .card-content { @apply md:w-2/3 p-6 sm:p-8 flex flex-col justify-between; }
-            
-            .tag-light { @apply px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold; }
-            .tag-dark { @apply px-3 py-1.5 bg-white/5 border border-white/10 text-emerald-200 hover:bg-emerald-500/15 hover:border-emerald-500/40 rounded-xl text-xs font-semibold transition-all; }
-            .expertise-list { @apply flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition; }
-        }
-    </style>
-
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .signature-dark-card { background: linear-gradient(115deg, #032219 0%, #0b1520 52%, #052622 100%); box-shadow: 0 20px 40px -15px rgba(3, 34, 25, 0.45); }
-        .hero-dark-canvas { background: radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.14) 0%, transparent 45%), radial-gradient(circle at 80% 70%, rgba(20, 184, 166, 0.12) 0%, transparent 50%), linear-gradient(125deg, #021a13 0%, #09121d 55%, #04221e 100%); }
-    </style>
 </head>
-<body class="bg-[#f4f7f6] text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
 
-    <!-- Navbar -->
-    <nav class="bg-[#041d17]/90 backdrop-blur-md border-b border-emerald-500/15 fixed w-full z-40 top-0 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-2 group">
-                <span class="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center text-emerald-950 group-hover:scale-105 transition-transform"><i class="fas fa-globe-asia text-sm"></i></span>
-                <span class="font-extrabold text-lg text-white group-hover:text-emerald-400 transition-colors">Gs. Mohamad Nazril</span>
-            </a>
-            <div class="space-x-6 hidden md:flex font-semibold text-slate-300 text-sm">
-                <a href="#expertise" class="hover:text-emerald-400 transition">Expertise</a>
-                <a href="#flagship" class="hover:text-emerald-400 transition">Flagship GeoAI</a>
-                <a href="#urban-planning" class="hover:text-emerald-400 transition">Statutory Plans</a>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-40 top-0">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-2xl text-blue-600 tracking-tighter">GeoPortfolio.</a>
+            <div class="hidden md:flex space-x-6 font-medium text-gray-600">
+                <a href="#home" class="hover:text-blue-600 transition">Utama</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Kemahiran</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projek</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Hubungi</a>
             </div>
-            <a href="#projects" class="hidden sm:inline-flex btn-primary !px-4 !py-2 !rounded-xl !text-xs uppercase tracking-wider">
-                Explore <i class="fas fa-arrow-down"></i>
-            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-dark-canvas text-white pt-32 pb-24 mt-12 relative border-b border-emerald-500/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
-                <div class="w-full lg:w-3/5 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-emerald text-xs font-bold uppercase tracking-wider mb-6">
-                        <i class="fas fa-certificate"></i> Certified Geospatial Practitioner | IGRSM & MBOT
-                    </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 text-white">Gs. Mohamad Nazril</h1>
-                    <p class="text-lg sm:text-xl text-emerald-400 font-semibold mb-6">GIS Practitioner &bull; GeoAI & UAV &bull; Land Suitability</p>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0 text-justify lg:text-left">
-                        Bridging spatial data science with statutory urban planning standards. Specialized in AHP multicriteria evaluation, automated geospatial workflows, and Deep Learning vision models for sustainable land administration.
-                    </p>
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                        <button onclick="openModal('urbanModal')" class="btn-primary"><i class="fas fa-book-open"></i> View Statutory Framework</button>
-                        <a href="#projects" class="btn-secondary"><i class="fas fa-map-location-dot text-emerald-400"></i> Browse Projects</a>
-                    </div>
-                </div>
-                <div class="w-full lg:w-2/5 flex justify-center">
-                    <div class="relative group">
-                        <div class="absolute -inset-1.5 bg-gradient-to-tr from-emerald-500 to-teal-400 rounded-[32px] blur-md opacity-35 group-hover:opacity-60 transition duration-500"></div>
-                        <div class="relative w-64 h-72 sm:w-80 sm:h-96 rounded-[28px] overflow-hidden border-2 border-emerald-400/40 bg-[#06241c] shadow-2xl">
-                            <img src="profil-nazril.jpg.JPG" alt="Profil" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/500x600/032219/34d399?text=Gs.+Mohamad+Nazril'">
-                            <div class="absolute bottom-3 left-3 right-3 bg-slate-950/85 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl flex justify-between items-center">
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 block">Registered</span>
-                                    <span class="text-xs font-extrabold text-white">IGRSM &bull; MBOT</span>
-                                </div>
-                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">Pakar Analisis <span class="text-blue-600">Geospatial</span></h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Mentransformasikan data lokasi yang kompleks kepada visualisasi yang jelas dan penyelesaian perancangan bandar yang mampan.</p>
+            <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg inline-block">Lihat Projek Saya</a>
         </div>
-    </header>
+    </section>
 
-    <!-- Expertise Section -->
-    <section id="expertise" class="py-16 bg-white border-b border-slate-200/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Expertise List -->
-            <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 text-white border border-slate-800">
-                <div class="flex items-center gap-3.5 mb-6">
-                    <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg"><i class="fas fa-brain"></i></span>
-                    <div>
-                        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 block">Core Competencies</span>
-                        <h3 class="text-xl font-black">Key Expertise</h3>
-                    </div>
-                </div>
-                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-200">
-                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Spatial Modeling (AHP)</li>
-                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Remote Sensing / GeoAI</li>
-                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Multi-Temporal Land Use</li>
-                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> UAV Survey & DSM/DTM</li>
-                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Web GIS Systems</li>
-                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Geodatabase Schema</li>
-                </ul>
-            </div>
-            <!-- Tech Stack -->
-            <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 text-white border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-3.5 mb-6">
-                        <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg"><i class="fas fa-microchip"></i></span>
-                        <div>
-                            <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 block">Software & Libraries</span>
-                            <h3 class="text-xl font-black">Technical Toolkit</h3>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap gap-2.5">
-                        <span class="tag-dark">ArcGIS Pro</span>
-                        <span class="tag-dark">QGIS</span>
-                        <span class="tag-dark">Python (ArcPy, GeoPandas)</span>
-                        <span class="tag-dark">PostGIS</span>
-                        <span class="tag-dark">Google Earth Engine</span>
-                        <span class="tag-dark">U-Net++ & ResNet50</span>
-                        <span class="tag-dark">Rasterio & Shapely</span>
-                        <span class="tag-dark">DJI Terra</span>
-                    </div>
-                </div>
-                <div class="mt-8 pt-4 border-t border-white/10 text-xs text-slate-400 flex justify-between">
-                    <span>Workflow: Automation & Zero-Topology Error</span>
-                    <i class="fas fa-code-branch text-emerald-400"></i>
-                </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Kemahiran Teknikal</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition"><h3 class="font-bold text-xl text-blue-600 mb-2">GIS Software</h3><p class="text-sm text-gray-600">ArcGIS Pro, QGIS, Global Mapper</p></div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition"><h3 class="font-bold text-xl text-blue-600 mb-2">Web Mapping</h3><p class="text-sm text-gray-600">Leaflet, Mapbox, ArcGIS Online</p></div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition"><h3 class="font-bold text-xl text-blue-600 mb-2">Spatial DB</h3><p class="text-sm text-gray-600">PostgreSQL, PostGIS</p></div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition"><h3 class="font-bold text-xl text-blue-600 mb-2">Programming</h3><p class="text-sm text-gray-600">Python (ArcPy, GeoPandas), SQL</p></div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <main id="projects" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 border border-emerald-300/60 px-4 py-1.5 rounded-full">Portfolio</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 tracking-tight">Spatial Projects & Master Plans</h2>
-                <div class="w-20 h-1.5 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Projek Terpilih</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-sm border overflow-hidden hover:-translate-y-1 transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 font-medium">[Imej Kudat Plan]</div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Kudat Local Plan 2030</h3>
+                        <p class="text-gray-600 mb-4 text-sm line-clamp-2">Perancangan spatial komprehensif merangkumi kesesuaian tapak dan unjuran demografi.</p>
+                        <button onclick="toggleModal('urbanModal', true)" class="text-blue-600 font-semibold hover:text-blue-800 transition">Lihat Butiran &rarr;</button>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-sm border overflow-hidden hover:-translate-y-1 transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 font-medium">[Imej GeoAI]</div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">GeoAI Feature Extraction</h3>
+                        <p class="text-gray-600 mb-4 text-sm line-clamp-2">Automasi pengekstrakan footprint bangunan menggunakan imej satelit & deep learning.</p>
+                        <button onclick="toggleModal('geoaiModal', true)" class="text-blue-600 font-semibold hover:text-blue-800 transition">Lihat Butiran &rarr;</button>
+                    </div>
+                </div>
             </div>
-
-            <!-- 1. Flagship GeoAI -->
-            <section id="flagship" class="mb-24">
-                <h3 class="text-2xl font-black mb-6">1. Flagship: GeoAI Deep Learning Model</h3>
-                <div class="signature-dark-card rounded-[28px] p-8 sm:p-10 text-white flex flex-col lg:flex-row justify-between gap-8">
-                    <div class="max-w-3xl">
-                        <h4 class="text-2xl font-black mb-3">Automated Land Use Pipeline</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">Bridging raw semantic segmentation and statutory cadastral bounds utilizing U-Net++ and ResNet50 architectures on high-resolution UAV orthomosaics.</p>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="tag-dark">PyTorch</span>
-                            <span class="tag-dark">Cadastral Snapping</span>
-                            <span class="tag-dark">Zero-Topology Vectors</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-3.5 min-w-[190px]">
-                        <button onclick="openModal('urbanModal')" class="btn-primary"><i class="fas fa-book-open"></i> Overview</button>
-                        <button onclick="openModal('mapModal')" class="btn-secondary"><i class="fas fa-map-marked-alt text-emerald-400"></i> Maps</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 2. Statutory Planning -->
-            <section id="urban-planning" class="mb-24">
-                <h3 class="text-2xl font-black mb-6">2. Statutory Master Plans (Sabah Cap. 141)</h3>
-                <div class="space-y-6">
-                    
-                    <!-- KK -->
-                    <div class="card-project">
-                        <div class="card-img-box">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Kota+Kinabalu" class="absolute inset-0 w-full h-full object-cover opacity-90">
-                            <span class="absolute top-4 left-4 badge-emerald px-3 py-1 text-xs font-bold rounded-lg backdrop-blur-md bg-white/10">Metropolitan Plan</span>
-                        </div>
-                        <div class="card-content">
-                            <div>
-                                <h4 class="text-xl font-black mb-1">Kota Kinabalu Local Plan</h4>
-                                <p class="text-xs font-bold text-emerald-700 mb-3">GIS Scope: Urban Density Harmonization</p>
-                                <p class="text-slate-600 text-sm mb-4 text-justify">Administered spatial database consolidation across Greater KK. Formulated high-density commercial zoning and aligned land titles with gazetted schemes.</p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="tag-light">ArcGIS Pro</span>
-                                    <span class="tag-light">High-Density Zoning</span>
-                                </div>
-                            </div>
-                            <div class="pt-4 border-t flex justify-between items-center">
-                                <span class="text-xs text-slate-500 font-semibold">DBKK Region</span>
-                                <button onclick="openModal('mapModal')" class="btn-secondary !px-4 !py-2 !text-xs"><i class="fas fa-map"></i> Explore</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kudat -->
-                    <div class="card-project">
-                        <div class="card-img-box">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Kudat" class="absolute inset-0 w-full h-full object-cover opacity-90">
-                            <span class="absolute top-4 left-4 badge-emerald px-3 py-1 text-xs font-bold rounded-lg backdrop-blur-md bg-white/10">District Plan 2030</span>
-                        </div>
-                        <div class="card-content">
-                            <div>
-                                <h4 class="text-xl font-black mb-1">Kudat Local Plan 2030</h4>
-                                <p class="text-xs font-bold text-emerald-700 mb-3">GIS Scope: Coastal Buffer & Tourism Zoning</p>
-                                <p class="text-slate-600 text-sm mb-4 text-justify">Formulated spatial strategies focusing on coastal buffer zoning and heritage tourism enclaves. Applied AHP evaluation for eco-tourism expansion.</p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="tag-light">QGIS</span>
-                                    <span class="tag-light">AHP Evaluation</span>
-                                </div>
-                            </div>
-                            <div class="pt-4 border-t flex justify-between items-center">
-                                <span class="text-xs text-slate-500 font-semibold">Kudat District</span>
-                                <button onclick="openModal('mapModal')" class="btn-secondary !px-4 !py-2 !text-xs"><i class="fas fa-map"></i> Explore</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
         </div>
-    </main>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-600 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Mari Bekerjasama</h2>
+            <p class="mb-8 max-w-xl mx-auto text-blue-100">Sama ada analisis spatial kompleks atau pemetaan interaktif, saya sedia membantu projek anda.</p>
+            <a href="mailto:hello@anda.com" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">Hubungi Saya</a>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-[#041d17] border-t border-emerald-500/20 py-8 mt-12 text-center">
-        <span class="font-extrabold text-white block">Gs. Mohamad Nazril Bin Sharil</span>
-        <span class="text-emerald-400/80 text-xs">Certified Geospatial Practitioner (IGRSM & MBOT)</span>
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
+        <p>&copy; 2026 Portfolio Profesional Geospatial. Hak Cipta Terpelihara.</p>
     </footer>
 
-    <!-- JS Modals -->
-    <div id="urbanModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-        <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-lg w-full relative">
-            <button onclick="closeModal('urbanModal')" class="absolute top-4 right-4 text-slate-400 hover:text-red-500"><i class="fas fa-times text-xl"></i></button>
-            <h3 class="text-xl font-bold mb-4">Statutory Framework (Cap. 141)</h3>
-            <p class="text-slate-600 text-sm">Adheres strictly to the Town and Country Planning Ordinance guidelines ensuring spatial data compliance for gazetted policies.</p>
+    <!-- ================= MODALS ================= -->
+    <!-- Modal 1: Urban -->
+    <div id="urbanModal" class="fixed inset-0 bg-black/60 hidden z-50 flex items-center justify-center backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-2xl w-[90%] max-w-3xl max-h-[85vh] overflow-y-auto p-6 md:p-8 relative">
+            <button onclick="toggleModal('urbanModal', false)" class="absolute top-4 right-5 text-gray-400 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            <h2 class="text-2xl font-bold mb-1">Kudat Local Plan 2030</h2>
+            <p class="text-blue-600 text-sm font-semibold mb-5">Perancangan Bandar & Analisis Spatial</p>
+            <div class="aspect-video bg-gray-100 rounded-xl mb-5 flex items-center justify-center text-gray-400">[Peta/Dashboard Kudat]</div>
+            <p class="text-gray-600 mb-4 text-justify text-sm">Pembangunan pelan tempatan komprehensif memfokuskan kepada analisis kesesuaian tapak, pemetaan risiko banjir, dan unjuran demografi untuk memastikan pembangunan mampan di Sabah.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+                <span class="bg-blue-50 text-blue-700 text-xs font-medium px-3 py-1 rounded-full border border-blue-100">ArcGIS Pro</span>
+                <span class="bg-blue-50 text-blue-700 text-xs font-medium px-3 py-1 rounded-full border border-blue-100">PostGIS</span>
+            </div>
         </div>
     </div>
 
-    <div id="mapModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full text-center relative">
-            <button onclick="closeModal('mapModal')" class="absolute top-4 right-4 text-slate-400 hover:text-red-500"><i class="fas fa-times text-xl"></i></button>
-            <i class="fas fa-map-marked-alt text-5xl text-emerald-400 mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Interactive Map Viewer</h3>
-            <p class="text-slate-500 text-sm">Embedded Web Maps (ArcGIS / Leaflet) will be dynamically loaded here.</p>
+    <!-- Modal 2: GeoAI -->
+    <div id="geoaiModal" class="fixed inset-0 bg-black/60 hidden z-50 flex items-center justify-center backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-2xl w-[90%] max-w-3xl max-h-[85vh] overflow-y-auto p-6 md:p-8 relative">
+            <button onclick="toggleModal('geoaiModal', false)" class="absolute top-4 right-5 text-gray-400 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            <h2 class="text-2xl font-bold mb-1">GeoAI Feature Extraction</h2>
+            <p class="text-blue-600 text-sm font-semibold mb-5">Deep Learning & Remote Sensing</p>
+            <div class="aspect-video bg-gray-100 rounded-xl mb-5 flex items-center justify-center text-gray-400">[Imej Klasifikasi AI]</div>
+            <p class="text-gray-600 mb-4 text-justify text-sm">Menggunakan algoritma pembelajaran mesin (Random Forest & CNN) ke atas imej satelit untuk mengklasifikasikan guna tanah secara automatik dengan ketepatan >92%.</p>
         </div>
     </div>
 
+    <!-- Script -->
     <script>
-        function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
-        function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+        const toggleModal = (id, show) => {
+            const m = document.getElementById(id);
+            show ? (m.classList.remove('hidden'), document.body.style.overflow = 'hidden') 
+                 : (m.classList.add('hidden'), document.body.style.overflow = 'auto');
+        };
         window.onclick = e => { 
-            if(e.target.id === 'urbanModal') closeModal('urbanModal'); 
-            if(e.target.id === 'mapModal') closeModal('mapModal'); 
+            if(e.target.classList.contains('fixed')) { 
+                e.target.classList.add('hidden'); document.body.style.overflow = 'auto'; 
+            } 
         };
     </script>
 </body>
