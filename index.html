@@ -62,7 +62,6 @@
             filter: brightness(1.03);
         }
 
-        /* Menghalang default gesture browser semasa interaksi lightbox */
         .lightbox-touch-surface {
             touch-action: none;
             user-select: none;
@@ -141,7 +140,6 @@
     <section id="expertise" class="py-16 bg-white border-b border-slate-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Expertise Card -->
                 <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 border border-slate-800 text-white">
                     <div class="flex items-center gap-3.5 mb-6">
                         <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg"><i class="fas fa-brain"></i></span>
@@ -162,7 +160,6 @@
                     </ul>
                 </div>
 
-                <!-- Technical Stacks -->
                 <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 border border-slate-800 text-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3.5 mb-6">
@@ -289,10 +286,10 @@
                 </div>
 
                 <div class="space-y-6">
-                    <!-- Card 1: KK -->
+                    <!-- KK Local Plan -->
                     <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
                         <div class="md:w-1/3 signature-dark-card relative flex items-center justify-center p-6 text-center">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Kota+Kinabalu+Local+Plan" alt="KK Local Plan" class="object-cover w-full h-full absolute inset-0 opacity-90 zoomable-map" onclick="openLightbox(this.src, 'Kota Kinabalu Local Plan', 'Zon Pengezonan Kepadatan Tinggi DBKK')">
+                            <img src="https://placehold.co/600x400/032219/34d399?text=Kota+Kinabalu+Local+Plan" alt="KK Local Plan" class="object-cover w-full h-full absolute inset-0 opacity-90 zoomable-map" onclick="openLightbox(this.src, 'Kota Kinabalu Local Plan', 'High-Density Zoning Plan')">
                             <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">Metropolitan Master Plan</span>
                         </div>
                         <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -323,10 +320,10 @@
                         </div>
                     </div>
 
-                    <!-- Card 2: Kudat -->
+                    <!-- Kudat Local Plan -->
                     <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
                         <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Kudat+Local+Plan+2030" alt="Kudat Local Plan" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'Kudat Local Plan 2030', 'Anjakan Garis Pantai 60m & Sektor Blue Economy')">
+                            <img src="https://placehold.co/600x400/032219/34d399?text=Kudat+Local+Plan+2030" alt="Kudat Local Plan" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'Kudat Local Plan 2030', 'Coastal Buffer & Setback Zoning Scheme')">
                             <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">District Plan 2030</span>
                         </div>
                         <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -357,10 +354,10 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Keningau -->
+                    <!-- Keningau Local Plan -->
                     <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
                         <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Keningau+Local+Plan+2030" alt="Keningau Local Plan" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'Draft Keningau Local Plan 2030', 'Model Analisis Cerun & Had Halangan Fizikal')">
+                            <img src="https://placehold.co/600x400/032219/34d399?text=Keningau+Local+Plan+2030" alt="Keningau Local Plan" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'Draft Keningau Local Plan 2030', 'Slope Hazard Constraints & Topography Model')">
                             <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">Inland Corridor Plan</span>
                         </div>
                         <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -401,10 +398,9 @@
                 </div>
 
                 <div class="space-y-6">
-                    <!-- Project 1: IRBM Tuaran -->
                     <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
                         <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=IRBM+Tuaran+Basin" alt="IRBM Tuaran" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'IRBM Sungai Tuaran Basin', 'Sempadan Tadahan Hidrologi & Rizab Riparian')">
+                            <img src="https://placehold.co/600x400/032219/34d399?text=IRBM+Tuaran+Basin" alt="IRBM Tuaran" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'IRBM Sungai Tuaran Basin', 'Catchment Delineation & Riparian Reserve Plan')">
                             <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">Catchment Master Plan</span>
                         </div>
                         <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -419,175 +415,12 @@
                                 <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
                                     Extracted watershed basin boundaries from high-resolution terrain surfaces, evaluated surface runoff vulnerability from agricultural expansion, and delineated riparian reserves to formulate sustainable river basin preservation policies.
                                 </p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Spatial Hydrology</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">DEM Catchment</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Riparian Buffers</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Water Quality Correlation</span>
-                                </div>
                             </div>
                             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
                                 <span class="text-xs text-slate-500 font-semibold">Status: Completed Documentation</span>
                                 <a href="projek-irbm.html" class="btn-emerald-glow px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2">
                                     <i class="fas fa-map-marked-alt"></i> View Case Study & Maps
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Sabah SMP -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Sabah+Shoreline+SMP" alt="Sabah SMP" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'Sabah Shoreline Management Plan', 'Kadar Hakisan Pantai & Anjakan Pembangunan')">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">State-Wide Coastline</span>
-                        </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Coastal Spatial Analysis</span>
-                                    <span class="text-slate-300">&bull;</span>
-                                    <span class="text-xs text-slate-500 font-semibold">State Master Plan</span>
-                                </div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">Sabah Shoreline Management Plan (SMP)</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: Shoreline Dynamics, Historical Erosion Rates & Setback Zoning</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Analyzed multi-decadal coastline movement using satellite earth observation indices, mapped coastal erosion vulnerability, and formulated setback limits to protect beachfront development against sea-level risks.
-                                </p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Remote Sensing</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Shoreline Rate Analysis</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Erosion Risk Delineation</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Coastal Setback</span>
-                                </div>
-                            </div>
-                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-500 font-semibold">Coverage: Entire Sabah Coastline</span>
-                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
-                                    View Shoreline Data <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: ISMP Kudat-Tawau -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=ISMP+Kudat-Tawau" alt="ISMP Kudat Tawau" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'ISMP Kudat - Tawau', 'Integrasi Marin-Terestrial & Pemeliharaan Bakau')">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">Regional Corridor</span>
-                        </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Integrated Coastal GIS</span>
-                                    <span class="text-slate-300">&bull;</span>
-                                    <span class="text-xs text-slate-500 font-semibold">Marine & Terrestrial</span>
-                                </div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">ISMP Integrated Coastal Zone Management (Kudat - Tawau)</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: Marine-Terrestrial Spatial Integration & Ecological Zoning</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Harmonized mainland land administration with offshore marine spatial activities across eastern Sabah, mapping coastal aquaculture, mangrove conservation extents, and maritime navigation channels.
-                                </p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Regional Geodatabase</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Marine Cadastre</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Mangrove Protection</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Cross-District Harmonization</span>
-                                </div>
-                            </div>
-                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-500 font-semibold">Coverage: Eastern Sabah Littoral</span>
-                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
-                                    View Spatial Layers <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 4. URBAN PLANNING & LAND USE ANALYSIS (DEVELOPMENT) -->
-            <section id="development-plans" class="mb-24">
-                <div class="flex items-center gap-3 mb-8 border-b-2 border-slate-200 pb-3">
-                    <span class="w-3 h-7 bg-emerald-500 rounded-md"></span>
-                    <h3 class="text-xl sm:text-2xl font-black text-slate-900">4. Urban Planning & Land Use Analysis (Development)</h3>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
-                        <img src="https://placehold.co/400x260/032219/34d399?text=Kudat+Blue+Econ+Park" alt="Kudat BE" class="w-full h-36 object-cover zoomable-map" onclick="openLightbox(this.src, 'Kudat Blue Economy Industrial Park', 'Masterplan Zon Industri Maritim & Koridor Pelabuhan')">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <div>
-                                <span class="text-emerald-700 font-extrabold text-[11px] uppercase block mb-1">Industrial Master Plan</span>
-                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Kudat Blue Economy Industrial Park</h5>
-                                <p class="text-xs text-slate-600 leading-relaxed">Maritime industrial land zoning, port logistics corridors, and coastal terrain assessment.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
-                        <img src="https://placehold.co/400x260/032219/34d399?text=Railway+Putatan-Sepanggar" alt="Railway" class="w-full h-36 object-cover zoomable-map" onclick="openLightbox(this.src, 'Railway: Putatan to Sepanggar Port', 'Penjajaran Landasan Kereta Api & Zon Penampan')">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <div>
-                                <span class="text-emerald-700 font-extrabold text-[11px] uppercase block mb-1">Transit & Corridor</span>
-                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Railway: Putatan to Sepanggar Port</h5>
-                                <p class="text-xs text-slate-600 leading-relaxed">Railway corridor alignment, land acquisition lot verification, and safety buffer zones.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
-                        <img src="https://placehold.co/400x260/032219/34d399?text=Mile+9+Labuk+Sandakan" alt="Sandakan" class="w-full h-36 object-cover zoomable-map" onclick="openLightbox(this.src, 'Mile 9, Labuk Road Sandakan', 'Susun Atur Pembangunan Bercampur')">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <div>
-                                <span class="text-emerald-700 font-extrabold text-[11px] uppercase block mb-1">Land Layout Scheme</span>
-                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">Mile 9, Labuk Road Sandakan</h5>
-                                <p class="text-xs text-slate-600 leading-relaxed">Mixed-use layout spatial analysis, title express condition checking, and road access.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
-                        <img src="https://placehold.co/400x260/032219/34d399?text=KKIP+Lot+Rezoning" alt="KKIP" class="w-full h-36 object-cover zoomable-map" onclick="openLightbox(this.src, 'KKIP Sepanggar CL015608750', 'Justifikasi Pengezonan Semula Lot Industri')">
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <div>
-                                <span class="text-emerald-700 font-extrabold text-[11px] uppercase block mb-1">Rezoning Justification</span>
-                                <h5 class="font-bold text-slate-900 text-sm mb-2 leading-snug">KKIP Sepanggar CL015608750</h5>
-                                <p class="text-xs text-slate-600 leading-relaxed">Specialized industrial conversion, setback analysis, and setback plot compatibility.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 5. STRATEGIC PLANS PROJECT -->
-            <section id="strategic-plans" class="mb-16">
-                <div class="flex items-center gap-3 mb-8 border-b-2 border-slate-200 pb-3">
-                    <span class="w-3 h-7 bg-emerald-500 rounded-md"></span>
-                    <h3 class="text-xl sm:text-2xl font-black text-slate-900">5. Strategic Plans Project</h3>
-                </div>
-
-                <div class="space-y-6">
-                    <!-- D1: PSPD Kudat -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/0b1520/34d399?text=PSPD+Kudat" alt="PSPD Kudat" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'PSPD Kudat', 'Nodus Pertumbuhan & Aksesibiliti Sosio-Ekonomi')">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">District Strategic Plan</span>
-                        </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Regional Strategy</span>
-                                    <span class="text-slate-300">&bull;</span>
-                                    <span class="text-xs text-slate-500 font-semibold">Socio-Economic Blueprint</span>
-                                </div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">Pelan Strategik Pembangunan Daerah (PSPD) Kudat</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: Growth Node Mapping, Demographic Accessibility & Economic Clustering</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Geospatial modeling of civic facility service radiuses, population clustering, and commercial nodal points to establish priority socio-economic infrastructure development across Kudat.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-500 font-semibold">District Scale: Kudat</span>
-                                <button class="text-emerald-700 hover:text-emerald-800 text-xs sm:text-sm font-bold inline-flex items-center">
-                                    Strategic Analysis <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -623,35 +456,12 @@
                 </div>
                 <button onclick="closeGeoaiModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm cursor-pointer"><i class="fas fa-times"></i></button>
             </div>
-
-            <div class="bg-[#0b1520] text-slate-300 px-6 py-3 sm:px-8 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
-                <div class="flex flex-wrap items-center gap-4">
-                    <span><strong class="text-emerald-400">Sensor GSD:</strong> 5.0 cm/px (UAV RTK)</span>
-                    <span><strong class="text-emerald-400">Patch Size:</strong> 512 &times; 512 px (50% Overlap)</span>
-                    <span><strong class="text-emerald-400">Framework:</strong> PyTorch &bull; CUDA T4</span>
-                    <span><strong class="text-emerald-400">CRS:</strong> RSO Borneo (EPSG:29873)</span>
-                </div>
-                <button onclick="closeGeoaiModal(); openMapModal('geoai');" class="text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center gap-1 cursor-pointer">
-                    View Visuals in Explore Maps <i class="fas fa-arrow-right text-[10px]"></i>
-                </button>
-            </div>
-
-            <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-12 bg-slate-50/50">
+            <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-6 bg-slate-50/50">
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-9 h-9 rounded-xl bg-emerald-800 text-white flex items-center justify-center font-bold text-sm">01</span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">PROJECT OVERVIEW & THE CHALLENGE</h4>
-                            <p class="text-xs text-slate-500 font-medium">Exploring AI's potential to accelerate precision data extraction & statutory compliance</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 mb-6">
-                        <span class="inline-block px-3 py-1 bg-emerald-700 text-white text-[11px] font-bold rounded-lg uppercase tracking-wider mb-2">Executive Overview</span>
-                        <p class="text-slate-700 font-semibold text-sm leading-relaxed">Exploring AI's Potential to Accelerate Precision Data Extraction & Statutory Compliance.</p>
-                    </div>
+                    <h4 class="text-lg font-black text-slate-900 mb-2">PROJECT OVERVIEW & THE CHALLENGE</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Exploring AI's potential to accelerate precision data extraction and statutory compliance in cadastral mapping.</p>
                 </div>
             </div>
-
             <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
                 <span>GeoAI Overview &bull; Meeting Urban Planning Standards</span>
                 <button onclick="closeGeoaiModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition cursor-pointer">Close Window</button>
@@ -667,24 +477,17 @@
                     <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center font-bold text-sm"><i class="fas fa-layer-group"></i></span>
                     <div>
                         <h3 class="text-base sm:text-lg font-black tracking-tight text-white">Urban Planning & Geospatial Development Framework</h3>
-                        <p class="text-xs text-slate-400">Sabah Cap. 141 &bull; 8 Sectoral Studies &bull; Geodatabase Schema &bull; Workflow Matrix</p>
+                        <p class="text-xs text-slate-400">Sabah Cap. 141 &bull; 8 Sectoral Studies &bull; Geodatabase Schema</p>
                     </div>
                 </div>
                 <button onclick="closeUrbanModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition text-sm cursor-pointer"><i class="fas fa-times"></i></button>
             </div>
-
-            <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-12 bg-slate-50/50">
+            <div class="p-6 sm:p-10 overflow-y-auto modal-scroll space-y-6 bg-slate-50/50">
                 <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="w-8 h-8 rounded-lg bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">01</span>
-                        <div>
-                            <h4 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">URBAN PLANNING & DEVELOPMENT</h4>
-                            <p class="text-xs text-slate-500 font-medium">Statutory translation, policy alignment, and sectoral study methodology</p>
-                        </div>
-                    </div>
+                    <h4 class="text-lg font-black text-slate-900 mb-2">URBAN PLANNING & STATUTORY FRAMEWORK</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Translating policies into spatial strategies under Town and Country Planning Ordinance (Sabah Cap. 141) and Sabah Structure Plan 2033.</p>
                 </div>
             </div>
-
             <div class="bg-slate-100 px-6 py-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
                 <span>Standardized Urban Planning Framework &bull; Sabah Statutory Regulations</span>
                 <button onclick="closeUrbanModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition cursor-pointer">Close Window</button>
@@ -723,8 +526,7 @@
 
                     <div id="vis-infographic" class="geoai-vis-panel space-y-2">
                         <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm text-center">
-                            <img src="WhatsApp Image 2026-10-26 at 8.15.22 AM.jpeg" alt="GeoAI Infographic Workflow" class="w-full h-auto rounded-xl mx-auto max-h-[650px] object-contain zoomable-map" onclick="openLightbox(this.src, 'GeoAI Infographic Workflow', 'Aliran Kerja Penuh GeoAI & Segmentasi Semantik')" onerror="this.src='https://placehold.co/1000x650/032219/34d399?text=GeoAI+Workflow+Infographic'">
-                            <p class="text-center text-xs font-semibold text-slate-500 mt-2">Rajah Infografik Utama: GeoAI Model Development &amp; Workflow (Klik untuk besarkan)</p>
+                            <img src="WhatsApp Image 2026-10-26 at 8.15.22 AM.jpeg" alt="GeoAI Infographic Workflow" class="w-full h-auto rounded-xl mx-auto max-h-[650px] object-contain zoomable-map" onclick="openLightbox(this.src, 'GeoAI Infographic Workflow', 'Deep Learning Model Development Framework')" onerror="this.src='https://placehold.co/1000x650/032219/34d399?text=GeoAI+Workflow+Infographic'">
                         </div>
                     </div>
 
@@ -733,22 +535,22 @@
                             <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Stage 01</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Step 1: Spatial Data Chipping (512&times;512 px)</h6>
-                                <img src="Step 1.jpg" alt="Step 1" class="w-full h-48 object-cover rounded-xl border border-slate-200 zoomable-map" onclick="openLightbox(this.src, 'Step 1: Spatial Data Chipping', 'Penyediaan jubin raster 512x512 dengan 50% pertindihan')" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+1'">
+                                <img src="Step 1.jpg" alt="Step 1" class="w-full h-48 object-cover rounded-xl border border-slate-200 zoomable-map" onclick="openLightbox(this.src, 'Step 1: Spatial Data Chipping', '512x512 Tiling with 50% Overlap')" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+1'">
                             </div>
                             <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Stage 02</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Step 2: AI Model Training (PyTorch &bull; CUDA T4)</h6>
-                                <img src="Step 2.png" alt="Step 2" class="w-full h-48 object-cover rounded-xl border border-slate-200 zoomable-map" onclick="openLightbox(this.src, 'Step 2: AI Model Training', 'Latihan model berasaskan senibina U-Net & ResNet')" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+2'">
+                                <img src="Step 2.png" alt="Step 2" class="w-full h-48 object-cover rounded-xl border border-slate-200 zoomable-map" onclick="openLightbox(this.src, 'Step 2: AI Model Training', 'U-Net Architecture Training')" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+2'">
                             </div>
                             <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Stage 03</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Step 3: Inference &amp; Vectorization (GeoPandas)</h6>
-                                <img src="Step 3.png" alt="Step 3" class="w-full h-48 object-cover rounded-xl border border-slate-200 zoomable-map" onclick="openLightbox(this.src, 'Step 3: Inference & Vectorization', 'Penukaran ramalan piksel AI terus ke poligon vektor')" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+3'">
+                                <img src="Step 3.png" alt="Step 3" class="w-full h-48 object-cover rounded-xl border border-slate-200 zoomable-map" onclick="openLightbox(this.src, 'Step 3: Inference & Vectorization', 'Raster-to-Vector Layer Conversion')" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+3'">
                             </div>
                             <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                                 <span class="text-xs font-bold text-emerald-700 uppercase block mb-1">Stage 04</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Step 4: Geometric Noise Filtering &amp; Snapping</h6>
-                                <img src="Step 4.png" alt="Step 4" class="w-full h-48 object-cover rounded-xl border border-slate-200 zoomable-map" onclick="openLightbox(this.src, 'Step 4: Geometric Noise Filtering', 'Penyelarasan sempadan kadaster & pembersihan topologi')" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+4'">
+                                <img src="Step 4.png" alt="Step 4" class="w-full h-48 object-cover rounded-xl border border-slate-200 zoomable-map" onclick="openLightbox(this.src, 'Step 4: Geometric Noise Filtering', 'Cadastral Lot Snapping & Geometry Clean')" onerror="this.src='https://placehold.co/500x300/032219/34d399?text=Step+4'">
                             </div>
                         </div>
                     </div>
@@ -756,28 +558,42 @@
                     <div id="vis-phases" class="geoai-vis-panel hidden space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                                <span class="px-2 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold rounded uppercase mb-1 inline-block">Phase 1 Test Result</span>
+                                <span class="px-2 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold rounded uppercase mb-1 inline-block">Phase 1 Result</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">Standard U-Net: Jagged/Blocky Boundaries</h6>
-                                <img src="phase 1.jpg" alt="Phase 1" class="w-full h-48 object-cover rounded-xl border border-red-200 zoomable-map" onclick="openLightbox(this.src, 'Phase 1: Standard U-Net', 'Sempadan bergerigi dan kasar')" onerror="this.src='https://placehold.co/500x300/fee2e2/991b1b?text=Phase+1'">
+                                <img src="phase 1.jpg" alt="Phase 1" class="w-full h-48 object-cover rounded-xl border border-red-200 zoomable-map" onclick="openLightbox(this.src, 'Phase 1: Baseline Architecture', 'Coarse Boundary Discrepancies')" onerror="this.src='https://placehold.co/500x300/fee2e2/991b1b?text=Phase+1'">
                             </div>
                             <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-                                <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded uppercase mb-1 inline-block">Phase 2 Test Result</span>
+                                <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded uppercase mb-1 inline-block">Phase 2 Result</span>
                                 <h6 class="font-bold text-slate-900 text-xs mb-2">U-Net + ResNet34 + Overlap Patching</h6>
-                                <img src="Phase 2.jpg" alt="Phase 2" class="w-full h-48 object-cover rounded-xl border border-amber-200 zoomable-map" onclick="openLightbox(this.src, 'Phase 2: ResNet34 Testing', 'Peningkatan ketepatan bucu')" onerror="this.src='https://placehold.co/500x300/fef3c7/92400e?text=Phase+2'">
+                                <img src="Phase 2.jpg" alt="Phase 2" class="w-full h-48 object-cover rounded-xl border border-amber-200 zoomable-map" onclick="openLightbox(this.src, 'Phase 2: Deep Encoder Testing', 'Boundary Refinement Progress')" onerror="this.src='https://placehold.co/500x300/fef3c7/92400e?text=Phase+2'">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2. Urban Planning Visual Gallery -->
+                <!-- 2. Urban Planning Visual Gallery (6 Tabs) -->
                 <div id="urbanVisualGallery" class="space-y-6 hidden">
+                    
+                    <!-- Navigation Tabs -->
                     <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-3">
                         <div class="flex flex-wrap gap-2">
-                            <button onclick="switchUrbanVisual('landuse-zoning')" id="btn-urban-lz" class="urban-vis-btn px-4 py-2 rounded-xl text-xs font-extrabold bg-emerald-800 text-white shadow-sm transition cursor-pointer flex items-center gap-2">
-                                <i class="fas fa-layer-group"></i> 1. Land Use &amp; Statutory Zoning
+                            <button onclick="switchUrbanVisual('landuse-zoning')" id="btn-urban-lz" class="urban-vis-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-emerald-800 text-white shadow-sm transition cursor-pointer flex items-center gap-1.5">
+                                <i class="fas fa-layer-group"></i> 1. Land Use &amp; Zoning
                             </button>
-                            <button onclick="switchUrbanVisual('road-transport')" id="btn-urban-road" class="urban-vis-btn px-4 py-2 rounded-xl text-xs font-extrabold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer flex items-center gap-2">
-                                <i class="fas fa-road"></i> 2. Road Network &amp; Transportation
+                            <button onclick="switchUrbanVisual('road-transport')" id="btn-urban-road" class="urban-vis-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer flex items-center gap-1.5">
+                                <i class="fas fa-road"></i> 2. Road Network
+                            </button>
+                            <button onclick="switchUrbanVisual('key-location')" id="btn-urban-keyloc" class="urban-vis-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer flex items-center gap-1.5">
+                                <i class="fas fa-compass"></i> 3. Key &amp; Location Plans
+                            </button>
+                            <button onclick="switchUrbanVisual('physical-maps')" id="btn-urban-physical" class="urban-vis-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer flex items-center gap-1.5">
+                                <i class="fas fa-mountain"></i> 4. Physical Constraints
+                            </button>
+                            <button onclick="switchUrbanVisual('land-suitability')" id="btn-urban-suitability" class="urban-vis-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer flex items-center gap-1.5">
+                                <i class="fas fa-chart-pie"></i> 5. Land Suitability (MCDM)
+                            </button>
+                            <button onclick="switchUrbanVisual('commercial-maps')" id="btn-urban-commercial" class="urban-vis-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-slate-200 text-slate-700 hover:bg-slate-300 transition cursor-pointer flex items-center gap-1.5">
+                                <i class="fas fa-store"></i> 6. Commercial Analysis
                             </button>
                         </div>
                         <span class="text-xs font-semibold text-slate-500 bg-white px-3 py-1.5 rounded-lg border border-slate-200">
@@ -785,99 +601,252 @@
                         </span>
                     </div>
 
-                    <!-- Panel 1: Land Use & Zoning Comparison -->
+                    <!-- Panel 1: Land Use & Zoning -->
                     <div id="panel-urban-lz" class="urban-vis-panel space-y-6">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <!-- Kad 1: Landuse.png -->
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div class="flex items-center justify-between mb-2">
-                                        <span class="px-2.5 py-1 bg-amber-100 text-amber-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Baseline Audit</span>
-                                        <span class="text-[11px] font-semibold text-slate-400">Current Land Use</span>
-                                    </div>
-                                    <h5 class="text-sm font-black text-slate-900 mb-2">Existing Land Use Map (Guna Tanah Semasa)</h5>
-                                    <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3 group relative">
-                                        <img src="Landuse.png" alt="Existing Land Use Map" class="w-full h-64 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Existing Land Use Map', 'Audit Guna Tanah Semasa Fizikal & Inventori Tapak')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Landuse.png'">
-                                    </div>
-                                    <p class="text-xs text-slate-600 leading-relaxed text-justify mb-3">
-                                        Inventori spatial guna tanah fizikal sedia ada merangkumi petempatan, kawasan pertanian, komersil dan tanah lapang bagi mengenalpasti corak guna tanah sebenar tapak. Klik gambar untuk paparan penuh.
-                                    </p>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 bg-amber-100 text-amber-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Baseline Audit</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Current Land Use</span>
                                 </div>
-                                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Dataset: Parcel Field Survey &amp; Satellite</span>
-                                    <span class="font-bold text-slate-700">Format: Landuse.png</span>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Existing Land Use Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                    <img src="Landuse.png" alt="Existing Land Use Map" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Existing Land Use Map', 'Current Physical Land Use Audit')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Landuse.png'">
+                                </div>
+                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                                    <span>Dataset: Land Use Parcel Survey</span>
+                                    <span class="font-bold text-slate-700">Landuse.png</span>
                                 </div>
                             </div>
 
-                            <!-- Kad 2: Zoning.png -->
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div class="flex items-center justify-between mb-2">
-                                        <span class="px-2.5 py-1 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Statutory Proposal</span>
-                                        <span class="text-[11px] font-semibold text-slate-400">Sabah Cap. 141 Scheme</span>
-                                    </div>
-                                    <h5 class="text-sm font-black text-slate-900 mb-2">Statutory Zoning Map (Pelan Pengezonan Cadangan)</h5>
-                                    <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3 group relative">
-                                        <img src="Zoning.png" alt="Zoning Plan Map" class="w-full h-64 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Statutory Zoning Map', 'Pelan Cadangan Pengezonan Berkanun Mengikut Sabah Cap. 141')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Zoning.png'">
-                                    </div>
-                                    <p class="text-xs text-slate-600 leading-relaxed text-justify mb-3">
-                                        Cadangan kawalan zon perancangan berkanun berdasarkan intensiti nisbah plot, kepadatan kediaman, anjakan zon komersil dan kawasan pemeliharaan mengikut Ordinan Cap. 141. Klik gambar untuk paparan penuh.
-                                    </p>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Statutory Proposal</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Sabah Cap. 141</span>
                                 </div>
-                                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Compliance: Gazetted Planning Scheme</span>
-                                    <span class="font-bold text-slate-700">Format: Zoning.png</span>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Statutory Zoning Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                    <img src="Zoning.png" alt="Statutory Zoning Map" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Statutory Zoning Map', 'Gazetted Statutory Planning Scheme')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Zoning.png'">
+                                </div>
+                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                                    <span>Compliance: Gazetted Scheme</span>
+                                    <span class="font-bold text-slate-700">Zoning.png</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Panel 2: Road & Transportation Comparison -->
+                    <!-- Panel 2: Road & Transportation -->
                     <div id="panel-urban-road" class="urban-vis-panel hidden space-y-6">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <!-- Kad 1: Existing Road.png -->
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div class="flex items-center justify-between mb-2">
-                                        <span class="px-2.5 py-1 bg-slate-100 text-slate-800 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Existing Network</span>
-                                        <span class="text-[11px] font-semibold text-slate-400">Road Alignment</span>
-                                    </div>
-                                    <h5 class="text-sm font-black text-slate-900 mb-2">Existing Road Network (Rangkaian Jalan Sedia Ada)</h5>
-                                    <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3 group relative">
-                                        <img src="Existing Road.png" alt="Existing Road Network" class="w-full h-64 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Existing Road Network', 'Pemetaan Garisan Jajaran Rangkaian Jalan Semasa')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Existing+Road.png'">
-                                    </div>
-                                    <p class="text-xs text-slate-600 leading-relaxed text-justify mb-3">
-                                        Pemetaan koridor jalan sedia ada merangkumi jajaran berturap, jalan tanah, dan sambungan akses primer bagi analisis kesalinghubungan fizikal kawasan kajian. Klik gambar untuk paparan penuh.
-                                    </p>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-800 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Current Network</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Road Alignment</span>
                                 </div>
-                                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Network: Line Vector Geometry</span>
-                                    <span class="font-bold text-slate-700">Format: Existing Road.png</span>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Existing Road Network Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                    <img src="Existing Road.png" alt="Existing Road Network" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Existing Road Network Map', 'Existing Transport Infrastructure')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Existing+Road.png'">
+                                </div>
+                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                                    <span>Dataset: Transport Geometry</span>
+                                    <span class="font-bold text-slate-700">Existing Road.png</span>
                                 </div>
                             </div>
 
-                            <!-- Kad 2: Road Hierarchy.png -->
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div class="flex items-center justify-between mb-2">
-                                        <span class="px-2.5 py-1 bg-blue-100 text-blue-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Hierarchy &amp; Reserves</span>
-                                        <span class="text-[11px] font-semibold text-slate-400">Planning Hierarchy</span>
-                                    </div>
-                                    <h5 class="text-sm font-black text-slate-900 mb-2">Road Hierarchy &amp; Right-of-Way (Hierarki &amp; Rezab Jalan)</h5>
-                                    <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3 group relative">
-                                        <img src="Road Hierarchy.png" alt="Road Hierarchy Map" class="w-full h-64 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Road Hierarchy & Right-of-Way', 'Penetapan Klasifikasi Hierarki & Lebar Rezab Jalan')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Road+Hierarchy.png'">
-                                    </div>
-                                    <p class="text-xs text-slate-600 leading-relaxed text-justify mb-3">
-                                        Klasifikasi hierarki jalan mengikut piawaian JKR/Perancang (Lebuhraya, Arteri, Pengumpul, Tempatan) berserta penetapan lebar rezab jalan (Right-of-Way) rasmi. Klik gambar untuk paparan penuh.
-                                    </p>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 bg-blue-100 text-blue-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Planning Hierarchy</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Right-of-Way</span>
                                 </div>
-                                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                                    <span>Classification: Expressway &bull; Primary &bull; Access</span>
-                                    <span class="font-bold text-slate-700">Format: Road Hierarchy.png</span>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Road Hierarchy &amp; Right-of-Way Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                    <img src="Road Hierarchy.png" alt="Road Hierarchy Map" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Road Hierarchy & Right-of-Way Map', 'Statutory Road Reservation Standards')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Road+Hierarchy.png'">
+                                </div>
+                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                                    <span>Classification: Expressways &bull; Primary &bull; Local</span>
+                                    <span class="font-bold text-slate-700">Road Hierarchy.png</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Panel 3: Key & Location Plans -->
+                    <div id="panel-urban-keyloc" class="urban-vis-panel hidden space-y-6">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Regional Context</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Macro Scale</span>
+                                </div>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Key Plan</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                    <img src="Key Plan.png" alt="Key Plan" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Key Plan', 'Regional Macro Context & Connectivity')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Key+Plan.png'">
+                                </div>
+                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                                    <span>Scope: Regional Macro Plan</span>
+                                    <span class="font-bold text-slate-700">Key Plan.png</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 bg-teal-100 text-teal-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Site Vicinity</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Micro Scale</span>
+                                </div>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Location Plan</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                    <img src="Location Plan.png" alt="Location Plan" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Location Plan', 'Immediate Site Delineation & Access Boundaries')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Location+Plan.png'">
+                                </div>
+                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                                    <span>Scope: Site Vicinity Delineation</span>
+                                    <span class="font-bold text-slate-700">Location Plan.png</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Physical Maps -->
+                    <div id="panel-urban-physical" class="urban-vis-panel hidden space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase">DEM / DTM</span>
+                                    <span class="text-[10px] font-semibold text-slate-400">Elevation</span>
+                                </div>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Topography Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="Topography.png" alt="Topography Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Topography Map', 'Digital Elevation Model & Contours')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Topography.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">Topography.png</span>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2 py-0.5 bg-amber-100 text-amber-900 text-[10px] font-extrabold rounded uppercase">Slope Analysis</span>
+                                    <span class="text-[10px] font-semibold text-slate-400">Gradient</span>
+                                </div>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Slope Constraint Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="Slope.png" alt="Slope Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Slope Constraint Map', 'Slope Class 1-4 Hazard Zoning')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Slope.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">Slope.png</span>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2 py-0.5 bg-red-100 text-red-900 text-[10px] font-extrabold rounded uppercase">Hazard Exclusion</span>
+                                    <span class="text-[10px] font-semibold text-slate-400">Tectonic</span>
+                                </div>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Seismic Hazard Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="Seisimic.png" alt="Seismic Hazard Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Seismic Hazard Map', 'Fault Lines & Fault Buffer Zones')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Seisimic.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">Seisimic.png</span>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase">ESA Class 1</span>
+                                    <span class="text-[10px] font-semibold text-slate-400">Conservation</span>
+                                </div>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Forest Reserve Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="Forest Reserve.png" alt="Forest Reserve Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Forest Reserve Map', 'Gazetted Permanent Forest Reserves & Buffers')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Forest+Reserve.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">Forest Reserve.png</span>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2 py-0.5 bg-slate-100 text-slate-800 text-[10px] font-extrabold rounded uppercase">Bedrock</span>
+                                    <span class="text-[10px] font-semibold text-slate-400">Stratigraphy</span>
+                                </div>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Geology Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="Geology.png" alt="Geology Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Geology Map', 'Lithological Formation & Soil Suitability')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Geology.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">Geology.png</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5: Land Suitability (MCDM) -->
+                    <div id="panel-urban-suitability" class="urban-vis-panel hidden space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase w-max mb-2">Model Tier 01</span>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Land Suitability Map 1</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="LandSuita1.png" alt="Land Suitability 1" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability Map 1', 'MCDM Criteria Layer Integration 01')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita1.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">LandSuita1.png</span>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase w-max mb-2">Model Tier 02</span>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Land Suitability Map 2</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="Landsuita2.png" alt="Land Suitability 2" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability Map 2', 'MCDM Criteria Layer Integration 02')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=Landsuita2.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">Landsuita2.png</span>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase w-max mb-2">Model Tier 03</span>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Land Suitability Map 3</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="LandSuita3.png" alt="Land Suitability 3" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability Map 3', 'AHP Multi-Factor Ranking Evaluation')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita3.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">LandSuita3.png</span>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase w-max mb-2">Final Synthesis</span>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Land Suitability Map 4</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="LandSuita4.png" alt="Land Suitability 4" class="w-full h-56 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Land Suitability Map 4', 'Composite Optimal Suitability Zones')" onerror="this.src='https://placehold.co/500x400/032219/34d399?text=LandSuita4.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">LandSuita4.png</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 6: Commercial Analysis -->
+                    <div id="panel-urban-commercial" class="urban-vis-panel hidden space-y-6">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 bg-teal-100 text-teal-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Spatial Catchment</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Demographic Reach</span>
+                                </div>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Commercial Catchment &amp; Retail Node Map 1</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                    <img src="Com1.png" alt="Commercial Map 1" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Commercial Spatial Analysis Map 1', 'Retail Hierarchy & Market Service Catchment')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Com1.png'">
+                                </div>
+                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                                    <span>Scope: Primary Service Area</span>
+                                    <span class="font-bold text-slate-700">Com1.png</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2.5 py-1 bg-teal-100 text-teal-900 text-[10px] font-extrabold rounded-lg uppercase tracking-wider">Accessibility Gradient</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Drive-Time Buffer</span>
+                                </div>
+                                <h5 class="text-sm font-black text-slate-900 mb-2">Commercial Density &amp; Growth Analysis Map 2</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
+                                    <img src="com 2.png" alt="Commercial Map 2" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Commercial Spatial Analysis Map 2', 'Nodal Viability & Growth Potential')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=com+2.png'">
+                                </div>
+                                <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                                    <span>Scope: Secondary Economic Corridor</span>
+                                    <span class="font-bold text-slate-700">com 2.png</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- 3. Standard Map Preview Section -->
@@ -920,7 +889,7 @@
                 </span>
                 <div>
                     <h4 id="lightboxTitle" class="text-sm sm:text-base font-black tracking-tight text-white line-clamp-1">Map Inspection</h4>
-                    <p id="lightboxSubtitle" class="text-[11px] text-slate-400 line-clamp-1">Cubit untuk zum (pinch) &bull; Seret untuk pan</p>
+                    <p id="lightboxSubtitle" class="text-[11px] text-slate-400 line-clamp-1">Pinch to zoom &bull; Drag to pan</p>
                 </div>
             </div>
 
@@ -942,14 +911,13 @@
             </div>
         </div>
 
-        <!-- Kad Sentuhan (Touch Area) -->
         <div id="lightboxCard" class="relative overflow-hidden flex items-center justify-center rounded-2xl bg-black/40 border border-white/10 shadow-2xl p-2 max-h-[85vh] lightbox-touch-surface">
             <img id="lightboxImage" src="" alt="Zoomable Map" class="object-contain will-change-transform select-none" style="transform: translate(0px, 0px) scale(1);">
         </div>
 
         <p class="text-slate-400 text-[11px] mt-2 flex items-center gap-2">
             <i class="fas fa-hand-pointer text-emerald-400 text-[10px]"></i>
-            <span>Guna 2 jari untuk zum (pinch) &bull; Seret untuk gerak &bull; Dwi-ketuk pantas untuk zum segera</span>
+            <span>2-finger pinch to zoom &bull; Drag to pan &bull; Double-tap for quick zoom &bull; ESC to exit</span>
         </p>
     </div>
 
@@ -990,7 +958,7 @@
             },
             urban: {
                 title: 'Statutory Urban Planning Spatial Catalog',
-                subtitle: 'Land Use, Zoning &amp; Road Transportation Schemes (Cap. 141)',
+                subtitle: 'Land Use, Zoning, Infrastructure &amp; Environmental Models (Cap. 141)',
                 isGallery: 'urban'
             },
             kk: {
@@ -1096,16 +1064,23 @@
                 b.classList.add('bg-slate-200', 'text-slate-700');
             });
 
-            if (themeId === 'landuse-zoning') {
-                document.getElementById('panel-urban-lz')?.classList.remove('hidden');
-                const btn = document.getElementById('btn-urban-lz');
-                btn.classList.remove('bg-slate-200', 'text-slate-700');
-                btn.classList.add('bg-emerald-800', 'text-white', 'shadow-sm');
-            } else if (themeId === 'road-transport') {
-                document.getElementById('panel-urban-road')?.classList.remove('hidden');
-                const btn = document.getElementById('btn-urban-road');
-                btn.classList.remove('bg-slate-200', 'text-slate-700');
-                btn.classList.add('bg-emerald-800', 'text-white', 'shadow-sm');
+            const panelMap = {
+                'landuse-zoning': { panel: 'panel-urban-lz', btn: 'btn-urban-lz' },
+                'road-transport': { panel: 'panel-urban-road', btn: 'btn-urban-road' },
+                'key-location': { panel: 'panel-urban-keyloc', btn: 'btn-urban-keyloc' },
+                'physical-maps': { panel: 'panel-urban-physical', btn: 'btn-urban-physical' },
+                'land-suitability': { panel: 'panel-urban-suitability', btn: 'btn-urban-suitability' },
+                'commercial-maps': { panel: 'panel-urban-commercial', btn: 'btn-urban-commercial' }
+            };
+
+            const selected = panelMap[themeId];
+            if (selected) {
+                document.getElementById(selected.panel)?.classList.remove('hidden');
+                const btn = document.getElementById(selected.btn);
+                if (btn) {
+                    btn.classList.remove('bg-slate-200', 'text-slate-700');
+                    btn.classList.add('bg-emerald-800', 'text-white', 'shadow-sm');
+                }
             }
         }
 
@@ -1197,13 +1172,11 @@
             }, 300);
         }
 
-        // GESTURE HANDLERS (TOUCH & MOUSE DRAG/PINCH)
+        // TOUCH & MOUSE EVENTS
         const touchSurface = document.getElementById('lightboxCard');
 
-        // 1. Sentuhan Telefon Pintar (Mobile Touch)
         touchSurface.addEventListener('touchstart', (e) => {
             if (e.touches.length === 1) {
-                // Pengesanan Dwi-Ketuk (Double Tap)
                 const now = Date.now();
                 if (now - lastTapTime < 300) {
                     if (currentZoom > 1.2) {
@@ -1225,7 +1198,6 @@
                     dragStartY = e.touches[0].clientY - panY;
                 }
             } else if (e.touches.length === 2) {
-                // Pinch to zoom bermula
                 isDragging = false;
                 initialPinchDistance = Math.hypot(
                     e.touches[0].clientX - e.touches[1].clientX,
@@ -1268,7 +1240,6 @@
             }
         });
 
-        // 2. Kawalan Tetikus (Desktop Drag & Mouse Panning)
         touchSurface.addEventListener('mousedown', (e) => {
             if (currentZoom > 1 && e.button === 0) {
                 isDragging = true;
@@ -1294,14 +1265,12 @@
             }
         });
 
-        // 3. Wheel Zoom (Desktop Mouse Wheel)
         touchSurface.addEventListener('wheel', (e) => {
             e.preventDefault();
             const delta = e.deltaY < 0 ? 0.2 : -0.2;
             zoomLightbox(delta);
         }, { passive: false });
 
-        // Global Keydown Listeners
         document.addEventListener('keydown', e => {
             if (e.key === 'Escape') {
                 if (!document.getElementById('lightboxModal').classList.contains('hidden')) {
