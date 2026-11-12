@@ -7,672 +7,254 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Custom Components (Optimization) -->
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn-primary { @apply font-extrabold px-6 py-3.5 rounded-2xl text-sm inline-flex items-center justify-center gap-2 cursor-pointer bg-emerald-500 text-emerald-950 shadow-[0_8px_25px_-4px_rgba(16,185,129,0.45)] hover:bg-emerald-400 hover:-translate-y-0.5 transition-all; }
+            .btn-secondary { @apply font-extrabold px-6 py-3.5 rounded-2xl text-sm inline-flex items-center justify-center gap-2 cursor-pointer bg-[#1c2636] text-white border border-slate-700 hover:bg-[#263348] hover:border-emerald-500 hover:-translate-y-0.5 transition-all; }
+            
+            .badge-emerald { @apply bg-emerald-500/10 border border-emerald-500/30 text-emerald-500; }
+            
+            .card-project { @apply bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300; }
+            .card-img-box { @apply md:w-1/3 signature-dark-card relative flex items-center justify-center min-h-[220px] overflow-hidden; }
+            .card-content { @apply md:w-2/3 p-6 sm:p-8 flex flex-col justify-between; }
+            
+            .tag-light { @apply px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold; }
+            .tag-dark { @apply px-3 py-1.5 bg-white/5 border border-white/10 text-emerald-200 hover:bg-emerald-500/15 hover:border-emerald-500/40 rounded-xl text-xs font-semibold transition-all; }
+            .expertise-list { @apply flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition; }
+        }
+    </style>
+
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        
-        /* Signature Dark Emerald-Slate Gradient */
-        .signature-dark-card {
-            background: linear-gradient(115deg, #032219 0%, #0b1520 52%, #052622 100%);
-            box-shadow: 0 20px 40px -15px rgba(3, 34, 25, 0.45);
-        }
-
-        .hero-dark-canvas {
-            background: radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.14) 0%, transparent 45%),
-                        radial-gradient(circle at 80% 70%, rgba(20, 184, 166, 0.12) 0%, transparent 50%),
-                        linear-gradient(125deg, #021a13 0%, #09121d 55%, #04221e 100%);
-            background-image: 
-                radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.14) 0%, transparent 45%),
-                radial-gradient(circle at 80% 70%, rgba(20, 184, 166, 0.12) 0%, transparent 50%),
-                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-                linear-gradient(125deg, #021a13 0%, #09121d 55%, #04221e 100%);
-        }
-
-        /* Primary Mint-Emerald Button with Soft Glow */
-        .btn-emerald-glow {
-            background-color: #10b981;
-            color: #022c22;
-            box-shadow: 0 8px 25px -4px rgba(16, 185, 129, 0.45);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .btn-emerald-glow:hover {
-            background-color: #34d399;
-            box-shadow: 0 12px 30px -4px rgba(16, 185, 129, 0.65);
-            transform: translateY(-2px);
-        }
-
-        /* Secondary Dark Slate Pill Button */
-        .btn-slate-dark {
-            background-color: #1c2636;
-            color: #ffffff;
-            border: 1px solid #334155;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .btn-slate-dark:hover {
-            background-color: #263348;
-            border-color: #10b981;
-            transform: translateY(-2px);
-        }
-
-        /* Tech Tag Pills inside Dark Cards */
-        .tech-pill-dark {
-            background-color: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #a7f3d0;
-            transition: all 0.2s ease;
-        }
-        .tech-pill-dark:hover {
-            background-color: rgba(16, 185, 129, 0.15);
-            border-color: rgba(16, 185, 129, 0.4);
-        }
-
-        /* Badge Pill Header */
-        .badge-pill-emerald {
-            background-color: rgba(16, 185, 129, 0.12);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: #34d399;
-        }
-
-        /* Modal Scrollbar Styling */
-        .modal-scroll::-webkit-scrollbar {
-            width: 8px;
-        }
-        .modal-scroll::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        .modal-scroll::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 9999px;
-        }
-        .modal-scroll::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
+        .signature-dark-card { background: linear-gradient(115deg, #032219 0%, #0b1520 52%, #052622 100%); box-shadow: 0 20px 40px -15px rgba(3, 34, 25, 0.45); }
+        .hero-dark-canvas { background: radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.14) 0%, transparent 45%), radial-gradient(circle at 80% 70%, rgba(20, 184, 166, 0.12) 0%, transparent 50%), linear-gradient(125deg, #021a13 0%, #09121d 55%, #04221e 100%); }
     </style>
 </head>
 <body class="bg-[#f4f7f6] text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
 
     <!-- Navbar -->
     <nav class="bg-[#041d17]/90 backdrop-blur-md border-b border-emerald-500/15 fixed w-full z-40 top-0 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-2.5 group">
-                <span class="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center text-emerald-950 shadow-md shadow-emerald-500/25 group-hover:scale-105 transition-transform">
-                    <i class="fas fa-globe-asia text-sm"></i>
-                </span>
-                <span class="font-extrabold text-lg tracking-tight text-white group-hover:text-emerald-400 transition-colors">
-                    Gs. Mohamad Nazril
-                </span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center text-emerald-950 group-hover:scale-105 transition-transform"><i class="fas fa-globe-asia text-sm"></i></span>
+                <span class="font-extrabold text-lg text-white group-hover:text-emerald-400 transition-colors">Gs. Mohamad Nazril</span>
             </a>
-            <div class="space-x-7 hidden md:flex font-semibold text-slate-300 text-sm">
+            <div class="space-x-6 hidden md:flex font-semibold text-slate-300 text-sm">
                 <a href="#expertise" class="hover:text-emerald-400 transition">Expertise</a>
                 <a href="#flagship" class="hover:text-emerald-400 transition">Flagship GeoAI</a>
-                <a href="#urban-planning" class="hover:text-emerald-400 transition">Urban Planning</a>
-                <a href="#environmental" class="hover:text-emerald-400 transition">Environmental</a>
-                <a href="#land-development" class="hover:text-emerald-400 transition">Land Development</a>
+                <a href="#urban-planning" class="hover:text-emerald-400 transition">Statutory Plans</a>
             </div>
-            <a href="#projects" class="hidden sm:inline-flex items-center text-xs font-extrabold uppercase tracking-wider btn-emerald-glow px-4 py-2 rounded-xl">
-                Explore Maps <i class="fas fa-arrow-down ml-2"></i>
+            <a href="#projects" class="hidden sm:inline-flex btn-primary !px-4 !py-2 !rounded-xl !text-xs uppercase tracking-wider">
+                Explore <i class="fas fa-arrow-down"></i>
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-dark-canvas text-white pt-32 pb-24 mt-12 relative overflow-hidden border-b border-emerald-500/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <header class="hero-dark-canvas text-white pt-32 pb-24 mt-12 relative border-b border-emerald-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
-                
-                <!-- Teks & Butang -->
                 <div class="w-full lg:w-3/5 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-pill-emerald text-xs font-bold uppercase tracking-wider mb-6">
-                        <i class="fas fa-certificate text-emerald-400"></i> Certified Geospatial Practitioner | IGRSM & MBOT
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-emerald text-xs font-bold uppercase tracking-wider mb-6">
+                        <i class="fas fa-certificate"></i> Certified Geospatial Practitioner | IGRSM & MBOT
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 leading-tight text-white">
-                        Gs. Mohamad Nazril Bin Sharil
-                    </h1>
-                    <p class="text-lg sm:text-xl text-emerald-400 font-semibold mb-6 tracking-wide">
-                        GIS Practitioner &bull; GeoAI & UAV Photogrammetry &bull; Land Suitability Specialist
-                    </p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 text-white">Gs. Mohamad Nazril</h1>
+                    <p class="text-lg sm:text-xl text-emerald-400 font-semibold mb-6">GIS Practitioner &bull; GeoAI & UAV &bull; Land Suitability</p>
                     <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0 text-justify lg:text-left">
-                        Bridging advanced spatial data science with statutory urban planning standards. Specialized in AHP multicriteria evaluation, automated geospatial workflows, geodatabase architecture, and Deep Learning vision models for sustainable land administration.
+                        Bridging spatial data science with statutory urban planning standards. Specialized in AHP multicriteria evaluation, automated geospatial workflows, and Deep Learning vision models for sustainable land administration.
                     </p>
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                        <button onclick="openModal('urbanModal')" class="btn-emerald-glow font-extrabold px-7 py-3.5 rounded-2xl text-sm inline-flex items-center gap-2.5 cursor-pointer">
-                            <i class="fas fa-book-open"></i>
-                            <span>View Statutory Framework</span>
-                        </button>
-                        <a href="#projects" class="btn-slate-dark font-extrabold px-7 py-3.5 rounded-2xl text-sm inline-flex items-center gap-2.5">
-                            <i class="fas fa-map-location-dot text-emerald-400"></i>
-                            <span>Browse Projects Catalog</span>
-                        </a>
+                        <button onclick="openModal('urbanModal')" class="btn-primary"><i class="fas fa-book-open"></i> View Statutory Framework</button>
+                        <a href="#projects" class="btn-secondary"><i class="fas fa-map-location-dot text-emerald-400"></i> Browse Projects</a>
                     </div>
                 </div>
-
-                <!-- Gambar Profil -->
                 <div class="w-full lg:w-2/5 flex justify-center">
                     <div class="relative group">
                         <div class="absolute -inset-1.5 bg-gradient-to-tr from-emerald-500 to-teal-400 rounded-[32px] blur-md opacity-35 group-hover:opacity-60 transition duration-500"></div>
                         <div class="relative w-64 h-72 sm:w-80 sm:h-96 rounded-[28px] overflow-hidden border-2 border-emerald-400/40 bg-[#06241c] shadow-2xl">
-                            <img src="profil-nazril.jpg.JPG" alt="Gs. Mohamad Nazril Bin Sharil" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/500x600/032219/34d399?text=Gs.+Mohamad+Nazril'">
-                            
-                            <div class="absolute bottom-3 left-3 right-3 bg-slate-950/85 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl flex items-center justify-between">
+                            <img src="profil-nazril.jpg.JPG" alt="Profil" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/500x600/032219/34d399?text=Gs.+Mohamad+Nazril'">
+                            <div class="absolute bottom-3 left-3 right-3 bg-slate-950/85 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl flex justify-between items-center">
                                 <div>
-                                    <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 block">Registered Professional</span>
-                                    <span class="text-xs font-extrabold text-white">IGRSM (M1711) &bull; MBOT</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 block">Registered</span>
+                                    <span class="text-xs font-extrabold text-white">IGRSM &bull; MBOT</span>
                                 </div>
                                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- Key Expertise Grid -->
+    <!-- Expertise Section -->
     <section id="expertise" class="py-16 bg-white border-b border-slate-200/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- Expertise Card -->
-                <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 border border-slate-800 text-white">
-                    <div class="flex items-center gap-3.5 mb-6">
-                        <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg">
-                            <i class="fas fa-brain"></i>
-                        </span>
-                        <div>
-                            <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 block">Core Competencies</span>
-                            <h3 class="text-xl font-black text-white">Key Expertise</h3>
-                        </div>
-                    </div>
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-200">
-                        <li class="flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition">
-                            <i class="fas fa-check-circle text-emerald-400 flex-shrink-0"></i>
-                            <span>Spatial Modeling & Multicriteria</span>
-                        </li>
-                        <li class="flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition">
-                            <i class="fas fa-check-circle text-emerald-400 flex-shrink-0"></i>
-                            <span>Remote Sensing & Earth Obs.</span>
-                        </li>
-                        <li class="flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition">
-                            <i class="fas fa-check-circle text-emerald-400 flex-shrink-0"></i>
-                            <span>Multi-Temporal Land Use</span>
-                        </li>
-                        <li class="flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition">
-                            <i class="fas fa-check-circle text-emerald-400 flex-shrink-0"></i>
-                            <span>UAV Survey & DSM/DTM</span>
-                        </li>
-                        <li class="flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition">
-                            <i class="fas fa-check-circle text-emerald-400 flex-shrink-0"></i>
-                            <span>Interactive Web GIS Systems</span>
-                        </li>
-                        <li class="flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition">
-                            <i class="fas fa-check-circle text-emerald-400 flex-shrink-0"></i>
-                            <span>Statutory Geodatabase Schema</span>
-                        </li>
-                        <li class="flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition">
-                            <i class="fas fa-check-circle text-emerald-400 flex-shrink-0"></i>
-                            <span>Catchment & Hydrology GIS</span>
-                        </li>
-                        <li class="flex items-center gap-2.5 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-emerald-500/40 transition">
-                            <i class="fas fa-check-circle text-emerald-400 flex-shrink-0"></i>
-                            <span>Spatial Decision Support (SDSS)</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Technical Stacks -->
-                <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 border border-slate-800 text-white flex flex-col justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Expertise List -->
+            <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 text-white border border-slate-800">
+                <div class="flex items-center gap-3.5 mb-6">
+                    <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg"><i class="fas fa-brain"></i></span>
                     <div>
-                        <div class="flex items-center gap-3.5 mb-6">
-                            <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg">
-                                <i class="fas fa-microchip"></i>
-                            </span>
-                            <div>
-                                <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 block">Software & Libraries</span>
-                                <h3 class="text-xl font-black text-white">Technical Toolkit</h3>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">ArcGIS Pro & ArcMap</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">QGIS Desktop</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">Python (ArcPy, GeoPandas)</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">PostGIS / PostgreSQL</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">Google Earth Engine</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">U-Net++ & ResNet50 GeoAI</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">Rasterio & Shapely</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">AHP Multicriteria Engine</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">DJI Terra Photogrammetry</span>
-                            <span class="px-3.5 py-2 tech-pill-dark rounded-xl text-xs font-semibold">Sabah Cap. 141 Compliance</span>
-                        </div>
-                    </div>
-                    <div class="mt-8 pt-4 border-t border-white/10 text-xs text-slate-400 flex items-center justify-between">
-                        <span>Workflow Discipline: Automation & Zero-Topology Error Geometry</span>
-                        <i class="fas fa-code-branch text-emerald-400"></i>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 block">Core Competencies</span>
+                        <h3 class="text-xl font-black">Key Expertise</h3>
                     </div>
                 </div>
-
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-200">
+                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Spatial Modeling (AHP)</li>
+                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Remote Sensing / GeoAI</li>
+                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Multi-Temporal Land Use</li>
+                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> UAV Survey & DSM/DTM</li>
+                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Web GIS Systems</li>
+                    <li class="expertise-list"><i class="fas fa-check-circle text-emerald-400"></i> Geodatabase Schema</li>
+                </ul>
+            </div>
+            <!-- Tech Stack -->
+            <div class="signature-dark-card rounded-[28px] p-7 sm:p-8 text-white border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3.5 mb-6">
+                        <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg"><i class="fas fa-microchip"></i></span>
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 block">Software & Libraries</span>
+                            <h3 class="text-xl font-black">Technical Toolkit</h3>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="tag-dark">ArcGIS Pro</span>
+                        <span class="tag-dark">QGIS</span>
+                        <span class="tag-dark">Python (ArcPy, GeoPandas)</span>
+                        <span class="tag-dark">PostGIS</span>
+                        <span class="tag-dark">Google Earth Engine</span>
+                        <span class="tag-dark">U-Net++ & ResNet50</span>
+                        <span class="tag-dark">Rasterio & Shapely</span>
+                        <span class="tag-dark">DJI Terra</span>
+                    </div>
+                </div>
+                <div class="mt-8 pt-4 border-t border-white/10 text-xs text-slate-400 flex justify-between">
+                    <span>Workflow: Automation & Zero-Topology Error</span>
+                    <i class="fas fa-code-branch text-emerald-400"></i>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Projects Section -->
+    <!-- Projects Section -->
     <main id="projects" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 border border-emerald-300/60 px-4 py-1.5 rounded-full">
-                    Geospatial Production Portfolio
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 tracking-tight">
-                    Spatial Projects & Statutory Master Plans
-                </h2>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 border border-emerald-300/60 px-4 py-1.5 rounded-full">Portfolio</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 tracking-tight">Spatial Projects & Master Plans</h2>
                 <div class="w-20 h-1.5 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
-                <p class="text-slate-600 mt-4 text-sm sm:text-base leading-relaxed">
-                    A curated catalog of environmental basin plans, statutory local plans, land development analyses, and intelligent GeoAI pipelines.
-                </p>
             </div>
 
-            <!-- ============================================================= -->
-            <!-- 1. FLAGSHIP PROJECT: GEOAI & SPATIAL AUTOMATION               -->
-            <!-- ============================================================= -->
+            <!-- 1. Flagship GeoAI -->
             <section id="flagship" class="mb-24">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-slate-200 pb-4">
-                    <div>
-                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
-                            Research & Applied Innovation
-                        </span>
-                        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 tracking-tight">
-                            1. Flagship Project: GeoAI & Spatial Automation
-                        </h3>
+                <h3 class="text-2xl font-black mb-6">1. Flagship: GeoAI Deep Learning Model</h3>
+                <div class="signature-dark-card rounded-[28px] p-8 sm:p-10 text-white flex flex-col lg:flex-row justify-between gap-8">
+                    <div class="max-w-3xl">
+                        <h4 class="text-2xl font-black mb-3">Automated Land Use Pipeline</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">Bridging raw semantic segmentation and statutory cadastral bounds utilizing U-Net++ and ResNet50 architectures on high-resolution UAV orthomosaics.</p>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="tag-dark">PyTorch</span>
+                            <span class="tag-dark">Cadastral Snapping</span>
+                            <span class="tag-dark">Zero-Topology Vectors</span>
+                        </div>
                     </div>
-                    <span class="text-xs font-bold text-emerald-950 mt-3 md:mt-0 bg-emerald-50 px-3.5 py-1.5 rounded-xl border border-emerald-200">
-                        Deep Learning & Cadastral Vector Compliance
-                    </span>
-                </div>
-
-                <!-- EXECUTIVE BANNER -->
-                <div class="signature-dark-card rounded-[28px] p-7 sm:p-10 text-white border border-slate-800/80">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-                        <div class="max-w-3xl">
-                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-pill-emerald text-[11px] font-extrabold uppercase tracking-wider mb-4">
-                                <i class="fas fa-brain text-emerald-400"></i> Computer Vision & Automated GIS Pipeline
-                            </div>
-                            <h4 class="text-2xl sm:text-3xl font-black tracking-tight text-white mb-3">
-                                GeoAI Deep Learning Model for Land Use Mapping
-                            </h4>
-                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 text-justify">
-                                Bridging the gap between raw semantic segmentation predictions and statutory urban planning cadastral lot bounds. Utilizing <strong class="text-white">U-Net++ and ResNet50</strong> architectures on ultra-high-resolution drone orthomosaics with custom post-processing to eliminate raster slivers and enforce clean topological geometry.
-                            </p>
-                            <div class="flex flex-wrap gap-2.5 text-xs">
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">PyTorch & U-Net++</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">UAV Orthomosaic Tiling</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">Cadastral Snapping Engine</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">Zero-Topology Polygonization</span>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row lg:flex-col gap-3.5 flex-shrink-0 min-w-[190px]">
-                            <button onclick="openModal('urbanModal')" class="btn-emerald-glow font-extrabold px-6 py-4 rounded-2xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
-                                <i class="fas fa-book-open text-base"></i>
-                                <span>Overview</span>
-                            </button>
-                            <button onclick="openModal('mapModal')" class="btn-slate-dark font-extrabold px-6 py-4 rounded-2xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
-                                <i class="fas fa-map-location-dot text-base text-emerald-400"></i>
-                                <span>Explore Maps</span>
-                            </button>
-                        </div>
+                    <div class="flex flex-col gap-3.5 min-w-[190px]">
+                        <button onclick="openModal('urbanModal')" class="btn-primary"><i class="fas fa-book-open"></i> Overview</button>
+                        <button onclick="openModal('mapModal')" class="btn-secondary"><i class="fas fa-map-marked-alt text-emerald-400"></i> Maps</button>
                     </div>
                 </div>
             </section>
 
-            <!-- ============================================================= -->
-            <!-- 2. GIS SUPPORT FOR URBAN PLANNING CONSULTANCY PROJECTS        -->
-            <!-- ============================================================= -->
+            <!-- 2. Statutory Planning -->
             <section id="urban-planning" class="mb-24">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-slate-200 pb-4">
-                    <div>
-                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
-                            Statutory Master Planning
-                        </span>
-                        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 tracking-tight">
-                            2. GIS Support for Urban Planning Consultancy Projects
-                        </h3>
-                    </div>
-                    <span class="text-xs font-bold text-emerald-950 mt-3 md:mt-0 bg-emerald-50 px-3.5 py-1.5 rounded-xl border border-emerald-200">
-                        Governed by Sabah Cap. 141
-                    </span>
-                </div>
-
-                <!-- EXECUTIVE BANNER FOR URBAN PLANNING -->
-                <div class="signature-dark-card rounded-[28px] p-7 sm:p-10 text-white mb-10 border border-slate-800/80">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-                        <div class="max-w-3xl">
-                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-pill-emerald text-[11px] font-extrabold uppercase tracking-wider mb-4">
-                                <i class="fas fa-layer-group text-emerald-400"></i> Standardized Geospatial Framework & SOP
-                            </div>
-                            <h4 class="text-2xl sm:text-3xl font-black tracking-tight text-white mb-3">
-                                Statutory Urban Planning GIS Engine
-                            </h4>
-                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 text-justify">
-                                Translating national and state development policies into spatial strategies under the <strong class="text-white">Town and Country Planning Ordinance (Sabah Cap. 141)</strong> and <strong class="text-white">Sabah Structure Plan 2033</strong>. Encompasses 8 sectoral domain studies, central enterprise geodatabase schemas, and multi-criteria land suitability models (AHP).
-                            </p>
-                            <div class="flex flex-wrap gap-2.5 text-xs">
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">Cap. 141 Mandate</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">8 Sectoral Domains</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">Base Map Hub Architecture</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">3-Stage Workflow Matrix</span>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row lg:flex-col gap-3.5 flex-shrink-0 min-w-[190px]">
-                            <button onclick="openModal('urbanModal')" class="btn-emerald-glow font-extrabold px-6 py-4 rounded-2xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
-                                <i class="fas fa-book-open text-base"></i>
-                                <span>Overview</span>
-                            </button>
-                            <button onclick="openModal('mapModal')" class="btn-slate-dark font-extrabold px-6 py-4 rounded-2xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
-                                <i class="fas fa-map-location-dot text-base text-emerald-400"></i>
-                                <span>Explore Maps</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SUB-HEADING -->
-                <div class="flex items-center gap-3 mb-6">
-                    <h4 class="text-lg font-extrabold text-slate-900">Statutory Master Plans Portfolio</h4>
-                    <span class="h-px bg-slate-300 flex-grow"></span>
-                </div>
-
-                <!-- INDIVIDUAL PROJECT CARDS (KK -> KUDAT -> KENINGAU) -->
+                <h3 class="text-2xl font-black mb-6">2. Statutory Master Plans (Sabah Cap. 141)</h3>
                 <div class="space-y-6">
                     
-                    <!-- Card 1: Kota Kinabalu Local Plan -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative flex items-center justify-center p-6 text-center">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Kota+Kinabalu+Local+Plan" alt="KK Local Plan" class="object-cover w-full h-full absolute inset-0 opacity-90">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">
-                                Metropolitan Master Plan
-                            </span>
+                    <!-- KK -->
+                    <div class="card-project">
+                        <div class="card-img-box">
+                            <img src="https://placehold.co/600x400/032219/34d399?text=Kota+Kinabalu" class="absolute inset-0 w-full h-full object-cover opacity-90">
+                            <span class="absolute top-4 left-4 badge-emerald px-3 py-1 text-xs font-bold rounded-lg backdrop-blur-md bg-white/10">Metropolitan Plan</span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="card-content">
                             <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
-                                    <span class="text-slate-300">&bull;</span>
-                                    <span class="text-xs text-slate-500 font-semibold">Tier 2 Local Plan</span>
-                                </div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">Kota Kinabalu Local Plan</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: Urban Density Harmonization & Cadastral Boundary Alignment</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Administered spatial database consolidation across Greater Kota Kinabalu. Formulated high-density commercial and residential zoning criteria, analyzed major transit corridors, and aligned land titles with gazetted planning scheme boundaries under the Cap. 141 framework.
-                                </p>
+                                <h4 class="text-xl font-black mb-1">Kota Kinabalu Local Plan</h4>
+                                <p class="text-xs font-bold text-emerald-700 mb-3">GIS Scope: Urban Density Harmonization</p>
+                                <p class="text-slate-600 text-sm mb-4 text-justify">Administered spatial database consolidation across Greater KK. Formulated high-density commercial zoning and aligned land titles with gazetted schemes.</p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">ArcGIS Pro</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Cadastral Snapping</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">High-Density Zoning</span>
+                                    <span class="tag-light">ArcGIS Pro</span>
+                                    <span class="tag-light">High-Density Zoning</span>
                                 </div>
                             </div>
-                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-500 font-semibold">Coverage: DBKK Region</span>
-                                <button onclick="openModal('mapModal')" class="btn-slate-dark px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
-                                    <i class="fas fa-map-location-dot text-emerald-400"></i> Explore Maps
-                                </button>
+                            <div class="pt-4 border-t flex justify-between items-center">
+                                <span class="text-xs text-slate-500 font-semibold">DBKK Region</span>
+                                <button onclick="openModal('mapModal')" class="btn-secondary !px-4 !py-2 !text-xs"><i class="fas fa-map"></i> Explore</button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card 2: Kudat Local Plan 2030 -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Kudat+Local+Plan+2030" alt="Kudat Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">
-                                District Plan 2030
-                            </span>
+                    <!-- Kudat -->
+                    <div class="card-project">
+                        <div class="card-img-box">
+                            <img src="https://placehold.co/600x400/032219/34d399?text=Kudat" class="absolute inset-0 w-full h-full object-cover opacity-90">
+                            <span class="absolute top-4 left-4 badge-emerald px-3 py-1 text-xs font-bold rounded-lg backdrop-blur-md bg-white/10">District Plan 2030</span>
                         </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
+                        <div class="card-content">
                             <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
-                                    <span class="text-slate-300">&bull;</span>
-                                    <span class="text-xs text-slate-500 font-semibold">Gazetted Blueprint</span>
-                                </div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">Kudat Local Plan 2030</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: Coastal Buffer Zoning & Tourism Heritage Land Allocation</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Formulated comprehensive spatial strategies focusing on coastal buffer zoning, heritage tourism enclaves, and rural economic hubs. Applied AHP multi-criteria evaluation to balance eco-tourism expansion with sensitive marine and terrestrial conservation areas.
-                                </p>
+                                <h4 class="text-xl font-black mb-1">Kudat Local Plan 2030</h4>
+                                <p class="text-xs font-bold text-emerald-700 mb-3">GIS Scope: Coastal Buffer & Tourism Zoning</p>
+                                <p class="text-slate-600 text-sm mb-4 text-justify">Formulated spatial strategies focusing on coastal buffer zoning and heritage tourism enclaves. Applied AHP evaluation for eco-tourism expansion.</p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">QGIS</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Coastal Buffer Zoning</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">AHP Evaluation</span>
+                                    <span class="tag-light">QGIS</span>
+                                    <span class="tag-light">AHP Evaluation</span>
                                 </div>
                             </div>
-                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-500 font-semibold">Coverage: Kudat District</span>
-                                <button onclick="openModal('mapModal')" class="btn-slate-dark px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
-                                    <i class="fas fa-map-location-dot text-emerald-400"></i> Explore Maps
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Keningau Local Plan -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Keningau+Local+Plan" alt="Keningau Local Plan" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">
-                                Interior Development
-                            </span>
-                        </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
-                                </div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">Keningau Local Plan</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: Agricultural Corridors & Inland Infrastructure</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Conducted extensive spatial analysis mapping agricultural land suitability, interior infrastructural upgrades, and rural settlement expansions. Designed the geodatabase structure to harmonize diverse dataset domains into a single source of truth for local authorities.
-                                </p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Agricultural Zoning</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">ArcGIS Pro</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Infrastructure Mapping</span>
-                                </div>
-                            </div>
-                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-500 font-semibold">Coverage: Keningau District</span>
-                                <button onclick="openModal('mapModal')" class="btn-slate-dark px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
-                                    <i class="fas fa-map-location-dot text-emerald-400"></i> Explore Maps
-                                </button>
+                            <div class="pt-4 border-t flex justify-between items-center">
+                                <span class="text-xs text-slate-500 font-semibold">Kudat District</span>
+                                <button onclick="openModal('mapModal')" class="btn-secondary !px-4 !py-2 !text-xs"><i class="fas fa-map"></i> Explore</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </section>
-
-            <!-- ============================================================= -->
-            <!-- 3. ENVIRONMENTAL & BASIN MANAGEMENT                           -->
-            <!-- ============================================================= -->
-            <section id="environmental" class="mb-24">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-slate-200 pb-4">
-                    <div>
-                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
-                            Hydrology & Conservation
-                        </span>
-                        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 tracking-tight">
-                            3. Environmental & Catchment Basin Plans
-                        </h3>
-                    </div>
-                    <span class="text-xs font-bold text-emerald-950 mt-3 md:mt-0 bg-emerald-50 px-3.5 py-1.5 rounded-xl border border-emerald-200">
-                        Flood Mitigation & Hydrological Modeling
-                    </span>
-                </div>
-
-                <div class="space-y-6">
-                    <!-- Flood Risk Card -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Catchment+Analysis" alt="Catchment Basin Analysis" class="object-cover w-full h-full min-h-[220px]">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">
-                                Hydrological GIS
-                            </span>
-                        </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
-                            <div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">River Basin & Flood Susceptibility Modeling</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: DEM Terrain Processing & Flow Accumulation</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Developed high-resolution hydrological models utilizing LiDAR Digital Elevation Models (DEM). Mapped flow directions, stream networks, and basin delineations to identify critical flood-prone zones, aiding in statutory setback implementations for riparian reserves.
-                                </p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Arc Hydro</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">LiDAR Processing</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Riparian Buffers</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============================================================= -->
-            <!-- 4. LAND DEVELOPMENT ANALYTICS                                 -->
-            <!-- ============================================================= -->
-            <section id="land-development">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-slate-200 pb-4">
-                    <div>
-                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
-                            Spatial Decision Support
-                        </span>
-                        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 tracking-tight">
-                            4. Land Development & Feasibility
-                        </h3>
-                    </div>
-                    <span class="text-xs font-bold text-emerald-950 mt-3 md:mt-0 bg-emerald-50 px-3.5 py-1.5 rounded-xl border border-emerald-200">
-                        Site Suitability & Constraints
-                    </span>
-                </div>
-
-                <div class="space-y-6">
-                    <!-- AHP Suitability Card -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative flex items-center justify-center p-6 text-center">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Site+Suitability" alt="Site Suitability" class="object-cover w-full h-full absolute inset-0 opacity-90">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">
-                                SDSS Multi-criteria
-                            </span>
-                        </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
-                            <div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">AHP Land Suitability Analysis for Township Expansion</h4>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Constructed a robust Spatial Decision Support System (SDSS) integrating Analytical Hierarchy Process (AHP). Evaluated topographical slopes, soil constraints, proximity to infrastructure, and environmental sensitivity indexes (ESI) to pinpoint optimal parcels for future commercial and residential development.
-                                </p>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">AHP Methodology</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Raster Math</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Feasibility Modeling</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#041d17] border-t border-emerald-500/20 py-12 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left">
-                <span class="font-extrabold text-lg text-white block mb-1">Gs. Mohamad Nazril Bin Sharil</span>
-                <span class="text-emerald-400/80 text-sm">Certified Geospatial Practitioner (IGRSM & MBOT)</span>
-            </div>
-            <div class="flex gap-4">
-                <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:bg-emerald-500 hover:text-emerald-950 transition">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:bg-emerald-500 hover:text-emerald-950 transition">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
+    <footer class="bg-[#041d17] border-t border-emerald-500/20 py-8 mt-12 text-center">
+        <span class="font-extrabold text-white block">Gs. Mohamad Nazril Bin Sharil</span>
+        <span class="text-emerald-400/80 text-xs">Certified Geospatial Practitioner (IGRSM & MBOT)</span>
     </footer>
 
-    <!-- Overlay Modals (Pop-ups) -->
-    
-    <!-- Modal 1: Statutory Framework -->
-    <div id="urbanModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-opacity">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">
-            <button onclick="closeModal('urbanModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 transition">
-                <i class="fas fa-times text-xl"></i>
-            </button>
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900">Statutory Framework</h3>
-            </div>
-            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                This project adheres strictly to the <strong>Town and Country Planning Ordinance (Sabah Cap. 141)</strong>. The methodologies applied in our geospatial workflows ensure that all land use zones, density harmonizations, and environmental buffers meet the mandatory statutory guidelines gazetted by the state.
-            </p>
-            <button onclick="closeModal('urbanModal')" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-emerald-600 transition">
-                Understand & Close
-            </button>
-        </div>
-    </div>
-    
-    <!-- Modal 2: Map Viewer Placeholder -->
-    <div id="mapModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-opacity">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full h-[80vh] flex flex-col relative overflow-hidden">
-            <div class="flex justify-between items-center p-4 border-b border-slate-200 bg-slate-50">
-                <h3 class="text-lg font-bold text-slate-800"><i class="fas fa-map text-emerald-500 mr-2"></i> Interactive Map Viewer</h3>
-                <button onclick="closeModal('mapModal')" class="text-slate-400 hover:text-red-500 transition">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-            </div>
-            <div class="flex-grow bg-slate-200 flex flex-col items-center justify-center text-center p-6">
-                <i class="fas fa-map-marked-alt text-6xl text-slate-300 mb-4"></i>
-                <h4 class="text-xl font-bold text-slate-500 mb-2">Web Map Embedded Here</h4>
-                <p class="text-slate-400 text-sm max-w-md">
-                    In a production environment, this space will host an interactive iframe (e.g., ArcGIS Web Map, QGIS2Web, or Leaflet.js) to allow users to pan, zoom, and query spatial data dynamically.
-                </p>
-            </div>
+    <!-- JS Modals -->
+    <div id="urbanModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-lg w-full relative">
+            <button onclick="closeModal('urbanModal')" class="absolute top-4 right-4 text-slate-400 hover:text-red-500"><i class="fas fa-times text-xl"></i></button>
+            <h3 class="text-xl font-bold mb-4">Statutory Framework (Cap. 141)</h3>
+            <p class="text-slate-600 text-sm">Adheres strictly to the Town and Country Planning Ordinance guidelines ensuring spatial data compliance for gazetted policies.</p>
         </div>
     </div>
 
-    <!-- Logik JavaScript untuk Modals -->
+    <div id="mapModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full text-center relative">
+            <button onclick="closeModal('mapModal')" class="absolute top-4 right-4 text-slate-400 hover:text-red-500"><i class="fas fa-times text-xl"></i></button>
+            <i class="fas fa-map-marked-alt text-5xl text-emerald-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Interactive Map Viewer</h3>
+            <p class="text-slate-500 text-sm">Embedded Web Maps (ArcGIS / Leaflet) will be dynamically loaded here.</p>
+        </div>
+    </div>
+
     <script>
-        // Fungsi untuk buka modal
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.remove('hidden');
-            }
-        }
-        
-        // Fungsi untuk tutup modal
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('hidden');
-            }
-        }
-        
-        // Menutup modal jika klik di luar kotak putih (backdrop)
-        window.onclick = function(event) {
-            const urbanModal = document.getElementById('urbanModal');
-            const mapModal = document.getElementById('mapModal');
-            if (event.target == urbanModal) {
-                closeModal('urbanModal');
-            }
-            if (event.target == mapModal) {
-                closeModal('mapModal');
-            }
-        }
+        function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+        function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+        window.onclick = e => { 
+            if(e.target.id === 'urbanModal') closeModal('urbanModal'); 
+            if(e.target.id === 'mapModal') closeModal('mapModal'); 
+        };
     </script>
-
 </body>
 </html>
