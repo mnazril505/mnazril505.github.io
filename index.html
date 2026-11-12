@@ -525,7 +525,7 @@
                         </div>
                     </div>
 
-                    <!-- Panel 2: Road & Transportation (Nama fail dibetulkan ke Road Hierachy.png) -->
+                    <!-- Panel 2: Road & Transportation -->
                     <div id="panel-urban-road" class="urban-vis-panel hidden space-y-6">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
@@ -550,7 +550,6 @@
                                 </div>
                                 <h5 class="text-sm font-black text-slate-900 mb-2">Road Hierarchy &amp; Right-of-Way Map</h5>
                                 <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-3">
-                                    <!-- NAMA FAIL TELAH DITUKAR KEPADA Road Hierachy.png -->
                                     <img src="Road Hierachy.png" alt="Road Hierarchy Map" class="w-full h-72 sm:h-80 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Road Hierarchy & Right-of-Way Map', 'Statutory Road Reservation Standards')" onerror="this.src='https://placehold.co/600x400/032219/34d399?text=Road+Hierachy.png'">
                                 </div>
                                 <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
@@ -596,9 +595,11 @@
                         </div>
                     </div>
 
-                    <!-- Panel 4: Physical Maps -->
+                    <!-- Panel 4: Physical Maps (6 Maps Grid including Hydrology) -->
                     <div id="panel-urban-physical" class="urban-vis-panel hidden space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                            
+                            <!-- 1. Topography -->
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div class="flex items-center justify-between mb-2">
                                     <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase">DEM / DTM</span>
@@ -611,6 +612,7 @@
                                 <span class="text-[10px] font-bold text-slate-500">Topography.png</span>
                             </div>
 
+                            <!-- 2. Slope -->
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div class="flex items-center justify-between mb-2">
                                     <span class="px-2 py-0.5 bg-amber-100 text-amber-900 text-[10px] font-extrabold rounded uppercase">Slope Analysis</span>
@@ -623,6 +625,7 @@
                                 <span class="text-[10px] font-bold text-slate-500">Slope.png</span>
                             </div>
 
+                            <!-- 3. Seismic -->
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div class="flex items-center justify-between mb-2">
                                     <span class="px-2 py-0.5 bg-red-100 text-red-900 text-[10px] font-extrabold rounded uppercase">Hazard Exclusion</span>
@@ -635,6 +638,7 @@
                                 <span class="text-[10px] font-bold text-slate-500">Seisimic.png</span>
                             </div>
 
+                            <!-- 4. Forest Reserve -->
                             <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div class="flex items-center justify-between mb-2">
                                     <span class="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-extrabold rounded uppercase">ESA Class 1</span>
@@ -647,7 +651,8 @@
                                 <span class="text-[10px] font-bold text-slate-500">Forest Reserve.png</span>
                             </div>
 
-                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                            <!-- 5. Geology -->
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div class="flex items-center justify-between mb-2">
                                     <span class="px-2 py-0.5 bg-slate-100 text-slate-800 text-[10px] font-extrabold rounded uppercase">Bedrock</span>
                                     <span class="text-[10px] font-semibold text-slate-400">Stratigraphy</span>
@@ -658,6 +663,20 @@
                                 </div>
                                 <span class="text-[10px] font-bold text-slate-500">Geology.png</span>
                             </div>
+
+                            <!-- 6. Hydrology (BOX BARU) -->
+                            <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-900 text-[10px] font-extrabold rounded uppercase">Catchment Basin</span>
+                                    <span class="text-[10px] font-semibold text-slate-400">Drainage</span>
+                                </div>
+                                <h5 class="text-xs font-black text-slate-900 mb-2">Hydrology Map</h5>
+                                <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-950/5 mb-2">
+                                    <img src="Hydrology.png" alt="Hydrology Map" class="w-full h-52 object-contain zoomable-map hover:scale-105 transition duration-300" onclick="openLightbox(this.src, 'Hydrology Map', 'Drainage Networks & River Basin Delineation')" onerror="this.src='https://placehold.co/500x350/032219/34d399?text=Hydrology.png'">
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500">Hydrology.png</span>
+                            </div>
+
                         </div>
                     </div>
 
