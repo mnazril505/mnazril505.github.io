@@ -385,12 +385,15 @@
                 <!-- INDIVIDUAL PROJECT CARDS (KK -> KUDAT -> KENINGAU) -->
                 <div class="space-y-6">
                     
-                    <!-- Card 1: Kota Kinabalu Local Plan -->
+                    <!-- Card 1: Kota Kinabalu Local Plan (5 Modules / 15 Maps) -->
                     <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
                         <div class="md:w-1/3 signature-dark-card relative flex items-center justify-center p-6 text-center">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Kota+Kinabalu+Local+Plan" alt="KK Local Plan" class="object-cover w-full h-full absolute inset-0 opacity-90 zoomable-map" onclick="openLightbox(this.src, 'Kota Kinabalu Local Plan', 'High-Density Zoning Plan')">
+                            <img src="https://placehold.co/600x400/032219/34d399?text=Kota+Kinabalu+Local+Plan" alt="KK Local Plan" class="object-cover w-full h-full min-h-[220px] absolute inset-0 opacity-90 zoomable-map" onclick="openLightbox(this.src, 'Kota Kinabalu Local Plan', 'High-Density Zoning Plan')">
                             <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">
                                 Metropolitan Master Plan
+                            </span>
+                            <span class="absolute bottom-3 left-4 bg-slate-950/85 text-emerald-300 border border-emerald-500/30 backdrop-blur-md text-[11px] font-bold px-2.5 py-1 rounded-lg">
+                                <i class="fas fa-layer-group mr-1"></i> 5 Thematic Modules &bull; 15 Maps
                             </span>
                         </div>
                         <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -414,8 +417,8 @@
                             </div>
                             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
                                 <span class="text-xs text-slate-500 font-semibold">Coverage: DBKK Region</span>
-                                <button onclick="openDistrictMapModal('kk')" class="btn-slate-dark px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
-                                    <i class="fas fa-map-location-dot text-emerald-400"></i> Explore Maps
+                                <button onclick="openDistrictMapModal('kk')" class="btn-emerald-glow px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
+                                    <i class="fas fa-map-location-dot"></i> Explore Maps (15)
                                 </button>
                             </div>
                         </div>
@@ -1555,7 +1558,7 @@
                     </div>
                 </div>
 
-                <!-- 2. Dynamic District Visual Gallery (Kudat 6 Tabs, KK & Keningau Modular) -->
+                <!-- 2. Dynamic District Visual Gallery (KK 5 Tabs, Kudat 6 Tabs, Keningau Modular) -->
                 <div id="districtVisualGallery" class="space-y-6 hidden">
                     <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-3">
                         <div id="districtTabsContainer" class="flex flex-wrap gap-2">
@@ -1656,9 +1659,78 @@
         const closeMapModal = () => toggleModal('mapViewerModal', false);
 
         // =====================================================================
-        // KATALOG PETA DINAMIK MENGIKUT DAERAH (KUDAT 6 TABS, KK & KENINGAU)
+        // KATALOG PETA DINAMIK MENGIKUT DAERAH (KK 5 TABS, KUDAT 6 TABS, KENINGAU)
         // =====================================================================
         const districtMapCatalog = {
+            kk: {
+                title: 'Kota Kinabalu Local Plan — Spatial Maps Catalog',
+                subtitle: 'Metropolitan Master Plan &bull; DBKK Region (Sabah Cap. 141)',
+                tabs: [
+                    {
+                        id: 'kk-key-location',
+                        label: '1. Key & Location Plan Area',
+                        icon: 'fa-compass',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-56',
+                        compact: true,
+                        maps: [
+                            { title: 'Key Plan', src: 'KK_Key_Plan.png', badge: 'Regional Context', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Macro Scale', subtitle: 'Regional Macro Context & Connectivity' },
+                            { title: 'Location Plan (Area 1)', src: 'KK_Location_Plan_1.png', badge: 'Site Vicinity', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'DBKK Sector', subtitle: 'Immediate Site Delineation & Access Boundaries' },
+                            { title: 'Location Plan (Area 2)', src: 'KK_Location_Plan_2.png', badge: 'Planning Boundary', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Gazetted Limit', subtitle: 'Local Plan Boundary & Sub-Districts' }
+                        ]
+                    },
+                    {
+                        id: 'kk-landuse-zoning',
+                        label: '2. Landuse & Zoning Plans',
+                        icon: 'fa-layer-group',
+                        gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
+                        imgHeight: 'h-72 sm:h-80',
+                        maps: [
+                            { title: 'Existing Land Use Map', src: 'KK_Landuse.png', badge: 'Baseline Audit', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Current Land Use', subtitle: 'Current Metropolitan Physical Land Use Audit' },
+                            { title: 'Statutory Zoning Plan', src: 'KK_Zoning.png', badge: 'Statutory Proposal', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Sabah Cap. 141', subtitle: 'High-Density Commercial & Residential Zoning' }
+                        ]
+                    },
+                    {
+                        id: 'kk-physical-maps',
+                        label: '3. Physical Maps',
+                        icon: 'fa-mountain',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
+                        maps: [
+                            { title: 'Topography Map', src: 'KK_Topography.png', badge: 'DEM / DTM', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Elevation', subtitle: 'Digital Elevation Model & Contours' },
+                            { title: 'Slope Constraint Map', src: 'KK_Slope.png', badge: 'Slope Analysis', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Gradient', subtitle: 'Slope Class 1-4 Hazard Zoning' },
+                            { title: 'Geology Map', src: 'KK_Geology.png', badge: 'Bedrock', badgeStyle: 'bg-slate-100 text-slate-800', tag: 'Stratigraphy', subtitle: 'Lithological Formations & Soil Class' },
+                            { title: 'Hydrology & River Basin Map', src: 'KK_Hydrology.png', badge: 'Catchment Basin', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Drainage', subtitle: 'Drainage Networks & Coastal River Systems' },
+                            { title: 'Forest Reserve & Green Area Map', src: 'KK_Forest_Reserve.png', badge: 'ESA Class 1', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Conservation', subtitle: 'Gazetted Forest Reserves & Urban Parks' },
+                            { title: 'Environmental & Flood Risk Map', src: 'KK_Flood_Hazard.png', badge: 'Hazard Exclusion', badgeStyle: 'bg-red-100 text-red-900', tag: 'Risk Zone', subtitle: 'Flood-Prone Areas & Coastal Buffer Zones' }
+                        ]
+                    },
+                    {
+                        id: 'kk-roads-transport',
+                        label: '4. Roads & Transportation',
+                        icon: 'fa-road',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-56',
+                        compact: true,
+                        maps: [
+                            { title: 'Existing Road Network Map', src: 'KK_Existing_Road.png', badge: 'Current Network', badgeStyle: 'bg-slate-100 text-slate-800', tag: 'Road Alignment', subtitle: 'Existing Metropolitan Road Infrastructure' },
+                            { title: 'Road Hierarchy & Right-of-Way Map', src: 'KK_Road_Hierarchy.png', badge: 'Planning Hierarchy', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Right-of-Way', subtitle: 'Statutory Road Reservation Standards' },
+                            { title: 'Public Transit & Mobility Corridor', src: 'KK_Public_Transport.png', badge: 'Transit Network', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Connectivity', subtitle: 'BRT, Rail & Feeder Bus Corridors' }
+                        ]
+                    },
+                    {
+                        id: 'kk-aerial-view',
+                        label: '5. Aerial View',
+                        icon: 'fa-satellite',
+                        gridCols: 'grid-cols-1 gap-6',
+                        imgHeight: 'h-80 sm:h-[450px]',
+                        maps: [
+                            { title: 'Kota Kinabalu High-Resolution Aerial Orthomosaic', src: 'KK_Aerial_View.png', badge: 'Remote Sensing / UAV', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Orthophoto', subtitle: 'Composite Aerial Imagery & Urban Footprint Overview' }
+                        ]
+                    }
+                ]
+            },
             kudat: {
                 title: 'Kudat Local Plan 2030 — Spatial Maps Catalog',
                 subtitle: 'District Development Scheme &bull; Gazetted Blueprint (Sabah Cap. 141)',
@@ -1739,23 +1811,6 @@
                     }
                 ]
             },
-            kk: {
-                title: 'Kota Kinabalu Local Plan — Spatial Maps Catalog',
-                subtitle: 'Metropolitan Master Plan &bull; DBKK Region (Sabah Cap. 141)',
-                tabs: [
-                    {
-                        id: 'kk-zoning',
-                        label: '1. Urban Zoning & Cadastral',
-                        icon: 'fa-city',
-                        gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
-                        imgHeight: 'h-72 sm:h-80',
-                        maps: [
-                            { title: 'Kota Kinabalu Zoning Plan', src: 'https://placehold.co/900x600/032219/34d399?text=Kota+Kinabalu+Statutory+Zoning+Plan', badge: 'DBKK Metropolitan', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'High-Density Zone', subtitle: 'Commercial & Residential Density Zoning' },
-                            { title: 'Transit Corridor & Cadastral Alignment', src: 'https://placehold.co/900x600/0b1520/34d399?text=KK+Transit+Corridor+%26+Cadastral+Alignment', badge: 'Parcel Alignment', badgeStyle: 'bg-blue-100 text-blue-900', tag: '> 45,000 Lots', subtitle: 'Cadastral Lot Boundary Harmonization' }
-                        ]
-                    }
-                ]
-            },
             keningau: {
                 title: 'Draft Keningau Local Plan 2030 — Spatial Maps Catalog',
                 subtitle: 'Inland Corridor Planning Scheme &bull; Slope & Terrain Models',
@@ -1775,7 +1830,7 @@
             }
         };
 
-        let activeDistrictKey = 'kudat';
+        let activeDistrictKey = 'kk';
 
         function openMapModal(key) {
             if (key === 'geoai') {
