@@ -382,7 +382,7 @@
                     <span class="h-px bg-slate-300 flex-grow"></span>
                 </div>
 
-                <!-- INDIVIDUAL PROJECT CARDS (KK -> KUDAT -> KENINGAU) -->
+                <!-- INDIVIDUAL PROJECT CARDS (KK -> KUDAT) -->
                 <div class="space-y-6">
                     
                     <!-- Card 1: Kota Kinabalu Local Plan (6 Thematic Modules / 17 Maps) -->
@@ -463,41 +463,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Draft Keningau Local Plan 2030 -->
-                    <div class="bg-white rounded-[26px] shadow-sm border border-slate-200/90 overflow-hidden flex flex-col md:flex-row hover:shadow-xl hover:border-emerald-500/50 transition duration-300">
-                        <div class="md:w-1/3 signature-dark-card relative">
-                            <img src="https://placehold.co/600x400/032219/34d399?text=Keningau+Local+Plan+2030" alt="Keningau Local Plan" class="object-cover w-full h-full min-h-[220px] zoomable-map" onclick="openLightbox(this.src, 'Draft Keningau Local Plan 2030', 'Slope Hazard Constraints & Topography Model')">
-                            <span class="absolute top-4 left-4 badge-pill-emerald backdrop-blur-md text-xs font-extrabold px-3 py-1 rounded-lg">
-                                Inland Corridor Plan
-                            </span>
-                        </div>
-                        <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">Statutory Master Plan</span>
-                                    <span class="text-slate-300">&bull;</span>
-                                    <span class="text-xs text-slate-500 font-semibold">Draft Scheme</span>
-                                </div>
-                                <h4 class="text-xl font-black text-slate-900 mb-1">Draft Keningau Local Plan 2030</h4>
-                                <p class="text-xs font-bold text-emerald-800 mb-3">GIS Scope: Slope Terrain Constraints & Agricultural Expansion Modeling</p>
-                                <p class="text-slate-600 text-sm leading-relaxed mb-4 text-justify">
-                                    Conducted Digital Elevation Model (DEM) topographical assessments, steep slope hazard exclusion zones, and environmentally sensitive delineation to safeguard the Crocker Range foothills while planning rural logistics hubs.
-                                </p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">DEM Terrain Model</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Slope Restrictions</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">AHP MCDM</span>
-                                    <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold">Agri-Corridor</span>
-                                </div>
-                            </div>
-                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-xs text-slate-500 font-semibold">Coverage: Keningau District</span>
-                                <button onclick="openDistrictMapModal('keningau')" class="btn-slate-dark px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
-                                    <i class="fas fa-map-location-dot text-emerald-400"></i> Explore Maps
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -1558,7 +1523,7 @@
                     </div>
                 </div>
 
-                <!-- 2. Dynamic District Visual Gallery (KK 6 Tabs, Kudat 6 Tabs, Keningau Modular) -->
+                <!-- 2. Dynamic District Visual Gallery (KK 6 Tabs, Kudat 6 Tabs) -->
                 <div id="districtVisualGallery" class="space-y-6 hidden">
                     <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-3">
                         <div id="districtTabsContainer" class="flex flex-wrap gap-2">
@@ -1659,7 +1624,7 @@
         const closeMapModal = () => toggleModal('mapViewerModal', false);
 
         // =====================================================================
-        // KATALOG PETA DINAMIK MENGIKUT DAERAH (KK 17 PNG, KUDAT 17 PNG, KENINGAU)
+        // KATALOG PETA DINAMIK MENGIKUT DAERAH (KK 17 PNG & KUDAT 17 PNG)
         // =====================================================================
         const districtMapCatalog = {
             kk: {
@@ -1818,23 +1783,6 @@
                         maps: [
                             { title: 'Commercial 1', src: 'Com1.png', badge: 'Spatial Catchment', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Demographic Reach', subtitle: 'Retail Hierarchy & Market Service Catchment' },
                             { title: 'Commercial 2', src: 'Com2.png', badge: 'Accessibility Gradient', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Drive-Time Buffer', subtitle: 'Nodal Viability & Growth Potential' }
-                        ]
-                    }
-                ]
-            },
-            keningau: {
-                title: 'Draft Keningau Local Plan 2030 — Spatial Maps Catalog',
-                subtitle: 'Inland Corridor Planning Scheme &bull; Slope & Terrain Models',
-                tabs: [
-                    {
-                        id: 'keningau-terrain',
-                        label: '1. Terrain & Slope Constraints',
-                        icon: 'fa-mountain',
-                        gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
-                        imgHeight: 'h-72 sm:h-80',
-                        maps: [
-                            { title: 'Keningau DEM Terrain & Slope Classes', src: 'https://placehold.co/900x600/032219/34d399?text=Keningau+DEM+Terrain+%26+Slope+Constraint+Map', badge: 'Hazard Exclusion', badgeStyle: 'bg-amber-100 text-amber-900', tag: '> 25° Slope Limit', subtitle: 'Hydro-Conditioned DEM Topographical Model' },
-                            { title: 'Inland Agri-Logistics Corridor Plan', src: 'https://placehold.co/900x600/0b1520/34d399?text=Keningau+Agri-Logistics+Corridor+Plan', badge: 'Economic Axis', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Rural Hubs', subtitle: 'Agricultural Expansion & Logistics Nodes' }
                         ]
                     }
                 ]
