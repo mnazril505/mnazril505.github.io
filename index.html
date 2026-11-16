@@ -531,7 +531,7 @@
                                 Catchment Master Plan
                             </span>
                             <span class="absolute bottom-3 left-4 bg-slate-950/85 text-emerald-300 border border-emerald-500/30 backdrop-blur-md text-[11px] font-bold px-2.5 py-1 rounded-lg">
-                                <i class="fas fa-layer-group mr-1"></i> Basin & Hydrology Layers
+                                <i class="fas fa-layer-group mr-1"></i> 4 Thematic Modules &bull; 15 Maps
                             </span>
                         </div>
                         <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -556,7 +556,7 @@
                             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
                                 <span class="text-xs text-slate-500 font-semibold">Coverage: Sungai Tuaran Basin</span>
                                 <button onclick="openDistrictMapModal('irbm')" class="btn-emerald-glow px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
-                                    <i class="fas fa-map-location-dot"></i> Explore Maps
+                                    <i class="fas fa-map-location-dot"></i> Explore Maps (15)
                                 </button>
                             </div>
                         </div>
@@ -570,7 +570,7 @@
                                 State-Wide Coastline
                             </span>
                             <span class="absolute bottom-3 left-4 bg-slate-950/85 text-emerald-300 border border-emerald-500/30 backdrop-blur-md text-[11px] font-bold px-2.5 py-1 rounded-lg">
-                                <i class="fas fa-layer-group mr-1"></i> Shoreline & Erosion Layers
+                                <i class="fas fa-layer-group mr-1"></i> 30 Coastal Cells &bull; 32 Maps
                             </span>
                         </div>
                         <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -595,7 +595,7 @@
                             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
                                 <span class="text-xs text-slate-500 font-semibold">Coverage: Entire Sabah Coastline</span>
                                 <button onclick="openDistrictMapModal('smp')" class="btn-emerald-glow px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
-                                    <i class="fas fa-map-location-dot"></i> Explore Maps
+                                    <i class="fas fa-map-location-dot"></i> Explore Maps (32)
                                 </button>
                             </div>
                         </div>
@@ -609,7 +609,7 @@
                                 Regional Corridor
                             </span>
                             <span class="absolute bottom-3 left-4 bg-slate-950/85 text-emerald-300 border border-emerald-500/30 backdrop-blur-md text-[11px] font-bold px-2.5 py-1 rounded-lg">
-                                <i class="fas fa-layer-group mr-1"></i> Marine & Terrestrial Layers
+                                <i class="fas fa-layer-group mr-1"></i> 19 Coastal Cells &bull; 20 Maps
                             </span>
                         </div>
                         <div class="md:w-2/3 p-6 sm:p-8 flex flex-col justify-between">
@@ -634,7 +634,7 @@
                             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
                                 <span class="text-xs text-slate-500 font-semibold">Coverage: Eastern Sabah Littoral</span>
                                 <button onclick="openDistrictMapModal('ismp')" class="btn-emerald-glow px-4 py-2 rounded-xl text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer">
-                                    <i class="fas fa-map-location-dot"></i> Explore Maps
+                                    <i class="fas fa-map-location-dot"></i> Explore Maps (20)
                                 </button>
                             </div>
                         </div>
@@ -2380,85 +2380,194 @@
                 ]
             },
             irbm: {
-                title: 'IRBM Plan For Sungai Tuaran Basin — Spatial Maps Catalog',
+                title: 'IRBM Plan For Sungai Tuaran Basin — Spatial Maps Catalog (15 Maps)',
                 subtitle: 'Integrated River Basin Management &bull; Hydrological Catchment & Riparian Governance',
                 tabs: [
                     {
+                        id: 'irbm-admin-location',
+                        label: '1. Location & Administration (4)',
+                        icon: 'fa-compass',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4',
+                        imgHeight: 'h-56',
+                        compact: true,
+                        maps: [
+                            { title: 'Location Plan IRBM', src: 'Location Plan IRBM,.png', badge: 'Site Vicinity', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Basin Context', subtitle: 'Sungai Tuaran Basin Location Plan' },
+                            { title: 'District Boundary IRBM', src: 'DISTRICT BOUNDARY IRBM.png', badge: 'Administration', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Jurisdiction', subtitle: 'Administrative District Boundaries' },
+                            { title: 'Political Parliament IRBM', src: 'POLITICAL PARLIMENT IRBM.png', badge: 'Electoral', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Parliament', subtitle: 'Parliamentary Constituency Boundaries' },
+                            { title: 'Village Distribution IRBM', src: 'VILLAGE IRBM.png', badge: 'Settlements', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Community', subtitle: 'Riparian & Basin Village Settlements' }
+                        ]
+                    },
+                    {
                         id: 'irbm-basin-hydro',
-                        label: '1. Basin & Hydrology',
+                        label: '2. Basin & Hydrology (2)',
                         icon: 'fa-water',
                         gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
                         imgHeight: 'h-72 sm:h-80',
                         maps: [
-                            { title: 'Sungai Tuaran Watershed Delineation', src: 'IRBM_Basin.png', badge: 'DEM Hydrology', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Catchment Boundary', subtitle: 'Sub-Basin Divides & River Network Extraction' },
-                            { title: 'Riparian Buffer & Floodplain Zoning', src: 'IRBM_Riparian.png', badge: 'Conservation Zone', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Riparian Reserve', subtitle: 'Statutory River Reserve & Flood Risk Buffers' }
+                            { title: 'Overall Sub-Basin Delineation', src: 'OVERALL SUB BASIN IRBM.png', badge: 'DEM Hydrology', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Macro Watershed', subtitle: 'Sungai Tuaran Overall Sub-Basin Architecture' },
+                            { title: 'Sub-Basin Network & Drainage', src: 'SUB BASIN IRBM.png', badge: 'Catchment', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Hydrology', subtitle: 'Detailed Sub-Catchment & Stream Network' }
                         ]
                     },
                     {
-                        id: 'irbm-landuse-pressure',
-                        label: '2. Land Use & Water Quality',
-                        icon: 'fa-leaf',
-                        gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
-                        imgHeight: 'h-72 sm:h-80',
+                        id: 'irbm-landuse-temporal',
+                        label: '3. Land Use & Projections (4)',
+                        icon: 'fa-layer-group',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4',
+                        imgHeight: 'h-56',
+                        compact: true,
                         maps: [
-                            { title: 'Catchment Land Use Pressure Audit', src: 'IRBM_Landuse.png', badge: 'Environmental Audit', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Runoff Vulnerability', subtitle: 'Agricultural & Urban Runoff Impact Assessment' },
-                            { title: 'Water Quality & Sampling Stations', src: 'IRBM_WaterQuality.png', badge: 'Monitoring Network', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'WQI Correlation', subtitle: 'River Water Quality Index Spatial Distribution' }
+                            { title: 'Overall Existing Land Use', src: 'OVERALL EXISTING LANDUSE IRBM.png', badge: 'Baseline Audit', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Current State', subtitle: 'Comprehensive Basin Land Use Baseline' },
+                            { title: 'Historical Land Use (2013)', src: '2013 IRBM.png', badge: 'Multi-Temporal', badgeStyle: 'bg-slate-100 text-slate-800', tag: 'Year 2013', subtitle: '2013 Basin Land Cover Classification' },
+                            { title: 'Current Land Use (2023)', src: '2023 IRBM.png', badge: 'Multi-Temporal', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Year 2023', subtitle: '2023 Basin Land Cover Classification' },
+                            { title: 'Overall Future Projections', src: 'OVERALL PROJECTIONS IRBM.png', badge: 'Predictive', badgeStyle: 'bg-purple-100 text-purple-900', tag: 'Future Growth', subtitle: 'Projected Basin Development & Land Use' }
+                        ]
+                    },
+                    {
+                        id: 'irbm-sectoral-zoning',
+                        label: '4. Sectoral & Zoning (5)',
+                        icon: 'fa-tree',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
+                        maps: [
+                            { title: 'Existing Agriculture IRBM', src: 'EXISTING AGRICULTURE IRBM.png', badge: 'Sectoral', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Agriculture', subtitle: 'Agricultural Cultivation & Runoff Zones' },
+                            { title: 'Existing Forest Reserve IRBM', src: 'EXISTING FOREST IRBM.png', badge: 'ESA Conservation', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Forestry', subtitle: 'Upstream Water Catchment Forest Reserves' },
+                            { title: 'Tourism & Tagal Nodes IRBM', src: 'TOURISM IRBM.png', badge: 'Eco-Tourism', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Stewardship', subtitle: 'Eco-Tourism & River Tagal Conservation Sites' },
+                            { title: 'Land Use Scheme IRBM', src: 'Land Use Scheme IRBM.png', badge: 'Statutory Plan', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Planning Scheme', subtitle: 'Gazetted Local & District Land Use Schemes' },
+                            { title: 'Statutory Zoning IRBM', src: 'Zoning IRBM.png', badge: 'Zoning Control', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Sabah Cap. 141', subtitle: 'Integrated Basin Land Use Zoning' }
                         ]
                     }
                 ]
             },
             smp: {
-                title: 'Sabah Shoreline Management Plan (SMP) — Spatial Maps Catalog',
-                subtitle: 'State-Wide Coastal Dynamics &bull; Erosion Rates & Setback Zoning',
+                title: 'Sabah Shoreline Management Plan (SMP) — Spatial Maps Catalog (32 Maps)',
+                subtitle: 'State-Wide Coastal Dynamics &bull; 30 Coastal Management Cells & Overall Assessment',
                 tabs: [
                     {
-                        id: 'smp-shoreline-dynamics',
-                        label: '1. Shoreline Dynamics',
-                        icon: 'fa-wave-square',
+                        id: 'smp-overall',
+                        label: '1. Overall Master Plans (2)',
+                        icon: 'fa-globe-asia',
                         gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
                         imgHeight: 'h-72 sm:h-80',
                         maps: [
-                            { title: 'Multi-Decadal Shoreline Change Analysis', src: 'SMP_Change.png', badge: 'Remote Sensing', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Historical Trend', subtitle: 'Coastline Erosion & Accretion Rates (DSAS)' },
-                            { title: 'Coastal Erosion Vulnerability Index', src: 'SMP_Erosion.png', badge: 'Hazard Delineation', badgeStyle: 'bg-red-100 text-red-900', tag: 'Risk Classification', subtitle: 'Critical Erosion Hotspots Across Sabah Coastline' }
+                            { title: 'Overall 1 — Sabah Shoreline Management Plan', src: 'OVERALL 1 SMP.png', badge: 'State Overview', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Sheet 01', subtitle: 'State-Wide Coastal Cell Index & Shoreline Overview (Part 1)' },
+                            { title: 'Overall 2 — Sabah Shoreline Management Plan', src: 'OVERALL 2 SMP.png', badge: 'State Overview', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Sheet 02', subtitle: 'State-Wide Coastal Cell Index & Shoreline Overview (Part 2)' }
                         ]
                     },
                     {
-                        id: 'smp-setback-zoning',
-                        label: '2. Coastal Setback Zoning',
-                        icon: 'fa-shield-alt',
-                        gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
-                        imgHeight: 'h-72 sm:h-80',
+                        id: 'smp-west-coast',
+                        label: '2. West Coast: Cells 1–10 (10)',
+                        icon: 'fa-wave-square',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
                         maps: [
-                            { title: 'Statutory Coastal Development Setbacks', src: 'SMP_Setback.png', badge: 'Planning Control', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Buffer Limit', subtitle: 'Beachfront Development Restriction & Resilience Zones' },
-                            { title: 'Coastal Infrastructure & Vulnerability Overlay', src: 'SMP_Infra.png', badge: 'Asset Exposure', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Adaptation Plan', subtitle: 'Exposed Coastal Settlements & Protection Structures' }
+                            { title: 'Cell 1: Brunei Bay SMP', src: '1. CELL 1 BRUNEI BAY SMP.png', badge: 'Cell 01', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'West Coast', subtitle: 'Brunei Bay Shoreline Dynamics & Assessment' },
+                            { title: 'Cell 2: Kuala Penyu West SMP', src: '2. CELL 2 KUALA PENYU WEST SMP.png', badge: 'Cell 02', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'West Coast', subtitle: 'Kuala Penyu West Shoreline Assessment' },
+                            { title: 'Cell 3: Kuala Penyu East SMP', src: '3. CELL 3 KUALA PENYU EAST SMP.png', badge: 'Cell 03', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'West Coast', subtitle: 'Kuala Penyu East Shoreline Assessment' },
+                            { title: 'Cell 4: Kimanis Bay SMP', src: '4. CELL 4 KIMANIS BAY SMP.png', badge: 'Cell 04', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'West Coast', subtitle: 'Kimanis Bay Shoreline Assessment' },
+                            { title: 'Cell 5: Papar SMP', src: '5. CELL 5 PAPAR SMP.png', badge: 'Cell 05', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'West Coast', subtitle: 'Papar Coastline Dynamics & Setback' },
+                            { title: 'Cell 6: Kota Kinabalu SMP', src: '6. CELL 6 KOTA KINABALU SMP.png', badge: 'Cell 06', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Metropolitan', subtitle: 'Kota Kinabalu Urban Coastline Assessment' },
+                            { title: 'Cell 7: Tuaran SMP', src: '7. CELL 7 TUARAN SMP.png', badge: 'Cell 07', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'West Coast', subtitle: 'Tuaran Coastline & Estuary Assessment' },
+                            { title: 'Cell 8: Ambong SMP', src: '8. CELL 8 AMBONG SMP.png', badge: 'Cell 08', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'West Coast', subtitle: 'Ambong Bay Shoreline Assessment' },
+                            { title: 'Cell 9: Kota Belud SMP', src: '9. CELL 9 (KOTA BELUD) SMP.png', badge: 'Cell 09', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'West Coast', subtitle: 'Kota Belud Littoral Zone Assessment' },
+                            { title: 'Cell 10: James Brook Highland SMP', src: '10. CELL 10 (JAMES BROOK HIGHLAND) SMP.png', badge: 'Cell 10', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'North-West', subtitle: 'James Brook Highland Shoreline Assessment' }
+                        ]
+                    },
+                    {
+                        id: 'smp-north-east',
+                        label: '3. North & Sandakan: Cells 11–20 (10)',
+                        icon: 'fa-compass',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
+                        maps: [
+                            { title: 'Cell 11: Tg Tambuluran SMP', src: '11. CELL 11 (TG TAMBULURAN) SMP.png', badge: 'Cell 11', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Northern Tip', subtitle: 'Tanjung Tambuluran Shoreline Assessment' },
+                            { title: 'Cell 12: Kudat SMP', src: '12. CELL 12 (KUDAT) SMP.png', badge: 'Cell 12', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Kudat', subtitle: 'Kudat Peninsula Shoreline Assessment' },
+                            { title: 'Cell 13: Marudu Bay SMP', src: '13. CELL 13 MARUDU BAY SMP.png', badge: 'Cell 13', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Marudu Bay', subtitle: 'Marudu Bay Coastal Dynamics' },
+                            { title: 'Cell 14: Pitas SMP', src: '14. CELL 14 PITAS SMP.png', badge: 'Cell 14', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'North-East', subtitle: 'Pitas Coastline Assessment' },
+                            { title: 'Cell 15: Paitan Bay SMP', src: '15. CELL PAITAN BAY SMP.png', badge: 'Cell 15', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'North-East', subtitle: 'Paitan Bay Shoreline Assessment' },
+                            { title: 'Cell 16: Pulau Jambongan Northeast SMP', src: '16. CELL 16 PULAU JAMBONGAN NORTHEAST SMP.png', badge: 'Cell 16', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Offshore Island', subtitle: 'Pulau Jambongan Northeast Coastline' },
+                            { title: 'Cell 17: Pulau Jambongan Southwest SMP', src: '17. CELL 17 PULAU JAMBONGAN SOUTHWEST SMP.png', badge: 'Cell 17', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Offshore Island', subtitle: 'Pulau Jambongan Southwest Coastline' },
+                            { title: 'Cell 18: Terusan SMP', src: '18. CELL 18 TERUSAN SMP.png', badge: 'Cell 18', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'East Coast', subtitle: 'Terusan Littoral Zone Assessment' },
+                            { title: 'Cell 19: Labuk Bay SMP', src: '19. CELL 19 LABUK BAY SMP.png', badge: 'Cell 19', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'East Coast', subtitle: 'Labuk Bay Estuary & Mangrove Coast' },
+                            { title: 'Cell 20: Sandakan SMP', src: '20. CELL 20 SANDAKAN SMP.png', badge: 'Cell 20', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Sandakan', subtitle: 'Sandakan Shoreline Assessment' }
+                        ]
+                    },
+                    {
+                        id: 'smp-south-east',
+                        label: '4. East & Tawau: Cells 21–30 (10)',
+                        icon: 'fa-shield-alt',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
+                        maps: [
+                            { title: 'Cell 21: Sandakan Bay SMP', src: '21. CELL 21 SANDAKAN BAY SMP.png', badge: 'Cell 21', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'East Coast', subtitle: 'Sandakan Bay Shoreline Dynamics' },
+                            { title: 'Cell 22: Kinabatangan SMP', src: '22. CELL 22 KINABATANGAN SMP.png', badge: 'Cell 22', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Deltaic Coast', subtitle: 'Kinabatangan River Mouth & Delta Coast' },
+                            { title: 'Cell 23: Tungku SMP', src: '23. CELL 23 TUNGKU SMP.png', badge: 'Cell 23', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Lahad Datu', subtitle: 'Tungku Coastline Assessment' },
+                            { title: 'Cell 24: Darvel Bay SMP', src: '24. CELL 24 DARVEL BAY SMP.png', badge: 'Cell 24', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Darvel Bay', subtitle: 'Darvel Bay Coastal Assessment' },
+                            { title: 'Cell 25: Pulau Timbun Mata North SMP', src: '25. CELL 25 PULAU TIMBUN MATA NORTH SMP.png', badge: 'Cell 25', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Offshore Island', subtitle: 'Pulau Timbun Mata North Shoreline' },
+                            { title: 'Cell 26: Pulau Timbun Mata South SMP', src: '26. CELL 26 PULAU TIMBUN MATA SOUTH SMP.png', badge: 'Cell 26', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Offshore Island', subtitle: 'Pulau Timbun Mata South Shoreline' },
+                            { title: 'Cell 27: Semporna North SMP', src: '27. CELL 27 SEMPORNA NORTH SMP.png', badge: 'Cell 27', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Semporna', subtitle: 'Semporna North Shoreline Assessment' },
+                            { title: 'Cell 28: Semporna South SMP', src: '28. CELL 28 SEMPORNA SOUTH SMP.png', badge: 'Cell 28', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Semporna', subtitle: 'Semporna South Shoreline Assessment' },
+                            { title: 'Cell 29: Batu Saddle SMP', src: '29. CELL 29 BATU SADDLE SMP.png', badge: 'Cell 29', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'South-East', subtitle: 'Batu Saddle Shoreline Assessment' },
+                            { title: 'Cell 30: Telukan Tawau SMP', src: '30. CELL 30 TELUKAN TAWAU SMP.png', badge: 'Cell 30', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Tawau Border', subtitle: 'Telukan Tawau Shoreline Assessment' }
                         ]
                     }
                 ]
             },
             ismp: {
-                title: 'ISMP Integrated Coastal Zone Management (Kudat - Tawau) — Maps Catalog',
-                subtitle: 'Eastern Sabah Littoral Corridor &bull; Marine-Terrestrial Spatial Integration',
+                title: 'ISMP Integrated Coastal Zone Management (Kudat - Tawau) — Maps Catalog (20 Maps)',
+                subtitle: 'Eastern Sabah Littoral Corridor &bull; Overall Blueprint & 19 Coastal Management Cells',
                 tabs: [
                     {
-                        id: 'ismp-marine-terrestrial',
-                        label: '1. Marine-Terrestrial Integration',
+                        id: 'ismp-overall-north',
+                        label: '1. Overall & Northern Coast: Cells 1–6 (7)',
                         icon: 'fa-anchor',
-                        gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
-                        imgHeight: 'h-72 sm:h-80',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
                         maps: [
-                            { title: 'Integrated Coastal Zone Land & Sea Use', src: 'ISMP_Zoning.png', badge: 'Marine Cadastre', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Littoral Corridor', subtitle: 'Harmonized Mainland & Offshore Spatial Activities' },
-                            { title: 'Mangrove & Coastal Ecological Protection', src: 'ISMP_Mangrove.png', badge: 'ESA Conservation', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Biodiversity', subtitle: 'Gazetted Mangrove Extents & Nursery Habitats' }
+                            { title: '0. Overall ISMP (Kudat – Tawau)', src: '0. Overall ISMP.jpg', badge: 'Master Overview', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Regional Corridor', subtitle: 'Overall Eastern Sabah ISMP Spatial Integration' },
+                            { title: 'Cell 1: Marudu Bay ISMP', src: '1. Cell 1 (Marudu Bay ISMP).jpg', badge: 'Cell 01', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Marudu Bay', subtitle: 'Marudu Bay Marine-Terrestrial Zoning' },
+                            { title: 'Cell 2: Pitas ISMP', src: '2. Cell 2 (Pitas) ISMP.jpg', badge: 'Cell 02', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Pitas', subtitle: 'Pitas Integrated Coastal Zone' },
+                            { title: 'Cell 3: Paitan Bay ISMP', src: '3. Cell 3 (Paitan Bay) ISMP.jpg', badge: 'Cell 03', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Paitan Bay', subtitle: 'Paitan Bay Integrated Coastal Zone' },
+                            { title: 'Cell 4: Pulau Jambongan North East ISMP', src: '4. Cell 4 (Pulau Jambongan North East) ISMP.jpg', badge: 'Cell 04', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Offshore Island', subtitle: 'Pulau Jambongan North East ICZM' },
+                            { title: 'Cell 5: Pulau Jambongan South West ISMP', src: '5. Cell 5 (Pulau Jambongan South West) ISMP.jpg', badge: 'Cell 05', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Offshore Island', subtitle: 'Pulau Jambongan South West ICZM' },
+                            { title: 'Cell 6: Terusan ISMP', src: '6. Cell 6 (Terusan) ISMP.jpg', badge: 'Cell 06', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Terusan', subtitle: 'Terusan Integrated Coastal Zone' }
                         ]
                     },
                     {
-                        id: 'ismp-maritime-aquaculture',
-                        label: '2. Maritime & Aquaculture Zones',
+                        id: 'ismp-east-sandakan',
+                        label: '2. East Coast & Sandakan: Cells 7–12 (6)',
                         icon: 'fa-ship',
-                        gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
-                        imgHeight: 'h-72 sm:h-80',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
                         maps: [
-                            { title: 'Coastal Aquaculture & Fisheries Allocation', src: 'ISMP_Aquaculture.png', badge: 'Blue Economy', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Resource Zoning', subtitle: 'Sustainable Mariculture & Fishing Ground Suitability' },
-                            { title: 'Maritime Navigation & Port Buffers', src: 'ISMP_Maritime.png', badge: 'Spatial Governance', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Cross-District', subtitle: 'Shipping Channels & Coastal Safety Corridors' }
+                            { title: 'Cell 7: Labuk Bay ISMP', src: '7. Cell 7 (Labuk Bay) ISMP.jpg', badge: 'Cell 07', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Labuk Bay', subtitle: 'Labuk Bay Mangrove & Coastal Zoning' },
+                            { title: 'Cell 8: Sandakan ISMP', src: '8. Cell 8 (Sandakan) ISMP.jpg', badge: 'Cell 08', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Sandakan', subtitle: 'Sandakan Maritime & Urban Littoral' },
+                            { title: 'Cell 9: Sandakan Bay ISMP', src: '9. Cell 9 (Sandakan Bay) ISMP.jpg', badge: 'Cell 09', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Sandakan Bay', subtitle: 'Sandakan Bay Integrated Coastal Zone' },
+                            { title: 'Cell 10: Kinabatangan ISMP', src: '10. Cell 10 (Kinabatangan) ISMP.jpg', badge: 'Cell 10', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Kinabatangan', subtitle: 'Kinabatangan Estuary & Ecological Buffer' },
+                            { title: 'Cell 11: Tungku ISMP', src: '11. Cell 11 (Tungku) ISMP.jpg', badge: 'Cell 11', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Tungku', subtitle: 'Tungku Integrated Coastal Zone' },
+                            { title: 'Cell 12: Darvel Bay ISMP', src: '12. Cell 12 (Dravel Bay) ISMP.jpg', badge: 'Cell 12', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Darvel Bay', subtitle: 'Darvel Bay Marine-Terrestrial Integration' }
+                        ]
+                    },
+                    {
+                        id: 'ismp-southeast-islands',
+                        label: '3. South-East & Islands: Cells 13–19 (7)',
+                        icon: 'fa-water',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
+                        maps: [
+                            { title: 'Cell 13: Pulau Timbun Mata North ISMP', src: '13. Cell 13 (Pulau Timbun Mata North) ISMP.jpg', badge: 'Cell 13', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Offshore Island', subtitle: 'Pulau Timbun Mata North ICZM' },
+                            { title: 'Cell 14: Pulau Timbun Mata South ISMP', src: '14. Cell 14 (Pulau Timbun Mata South) ISMP.jpg', badge: 'Cell 14', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Offshore Island', subtitle: 'Pulau Timbun Mata South ICZM' },
+                            { title: 'Cell 15: Semporna North ISMP', src: '15. Cell 15 (Semporna North) ISMP.jpg', badge: 'Cell 15', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Semporna', subtitle: 'Semporna North Integrated Coastal Zone' },
+                            { title: 'Cell 16: Semporna South ISMP', src: '16. Cell 16 (Semporna South) ISMP.jpg', badge: 'Cell 16', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Semporna', subtitle: 'Semporna South Integrated Coastal Zone' },
+                            { title: 'Cell 17: Batu Saddle ISMP', src: '17. Cell 17 (Batu Saddle) ISMP.jpg', badge: 'Cell 17', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Batu Saddle', subtitle: 'Batu Saddle Integrated Coastal Zone' },
+                            { title: 'Cell 18: Telukan Tawau ISMP', src: '18. Cell 18 (Telukan Tawau) ISMP.jpg', badge: 'Cell 18', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Tawau', subtitle: 'Telukan Tawau Littoral & Border Corridor' },
+                            { title: 'Cell 19: Pulau Sipadan ISMP', src: '19. Cell 19 (Pulau Sipadan) ISMP.jpg', badge: 'Cell 19', badgeStyle: 'bg-purple-100 text-purple-900', tag: 'Marine Park', subtitle: 'Pulau Sipadan Marine Conservation Zone' }
                         ]
                     }
                 ]
