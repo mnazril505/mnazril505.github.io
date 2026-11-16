@@ -661,42 +661,6 @@
                     </span>
                 </div>
 
-                <!-- EXECUTIVE BANNER FOR KBEIP (HANYA BUTANG OVERVIEW SAHAJA) -->
-                <div class="signature-dark-card rounded-[28px] p-7 sm:p-10 text-white mb-10 border border-slate-800/80">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-                        <div class="max-w-3xl">
-                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-pill-emerald text-[11px] font-extrabold uppercase tracking-wider mb-4">
-                                <i class="fas fa-industry text-emerald-400"></i> SEDCO Feasibility Study & Industrial Masterplan
-                            </div>
-                            <h4 class="text-2xl sm:text-3xl font-black tracking-tight text-white mb-3">
-                                Kudat Blue Economy Industrial Park (KBEIP) Masterplan
-                            </h4>
-                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 text-justify">
-                                Appointed by <strong class="text-white">Sabah Economic Development Corporation (SEDCO)</strong> under Prime Consultant <strong class="text-white">Arkitek OMA Sdn. Bhd. ("AOMA")</strong> alongside <strong class="text-white">JTA Planners Sdn. Bhd.</strong> and multidisciplinary sub-consultants to develop a sustainable masterplan integrating green energy, blue economy industries, and carbon capture initiatives.
-                            </p>
-                            <div class="flex flex-wrap gap-2.5 text-xs">
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">Marine-Based & Green Tech</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">SEDCO Land Optimization</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">Carbon Capture & Storage (CCS)</span>
-                                <span class="px-3 py-1.5 tech-pill-dark rounded-lg font-medium">4-Stage TOR Execution</span>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row lg:flex-col gap-3.5 flex-shrink-0 min-w-[210px]">
-                            <button onclick="openKbeipModal()" class="btn-emerald-glow font-extrabold px-6 py-4 rounded-2xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
-                                <i class="fas fa-book-open text-base"></i>
-                                <span>Overview</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SUB-HEADING: INDIVIDUAL PROJECTS -->
-                <div class="flex items-center gap-3 mb-6">
-                    <h4 class="text-lg font-extrabold text-slate-900">Land Development & Rezoning Portfolio (Implementation)</h4>
-                    <span class="h-px bg-slate-300 flex-grow"></span>
-                </div>
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden hover:shadow-lg hover:border-emerald-500/50 transition flex flex-col justify-between">
                         <img src="https://placehold.co/400x260/032219/34d399?text=Kudat+Blue+Econ+Park" alt="Kudat BE" class="w-full h-36 object-cover zoomable-map" onclick="openLightbox(this.src, 'Kudat Blue Economy Industrial Park (KBEIP)', 'Industrial Master Plan')">
@@ -711,7 +675,7 @@
                                     <i class="fas fa-book-open text-emerald-400"></i> Overview
                                 </button>
                                 <button onclick="openDistrictMapModal('kbeip')" class="btn-emerald-glow px-3 py-1.5 rounded-xl text-[11px] font-extrabold inline-flex items-center gap-1 cursor-pointer">
-                                    <i class="fas fa-map-location-dot"></i> Explore Maps
+                                    <i class="fas fa-map-location-dot"></i> Explore Maps (20)
                                 </button>
                             </div>
                         </div>
@@ -2936,18 +2900,67 @@
                 ]
             },
             kbeip: {
-                title: 'Kudat Blue Economy Industrial Park (KBEIP) — Spatial Maps Catalog',
+                title: 'Kudat Blue Economy Industrial Park (KBEIP) — Spatial Maps Catalog (20 Maps)',
                 subtitle: 'SEDCO Feasibility Study &bull; Industrial Masterplan (AOMA & Sub-Consultants)',
                 tabs: [
                     {
-                        id: 'kbeip-masterplan',
-                        label: '1. Industrial Masterplan & Zoning',
-                        icon: 'fa-industry',
-                        gridCols: 'grid-cols-1 lg:grid-cols-2 gap-6',
-                        imgHeight: 'h-72 sm:h-80',
+                        id: 'kbeip-site-context',
+                        label: '1. Site & Location Context (3)',
+                        icon: 'fa-compass',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-56',
+                        compact: true,
                         maps: [
-                            { title: 'KBEIP Proposed Industrial Zoning Plan', src: 'KBEIP_Zoning.png', badge: 'Masterplan', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'SEDCO', subtitle: 'Blue Economy, Green Energy & Maritime Industrial Parcels' },
-                            { title: 'Cadastral Boundary & Site Context', src: 'KBEIP_Cadastral.png', badge: 'Land Audit', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Title Verification', subtitle: 'Land Ownership, Express Conditions & Port Connectivity' }
+                            { title: 'Key Plan KBEIP', src: 'KEY PLAN KBEIP.png', badge: 'Regional Context', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Macro Scale', subtitle: 'Regional Macro Context & Connectivity' },
+                            { title: 'Location Plan KBEIP', src: 'LOCATION PLAN KBEIP.png', badge: 'Site Vicinity', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Kudat Sector', subtitle: 'Immediate Site Delineation & Coastal Access' },
+                            { title: 'Subject Site KBEIP', src: 'SUBJECT SITE KBEIP.png', badge: 'Project Boundary', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'SEDCO Land', subtitle: 'KBEIP Development Site Boundary & Parcels' }
+                        ]
+                    },
+                    {
+                        id: 'kbeip-landuse-zoning',
+                        label: '2. Land Use, Status & Zoning (4)',
+                        icon: 'fa-layer-group',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4',
+                        imgHeight: 'h-56',
+                        compact: true,
+                        maps: [
+                            { title: 'Existing Landuse KBEIP', src: 'LANDUSE KBEIP.png', badge: 'Baseline Audit', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Current Land Use', subtitle: 'Baseline Physical Land Use Inventory' },
+                            { title: 'Land Status (Feedstock) KBEIP', src: 'LAND STATUS (Feedstock) KBEIP.png', badge: 'Land Tenure', badgeStyle: 'bg-purple-100 text-purple-900', tag: 'Feedstock Audit', subtitle: 'Land Ownership & Feedstock Resource Status' },
+                            { title: 'Industry Land KBEIP', src: 'INDUSTRY LAND KBEIP.png', badge: 'Industrial Allocation', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Industrial Lots', subtitle: 'Designated Industrial Land Parcels' },
+                            { title: 'Statutory Zoning KBEIP', src: 'ZONING KBEIP.png', badge: 'Masterplan Zoning', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Proposed Scheme', subtitle: 'Proposed KBEIP Land Use Zoning Framework' }
+                        ]
+                    },
+                    {
+                        id: 'kbeip-sectoral-audit',
+                        label: '3. Existing Sectoral Audit (6)',
+                        icon: 'fa-city',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
+                        maps: [
+                            { title: 'Existing Agriculture KBEIP', src: 'EXISTING AGRICULTURE KBEIP.png', badge: 'Sectoral Audit', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Agriculture', subtitle: 'Surrounding Agricultural Cultivation & Downstream Potential' },
+                            { title: 'Existing Commercial KBEIP', src: 'EXISTING COMERCIAL KBEIP.png', badge: 'Sectoral Audit', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Commercial', subtitle: 'Existing Commercial Nodes & Service Centres' },
+                            { title: 'Existing Government & Community Facilities', src: 'EXISTING GOVERNMENT & COMMUNITY FACILTIES KBEIP.png', badge: 'Public Amenities', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Facilities', subtitle: 'Civic, Institutional & Community Infrastructure' },
+                            { title: 'Existing Industry KBEIP', src: 'EXISTING INDUSTRY KBEIP.png', badge: 'Sectoral Audit', badgeStyle: 'bg-indigo-100 text-indigo-900', tag: 'Industry', subtitle: 'Existing Industrial Activities & Maritime Nodes' },
+                            { title: 'Existing Residential KBEIP', src: 'EXISTING RESIDENTIAL KBEIP.png', badge: 'Settlements', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Residential', subtitle: 'Surrounding Villages & Residential Settlements' },
+                            { title: 'Existing Tourism KBEIP', src: 'EXISTING TOURISM KBEIP.png', badge: 'Eco-Tourism', badgeStyle: 'bg-purple-100 text-purple-900', tag: 'Tourism', subtitle: 'Coastal Tourism & Heritage Attractions' }
+                        ]
+                    },
+                    {
+                        id: 'kbeip-physical-roads',
+                        label: '4. Physical Constraints & Roads (7)',
+                        icon: 'fa-mountain',
+                        gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5',
+                        imgHeight: 'h-52',
+                        compact: true,
+                        maps: [
+                            { title: 'Topography KBEIP', src: 'TOPOGRAPHY KBEIP.png', badge: 'DEM / Elevation', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Terrain', subtitle: 'Digital Elevation Model & Terrain Relief' },
+                            { title: 'Geology KBEIP', src: 'GEOLOGY KBEIP.png', badge: 'Bedrock', badgeStyle: 'bg-slate-100 text-slate-800', tag: 'Stratigraphy', subtitle: 'Geological Formations & Subsurface Profile' },
+                            { title: 'Soil Association KBEIP', src: 'SOIL ASSOCIATION KBEIP.png', badge: 'Pedology', badgeStyle: 'bg-amber-100 text-amber-900', tag: 'Soil Class', subtitle: 'Soil Associations & Engineering Suitability' },
+                            { title: 'Seismic Hazard KBEIP', src: 'SEISIMIC KBEIP.png', badge: 'Hazard Exclusion', badgeStyle: 'bg-red-100 text-red-900', tag: 'Seismic Zone', subtitle: 'Seismic Risk & Fault Line Assessment' },
+                            { title: 'Forest Reserve KBEIP', src: 'FOREST RESERVE KBEIP.png', badge: 'ESA Conservation', badgeStyle: 'bg-emerald-100 text-emerald-900', tag: 'Forestry', subtitle: 'Gazetted Forest Reserves & Buffer Zones' },
+                            { title: 'Existing Roads & Transportation Linkages', src: 'EXISTING ROADS & TRANSPORTATION LINKAGES KBEIP.png', badge: 'Current Network', badgeStyle: 'bg-blue-100 text-blue-900', tag: 'Connectivity', subtitle: 'Existing Road Network & Regional Linkages' },
+                            { title: 'Proposed Road Network KBEIP', src: 'PROPOSED ROAD KBEIP.png', badge: 'Infrastructure Plan', badgeStyle: 'bg-teal-100 text-teal-900', tag: 'Proposed ROW', subtitle: 'Proposed Industrial Access & Internal Road Hierarchy' }
                         ]
                     }
                 ]
